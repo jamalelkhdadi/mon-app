@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>CSS - Animation - Tutorialspoint</title>
+    <meta charset="utf-8">
+    <meta name="description"
+        content="CSS - Animation - Animation is the process of creating motion effects and change the appearance.CSS does supported different animation effects to change the event motion." />
+    <meta name="keywords"
+        content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Programming, examples, code" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <!-- Top main-menu Starts Here -->
+        <div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+            <div class="mui-container">
+                <div class="left-menu">
+                    <img class="tp-logo" alt="tutorialspoint" src="../images/logo.png">
+                    <div class="mui-dropdown">
+                        <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                            <i class="fa fa-th-large"></i>
+                            <span> CSS Tutorial <span class="mui-caret"></span></span>
+                        </a>
+                        <ul class="mui-dropdown__menu cat-menu">
+                            <li>
+                                <ul>
+                                    <li><a target="_top" href="index.html">CSS - Home</a></li>
+                                    <li><a target="_top" href="what_is_css.html">CSS - Introduction</a></li>
+                                    <li><a target="_top" href="css_syntax.html">CSS - Syntax</a></li>
+                                    <li><a target="_top" href="css_inclusion.html">CSS - Inclusion</a></li>
+                                    <li><a target="_top" href="css_measurement_units.html">CSS - Measurement Units</a>
+                                    </li>
+                                    <li><a target="_top" href="css_colors.html">CSS - Colors</a></li>
+                                    <li><a target="_top" href="css_backgrounds.html">CSS - Backgrounds</a></li>
+                                    <li><a target="_top" href="css_fonts.html">CSS - Fonts</a></li>
+                                    <li><a target="_top" href="css_text.html">CSS - Text</a></li>
+                                    <li><a target="_top" href="css_images.html">CSS - Images</a></li>
+                                    <li><a target="_top" href="css_links.html">CSS - Links</a></li>
+                                    <li><a target="_top" href="css_tables.html">CSS - Tables</a></li>
+                                    <li><a target="_top" href="css_borders.html">CSS - Borders</a></li>
+                                    <li><a target="_top" href="css_margins.html">CSS - Margins</a></li>
+                                    <li><a target="_top" href="css_lists.html">CSS - Lists</a></li>
+                                    <li><a target="_top" href="css_padding.html">CSS - Padding</a></li>
+                                    <li><a target="_top" href="css_cursors.html">CSS - Cursors</a></li>
+                                    <li><a target="_top" href="css_outlines.html">CSS - Outlines</a></li>
+                                    <li><a target="_top" href="css_dimension.html">CSS - Dimension</a></li>
+                                    <li><a target="_top" href="css_scrollbars.html">CSS - Scrollbars</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mui-dropdown">
+                        <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                            <i class="fa fa-th-large"></i>
+                            <span> CSS Advanced <span class="mui-caret"></span></span>
+                        </a>
+                        <ul class="mui-dropdown__menu cat-menu">
+                            <li>
+                                <ul>
+                                    <li><a target="_top" href="css_visibility.html">CSS - Visibility</a></li>
+                                    <li><a target="_top" href="css_positioning.html">CSS - Positioning</a></li>
+                                    <li><a target="_top" href="css_layers.html">CSS - Layers</a></li>
+                                    <li><a target="_top" href="css_pseudo_classes.html">CSS - Pseudo Classes</a></li>
+                                    <li><a target="_top" href="css_pseudo_elements.html">CSS - Pseudo Elements</a></li>
+                                    <li><a target="_top" href="css_at_rules.html">CSS - @ Rules</a></li>
+                                    <li><a target="_top" href="css_text_effects.html">CSS - Text Effects</a></li>
+                                    <li><a target="_top" href="css_media_types.html">CSS - Media Types</a></li>
+                                    <li><a target="_top" href="css_paged_media.html">CSS - Paged Media</a></li>
+                                    <li><a target="_top" href="css_aural_media.html">CSS - Aural Media</a></li>
+                                    <li><a target="_top" href="css_printing.html">CSS - Printing</a></li>
+                                    <li><a target="_top" href="css_layouts.html">CSS - Layouts</a></li>
+                                    <li><a target="_top" href="css_validations.html">CSS - Validations</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mui-dropdown">
+                        <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                            <i class="fa fa-th-large"></i>
+                            <span> CSS3 Tutorial <span class="mui-caret"></span></span>
+                        </a>
+                        <ul class="mui-dropdown__menu cat-menu">
+                            <li>
+                                <ul>
+                                    <li><a target="_top" href="css3_tutorial.html">CSS3 - Tutorial</a></li>
+                                    <li><a target="_top" href="css3_rounded_corner.html">CSS3 - Rounded Corner</a></li>
+                                    <li><a target="_top" href="css3_boarder_image.html">CSS3 - Border Images</a></li>
+                                    <li><a target="_top" href="css3_multi_background.html">CSS3 - Multi Background</a>
+                                    </li>
+                                    <li><a target="_top" href="css3_color.html">CSS3 - Color</a></li>
+                                    <li><a target="_top" href="css3_gradients.html">CSS3 - Gradients</a></li>
+                                    <li><a target="_top" href="css3_shadow.html">CSS3 - Shadow</a></li>
+                                    <li><a target="_top" href="css3_text.html">CSS3 - Text</a></li>
+                                    <li><a target="_top" href="css3_web_font.html">CSS3 - Web font</a></li>
+                                    <li><a target="_top" href="css3_2d_transform.html">CSS3 - 2d transform</a></li>
+                                    <li><a target="_top" href="css3_3d_transform.html">CSS3 - 3d transform</a></li>
+                                    <li><a target="_top" href="css3_animation.html">CSS3 - Animation</a></li>
+                                    <li><a target="_top" href="css3_multi_columns.html">CSS3 - Multi columns</a></li>
+                                    <li><a target="_top" href="css3_userinterface.html">CSS3 - User Interface</a></li>
+                                    <li><a target="_top" href="css3_box_sizing.html">CSS3 - Box Sizing</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mui-dropdown">
+                        <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                            <i class="fa fa-th-large"></i>
+                            <span> CSS References & tools <span class="mui-caret"></span></span>
+                        </a>
+                        <ul class="mui-dropdown__menu cat-menu">
+                            <li>
+                                <ul>
+                                    <li><a target="_top" href="css_responsive.html">Responsive Web Design</a></li>
+                                    <li><a target="_top" href="css_references.html">CSS - References</a></li>
+                                    <li><a target="_top" href="css_color_references.html">CSS - Color References</a>
+                                    </li>
+                                    <li><a target="_top" href="css_web_fonts.html">CSS - Web safe fonts</a></li>
+                                    <li><a target="_top" href="css_units.html">CSS - Units</a></li>
+                                    <li><a target="_top" href="css_animation.html">CSS - Animation</a></li>
+                                    <li><a target="_top" href="css_converter.html">CSS - PX to EM converter</a></li>
+                                    <li><a target="_top" href="css_color_picker.html">Color Chooser &amp; Animation</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-menu">
+                    <a href="../index.html">
+                        <button class="mui-btn mui-btn--primary mobile-menu">home</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Top main-menu Ends Here jamal -->
+    </header>
+    <div class="mui-container-fluid content">
+        <div class="mui-container">
+            <!-- Tutorial Content Starts Here -->
+            <div class="mui-col-md-12 tutorial-content">
+                <div class="cover">
+                    <img class="img-responsive" src="../images/css.jpg" />
+                </div>
+                <h1>CSS - Animation</h1>
+                <hr />
+                <br>
+                <h2>Animation</h2>
+                <p><b>Animation</b> is the process of creating motion effects and change the appearance.CSS does
+                    supported different animation effects to change the event motion.</p>
+                <p>Following table list down all the effects which you can use in CSS &minus;</p>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Sr.No.</th>
+                        <th style="text-align:center;">Method &amp; Description</th>
+                    </tr>
+                    <tr>
+                        <td class="ts">1</td>
+                        <td><a href="/css/css_animation_bounce.htm">Bounce</a>
+                            <p>Bounce Animation effect is used to move the element quick up, back, or away from a
+                                surface after hitting it.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">2</td>
+                        <td><a href="/css/css_animation_bounce_in.htm">Bounce In</a>
+                            <p>Bounce Animation effect is used to move the element quick up, back, or away from a
+                                surface after hitting it.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">3</td>
+                        <td><a href="/css/css_animation_bounce_in_down.htm">Bounce In Down</a>
+                            <p>Bounce Animation effect is used to move the element quick up, back, or away from a
+                                surface after hitting it..</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">4</td>
+                        <td><a href="/css/css_animation_bounce_in_left.htm">Bounce In Left</a>
+                            <p>Bounce Animation effect is used to move the element quick up, back, or away from a
+                                surface after hitting it.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">5</td>
+                        <td><a href="/css/css_animation_bounce_in_right.htm">Bounce In Right</a>
+                            <p>Bounce Animation effect is used to move the element quick up, back, or away from a
+                                surface after hitting it.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">6</td>
+                        <td><a href="/css/css_animation_bounce_out.htm">Bounce Out</a>
+                            <p>Bounce Animation effect is used to move the element quick up, back, or away from a
+                                surface after hitting it.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">7</td>
+                        <td><a href="/css/css_animation_bounce_out_down.htm">Bounce Out Down</a>
+                            <p>Bounce Animation effect is used to move the element quick up, back, or away from a
+                                surface after hitting it.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">8</td>
+                        <td><a href="/css/css_animation_bounce_up.htm">Bounce Up</a>
+                            <p>Bounce Animation effect is used to move the element quick up, back, or away from a
+                                surface after hitting it</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">9</td>
+                        <td><a href="/css/css_animation_bounce_out_left.htm">Bounce Out Left</a>
+                            <p>Bounce Animation effect is used to move the element quick up, back, or away from a
+                                surface after hitting it.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">10</td>
+                        <td><a href="/css/css_animation_bounce_out_right.htm">Bounce Out Right </a>
+                            <p>Bounce Animation effect is used to move the element quick up, back, or away from a
+                                surface after hitting it</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">11</td>
+                        <td><a href="/css/css_animation_bounce_out_up.htm">Bounce Out Up</a>
+                            <p>Bounce Animation effect is used to move the element quick up, back, or away from a
+                                surface after hitting it.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">12</td>
+                        <td><a href="/css/css_animation_fade_down_big.htm">Fade Down Big</a>
+                            <p>The image come or cause to come gradually into or out of view, or to merge into another
+                                shot.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">13</td>
+                        <td><a href="/css/css_animation_fade_in.htm">Fade In</a>
+                            <p>The image come or cause to come gradually into or out of view, or to merge into another
+                                shot.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">14</td>
+                        <td><a href="/css/css_animation_fade_in_down.htm">Fade In Down</a>
+                            <p>The image come or cause to come gradually into or out of view, or to merge into another
+                                shot.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">15</td>
+                        <td><a href="/css/css_animation_fade_in_left.htm">Fade In Left</a>
+                            <p>The image come or cause to come gradually into or out of view, or to merge into another
+                                shot.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">16</td>
+                        <td><a href="/css/css_animation_fade_in_left_big.htm">Fade In Left Big</a>
+                            <p>The image come or cause to come gradually into or out of view, or to merge into another
+                                shot.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">17</td>
+                        <td><a href="/css/css_animation_fade_in_right.htm">Fade In Right</a>
+                            <p>The image come or cause to come gradually into or out of view, or to merge into another
+                                shot.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">18</td>
+                        <td><a href="/css/css_animation_fade_in_right_big.htm">Fade In Right Big</a>
+                            <p>The image come or cause to come gradually into or out of view, or to merge into another
+                                shot.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">19</td>
+                        <td><a href="/css/css_animation_fade_in_up.htm">Fade in Up</a>
+                            <p>The image come or cause to come gradually into or out of view, or to merge into another
+                                shot.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">20</td>
+                        <td><a href="/css/css_animation_fade_in_up_big.htm">Fade In Up Big</a>
+                            <p>The image come or cause to come gradually into or out of view, or to merge into another
+                                shot.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">21</td>
+                        <td><a href="/css/css_animation_fade_out.htm">Fade Out</a>
+                            <p>The image come or cause to come gradually into or out of view, or to merge into another
+                                shot.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">22</td>
+                        <td><a href="/css/css_animation_fade_out_down.htm">Fade Out Down</a>
+                            <p>The image come or cause to come gradually into or out of view, or to merge into another
+                                shot.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">23</td>
+                        <td><a href="/css/css_animation_fade_out_left.htm">Fade Out Left</a>
+                            <p>The image come or cause to come gradually into or out of view, or to merge into another
+                                shot.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">24</td>
+                        <td><a href="/css/css_animation_fade_out_left_big.htm">Fade Out Left Big</a>
+                            <p>The image come or cause to come gradually into or out of view, or to merge into another
+                                shot.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">25</td>
+                        <td><a href="/css/css_animation_fade_out_right.htm">Fade Out Right</a>
+                            <p>The image come or cause to come gradually into or out of view, or to merge into another
+                                shot.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">26</td>
+                        <td><a href="/css/css_animation_fade_out_right_big.htm">Fade Out Right Big</a>
+                            <p>The image come or cause to come gradually into or out of view, or to merge into another
+                                shot.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">27</td>
+                        <td><a href="/css/css_animation_fade_out_up.htm">Fade Out Up</a>
+                            <p>The image come or cause to come gradually into or out of view, or to merge into another
+                                shot.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">28</td>
+                        <td><a href="/css/css_animation_fade_out_up_big.htm">Fade Out UP Big</a>
+                            <p>The image come or cause to come gradually into or out of view, or to merge into another
+                                shot</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">29</td>
+                        <td><a href="/css/css_animation_flash.htm">Flash</a>
+                            <p>A sudden brief burst of bright light of an element.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">30</td>
+                        <td><a href="/css/css_animation_flip.htm">Flip</a>
+                            <p>An Element can turn over or cause to turn over with a sudden quick movement.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">31</td>
+                        <td><a href="/css/css_animation_flip_in_x.htm">Flip In X</a>
+                            <p>An Element can turn over or cause to turn over with a sudden quick movement.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">32</td>
+                        <td><a href="/css/css_animation_flip_in_y.htm">Flip In Y</a>
+                            <p>An Element can turn over or cause to turn over with a sudden quick movement.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">33</td>
+                        <td><a href="/css/css_animation_flip_out_x.htm">Flip Out X</a>
+                            <p>An Element can turn over or cause to turn over with a sudden quick movement.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">34</td>
+                        <td><a href="/css/css_animation_flip_out_y.htm">Flip Out Y</a>
+                            <p>An Element can turn over or cause to turn over with a sudden quick movement.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">35</td>
+                        <td><a href="/css/css_animation_hinge.htm">Hinge</a>
+                            <p>An Element can turn over or cause to turn over with a sudden quick movement.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">36</td>
+                        <td><a href="/css/css_animation_light_speed_in.htm">Light Speed In</a>
+                            <p>It going to provide the light or lighting with speed to element.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">37</td>
+                        <td><a href="/css/css_animation_light_speed_out.htm">Light Speed Out</a>
+                            <p>It going to provide the light or lighting with speed to element.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">38</td>
+                        <td><a href="/css/css_animation_pulse.htm">Pulse</a>
+                            <p>It Provides a single vibration or short burs to an element.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">39</td>
+                        <td><a href="/css/css_animation_roll_in.htm">Roll In</a>
+                            <p>An Element can move in a particular direction by turning over and over on an axis.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">40</td>
+                        <td><a href="/css/css_animation_roll_out.htm">Roll Out</a>
+                            <p>An Element can move in a particular direction by turning over and over on an axis.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">41</td>
+                        <td><a href="/css/css_animation_rotate_in_down_left.htm">Rotate In Down Left</a>
+                            <p>An Element can move in a particular direction by turning over and over on an axis.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">42</td>
+                        <td><a href="/css/css_animation_rotate_in.htm">Rotate In</a>
+                            <p>An Element can move in a particular direction by turning over and over on an axis.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">43</td>
+                        <td><a href="/css/css_animation_rotate_in_down_right.htm">Rotate In Down Right</a>
+                            <p>An Element can move in a particular direction by turning over and over on an axis.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">44</td>
+                        <td><a href="/css/css_animation_wobble.htm">Wobble</a>
+                            <p>It provides to move an element or cause to move unsteadily from side to side.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">45</td>
+                        <td><a href="/css/css_animation_rotate_in_up_left.htm">Rotate In Up Left</a>
+                            <p>It provides to move or cause to move in a circle round an axis or centre.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">46</td>
+                        <td><a href="/css/css_animation_rotate_in_up_right.htm">Rotate In Up Right</a>
+                            <p>It provides to move or cause to move in a circle round an axis or centre.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">47</td>
+                        <td><a href="/css/css_animation_winggle.htm">Winggle</a>
+                            <p>It provides to move or cause to move up and down or from side to side with small rapid
+                                movements.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">48</td>
+                        <td><a href="/css/css_animation_rotate_out.htm">Rotate Out</a>
+                            <p>It provides to move or cause to move in a circle round an axis or centre.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">49</td>
+                        <td><a href="/css/css_animation_rotate_out_down_left.htm">Rotate Out Down Left</a>
+                            <p>It provides to move or cause to move in a circle round an axis or centre.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">50</td>
+                        <td><a href="/css/css_animation_rotate_out_down_right.htm">Rotate Out Down Right</a>
+                            <p>It provides to move or cause to move in a circle round an axis or centre.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">51</td>
+                        <td><a href="/css/css_animation_rotate_out_up_left.htm">Rotate Out Up Left</a>
+                            <p>It provides to move or cause to move in a circle round an axis or centre.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">52</td>
+                        <td><a href="/css/css_animation_rotate_out_up_right.htm">Rotate Out Up Right</a>
+                            <p>It provides to move or cause to move in a circle round an axis or centre.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">53</td>
+                        <td><a href="/css/css_animation_shake.htm">Shake</a>
+                            <p>It provides to move (an object) up and down or from side to side for an element.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">54</td>
+                        <td><a href="/css/css_animation_swing.htm">Swing</a>
+                            <p>It provides move or cause to move back and forth or from side to side while suspended or
+                                on an axis to an element.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">55</td>
+                        <td><a href="/css/css_animation_tada.htm">Tada</a>
+                            <p>It provides to move an element from side to side.</p>
+                        </td>
+                    </tr>
+                </table>
+                <div class="mui-container-fluid button-borders show" id="bottom_navigation">
+                    <div class="pre-btn">
+                        <a href="/css/css_units.htm"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+                        <a class="hide-on-mobile" href="javascript:printPage();"><i class="fa fa-print"></i> Print
+                            Page</a>
+                    </div>
+                    <div class="nxt-btn">
+                        <a href="/css/css_converter.htm">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+                    </div>
+                </div>
+                <div class="google-bottom-ads">
+                    <div>Advertisements</div>
+                    <div>
+                        <div id="vi_bottom_ads"></div>
+                        <script>
+                            (function () {
+                                var adPos = document.getElementById('vi_bottom_ads');
+                                var mobile_ad_id = "vi_9017967";
+                                var desktop_ad_id = "vi_9013190";
+                                var ad_id = window.innerWidth <= 768 ? mobile_ad_id : desktop_ad_id;
+                                adPos.innerHTML = '<div class="adsbyvli" data-ad-slot="' + ad_id + '"></div>';
+                                (vitag.displayInit = window.vitag.displayInit || []).push(function () {
+                                    viAPItag.display(ad_id);
+                                });
+                            }())
+                        </script>
+                    </div>
+                    <div class="space-bottom"></div>
+                </div>
+            </div>
+            <!-- Tutorial Content Ends Here -->
+            <!-- Right Column Starts Here -->
+            <div class="mui-col-md-2 google-right-ads">
+                <div class="space-top"></div>
+                <div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;">
+                    <div class="adsbyvli" data-ad-slot="vi_9017966"></div>
+                    <script>(vitag.Init = window.vitag.Init || []).push(function () { viAPItag.display("vi_9017966") })</script>
+                </div>
+                <div class="google-right-ad" style="margin-top:16px;">
+                    <div class="adsbyvli" data-ad-slot="vi_9017967"></div>
+                    <script>(vitag.Init = window.vitag.Init || []).push(function () { viAPItag.display("vi_9017967") })</script>
+                </div>
+                <div class="google-right-ad" style="margin-top:16px;margin-bottom:15px;">
+                    <div class="adsbyvli" data-ad-slot="vi_9013289"></div>
+                    <script>(vitag.Init = window.vitag.Init || []).push(function () { viAPItag.display("vi_9013289") })</script>
+                </div>
+                <div class="space-bottom" style="margin-bottom:15px;"></div>
+            </div>
+            <!-- Right Column Ends Here -->
+        </div>
+    </div>
+    <div class="clear"></div>
+    <footer id="footer">
+        <div class="mui--text-center">
+            <div class="mui--text-caption mui--text-light">
+                <a href="/index.htm" class="logo"><img class="img-responsive" src="/images/logo-black.png"
+                        alt="Tutorials Point" title="Tutorials Point"></a>
+            </div>
+            <ul class="mui-list--inline mui--text-body2 mui--text-light">
+                <li><a href="/about/index.htm"><i class="fal fa-globe"></i> About us</a></li>
+                <li><a href="/about/about_terms_of_use.htm"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+                <li><a href="/about/about_privacy.htm"> <i class="fal fa-shield-check"></i> Privacy Policy</a></li>
+                <li><a href="/about/faq.htm"><i class="fal fa-question-circle"></i> FAQ's</a></li>
+                <li><a href="/about/about_helping.htm"><i class="fal fa-hands-helping"></i> Helping</a></li>
+                <li><a href="/about/contact_us.htm"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+            </ul>
+            <div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights
+                Reserved.</div>
+        </div>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-232293-17"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'UA-232293-6');
+        </script>
+    </footer>
+</body>
+
+</html>

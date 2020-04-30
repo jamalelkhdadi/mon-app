@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+   <title>CSS - Text - Tutorialspoint</title>
+   <meta charset="utf-8">
+   <meta name="description"
+      content="CSS - Text - This chapter teaches you how to manipulate text using CSS properties. You can set following text properties of an element −" />
+   <meta name="keywords"
+      content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Programming, examples, code" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+   <link rel="stylesheet" href="../style.css">
+   <script src="../script.js"></script>
+</head>
+
+<body>
+   <header id="header">
+      <!-- Top main-menu Starts Here -->
+      <div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+         <div class="mui-container">
+            <div class="left-menu">
+               <img class="tp-logo" alt="tutorialspoint" src="../images/logo.png">
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> CSS Tutorial <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="index.html">CSS - Home</a></li>
+                           <li><a target="_top" href="what_is_css.html">CSS - Introduction</a></li>
+                           <li><a target="_top" href="css_syntax.html">CSS - Syntax</a></li>
+                           <li><a target="_top" href="css_inclusion.html">CSS - Inclusion</a></li>
+                           <li><a target="_top" href="css_measurement_units.html">CSS - Measurement Units</a>
+                           </li>
+                           <li><a target="_top" href="css_colors.html">CSS - Colors</a></li>
+                           <li><a target="_top" href="css_backgrounds.html">CSS - Backgrounds</a></li>
+                           <li><a target="_top" href="css_fonts.html">CSS - Fonts</a></li>
+                           <li><a target="_top" href="css_text.html">CSS - Text</a></li>
+                           <li><a target="_top" href="css_images.html">CSS - Images</a></li>
+                           <li><a target="_top" href="css_links.html">CSS - Links</a></li>
+                           <li><a target="_top" href="css_tables.html">CSS - Tables</a></li>
+                           <li><a target="_top" href="css_borders.html">CSS - Borders</a></li>
+                           <li><a target="_top" href="css_margins.html">CSS - Margins</a></li>
+                           <li><a target="_top" href="css_lists.html">CSS - Lists</a></li>
+                           <li><a target="_top" href="css_padding.html">CSS - Padding</a></li>
+                           <li><a target="_top" href="css_cursors.html">CSS - Cursors</a></li>
+                           <li><a target="_top" href="css_outlines.html">CSS - Outlines</a></li>
+                           <li><a target="_top" href="css_dimension.html">CSS - Dimension</a></li>
+                           <li><a target="_top" href="css_scrollbars.html">CSS - Scrollbars</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> CSS Advanced <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="css_visibility.html">CSS - Visibility</a></li>
+                           <li><a target="_top" href="css_positioning.html">CSS - Positioning</a></li>
+                           <li><a target="_top" href="css_layers.html">CSS - Layers</a></li>
+                           <li><a target="_top" href="css_pseudo_classes.html">CSS - Pseudo Classes</a></li>
+                           <li><a target="_top" href="css_pseudo_elements.html">CSS - Pseudo Elements</a></li>
+                           <li><a target="_top" href="css_at_rules.html">CSS - @ Rules</a></li>
+                           <li><a target="_top" href="css_text_effects.html">CSS - Text Effects</a></li>
+                           <li><a target="_top" href="css_media_types.html">CSS - Media Types</a></li>
+                           <li><a target="_top" href="css_paged_media.html">CSS - Paged Media</a></li>
+                           <li><a target="_top" href="css_aural_media.html">CSS - Aural Media</a></li>
+                           <li><a target="_top" href="css_printing.html">CSS - Printing</a></li>
+                           <li><a target="_top" href="css_layouts.html">CSS - Layouts</a></li>
+                           <li><a target="_top" href="css_validations.html">CSS - Validations</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> CSS3 Tutorial <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="css3_tutorial.html">CSS3 - Tutorial</a></li>
+                           <li><a target="_top" href="css3_rounded_corner.html">CSS3 - Rounded Corner</a></li>
+                           <li><a target="_top" href="css3_boarder_image.html">CSS3 - Border Images</a></li>
+                           <li><a target="_top" href="css3_multi_background.html">CSS3 - Multi Background</a>
+                           </li>
+                           <li><a target="_top" href="css3_color.html">CSS3 - Color</a></li>
+                           <li><a target="_top" href="css3_gradients.html">CSS3 - Gradients</a></li>
+                           <li><a target="_top" href="css3_shadow.html">CSS3 - Shadow</a></li>
+                           <li><a target="_top" href="css3_text.html">CSS3 - Text</a></li>
+                           <li><a target="_top" href="css3_web_font.html">CSS3 - Web font</a></li>
+                           <li><a target="_top" href="css3_2d_transform.html">CSS3 - 2d transform</a></li>
+                           <li><a target="_top" href="css3_3d_transform.html">CSS3 - 3d transform</a></li>
+                           <li><a target="_top" href="css3_animation.html">CSS3 - Animation</a></li>
+                           <li><a target="_top" href="css3_multi_columns.html">CSS3 - Multi columns</a></li>
+                           <li><a target="_top" href="css3_userinterface.html">CSS3 - User Interface</a></li>
+                           <li><a target="_top" href="css3_box_sizing.html">CSS3 - Box Sizing</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> CSS References & tools <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="css_responsive.html">Responsive Web Design</a></li>
+                           <li><a target="_top" href="css_references.html">CSS - References</a></li>
+                           <li><a target="_top" href="css_color_references.html">CSS - Color References</a>
+                           </li>
+                           <li><a target="_top" href="css_web_fonts.html">CSS - Web safe fonts</a></li>
+                           <li><a target="_top" href="css_units.html">CSS - Units</a></li>
+                           <li><a target="_top" href="css_animation.html">CSS - Animation</a></li>
+                           <li><a target="_top" href="css_converter.html">CSS - PX to EM converter</a></li>
+                           <li><a target="_top" href="css_color_picker.html">Color Chooser &amp; Animation</a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="right-menu">
+               <a href="../index.html">
+                  <button class="mui-btn mui-btn--primary mobile-menu">home</button>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- Top main-menu Ends Here jamal -->
+   </header>
+   <div class="mui-container-fluid content">
+      <div class="mui-container">
+         <!-- Tutorial Content Starts Here -->
+         <div class="mui-col-md-12 tutorial-content">
+            <div class="cover">
+               <img class="img-responsive" src="../images/css.jpg" />
+            </div>
+            <h1>CSS - Text</h1>
+            <hr />
+            <br>
+            <p>This chapter teaches you how to manipulate text using CSS properties. You can set following text
+               properties of an element &minus;</p>
+            <ul class="list">
+               <li>
+                  <p>The <b>color</b> property is used to set the color of a text.</p>
+               </li>
+               <li>
+                  <p>The <b>direction</b> property is used to set the text direction.</p>
+               </li>
+               <li>
+                  <p>The <b>letter-spacing</b> property is used to add or subtract space between the letters that make
+                     up a word.</p>
+               </li>
+               <li>
+                  <p>The <b>word-spacing</b> property is used to add or subtract space between the words of a sentence.
+                  </p>
+               </li>
+               <li>
+                  <p>The <b>text-indent</b> property is used to indent the text of a paragraph.</p>
+               </li>
+               <li>
+                  <p>The <b>text-align</b> property is used to align the text of a document.</p>
+               </li>
+               <li>
+                  <p>The <b>text-decoration</b> property is used to underline, overline, and strikethrough text.</p>
+               </li>
+               <li>
+                  <p>The <b>text-transform</b> property is used to capitalize text or convert text to uppercase or
+                     lowercase letters.</p>
+               </li>
+               <li>
+                  <p>The <b>white-space</b> property is used to control the flow and formatting of text.</p>
+               </li>
+               <li>
+                  <p>The <b>text-shadow</b> property is used to set the text shadow around a text.</p>
+               </li>
+            </ul>
+            <h2>Set the Text Color</h2>
+            <p>The following example demonstrates how to set the text color. Possible value could be any color name in
+               any valid format.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/ZNkCsf" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;p <b>style = "color:red;"</b>&gt;
+         This text will be written in red.
+      &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            <p>It will produce the following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/text.htm" height="50px"
+               width="660px"></iframe>
+            <h2>Set the Text Direction</h2>
+            <p>The following example demonstrates how to set the direction of a text. Possible values are <i>ltr or
+                  rtl</i>.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/aFDTZb" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;p <b>style = "direction:rtl;"</b>&gt;
+         This text will be rendered from right to left
+      &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            <p>It will produce the following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/text1.htm" height="50px"
+               width="660px"></iframe>
+            <h2>Set the Space between Characters</h2>
+            <p>The following example demonstrates how to set the space between characters. Possible values are <i>normal
+                  or a number specifying space.</i>.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/xr88Ns" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;p <b>style = "letter-spacing:5px;"</b>&gt;
+         This text is having space between letters.
+      &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            <p>It will produce the following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/text2.htm" height="50px"
+               width="660px"></iframe>
+            <h2>Set the Space between Words</h2>
+            <p>The following example demonstrates how to set the space between words. Possible values are <i>normal or a
+                  number specifying space</i>.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/HNV9nc" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;p <b>style = "word-spacing:5px;"</b>&gt;
+         This text is having space between words.
+      &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt; 
+</pre>
+            <p>This will produce following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/word_spacing.htm" height="70px"
+               width="660px"></iframe>
+            <h2>Set the Text Indent</h2>
+            <p>The following example demonstrates how to indent the first line of a paragraph. Possible values are <i>%
+                  or a number specifying indent space</i>.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/9UDJ5g" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;p <b>style = "text-indent:1cm;"</b>&gt;
+         This text will have first line indented by 1cm and this line will remain at 
+         its actual position this is done by CSS text-indent property.
+      &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            <p>It will produce the following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/text4.htm" height="70px"
+               width="660px"></iframe>
+            <h2>Set the Text Alignment</h2>
+            <p>The following example demonstrates how to align a text. Possible values are <i>left, right, center,
+                  justify</i>.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/hn0sUv" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;p <b>style = "text-align:right;"</b>&gt;
+         This will be right aligned.
+      &lt;/p&gt;
+      
+      &lt;p <b>style = "text-align:center;"</b>&gt;
+         This will be center aligned.
+      &lt;/p&gt;
+      
+      &lt;p <b>style = "text-align:left;"</b>&gt;
+         This will be left aligned.
+      &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt; 
+</pre>
+            <p>This will produce following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/text_align.htm" height="130px"
+               width="660px"></iframe>
+            <h2>Decorating the Text</h2>
+            <p>The following example demonstrates how to decorate a text. Possible values are <i>none, underline,
+                  overline, line-through, blink</i>.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/2GOkPG" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;p <b>style = "text-decoration:underline;"</b>&gt;
+         This will be underlined
+      &lt;/p&gt;
+      
+      &lt;p <b>style = "text-decoration:line-through;"</b>&gt;
+         This will be striked through.
+      &lt;/p&gt;
+      
+      &lt;p <b>style = "text-decoration:overline;"</b>&gt;
+         This will have a over line.
+      &lt;/p&gt;
+      
+      &lt;p <b>style = "text-decoration:blink;"</b>&gt;
+         This text will have blinking effect
+      &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt; 
+</pre>
+            <p>This will produce following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/text_decoration.htm" height="150px"
+               width="660px"></iframe>
+            <h2>Set the Text Cases</h2>
+            <p>The following example demonstrates how to set the cases for a text. Possible values are <i>none,
+                  capitalize, uppercase, lowercase</i>.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/saoobs" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;p <b>style = "text-transform:capitalize;"</b>&gt;
+         This will be capitalized
+      &lt;/p&gt;
+      
+      &lt;p <b>style = "text-transform:uppercase;"</b>&gt;
+         This will be in uppercase
+      &lt;/p&gt;
+      
+      &lt;p <b>style = "text-transform:lowercase;"</b>&gt;
+         This will be in lowercase
+      &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt; 
+</pre>
+            <p>This will produce following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/text_transform.htm" height="130px"
+               width="660px"></iframe>
+            <h2>Set the White Space between Text</h2>
+            <p>The following example demonstrates how white space inside an element is handled. Possible values are
+               <i>normal, pre, nowrap</i>.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/bGsQfo" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;p <b>style = "white-space:pre;"</b>&gt;
+         This text has a line break and the white-space pre setting 
+         tells the browser to honor it just like the HTML pre tag.
+      &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt; 
+</pre>
+            <p>This will produce following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/text8.htm" height="90px"
+               width="660px"></iframe>
+            <h2>Set the Text Shadow</h2>
+            <p>The following example demonstrates how to set the shadow around a text. This may not be supported by all
+               the browsers.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/pYePl1" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;p <b>style = "text-shadow:4px 4px 8px blue;"</b>&gt;
+         If your browser supports the CSS text-shadow property, 
+         this text will have a  blue shadow.
+      &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt; 
+</pre>
+            <p>It will produce the following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/text9.htm" height="70px"
+               width="660px"></iframe>
+            <div class="mui-container-fluid button-borders show" id="bottom_navigation">
+               <div class="pre-btn">
+                  <a href="/css/css_fonts.htm"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+                  <a class="hide-on-mobile" href="javascript:printPage();"><i class="fa fa-print"></i> Print Page</a>
+               </div>
+               <div class="nxt-btn">
+                  <a href="/css/css_images.htm">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+               </div>
+            </div>
+            <div class="google-bottom-ads">
+               <div>Advertisements</div>
+               <div>
+                  <div id="vi_bottom_ads"></div>
+                  <script>
+                     (function () {
+                        var adPos = document.getElementById('vi_bottom_ads');
+                        var mobile_ad_id = "vi_9017967";
+                        var desktop_ad_id = "vi_9013190";
+                        var ad_id = window.innerWidth <= 768 ? mobile_ad_id : desktop_ad_id;
+                        adPos.innerHTML = '<div class="adsbyvli" data-ad-slot="' + ad_id + '"></div>';
+                        (vitag.displayInit = window.vitag.displayInit || []).push(function () {
+                           viAPItag.display(ad_id);
+                        });
+                     }())
+                  </script>
+               </div>
+               <div class="space-bottom"></div>
+            </div>
+         </div>
+         <!-- Tutorial Content Ends Here -->
+         <!-- Right Column Starts Here -->
+         <div class="mui-col-md-2 google-right-ads">
+            <div class="space-top"></div>
+            <div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;">
+               <div class="adsbyvli" data-ad-slot="vi_9017966"></div>
+               <script>(vitag.Init = window.vitag.Init || []).push(function () { viAPItag.display("vi_9017966") })</script>
+            </div>
+            <div class="google-right-ad" style="margin-top:16px;">
+               <div class="adsbyvli" data-ad-slot="vi_9017967"></div>
+               <script>(vitag.Init = window.vitag.Init || []).push(function () { viAPItag.display("vi_9017967") })</script>
+            </div>
+            <div class="google-right-ad" style="margin-top:16px;margin-bottom:15px;">
+               <div class="adsbyvli" data-ad-slot="vi_9013289"></div>
+               <script>(vitag.Init = window.vitag.Init || []).push(function () { viAPItag.display("vi_9013289") })</script>
+            </div>
+            <div class="space-bottom" style="margin-bottom:15px;"></div>
+         </div>
+         <!-- Right Column Ends Here -->
+      </div>
+   </div>
+   <div class="clear"></div>
+   <footer id="footer">
+      <div class="mui--text-center">
+         <div class="mui--text-caption mui--text-light">
+            <a href="/index.htm" class="logo"><img class="img-responsive" src="/images/logo-black.png"
+                  alt="Tutorials Point" title="Tutorials Point"></a>
+         </div>
+         <ul class="mui-list--inline mui--text-body2 mui--text-light">
+            <li><a href="/about/index.htm"><i class="fal fa-globe"></i> About us</a></li>
+            <li><a href="/about/about_terms_of_use.htm"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+            <li><a href="/about/about_privacy.htm"> <i class="fal fa-shield-check"></i> Privacy Policy</a></li>
+            <li><a href="/about/faq.htm"><i class="fal fa-question-circle"></i> FAQ's</a></li>
+            <li><a href="/about/about_helping.htm"><i class="fal fa-hands-helping"></i> Helping</a></li>
+            <li><a href="/about/contact_us.htm"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+         </ul>
+         <div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights
+            Reserved.</div>
+      </div>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-232293-17"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag() { dataLayer.push(arguments); }
+         gtag('js', new Date());
+         gtag('config', 'UA-232293-6');
+      </script>
+   </footer>
+</body>
+
+</html>

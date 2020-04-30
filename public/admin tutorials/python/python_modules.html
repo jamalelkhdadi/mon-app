@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+   <title>Python - Modules - Tutorialspoint</title>
+   <meta charset="utf-8">
+   <meta name="description"
+      content="Python - Modules - A module allows you to logically organize your Python code. Grouping related code into a module makes the code easier to understand and use. A module is a Pytho" />
+   <meta name="keywords"
+      content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Programming, examples, code" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+   <link rel="stylesheet" href="../style.css">
+   <script src="../script.js"></script>
+</head>
+
+<body>
+   <header id="header">
+      <!-- Top main-menu Starts Here -->
+      <div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+         <div class="mui-container">
+            <div class="left-menu">
+               <img class="tp-logo" alt="tutorialspoint" src="../images/logo.png">
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> Python Tutorial <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="index.html">01 : Home</a></li>
+                           <li><a target="_top" href="python_overview.html">02 : Overview</a></li>
+                           <li><a target="_top" href="python_environment.html">03 : Environment Setup</a></li>
+                           <li><a target="_top" href="python_basic_syntax.html">04 : Basic Syntax</a></li>
+                           <li><a target="_top" href="python_variable_types.html">05 : Variable Types</a></li>
+                           <li><a target="_top" href="python_basic_operators.html">06 : Basic Operators</a></li>
+                           <li><a target="_top" href="python_decision_making.html">07 : Decision Making</a></li>
+                           <li><a target="_top" href="python_loops.html">08 : Loops</a></li>
+                           <li><a target="_top" href="python_numbers.html">09 : Numbers</a></li>
+                           <li><a target="_top" href="python_strings.html">10 : Strings</a></li>
+                           <li><a target="_top" href="python_lists.html">11 : Lists</a></li>
+                           <li><a target="_top" href="python_tuples.html">12 : Tuples</a></li>
+                           <li><a target="_top" href="python_dictionary.html">13 : Dictionary</a></li>
+                           <li><a target="_top" href="python_date_time.html">14 : Date &amp; Time</a></li>
+                           <li><a target="_top" href="python_functions.html">15 : Functions</a></li>
+                           <li><a target="_top" href="python_modules.html">16 : Modules</a></li>
+                           <li><a target="_top" href="python_files_io.html">17 : Files I/O</a></li>
+                           <li><a target="_top" href="python_exceptions.html">18 : Exceptions</a></li>
+                           <li><a target="_top" href="python_classes_objects.html">19 : Classes/Objects</a></li>
+                           <li><a target="_top" href="python_reg_expressions.html">20 : Reg Expressions</a></li>
+                           <li><a target="_top" href="python_cgi_programming.html">21 : CGI Programming</a></li>
+                           <li><a target="_top" href="python_database_access.html">22 : Database Access</a></li>
+                           <li><a target="_top" href="python_networking.html">23 : Networking</a></li>
+                           <li><a target="_top" href="python_sending_email.html">24 : Sending Email</a></li>
+                           <li><a target="_top" href="python_multithreading.html">25 : Multithreading</a></li>
+                           <li><a target="_top" href="python_xml_processing.html">26 : XML Processing</a></li>
+                           <li><a target="_top" href="python_gui_programming.html">27 : GUI Programming</a></li>
+                           <li><a target="_top" href="python_further_extensions.html">28 : Further Extensions</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="right-menu">
+               <a href="../index.html">
+                  <button class="mui-btn mui-btn--primary mobile-menu">home</button>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- Top main-menu Ends Here jamal -->
+   </header>
+   <div class="mui-container-fluid content">
+      <div class="mui-container">
+         <!-- Tutorial Content Starts Here -->
+         <div class="mui-col-md-12 tutorial-content">
+            <div class="cover">
+               <img class="img-responsive" src="../images/python.jpg" />
+            </div>
+            <h1>Python - Modules</h1>
+            <p>A module allows you to logically organize your Python code. Grouping related code into a module makes the
+               code easier to understand and use. A module is a Python object with arbitrarily named attributes that you
+               can bind and reference.</p>
+            <p>Simply, a module is a file consisting of Python code. A module can define functions, classes and
+               variables. A module can also include runnable code.</p>
+            <h2>Example</h2>
+            <p>The Python code for a module named <i>aname</i> normally resides in a file named <i>aname.py</i>. Here's
+               an example of a simple module, support.py</p>
+            <pre class="prettyprint notranslate" id="hello">
+def print_func( par ):
+   print "Hello : ", par
+   return
+</pre>
+            <h2>The <i>import</i> Statement</h2>
+            <p>You can use any Python source file as a module by executing an import statement in some other Python
+               source file. The <i>import</i> has the following syntax &minus;</p>
+            <pre class="result notranslate">
+import module1[, module2[,... moduleN]
+</pre>
+            <p>When the interpreter encounters an import statement, it imports the module if the module is present in
+               the search path. A search path is a list of directories that the interpreter searches before importing a
+               module. For example, to import the module support.py, you need to put the following command at the top of
+               the script &minus;</p>
+            <pre class="prettyprint notranslate">
+#!/usr/bin/python
+
+# Import module support
+import support
+
+# Now you can call defined function that module as follows
+support.print_func("Zara")
+</pre>
+            <p>When the above code is executed, it produces the following result &minus;</p>
+            <pre class="result notranslate">
+Hello : Zara
+</pre>
+            <p>A module is loaded only once, regardless of the number of times it is imported. This prevents the module
+               execution from happening over and over again if multiple imports occur.</p>
+            <h2>The <i>from...import</i> Statement</h2>
+            <p>Python's <i>from</i> statement lets you import specific attributes from a module into the current
+               namespace. The <i>from...import</i> has the following syntax &minus;</p>
+            <pre class="result notranslate">
+from modname import name1[, name2[, ... nameN]]
+</pre>
+            <p>For example, to import the function fibonacci from the module fib, use the following statement &minus;
+            </p>
+            <pre class="result notranslate">
+from fib import fibonacci
+</pre>
+            <p>This statement does not import the entire module fib into the current namespace; it just introduces the
+               item fibonacci from the module fib into the global symbol table of the importing module.</p>
+            <h2>The <i>from...import *</i> Statement</h2>
+            <p>It is also possible to import all names from a module into the current namespace by using the following
+               import statement &minus;</p>
+            <pre class="result notranslate">
+from modname import *
+</pre>
+            <p>This provides an easy way to import all the items from a module into the current namespace; however, this
+               statement should be used sparingly.</p>
+            <h2>Locating Modules</h2>
+            <p>When you import a module, the Python interpreter searches for the module in the following sequences
+               &minus;</p>
+            <ul class="list">
+               <li>
+                  <p>The current directory.</p>
+               </li>
+               <li>
+                  <p>If the module isn't found, Python then searches each directory in the shell variable PYTHONPATH.
+                  </p>
+               </li>
+               <li>
+                  <p>If all else fails, Python checks the default path. On UNIX, this default path is normally
+                     /usr/local/lib/python/.</p>
+               </li>
+            </ul>
+            <p>The module search path is stored in the system module sys as the <b>sys.path</b> variable. The sys.path
+               variable contains the current directory, PYTHONPATH, and the installation-dependent default.</p>
+            <h2>The <i>PYTHONPATH</i> Variable</h2>
+            <p>The PYTHONPATH is an environment variable, consisting of a list of directories. The syntax of PYTHONPATH
+               is the same as that of the shell variable PATH.</p>
+            <p>Here is a typical PYTHONPATH from a Windows system &minus;</p>
+            <pre class="result notranslate">
+set PYTHONPATH = c:\python20\lib;
+</pre>
+            <p>And here is a typical PYTHONPATH from a UNIX system &minus;</p>
+            <pre class="result notranslate">
+set PYTHONPATH = /usr/local/lib/python
+</pre>
+            <h2>Namespaces and Scoping</h2>
+            <p>Variables are names (identifiers) that map to objects. A <i>namespace</i> is a dictionary of variable
+               names (keys) and their corresponding objects (values).</p>
+            <p>A Python statement can access variables in a <i>local namespace</i> and in the <i>global namespace</i>.
+               If a local and a global variable have the same name, the local variable shadows the global variable.</p>
+            <p>Each function has its own local namespace. Class methods follow the same scoping rule as ordinary
+               functions.</p>
+            <p>Python makes educated guesses on whether variables are local or global. It assumes that any variable
+               assigned a value in a function is local.</p>
+            <p>Therefore, in order to assign a value to a global variable within a function, you must first use the
+               global statement.</p>
+            <p>The statement <i>global VarName</i> tells Python that VarName is a global variable. Python stops
+               searching the local namespace for the variable.</p>
+            <p>For example, we define a variable <i>Money</i> in the global namespace. Within the function <i>Money</i>,
+               we assign <i>Money</i> a value, therefore Python assumes <i>Money</i> as a local variable. However, we
+               accessed the value of the local variable <i>Money</i> before setting it, so an UnboundLocalError is the
+               result. Uncommenting the global statement fixes the problem.</p>
+            <pre class="prettyprint notranslate">
+#!/usr/bin/python
+
+Money = 2000
+def AddMoney():
+   # Uncomment the following line to fix the code:
+   # global Money
+   Money = Money + 1
+
+print Money
+AddMoney()
+print Money
+</pre>
+            <h2>The dir( ) Function</h2>
+            <p>The dir() built-in function returns a sorted list of strings containing the names defined by a module.
+            </p>
+            <p>The list contains the names of all the modules, variables and functions that are defined in a module.
+               Following is a simple example &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/ZoifUr" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+#!/usr/bin/python
+
+# Import built-in module math
+import math
+
+content = dir(math)
+print content
+</pre>
+            <p>When the above code is executed, it produces the following result &minus;</p>
+            <pre class="result notranslate">
+['__doc__', '__file__', '__name__', 'acos', 'asin', 'atan', 
+'atan2', 'ceil', 'cos', 'cosh', 'degrees', 'e', 'exp', 
+'fabs', 'floor', 'fmod', 'frexp', 'hypot', 'ldexp', 'log',
+'log10', 'modf', 'pi', 'pow', 'radians', 'sin', 'sinh', 
+'sqrt', 'tan', 'tanh']
+</pre>
+            <p>Here, the special string variable <i>__name__</i> is the module's name, and <i>__file__</i> is the
+               filename from which the module was loaded.</p>
+            <h2>The <i>globals()</i> and <i>locals()</i> Functions</h2>
+            <p>The <i>globals()</i> and <i>locals()</i> functions can be used to return the names in the global and
+               local namespaces depending on the location from where they are called.</p>
+            <p>If locals() is called from within a function, it will return all the names that can be accessed locally
+               from that function.</p>
+            <p>If globals() is called from within a function, it will return all the names that can be accessed globally
+               from that function.</p>
+            <p>The return type of both these functions is dictionary. Therefore, names can be extracted using the keys()
+               function.</p>
+            <h2>The <i>reload()</i> Function</h2>
+            <p>When the module is imported into a script, the code in the top-level portion of a module is executed only
+               once.</p>
+            <p>Therefore, if you want to reexecute the top-level code in a module, you can use the <i>reload()</i>
+               function. The reload() function imports a previously imported module again. The syntax of the reload()
+               function is this &minus;</p>
+            <pre class="result notranslate">
+reload(module_name)
+</pre>
+            <p>Here, <i>module_name</i> is the name of the module you want to reload and not the string containing the
+               module name. For example, to reload <i>hello</i> module, do the following &minus;</p>
+            <pre class="result notranslate">
+reload(hello)
+</pre>
+            <h2>Packages in Python</h2>
+            <p>A package is a hierarchical file directory structure that defines a single Python application environment
+               that consists of modules and subpackages and sub-subpackages, and so on.</p>
+            <p>Consider a file <i>Pots.py</i> available in <i>Phone</i> directory. This file has following line of
+               source code &minus;</p>
+            <pre class="prettyprint notranslate">
+#!/usr/bin/python
+
+def Pots():
+   print "I'm Pots Phone"
+</pre>
+            <p>Similar way, we have another two files having different functions with the same name as above &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><i>Phone/Isdn.py</i> file having function Isdn()</p>
+               </li>
+               <li>
+                  <p><i>Phone/G3.py</i> file having function G3()</p>
+               </li>
+            </ul>
+            <p>Now, create one more file __init__.py in <i>Phone</i> directory &minus;</p>
+            <ul class="list">
+               <li>Phone/__init__.py</li>
+            </ul>
+            <p>To make all of your functions available when you've imported Phone, you need to put explicit import
+               statements in __init__.py as follows &minus;</p>
+            <pre class="result notranslate">
+from Pots import Pots
+from Isdn import Isdn
+from G3 import G3
+</pre>
+            <p>After you add these lines to __init__.py, you have all of these classes available when you import the
+               Phone package.</p>
+            <pre class="prettyprint notranslate">
+#!/usr/bin/python
+
+# Now import your Phone Package.
+import Phone
+
+Phone.Pots()
+Phone.Isdn()
+Phone.G3()
+</pre>
+            <p>When the above code is executed, it produces the following result &minus;</p>
+            <pre class="result notranslate">
+I'm Pots Phone
+I'm 3G Phone
+I'm ISDN Phone
+</pre>
+            <p>In the above example, we have taken example of a single functions in each file, but you can keep multiple
+               functions in your files. You can also define different Python classes in those files and then you can
+               create your packages out of those classes.</p>
+            <div class="mui-container-fluid button-borders show" id="bottom_navigation">
+               <div class="pre-btn">
+                  <a href="python_functions.html"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+               </div>
+               <div class="nxt-btn">
+                  <a href="python_files_io.html">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <footer id="footer">
+      <div class="mui--text-center">
+         <div class="mui--text-caption mui--text-light">
+            <a href="../index.html">
+               <img class="img-responsive" src="../images/logo-black.png" alt="Tutorials" title="Tutorials">
+            </a>
+         </div>
+         <ul class="mui-list--inline mui--text-body2 mui--text-light">
+            <li><a href="../about/index.html"><i class="fal fa-home"></i> About us</a></li>
+            <li><a href="../about/about_terms_of_use.html"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+            <li><a href="../about/about_privacy.html"><i class="fal fa-globe"></i> Privacy Policy</a></li>
+            <li><a href="../about/about_cookies.html"><i class="fal fa-question-circle"></i> Cookies Policy</a></li>
+            <li><a href="../about/tutorials_writing.html"><i class="fal fa-hands-helping"></i> Write for us</a></li>
+            <li><a href="../about/contact_us.html"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+            <li><a href="../about/about_careers.html"><i class="fal fa-shield-check"></i> Careers</a></li>
+         </ul>
+         <div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights
+            Reserved.</div>
+      </div>
+   </footer>
+</body>
+
+</html>

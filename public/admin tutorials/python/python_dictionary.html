@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+   <title>Python - Dictionary - Tutorialspoint</title>
+   <meta charset="utf-8">
+   <meta name="description"
+      content="Python - Dictionary - Each key is separated from its value by a colon (:), the items are separated by commas, and the whole thing is enclosed in curly braces. An empty dictionary wit" />
+   <meta name="keywords"
+      content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Programming, examples, code" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+   <link rel="stylesheet" href="../style.css">
+   <script src="../script.js"></script>
+</head>
+
+<body>
+   <header id="header">
+      <!-- Top main-menu Starts Here -->
+      <div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+         <div class="mui-container">
+            <div class="left-menu">
+               <img class="tp-logo" alt="tutorialspoint" src="../images/logo.png">
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> Python Tutorial <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="index.html">01 : Home</a></li>
+                           <li><a target="_top" href="python_overview.html">02 : Overview</a></li>
+                           <li><a target="_top" href="python_environment.html">03 : Environment Setup</a></li>
+                           <li><a target="_top" href="python_basic_syntax.html">04 : Basic Syntax</a></li>
+                           <li><a target="_top" href="python_variable_types.html">05 : Variable Types</a></li>
+                           <li><a target="_top" href="python_basic_operators.html">06 : Basic Operators</a></li>
+                           <li><a target="_top" href="python_decision_making.html">07 : Decision Making</a></li>
+                           <li><a target="_top" href="python_loops.html">08 : Loops</a></li>
+                           <li><a target="_top" href="python_numbers.html">09 : Numbers</a></li>
+                           <li><a target="_top" href="python_strings.html">10 : Strings</a></li>
+                           <li><a target="_top" href="python_lists.html">11 : Lists</a></li>
+                           <li><a target="_top" href="python_tuples.html">12 : Tuples</a></li>
+                           <li><a target="_top" href="python_dictionary.html">13 : Dictionary</a></li>
+                           <li><a target="_top" href="python_date_time.html">14 : Date &amp; Time</a></li>
+                           <li><a target="_top" href="python_functions.html">15 : Functions</a></li>
+                           <li><a target="_top" href="python_modules.html">16 : Modules</a></li>
+                           <li><a target="_top" href="python_files_io.html">17 : Files I/O</a></li>
+                           <li><a target="_top" href="python_exceptions.html">18 : Exceptions</a></li>
+                           <li><a target="_top" href="python_classes_objects.html">19 : Classes/Objects</a></li>
+                           <li><a target="_top" href="python_reg_expressions.html">20 : Reg Expressions</a></li>
+                           <li><a target="_top" href="python_cgi_programming.html">21 : CGI Programming</a></li>
+                           <li><a target="_top" href="python_database_access.html">22 : Database Access</a></li>
+                           <li><a target="_top" href="python_networking.html">23 : Networking</a></li>
+                           <li><a target="_top" href="python_sending_email.html">24 : Sending Email</a></li>
+                           <li><a target="_top" href="python_multithreading.html">25 : Multithreading</a></li>
+                           <li><a target="_top" href="python_xml_processing.html">26 : XML Processing</a></li>
+                           <li><a target="_top" href="python_gui_programming.html">27 : GUI Programming</a></li>
+                           <li><a target="_top" href="python_further_extensions.html">28 : Further Extensions</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="right-menu">
+               <a href="../index.html">
+                  <button class="mui-btn mui-btn--primary mobile-menu">home</button>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- Top main-menu Ends Here jamal -->
+   </header>
+   <div class="mui-container-fluid content">
+      <div class="mui-container">
+         <!-- Tutorial Content Starts Here -->
+         <div class="mui-col-md-12 tutorial-content">
+            <div class="cover">
+               <img class="img-responsive" src="../images/python.jpg" />
+            </div>
+            <h1>Python - Dictionary</h1>
+            <p>Each key is separated from its value by a colon (:), the items are separated by commas, and the whole
+               thing is enclosed in curly braces. An empty dictionary without any items is written with just two curly
+               braces, like this: {}.</p>
+            <p>Keys are unique within a dictionary while values may not be. The values of a dictionary can be of any
+               type, but the keys must be of an immutable data type such as strings, numbers, or tuples.</p>
+            <h2>Accessing Values in Dictionary</h2>
+            <p>To access dictionary elements, you can use the familiar square brackets along with the key to obtain its
+               value. Following is a simple example &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/KTBDvD" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+#!/usr/bin/python
+
+dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+print "dict['Name']: ", dict['Name']
+print "dict['Age']: ", dict['Age']
+</pre>
+            <p>When the above code is executed, it produces the following result &minus;</p>
+            <pre class="result notranslate">
+dict['Name']:  Zara
+dict['Age']:  7
+</pre>
+            <p>If we attempt to access a data item with a key, which is not part of the dictionary, we get an error as
+               follows &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/pzUOPx" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+#!/usr/bin/python
+
+dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+print "dict['Alice']: ", dict['Alice']
+</pre>
+            <p>When the above code is executed, it produces the following result &minus;</p>
+            <pre class="result notranslate">
+dict['Alice']:
+Traceback (most recent call last):
+   File "test.py", line 4, in &lt;module&gt;
+      print "dict['Alice']: ", dict['Alice'];
+KeyError: 'Alice'
+</pre>
+            <h2>Updating Dictionary</h2>
+            <p>You can update a dictionary by adding a new entry or a key-value pair, modifying an existing entry, or
+               deleting an existing entry as shown below in the simple example &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/porcg2" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+#!/usr/bin/python
+
+dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+dict['Age'] = 8; # update existing entry
+dict['School'] = "DPS School"; # Add new entry
+
+print "dict['Age']: ", dict['Age']
+print "dict['School']: ", dict['School']
+</pre>
+            <p>When the above code is executed, it produces the following result &minus;</p>
+            <pre class="result notranslate">
+dict['Age']:  8
+dict['School']:  DPS School
+</pre>
+            <h2>Delete Dictionary Elements</h2>
+            <p>You can either remove individual dictionary elements or clear the entire contents of a dictionary. You
+               can also delete entire dictionary in a single operation.</p>
+            <p>To explicitly remove an entire dictionary, just use the <b>del</b> statement. Following is a simple
+               example &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/mbvT73" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+#!/usr/bin/python
+
+dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}
+del dict['Name']; # remove entry with key 'Name'
+dict.clear();     # remove all entries in dict
+del dict ;        # delete entire dictionary
+
+print "dict['Age']: ", dict['Age']
+print "dict['School']: ", dict['School']
+</pre>
+            <p>This produces the following result. Note that an exception is raised because after <b>del dict</b>
+               dictionary does not exist any more &minus;</p>
+            <pre class="result notranslate">
+dict['Age']:
+Traceback (most recent call last):
+   File "test.py", line 8, in &lt;module&gt;
+      print "dict['Age']: ", dict['Age'];
+TypeError: 'type' object is unsubscriptable
+</pre>
+            <p><b>Note</b> &minus; del() method is discussed in subsequent section.</p>
+            <h2>Properties of Dictionary Keys</h2>
+            <p>Dictionary values have no restrictions. They can be any arbitrary Python object, either standard objects
+               or user-defined objects. However, same is not true for the keys.</p>
+            <p>There are two important points to remember about dictionary keys &minus;</p>
+            <p><b>(a)</b> More than one entry per key not allowed. Which means no duplicate key is allowed. When
+               duplicate keys encountered during assignment, the last assignment wins. For example &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/rEJFby" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+#!/usr/bin/python
+
+dict = {'Name': 'Zara', 'Age': 7, 'Name': 'Manni'}
+print "dict['Name']: ", dict['Name']
+</pre>
+            <p>When the above code is executed, it produces the following result &minus;</p>
+            <pre class="result notranslate">
+dict['Name']:  Manni
+</pre>
+            <p><b>(b)</b> Keys must be immutable. Which means you can use strings, numbers or tuples as dictionary keys
+               but something like ['key'] is not allowed. Following is a simple example &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/BLKmXZ" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+#!/usr/bin/python
+
+dict = {['Name']: 'Zara', 'Age': 7}
+print "dict['Name']: ", dict['Name']
+</pre>
+            <p>When the above code is executed, it produces the following result &minus;</p>
+            <pre class="result notranslate">
+Traceback (most recent call last):
+   File "test.py", line 3, in &lt;module&gt;
+      dict = {['Name']: 'Zara', 'Age': 7};
+TypeError: unhashable type: 'list'
+</pre>
+            <h2>Built-in Dictionary Functions &amp; Methods</h2>
+            <p>Python includes the following dictionary functions &minus;</p>
+            <table class="table table-bordered">
+               <tr>
+                  <th style="text-align:center;width:5%">Sr.No.</th>
+                  <th style="text-align:center;width:95%">Function with Description</th>
+               </tr>
+               <tr>
+                  <td class="ts">1</td>
+                  <td><a href="/python/dictionary_cmp.htm">cmp(dict1, dict2)</a>
+                     <p>Compares elements of both dict.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">2</td>
+                  <td><a href="/python/dictionary_len.htm">len(dict)</a>
+                     <p>Gives the total length of the dictionary. This would be equal to the number of items in the
+                        dictionary.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">3</td>
+                  <td><a href="/python/dictionary_str.htm">str(dict)</a>
+                     <p>Produces a printable string representation of a dictionary</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">4</td>
+                  <td><a href="/python/dictionary_type.htm">type(variable)</a>
+                     <p>Returns the type of the passed variable. If passed variable is dictionary, then it would return
+                        a dictionary type.</p>
+                  </td>
+               </tr>
+            </table>
+            <p>Python includes following dictionary methods &minus;</p>
+            <table class="table table-bordered">
+               <tr>
+                  <th style="width:5%">Sr.No.</th>
+                  <th style="width:95%">Methods with Description</th>
+               </tr>
+               <tr>
+                  <td class="ts">1</td>
+                  <td><a href="/python/dictionary_clear.htm">dict.clear()</a>
+                     <p>Removes all elements of dictionary <i>dict</i></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">2</td>
+                  <td><a href="/python/dictionary_copy.htm">dict.copy()</a>
+                     <p>Returns a shallow copy of dictionary <i>dict</i></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">3</td>
+                  <td><a href="/python/dictionary_fromkeys.htm">dict.fromkeys()</a>
+                     <p>Create a new dictionary with keys from seq and values <i>set</i> to <i>value</i>.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">4</td>
+                  <td><a href="/python/dictionary_get.htm">dict.get(key, default=None)</a>
+                     <p>For <i>key</i> key, returns value or default if key not in dictionary</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">5</td>
+                  <td><a href="/python/dictionary_has_key.htm">dict.has_key(key)</a>
+                     <p>Returns <i>true</i> if key in dictionary <i>dict</i>, <i>false</i> otherwise</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">6</td>
+                  <td><a href="/python/dictionary_items.htm">dict.items()</a>
+                     <p>Returns a list of <i>dict</i>'s (key, value) tuple pairs</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">7</td>
+                  <td><a href="/python/dictionary_keys.htm">dict.keys()</a>
+                     <p>Returns list of dictionary dict's keys</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">8</td>
+                  <td><a href="/python/dictionary_setdefault.htm">dict.setdefault(key, default=None)</a>
+                     <p>Similar to get(), but will set dict[key]=default if <i>key</i> is not already in dict</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">9</td>
+                  <td><a href="/python/dictionary_update.htm">dict.update(dict2)</a>
+                     <p>Adds dictionary <i>dict2</i>'s key-values pairs to <i>dict</i></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">10</td>
+                  <td><a href="/python/dictionary_values.htm">dict.values()</a>
+                     <p>Returns list of dictionary <i>dict</i>'s values</p>
+                  </td>
+               </tr>
+            </table>
+            <div class="mui-container-fluid button-borders show" id="bottom_navigation">
+               <div class="pre-btn">
+                  <a href="python_tuples.html"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+               </div>
+               <div class="nxt-btn">
+                  <a href="python_date_time.html">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <footer id="footer">
+      <div class="mui--text-center">
+         <div class="mui--text-caption mui--text-light">
+            <a href="../index.html">
+               <img class="img-responsive" src="../images/logo-black.png" alt="Tutorials" title="Tutorials">
+            </a>
+         </div>
+         <ul class="mui-list--inline mui--text-body2 mui--text-light">
+            <li><a href="../about/index.html"><i class="fal fa-home"></i> About us</a></li>
+            <li><a href="../about/about_terms_of_use.html"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+            <li><a href="../about/about_privacy.html"><i class="fal fa-globe"></i> Privacy Policy</a></li>
+            <li><a href="../about/about_cookies.html"><i class="fal fa-question-circle"></i> Cookies Policy</a></li>
+            <li><a href="../about/tutorials_writing.html"><i class="fal fa-hands-helping"></i> Write for us</a></li>
+            <li><a href="../about/contact_us.html"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+            <li><a href="../about/about_careers.html"><i class="fal fa-shield-check"></i> Careers</a></li>
+         </ul>
+         <div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights
+            Reserved.</div>
+      </div>
+   </footer>
+</body>
+
+</html>

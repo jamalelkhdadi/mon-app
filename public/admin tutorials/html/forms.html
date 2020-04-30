@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+   <title>HTML - Forms - Tutorialspoint</title>
+   <meta charset="utf-8">
+   <meta name="description"
+      content="HTML - Forms - HTML Forms are required, when you want to collect some data from the site visitor. For example, during user registration you would like to collect information s" />
+   <meta name="keywords"
+      content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Programming, examples, code" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+   <link rel="stylesheet" href="../style.css">
+   <script src="../script.js"></script>
+</head>
+
+<body>
+   <header id="header">
+      <!-- Top main-menu Starts Here -->
+      <div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+         <div class="mui-container">
+            <div class="left-menu">
+               <img class="tp-logo" alt="tutorialspoint" src="../images/logo.png">
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> HTML Tutorial <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="index.html">01 : Home</a></li>
+                           <li><a target="_top" href="overview.html">02 : Overview</a></li>
+                           <li><a target="_top" href="basic_tags.html">03 : Basic Tags</a></li>
+                           <li><a target="_top" href="elements.html">04 : Elements</a></li>
+                           <li><a target="_top" href="attributes.html">05 : Attributes</a></li>
+                           <li><a target="_top" href="formatting.html">06 : Formatting</a></li>
+                           <li><a target="_top" href="phrase_elements.html">07 : Phrase Tags</a></li>
+                           <li><a target="_top" href="meta_tags.html">08 : Meta Tags</a></li>
+                           <li><a target="_top" href="comments.html">09 : Comments</a></li>
+                           <li><a target="_top" href="images.html">10 : Images</a></li>
+                           <li><a target="_top" href="tables.html">11 : Tables</a></li>
+                           <li><a target="_top" href="lists.html">12 : Lists</a></li>
+                           <li><a target="_top" href="links.html">13 : Text Links</a></li>
+                           <li><a target="_top" href="image_links.html">14 : Image Links</a></li>
+                           <li><a target="_top" href="email_links.html">15 : Email Links</a></li>
+                           <li><a target="_top" href="frames.html">16 : Frames</a></li>
+                           <li><a target="_top" href="iframes.html">17 : Iframes</a></li>
+                           <li><a target="_top" href="blocks.html">18 : Blocks</a></li>
+                           <li><a target="_top" href="backgrounds.html">19 : Backgrounds</a></li>
+                           <li><a target="_top" href="colors.html">20 : Colors</a></li>
+                           <li><a target="_top" href="fonts.html">21 : Fonts</a></li>
+                           <li><a target="_top" href="forms.html">22 : Forms</a></li>
+                           <li><a target="_top" href="embed_multimedia.html">23 : Embed Multimedia</a>
+                           </li>
+                           <li><a target="_top" href="marquees.html">24 : Marquees</a></li>
+                           <li><a target="_top" href="header.html">25 : Header</a></li>
+                           <li><a target="_top" href="style_sheet.html">26 : Style Sheet</a></li>
+                           <li><a target="_top" href="javascript.html">27 : Javascript</a></li>
+                           <li><a target="_top" href="layouts.html">28 : Layouts</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> HTML References <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="tags_reference.html">29 : Tags Reference</a></li>
+                           <li><a target="_top" href="attributes_reference.html">30 : Attributes
+                                 Reference</a></li>
+                           <li><a target="_top" href="events_reference.html">31 : Events Reference </a>
+                           </li>
+                           <li><a target="_top" href="fonts_reference.html">32 : Fonts Reference</a></li>
+                           <li><a target="_top" href="ascii_codes.html">33 : ASCII Codes</a></li>
+                           <li><a target="_top" href="ascii_table_lookup.html">34 : ASCII Table Lookup</a>
+                           </li>
+                           <li><a target="_top" href="color_names.html">35 : Color Names</a></li>
+                           <li><a target="_top" href="entities.html">36 : Entities</a></li>
+                           <li><a target="_top" href="fonts_ref.html">37 : Fonts Ref</a></li>
+                           <li><a target="_top" href="events_ref.html">38 : Events Ref</a></li>
+                           <li><a target="_top" href="mime_media_types.html">39 : MIME Media Types</a></li>
+                           <li><a target="_top" href="url_encoding.html">40 : URL Encoding</a></li>
+                           <li><a target="_top" href="language_iso_codes.html">41 : Language ISO Codes</a>
+                           </li>
+                           <li><a target="_top" href="character_encodings.html">42 : Character
+                                 Encodings</a></li>
+                           <li><a target="_top" href="deprecated_tags.html">43 : Deprecated Tags</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="right-menu">
+               <a href="../index.html">
+                  <button class="mui-btn mui-btn--primary mobile-menu">home</button>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- Top main-menu Ends Here jamal -->
+   </header>
+   <div class="mui-container-fluid content">
+      <div class="mui-container">
+         <!-- Tutorial Content Starts Here -->
+         <div class="mui-col-md-12 tutorial-content">
+            <div class="cover">
+               <img class="img-responsive" src="../images/html.jpg" />
+            </div>
+            <h1>HTML - Forms</h1>
+            <hr />
+            <br>
+            <p>HTML Forms are required, when you want to collect some data from the site visitor. For example, during
+               user registration you would like to collect information such as name, email address, credit card, etc.
+            </p>
+            <p>A form will take input from the site visitor and then will post it to a back-end application such as CGI,
+               ASP Script or PHP script etc. The back-end application will perform required processing on the passed
+               data based on defined business logic inside the application.</p>
+            <p>There are various form elements available like text fields, textarea fields, drop-down menus, radio
+               buttons, checkboxes, etc.</p>
+            <p>The HTML <b>&lt;form&gt;</b> tag is used to create an HTML form and it has following syntax &minus;</p>
+            <pre class="result notranslate">
+&lt;form action = "Script URL" method = "GET|POST"&gt;
+   form elements like input, textarea etc.
+&lt;/form&gt;
+</pre>
+            <h2>Form Attributes</h2>
+            <p>Apart from common attributes, following is a list of the most frequently used form attributes &minus;</p>
+            <table class="table table-bordered">
+               <tr>
+                  <th>Sr.No</th>
+                  <th style="text-align:center;">Attribute &amp; Description</th>
+               </tr>
+               <tr>
+                  <td class="ts">1</td>
+                  <td>
+                     <p><b>action</b></p>
+                     <p>Backend script ready to process your passed data.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">2</td>
+                  <td>
+                     <p><b>method</b></p>
+                     <p>Method to be used to upload data. The most frequently used are GET and POST methods.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">3</td>
+                  <td>
+                     <p><b>target</b></p>
+                     <p>Specify the target window or frame where the result of the script will be displayed. It takes
+                        values like _blank, _self, _parent etc.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">4</td>
+                  <td>
+                     <p><b>enctype</b></p>
+                     <p>You can use the enctype attribute to specify how the browser encodes the data before it sends it
+                        to the server. Possible values are &minus;</p>
+                     <p><b>application/x-www-form-urlencoded</b> &minus; This is the standard method most forms use in
+                        simple scenarios.</p>
+                     <p><b>mutlipart/form-data</b> &minus; This is used when you want to upload binary data in the form
+                        of files like image, word file etc.</p>
+                  </td>
+               </tr>
+            </table>
+            <p><b>Note</b> &minus; You can refer to <a href="/perl/perl_cgi_programming.htm">Perl &amp; CGI</a> for a
+               detail on how form data upload works.</p>
+            <h2>HTML Form Controls</h2>
+            <p>There are different types of form controls that you can use to collect data using HTML form &minus;</p>
+            <ul class="list">
+               <li>Text Input Controls</li>
+               <li>Checkboxes Controls</li>
+               <li>Radio Box Controls</li>
+               <li>Select Box Controls</li>
+               <li>File Select boxes</li>
+               <li>Hidden Controls</li>
+               <li>Clickable Buttons</li>
+               <li>Submit and Reset Button</li>
+            </ul>
+            <h2>Text Input Controls</h2>
+            <p>There are three types of text input used on forms &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>Single-line text input controls</b> &minus; This control is used for items that require only one
+                     line of user input, such as search boxes or names. They are created using HTML <b>&lt;input&gt;</b>
+                     tag.</p>
+               </li>
+               <li>
+                  <p><b>Password input controls</b> &minus; This is also a single-line text input but it masks the
+                     character as soon as a user enters it. They are also created using HTMl &lt;input&gt; tag.</p>
+               </li>
+               <li>
+                  <p><b>Multi-line text input controls</b> &minus; This is used when the user is required to give
+                     details that may be longer than a single sentence. Multi-line input controls are created using HTML
+                     <b>&lt;textarea&gt;</b> tag.</p>
+               </li>
+            </ul>
+            <h2>Single-line text input controls</h2>
+            <p>This control is used for items that require only one line of user input, such as search boxes or names.
+               They are created using HTML &lt;input&gt; tag.</p>
+            <h3>Example</h3>
+            <p>Here is a basic example of a single-line text input used to take first name and last name &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/rsDvtp" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;Text Input Control&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;form &gt;
+         First name: &lt;input type = "text" name = "first_name" /&gt;
+         &lt;br&gt;
+         Last name: &lt;input type = "text" name = "last_name" /&gt;
+      &lt;/form&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html/src/single_line_text_input.htm" height="100px"
+               width="660px"></iframe>
+            <h2>Attributes</h2>
+            <p>Following is the list of attributes for &lt;input&gt; tag for creating text field.</p>
+            <table class="table table-bordered">
+               <tr>
+                  <th>Sr.No</th>
+                  <th style="text-align:center;">Attribute &amp; Description</th>
+               </tr>
+               <tr>
+                  <td class="ts">1</td>
+                  <td>
+                     <p><b>type</b></p>
+                     <p>Indicates the type of input control and for text input control it will be set to <b>text</b>.
+                     </p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">2</td>
+                  <td>
+                     <p><b>name</b></p>
+                     <p>Used to give a name to the control which is sent to the server to be recognized and get the
+                        value.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">3</td>
+                  <td>
+                     <p><b>value</b></p>
+                     <p>This can be used to provide an initial value inside the control.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">4</td>
+                  <td>
+                     <p><b>size</b></p>
+                     <p>Allows to specify the width of the text-input control in terms of characters.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">5</td>
+                  <td>
+                     <p><b>maxlength</b></p>
+                     <p>Allows to specify the maximum number of characters a user can enter into the text box.</p>
+                  </td>
+               </tr>
+            </table>
+            <h2>Password input controls</h2>
+            <p>This is also a single-line text input but it masks the character as soon as a user enters it. They are
+               also created using HTML &lt;input&gt;tag but type attribute is set to <b>password</b>.</p>
+            <h3>Example</h3>
+            <p>Here is a basic example of a single-line password input used to take user password &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/3lbdUK" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;Password Input Control&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;form &gt;
+         User ID : &lt;input type = "text" name = "user_id" /&gt;
+         &lt;br&gt;
+         Password: &lt;input type = "password" name = "password" /&gt;
+      &lt;/form&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html/src/password_input_controls.htm" height="100px"
+               width="660px"></iframe>
+            <h2>Attributes</h2>
+            <p>Following is the list of attributes for &lt;input&gt; tag for creating password field.</p>
+            <table class="table table-bordered">
+               <tr>
+                  <th>Sr.No</th>
+                  <th style="text-align:center;">Attribute &amp; Description</th>
+               </tr>
+               <tr>
+                  <td class="ts">1</td>
+                  <td>
+                     <p><b>type</b></p>
+                     <p>Indicates the type of input control and for password input control it will be set to
+                        <b>password</b>.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">2</td>
+                  <td>
+                     <p><b>name</b></p>
+                     <p>Used to give a name to the control which is sent to the server to be recognized and get the
+                        value.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">3</td>
+                  <td>
+                     <p><b>value</b></p>
+                     <p>This can be used to provide an initial value inside the control.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">4</td>
+                  <td>
+                     <p><b>size</b></p>
+                     <p>Allows to specify the width of the text-input control in terms of characters.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">5</td>
+                  <td>
+                     <p><b>maxlength</b></p>
+                     <p>Allows to specify the maximum number of characters a user can enter into the text box.</p>
+                  </td>
+               </tr>
+            </table>
+            <h2>Multiple-Line Text Input Controls</h2>
+            <p>This is used when the user is required to give details that may be longer than a single sentence.
+               Multi-line input controls are created using HTML &lt;textarea&gt; tag.</p>
+            <h3>Example</h3>
+            <p>Here is a basic example of a multi-line text input used to take item description &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/oHNbzQ" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;Multiple-Line Input Control&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;form&gt;
+         Description : &lt;br /&gt;
+         &lt;textarea rows = "5" cols = "50" name = "description"&gt;
+            Enter description here...
+         &lt;/textarea&gt;
+      &lt;/form&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html/src/multiple_line_text.htm" height="150px"
+               width="660px"></iframe>
+            <h2>Attributes</h2>
+            <p>Following is the list of attributes for &lt;textarea&gt; tag.</p>
+            <table class="table table-bordered">
+               <tr>
+                  <th>Sr.No</th>
+                  <th style="text-align:center;">Attribute &amp; Description</th>
+               </tr>
+               <tr>
+                  <td class="ts">1</td>
+                  <td>
+                     <p><b>name</b></p>
+                     <p>Used to give a name to the control which is sent to the server to be recognized and get the
+                        value.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">2</td>
+                  <td>
+                     <p><b>rows</b></p>
+                     <p>Indicates the number of rows of text area box.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">3</td>
+                  <td>
+                     <p><b>cols</b></p>
+                     <p>Indicates the number of columns of text area box</p>
+                  </td>
+               </tr>
+            </table>
+            <h2>Checkbox Control</h2>
+            <p>Checkboxes are used when more than one option is required to be selected. They are also created using
+               HTML &lt;input&gt; tag but type attribute is set to <b>checkbox.</b>.</p>
+            <h3>Example</h3>
+            <p>Here is an example HTML code for a form with two checkboxes &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/VLMQaA" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;Checkbox Control&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;form&gt;
+         &lt;input type = "checkbox" name = "maths" value = "on"&gt; Maths
+         &lt;input type = "checkbox" name = "physics" value = "on"&gt; Physics
+      &lt;/form&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html/src/checkbox_control.htm" height="100px"
+               width="660px"></iframe>
+            <h2>Attributes</h2>
+            <p>Following is the list of attributes for &lt;checkbox&gt; tag.</p>
+            <table class="table table-bordered">
+               <tr>
+                  <th>Sr.No</th>
+                  <th style="text-align:center;">Attribute &amp; Description</th>
+               </tr>
+               <tr>
+                  <td class="ts">1</td>
+                  <td>
+                     <p><b>type</b></p>
+                     <p>Indicates the type of input control and for checkbox input control it will be set to
+                        <b>checkbox.</b>.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">2</td>
+                  <td>
+                     <p><b>name</b></p>
+                     <p>Used to give a name to the control which is sent to the server to be recognized and get the
+                        value.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">3</td>
+                  <td>
+                     <p><b>value</b></p>
+                     <p>The value that will be used if the checkbox is selected.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">4</td>
+                  <td>
+                     <p><b>checked</b></p>
+                     <p>Set to <i>checked</i> if you want to select it by default.</p>
+                  </td>
+               </tr>
+            </table>
+            <h2>Radio Button Control</h2>
+            <p>Radio buttons are used when out of many options, just one option is required to be selected. They are
+               also created using HTML &lt;input&gt; tag but type attribute is set to <b>radio</b>.</p>
+            <h3>Example</h3>
+            <p>Here is example HTML code for a form with two radio buttons &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/KtRu65" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;Radio Box Control&lt;/title&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;form&gt;
+         &lt;input type = "radio" name = "subject" value = "maths"&gt; Maths
+         &lt;input type = "radio" name = "subject" value = "physics"&gt; Physics
+      &lt;/form&gt;
+   &lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html/src/radio_button_control.htm" height="100px"
+               width="660px"></iframe>
+            <h2>Attributes</h2>
+            <p>Following is the list of attributes for radio button.</p>
+            <table class="table table-bordered">
+               <tr>
+                  <th>Sr.No</th>
+                  <th style="text-align:center;">Attribute &amp; Description</th>
+               </tr>
+               <tr>
+                  <td class="ts">1</td>
+                  <td>
+                     <p><b>type</b></p>
+                     <p>Indicates the type of input control and for checkbox input control it will be set to radio.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">2</td>
+                  <td>
+                     <p><b>name</b></p>
+                     <p>Used to give a name to the control which is sent to the server to be recognized and get the
+                        value.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">3</td>
+                  <td>
+                     <p><b>value</b></p>
+                     <p>The value that will be used if the radio box is selected.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">4</td>
+                  <td>
+                     <p><b>checked</b></p>
+                     <p>Set to <i>checked</i> if you want to select it by default.</p>
+                  </td>
+               </tr>
+            </table>
+            <h2>Select Box Control</h2>
+            <p>A select box, also called drop down box which provides option to list down various options in the form of
+               drop down list, from where a user can select one or more options.</p>
+            <h3>Example</h3>
+            <p>Here is example HTML code for a form with one drop down box</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/Ofo4UQ" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;Select Box Control&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;form&gt;
+         &lt;select name = "dropdown"&gt;
+            &lt;option value = "Maths" selected&gt;Maths&lt;/option&gt;
+            &lt;option value = "Physics"&gt;Physics&lt;/option&gt;
+         &lt;/select&gt;
+      &lt;/form&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html/src/select_box_control.htm" height="100px"
+               width="660px"></iframe>
+            <h2>Attributes</h2>
+            <p>Following is the list of important attributes of &lt;select&gt; tag &minus;</p>
+            <table class="table table-bordered">
+               <tr>
+                  <th>Sr.No</th>
+                  <th style="text-align:center;">Attribute &amp; Description</th>
+               </tr>
+               <tr>
+                  <td class="ts">1</td>
+                  <td>
+                     <p><b>name</b></p>
+                     <p>Used to give a name to the control which is sent to the server to be recognized and get the
+                        value.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">2</td>
+                  <td>
+                     <p><b>size</b></p>
+                     <p>This can be used to present a scrolling list box.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">3</td>
+                  <td>
+                     <p><b>multiple</b></p>
+                     <p>If set to "multiple" then allows a user to select multiple items from the menu.</p>
+                  </td>
+               </tr>
+            </table>
+            <p>Following is the list of important attributes of &lt;option&gt; tag &minus;</p>
+            <table class="table table-bordered">
+               <tr>
+                  <th>Sr.No</th>
+                  <th style="text-align:center;">Attribute &amp; Description</th>
+               </tr>
+               <tr>
+                  <td class="ts">1</td>
+                  <td>
+                     <p><b>value</b></p>
+                     <p>The value that will be used if an option in the select box box is selected.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">2</td>
+                  <td>
+                     <p><b>selected</b></p>
+                     <p>Specifies that this option should be the initially selected value when the page loads.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">3</td>
+                  <td>
+                     <p><b>label</b></p>
+                     <p>An alternative way of labeling options</p>
+                  </td>
+               </tr>
+            </table>
+            <h2>File Upload Box</h2>
+            <p>If you want to allow a user to upload a file to your web site, you will need to use a file upload box,
+               also known as a file select box. This is also created using the &lt;input&gt; element but type attribute
+               is set to <b>file</b>.</p>
+            <h3>Example</h3>
+            <p>Here is example HTML code for a form with one file upload box &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/OqYwor" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;File Upload Box&lt;/title&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;form&gt;
+         &lt;input type = "file" name = "fileupload" accept = "image/*" /&gt;
+      &lt;/form&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html/src/file_upload_box.htm" height="100px"
+               width="660px"></iframe>
+            <h2>Attributes</h2>
+            <p>Following is the list of important attributes of file upload box &minus;</p>
+            <table class="table table-bordered">
+               <tr>
+                  <th>Sr.No</th>
+                  <th style="text-align:center;">Attribute &amp; Description</th>
+               </tr>
+               <tr>
+                  <td class="ts">1</td>
+                  <td>
+                     <p><b>name</b></p>
+                     <p>Used to give a name to the control which is sent to the server to be recognized and get the
+                        value.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">2</td>
+                  <td>
+                     <p><b>accept</b></p>
+                     <p>Specifies the types of files that the server accepts.</p>
+                  </td>
+               </tr>
+            </table>
+            <h2>Button Controls</h2>
+            <p>There are various ways in HTML to create clickable buttons. You can also create a clickable button using
+               &lt;input&gt;tag by setting its type attribute to <b>button</b>. The type attribute can take the
+               following values &minus;</p>
+            <table class="table table-bordered">
+               <tr>
+                  <th>Sr.No</th>
+                  <th style="text-align:center;">Type &amp; Description</th>
+               </tr>
+               <tr>
+                  <td class="ts">1</td>
+                  <td>
+                     <p><b>submit</b></p>
+                     <p>This creates a button that automatically submits a form.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">2</td>
+                  <td>
+                     <p><b>reset</b></p>
+                     <p>This creates a button that automatically resets form controls to their initial values.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">3</td>
+                  <td>
+                     <p><b>button</b></p>
+                     <p>This creates a button that is used to trigger a client-side script when the user clicks that
+                        button.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">4</td>
+                  <td>
+                     <p><b>image</b></p>
+                     <p>This creates a clickable button but we can use an image as background of the button.</p>
+                  </td>
+               </tr>
+            </table>
+            <h3>Example</h3>
+            <p>Here is example HTML code for a form with three types of buttons &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/PeT9hv" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;File Upload Box&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;form&gt;
+         &lt;input type = "submit" name = "submit" value = "Submit" /&gt;
+         &lt;input type = "reset" name = "reset"  value = "Reset" /&gt;
+         &lt;input type = "button" name = "ok" value = "OK" /&gt;
+         &lt;input type = "image" name = "imagebutton" src = "/html/images/logo.png" /&gt;
+      &lt;/form&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html/src/button_controls.htm" height="150px"
+               width="660px"></iframe>
+            <h2>Hidden Form Controls</h2>
+            <p>Hidden form controls are used to hide data inside the page which later on can be pushed to the server.
+               This control hides inside the code and does not appear on the actual page. For example, following hidden
+               form is being used to keep current page number. When a user will click next page then the value of hidden
+               control will be sent to the web server and there it will decide which page will be displayed next based
+               on the passed current page.</p>
+            <h3>Example</h3>
+            <p>Here is example HTML code to show the usage of hidden control &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/1SKStx" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;File Upload Box&lt;/title&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;form&gt;
+         &lt;p&gt;This is page 10&lt;/p&gt;
+         &lt;input type = "hidden" name = "pagename" value = "10" /&gt;
+         &lt;input type = "submit" name = "submit" value = "Submit" /&gt;
+         &lt;input type = "reset" name = "reset"  value = "Reset" /&gt;
+      &lt;/form&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html/src/hidden_form_controls.htm" height="100px"
+               width="660px"></iframe>
+
+            <div class="mui-container-fluid button-borders show" id="bottom_navigation">
+               <div class="pre-btn">
+                  <a href="fonts.html"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+               </div>
+               <div class="nxt-btn">
+                  <a href="embed_multimedia.html">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+               </div>
+            </div>
+         </div>
+         <!-- Tutorial Content Ends Here -->
+      </div>
+   </div>
+   <footer id="footer">
+      <div class="mui--text-center">
+         <div class="mui--text-caption mui--text-light">
+            <a href="../index.html">
+               <img class="img-responsive" src="../images/logo-black.png" alt="Tutorials" title="Tutorials">
+            </a>
+         </div>
+         <ul class="mui-list--inline mui--text-body2 mui--text-light">
+            <li><a href="../about/index.html"><i class="fal fa-home"></i> About us</a></li>
+            <li><a href="../about/about_terms_of_use.html"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+            <li><a href="../about/about_privacy.html"><i class="fal fa-globe"></i> Privacy Policy</a></li>
+            <li><a href="../about/about_cookies.html"><i class="fal fa-question-circle"></i> Cookies Policy</a></li>
+            <li><a href="../about/tutorials_writing.html"><i class="fal fa-hands-helping"></i> Write for us</a></li>
+            <li><a href="../about/contact_us.html"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+            <li><a href="../about/about_careers.html"><i class="fal fa-shield-check"></i> Careers</a></li>
+         </ul>
+         <div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights
+            Reserved.</div>
+      </div>
+   </footer>
+</body>
+
+</html>

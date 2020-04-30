@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+   <title>CSS - Fonts - Tutorialspoint</title>
+   <meta charset="utf-8">
+   <meta name="description"
+      content="CSS - Fonts - This chapter teaches you how to set fonts of a content, available in an HTML element. You can set following font properties of an element −" />
+   <meta name="keywords"
+      content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Programming, examples, code" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+   <link rel="stylesheet" href="../style.css">
+   <script src="../script.js"></script>
+</head>
+
+<body>
+   <header id="header">
+      <!-- Top main-menu Starts Here -->
+      <div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+         <div class="mui-container">
+            <div class="left-menu">
+               <img class="tp-logo" alt="tutorialspoint" src="../images/logo.png">
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> CSS Tutorial <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="index.html">CSS - Home</a></li>
+                           <li><a target="_top" href="what_is_css.html">CSS - Introduction</a></li>
+                           <li><a target="_top" href="css_syntax.html">CSS - Syntax</a></li>
+                           <li><a target="_top" href="css_inclusion.html">CSS - Inclusion</a></li>
+                           <li><a target="_top" href="css_measurement_units.html">CSS - Measurement Units</a></li>
+                           <li><a target="_top" href="css_colors.html">CSS - Colors</a></li>
+                           <li><a target="_top" href="css_backgrounds.html">CSS - Backgrounds</a></li>
+                           <li><a target="_top" href="css_fonts.html">CSS - Fonts</a></li>
+                           <li><a target="_top" href="css_text.html">CSS - Text</a></li>
+                           <li><a target="_top" href="css_images.html">CSS - Images</a></li>
+                           <li><a target="_top" href="css_links.html">CSS - Links</a></li>
+                           <li><a target="_top" href="css_tables.html">CSS - Tables</a></li>
+                           <li><a target="_top" href="css_borders.html">CSS - Borders</a></li>
+                           <li><a target="_top" href="css_margins.html">CSS - Margins</a></li>
+                           <li><a target="_top" href="css_lists.html">CSS - Lists</a></li>
+                           <li><a target="_top" href="css_padding.html">CSS - Padding</a></li>
+                           <li><a target="_top" href="css_cursors.html">CSS - Cursors</a></li>
+                           <li><a target="_top" href="css_outlines.html">CSS - Outlines</a></li>
+                           <li><a target="_top" href="css_dimension.html">CSS - Dimension</a></li>
+                           <li><a target="_top" href="css_scrollbars.html">CSS - Scrollbars</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> CSS Advanced <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="css_visibility.html">CSS - Visibility</a></li>
+                           <li><a target="_top" href="css_positioning.html">CSS - Positioning</a></li>
+                           <li><a target="_top" href="css_layers.html">CSS - Layers</a></li>
+                           <li><a target="_top" href="css_pseudo_classes.html">CSS - Pseudo Classes</a></li>
+                           <li><a target="_top" href="css_pseudo_elements.html">CSS - Pseudo Elements</a></li>
+                           <li><a target="_top" href="css_at_rules.html">CSS - @ Rules</a></li>
+                           <li><a target="_top" href="css_text_effects.html">CSS - Text Effects</a></li>
+                           <li><a target="_top" href="css_media_types.html">CSS - Media Types</a></li>
+                           <li><a target="_top" href="css_paged_media.html">CSS - Paged Media</a></li>
+                           <li><a target="_top" href="css_aural_media.html">CSS - Aural Media</a></li>
+                           <li><a target="_top" href="css_printing.html">CSS - Printing</a></li>
+                           <li><a target="_top" href="css_layouts.html">CSS - Layouts</a></li>
+                           <li><a target="_top" href="css_validations.html">CSS - Validations</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> CSS3 Tutorial <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="css3_tutorial.html">CSS3 - Tutorial</a></li>
+                           <li><a target="_top" href="css3_rounded_corner.html">CSS3 - Rounded Corner</a></li>
+                           <li><a target="_top" href="css3_boarder_image.html">CSS3 - Border Images</a></li>
+                           <li><a target="_top" href="css3_multi_background.html">CSS3 - Multi Background</a></li>
+                           <li><a target="_top" href="css3_color.html">CSS3 - Color</a></li>
+                           <li><a target="_top" href="css3_gradients.html">CSS3 - Gradients</a></li>
+                           <li><a target="_top" href="css3_shadow.html">CSS3 - Shadow</a></li>
+                           <li><a target="_top" href="css3_text.html">CSS3 - Text</a></li>
+                           <li><a target="_top" href="css3_web_font.html">CSS3 - Web font</a></li>
+                           <li><a target="_top" href="css3_2d_transform.html">CSS3 - 2d transform</a></li>
+                           <li><a target="_top" href="css3_3d_transform.html">CSS3 - 3d transform</a></li>
+                           <li><a target="_top" href="css3_animation.html">CSS3 - Animation</a></li>
+                           <li><a target="_top" href="css3_multi_columns.html">CSS3 - Multi columns</a></li>
+                           <li><a target="_top" href="css3_userinterface.html">CSS3 - User Interface</a></li>
+                           <li><a target="_top" href="css3_box_sizing.html">CSS3 - Box Sizing</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> CSS References & tools <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="css_responsive.html">Responsive Web Design</a></li>
+                           <li><a target="_top" href="css_references.html">CSS - References</a></li>
+                           <li><a target="_top" href="css_color_references.html">CSS - Color References</a></li>
+                           <li><a target="_top" href="css_web_fonts.html">CSS - Web safe fonts</a></li>
+                           <li><a target="_top" href="css_units.html">CSS - Units</a></li>
+                           <li><a target="_top" href="css_animation.html">CSS - Animation</a></li>
+                           <li><a target="_top" href="css_converter.html">CSS - PX to EM converter</a></li>
+                           <li><a target="_top" href="css_color_picker.html">Color Chooser &amp; Animation</a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="right-menu">
+               <a href="../index.html">
+                  <button class="mui-btn mui-btn--primary mobile-menu">home</button>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- Top main-menu Ends Here jamal -->
+   </header>
+   <div class="mui-container-fluid content">
+      <div class="mui-container">
+         <!-- Tutorial Content Starts Here -->
+         <div class="mui-col-md-12 tutorial-content">
+            <div class="cover">
+               <img class="img-responsive" src="../images/css.jpg" />
+            </div>
+            <h1>CSS - Fonts</h1>
+            <hr />
+            <br>
+            <p>This chapter teaches you how to set fonts of a content, available in an HTML element. You can set
+               following font properties of an element &minus;</p>
+            <ul class="list">
+               <li>
+                  <p>The <b>font-family</b> property is used to change the face of a font.</p>
+               </li>
+               <li>
+                  <p>The <b>font-style</b> property is used to make a font italic or oblique.</p>
+               </li>
+               <li>
+                  <p>The <b>font-variant</b> property is used to create a small-caps effect.</p>
+               </li>
+               <li>
+                  <p>The <b>font-weight</b> property is used to increase or decrease how bold or light a font appears.
+                  </p>
+               </li>
+               <li>
+                  <p>The <b>font-size</b> property is used to increase or decrease the size of a font.</p>
+               </li>
+               <li>
+                  <p>The <b>font</b> property is used as shorthand to specify a number of other font properties.</p>
+               </li>
+            </ul>
+            <h2>Set the Font Family</h2>
+            <p>Following is the example, which demonstrates how to set the font family of an element. Possible value
+               could be any font family name.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/bodklA" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;p <b>style = "font-family:georgia,garamond,serif;"</b>&gt;
+         This text is rendered in either georgia, garamond, or the 
+         default serif font depending on which font  you have at your system.
+      &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            <p>This will produce following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/css_font1.htm" height="70px"
+               width="660px"></iframe>
+            <h2>Set the Font Style</h2>
+            <p>Following is the example, which demonstrates how to set the font style of an element. Possible values are
+               <i>normal, italic and oblique</i>.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/5ag0Uy" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;p <b>style = "font-style:italic;"</b>&gt;
+         This text will be rendered in italic style
+      &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt; 
+</pre>
+            <p>This will produce following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/css_font5.htm" height="50px"
+               width="660px"></iframe>
+            <h2>Set the Font Variant</h2>
+            <p>The following example demonstrates how to set the font variant of an element. Possible values are
+               <i>normal and small-caps</i>.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/gjK7kb" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;p <b>style = "font-variant:small-caps;"</b>&gt;
+         This text will be rendered as small caps
+      &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt; 
+</pre>
+            <p>This will produce following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/css_font6.htm" height="50px"
+               width="660px"></iframe>
+            <h2>Set the Font Weight</h2>
+            <p>The following example demonstrates how to set the font weight of an element. The font-weight property
+               provides the functionality to specify how bold a font is. Possible values could be <i>normal, bold,
+                  bolder, lighter, 100, 200, 300, 400, 500, 600, 700, 800, 900</i>.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/HKBdoD" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;p <b>style = "font-weight:bold;"</b>&gt;
+         This font is bold.
+      &lt;/p&gt;
+      
+      &lt;p <b>style = "font-weight:bolder;"</b>&gt;
+         This font is bolder.
+      &lt;/p&gt;
+      
+      &lt;p <b>style = "font-weight:500;"</b>&gt;
+         This font is 500 weight.
+      &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt; 
+</pre>
+            <p>This will produce following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/css_font7.htm" height="120px"
+               width="660px"></iframe>
+            <h2>Set the Font Size</h2>
+            <p>The following example demonstrates how to set the font size of an element. The font-size property is used
+               to control the size of fonts. Possible values could be <i>xx-small, x-small, small, medium, large,
+                  x-large, xx-large, smaller, larger, size in pixels or in %</i>.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/EBK78e" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;p <b>style = "font-size:20px;"</b>&gt;
+         This font size is 20 pixels
+      &lt;/p&gt;
+      
+      &lt;p <b>style = "font-size:small;"</b>&gt;
+         This font size is small
+      &lt;/p&gt;
+      
+      &lt;p <b>style = "font-size:large;"</b>&gt;
+         This font size is large
+      &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt; 
+</pre>
+            <p>This will produce following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/css_font2.htm" height="150px"
+               width="660px"></iframe>
+            <h2>Set the Font Size Adjust</h2>
+            <p>The following example demonstrates how to set the font size adjust of an element. This property enables
+               you to adjust the x-height to make fonts more legible. Possible value could be any number.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/YQiR1i" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;p <b>style = "font-size-adjust:0.61;"</b>&gt;
+         This text is using a font-size-adjust value.
+      &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt; 
+</pre>
+            <p>This will produce following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/css_font3.htm" height="70px"
+               width="660px"></iframe>
+            <h2>Set the Font Stretch</h2>
+            <p>The following example demonstrates how to set the font stretch of an element. This property relies on the
+               user's computer to have an expanded or condensed version of the font being used.</p>
+            <p>Possible values could be <i>normal, wider, narrower, ultra-condensed, extra-condensed, condensed,
+                  semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded</i>.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/hknNR1" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;p <b>style = "font-stretch:ultra-expanded;"</b>&gt;
+         If this doesn't appear to work, it is likely that your computer 
+         doesn't have a &lt;br&gt;condensed or expanded version of the font being used.
+      &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt; 
+</pre>
+            <p>This will produce following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/css_font4.htm" height="100px"
+               width="660px"></iframe>
+            <h2>Shorthand Property</h2>
+            <p>You can use the <i>font</i> property to set all the font properties at once. For example &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/Rsu4Ct" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;p <b>style = "font:italic small-caps bold 15px georgia;"</b>&gt;
+         Applying all the properties on the text at once.
+      &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            <p>This will produce following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/css_font.htm" height="70px"
+               width="660px"></iframe>
+            <div class="mui-container-fluid button-borders show" id="bottom_navigation">
+               <div class="pre-btn">
+                  <a href="/css/css_backgrounds.htm"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+                  <a class="hide-on-mobile" href="javascript:printPage();"><i class="fa fa-print"></i> Print Page</a>
+               </div>
+               <div class="nxt-btn">
+                  <a href="/css/css_text.htm">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+               </div>
+            </div>
+            <div class="google-bottom-ads">
+               <div>Advertisements</div>
+               <div>
+                  <div id="vi_bottom_ads"></div>
+                  <script>
+                     (function () {
+                        var adPos = document.getElementById('vi_bottom_ads');
+                        var mobile_ad_id = "vi_9017967";
+                        var desktop_ad_id = "vi_9013190";
+                        var ad_id = window.innerWidth <= 768 ? mobile_ad_id : desktop_ad_id;
+                        adPos.innerHTML = '<div class="adsbyvli" data-ad-slot="' + ad_id + '"></div>';
+                        (vitag.displayInit = window.vitag.displayInit || []).push(function () {
+                           viAPItag.display(ad_id);
+                        });
+                     }())
+                  </script>
+               </div>
+               <div class="space-bottom"></div>
+            </div>
+         </div>
+         <!-- Tutorial Content Ends Here -->
+         <!-- Right Column Starts Here -->
+         <div class="mui-col-md-2 google-right-ads">
+            <div class="space-top"></div>
+            <div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;">
+               <div class="adsbyvli" data-ad-slot="vi_9017966"></div>
+               <script>(vitag.Init = window.vitag.Init || []).push(function () { viAPItag.display("vi_9017966") })</script>
+            </div>
+            <div class="google-right-ad" style="margin-top:16px;">
+               <div class="adsbyvli" data-ad-slot="vi_9017967"></div>
+               <script>(vitag.Init = window.vitag.Init || []).push(function () { viAPItag.display("vi_9017967") })</script>
+            </div>
+            <div class="google-right-ad" style="margin-top:16px;margin-bottom:15px;">
+               <div class="adsbyvli" data-ad-slot="vi_9013289"></div>
+               <script>(vitag.Init = window.vitag.Init || []).push(function () { viAPItag.display("vi_9013289") })</script>
+            </div>
+            <div class="space-bottom" style="margin-bottom:15px;"></div>
+         </div>
+         <!-- Right Column Ends Here -->
+      </div>
+   </div>
+   <div class="clear"></div>
+   <footer id="footer">
+      <div class="mui--text-center">
+         <div class="mui--text-caption mui--text-light">
+            <a href="/index.htm" class="logo"><img class="img-responsive" src="/images/logo-black.png"
+                  alt="Tutorials Point" title="Tutorials Point"></a>
+         </div>
+         <ul class="mui-list--inline mui--text-body2 mui--text-light">
+            <li><a href="/about/index.htm"><i class="fal fa-globe"></i> About us</a></li>
+            <li><a href="/about/about_terms_of_use.htm"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+            <li><a href="/about/about_privacy.htm"> <i class="fal fa-shield-check"></i> Privacy Policy</a></li>
+            <li><a href="/about/faq.htm"><i class="fal fa-question-circle"></i> FAQ's</a></li>
+            <li><a href="/about/about_helping.htm"><i class="fal fa-hands-helping"></i> Helping</a></li>
+            <li><a href="/about/contact_us.htm"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+         </ul>
+         <div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights
+            Reserved.</div>
+      </div>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-232293-17"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag() { dataLayer.push(arguments); }
+         gtag('js', new Date());
+         gtag('config', 'UA-232293-6');
+      </script>
+   </footer>
+</body>
+
+</html>

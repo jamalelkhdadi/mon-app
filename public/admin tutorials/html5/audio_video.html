@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+   <title>HTML5 - Audio & Video - Tutorialspoint</title>
+   <meta charset="utf-8">
+   <meta name="description"
+      content="HTML5 - Audio & Video - HTML5 features include native audio and video support without the need for Flash." />
+   <meta name="keywords"
+      content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Programming, examples, code" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+   <link rel="stylesheet" href="../style.css">
+   <script src="../script.js"></script>
+</head>
+
+<body>
+   <header id="header">
+      <!-- Top main-menu Starts Here -->
+      <div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+         <div class="mui-container">
+            <div class="left-menu">
+               <img class="tp-logo" alt="tutorialspoint" src="../images/logo.png">
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> HTML5 Tutorial <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="index.html">01 - Home</a></li>
+                           <li><a target="_top" href="overview.html">02 - Overview</a></li>
+                           <li><a target="_top" href="syntax.html">03 - Syntax</a></li>
+                           <li><a target="_top" href="attributes.html">04 - Attributes</a></li>
+                           <li><a target="_top" href="events.html">05 - Events</a></li>
+                           <li><a target="_top" href="web_forms2.html">06 - Web Forms 2.0</a></li>
+                           <li><a target="_top" href="svg.html">07 - SVG</a></li>
+                           <li><a target="_top" href="mathml.html">08 - MathML</a></li>
+                           <li><a target="_top" href="web_storage.html">09 - Web Storage</a></li>
+                           <li><a target="_top" href="web_sql.html">10 - Web SQL Database</a></li>
+                           <li><a target="_top" href="server_sent_events.html">11 - Server-Sent Events</a></li>
+                           <li><a target="_top" href="websocket.html">12 - WebSocket</a></li>
+                           <li><a target="_top" href="canvas.html">13 - Canvas</a></li>
+                           <li><a target="_top" href="audio_video.html">14 - Audio &amp; Video</a></li>
+                           <li><a target="_top" href="geolocation.html">15 - Geolocation</a></li>
+                           <li><a target="_top" href="microdata.html">16 - Microdata</a></li>
+                           <li><a target="_top" href="drag_drop.html">17 - Drag &amp; drop</a></li>
+                           <li><a target="_top" href="web_workers.html">18 - Web Workers</a></li>
+                           <li><a target="_top" href="indexeddb.html">19 - IndexedDB</a></li>
+                           <li><a target="_top" href="web_messaging.html">20 - Web Messaging</a></li>
+                           <li><a target="_top" href="cors.html">21 - Web CORS</a></li>
+                           <li><a target="_top" href="web_rtc.html">22 - Web RTC</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> HTML5 Demo <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="web_storage-demo.html">23 - Web Storage Demo</a></li>
+                           <li><a target="_top" href="server_sent_events-demo.html">24 - Server SentEvents</a>
+                           </li>
+                           <li><a target="_top" href="canvas_demo.html">25 - Canvas Demo</a></li>
+                           <li><a target="_top" href="audio_demo.html">26 - Audio Players Demo</a></li>
+                           <li><a target="_top" href="video_demo.html">27 - Video Players Demo</a></li>
+                           <li><a target="_top" href="geo_demo.html">28 - Geo-Location Demo</a></li>
+                           <li><a target="_top" href="drag_demo.html">29 - Drag and Drop Demo</a></li>
+                           <li><a target="_top" href="web_workers-demo.html">30 - Web Worker Demo</a></li>
+                           <li><a target="_top" href="slide_desk-demo.html">31 - Web slide Desk Demo</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> HTML5 Tools <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="svg_tool.html">32 - SVG Generator </a></li>
+                           <li><a target="_top" href="mathml-tool.html">33 - MathML Tool</a></li>
+                           <li><a target="_top" href="velocity.html">34 - Velocity Draw </a></li>
+                           <li><a target="_top" href="qr_code.html">35 - QR Code </a></li>
+                           <li><a target="_top" href="validator.html">36 - Validator.nu Validation</a></li>
+                           <li><a target="_top" href="modernizr.html">37 - Modernizr</a></li>
+                           <li><a target="_top" href="validation.html">38 - Validation</a></li>
+                           <li><a target="_top" href="online_editor.html">39 - Online Editor</a></li>
+                           <li><a target="_top" href="color_code_builder.html">40 - Color Code Builder</a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class=" mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> HTML5 References <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="color_names.html">41 - Color Names</a></li>
+                           <li><a target="_top" href="fonts.html">42 - Fonts Reference</a></li>
+                           <li><a target="_top" href="url_encoding.html">43 - UR Encoding</a></li>
+                           <li><a target="_top" href="entities.html">44 - Entities</a></li>
+                           <li><a target="_top" href="character_encodings.html">45 - Char Encodings</a></li>
+                           <li><a target="_top" href="tags.html">46 - Tags Reference</a></li>
+                           <li><a target="_top" href="deprecated_tags.html">47 - Deprecated Tags</a></li>
+                           <li><a target="_top" href="new_tags.html">48 - New Tags</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="right-menu">
+               <a href="../index.html">
+                  <button class="mui-btn mui-btn--primary mobile-menu">home</button>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- Top main-menu Ends Here jamal -->
+   </header>
+   <div class="mui-container-fluid content">
+      <div class="mui-container">
+         <!-- Tutorial Content Starts Here -->
+         <div class="mui-col-md-12 tutorial-content">
+            <div class="cover">
+               <img class="img-responsive" src="../images/html5.jpg" alt="HTML5" />
+            </div>
+            <h1>HTML5 - Audio &amp; Video</h1>
+            <hr />
+            <br>
+            <p>HTML5 features include native audio and video support without the need for Flash.</p>
+            <p>The HTML5 &lt;audio&gt; and &lt;video&gt; tags make it simple to add media to a website. You need to set
+               <b>src</b> attribute to identify the media source and include a controls attribute so the user can play
+               and pause the media.</p>
+            <h2>Embedding Video</h2>
+            <p>Here is the simplest form of embedding a video file in your webpage &minus;</p>
+            <pre class="result notranslate">
+&lt;video src = "foo.mp4"  width = "300" height = "200" controls&gt;
+   Your browser does not support the &lt;video&gt; element.   
+&lt;/video&gt;
+</pre>
+            <p>The current HTML5 draft specification does not specify which video formats browsers should support in the
+               video tag. But most commonly used video formats are &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>Ogg</b> &minus; Ogg files with Thedora video codec and Vorbis audio codec.</p>
+               </li>
+               <li>
+                  <p><b>mpeg4</b> &minus; MPEG4 files with H.264 video codec and AAC audio codec.</p>
+               </li>
+            </ul>
+            <p>You can use &lt;source&gt; tag to specify media along with media type and many other attributes. A video
+               element allows multiple source elements and browser will use the first recognized format &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/o0VJq4" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE HTML&gt;
+
+&lt;html&gt;
+   &lt;body&gt;
+      
+      &lt;video  width = "300" height = "200" controls autoplay&gt;
+         &lt;source src = "/html5/foo.ogg" type ="video/ogg" /&gt;
+         &lt;source src = "/html5/foo.mp4" type = "video/mp4" /&gt;
+         Your browser does not support the &lt;video&gt; element.
+      &lt;/video&gt;
+      
+   &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/html5/src/embedding-video.htm" height="250px"
+               width="660px"></iframe>
+            <h2>Video Attribute Specification</h2>
+            <p>The HTML5 video tag can have a number of attributes to control the look and feel and various
+               functionalities of the control &minus;</p>
+            <table class="table table-bordered">
+               <tr>
+                  <th style="text-align:center;">Sr.No.</th>
+                  <th style="text-align:center;">Attribute &amp; Description</th>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">1</td>
+                  <td>
+                     <p><b>autoplay</b></p>
+                     <p>This Boolean attribute if specified, the video will automatically begin to play back as soon as
+                        it can do so without stopping to finish loading the data.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">2</td>
+                  <td>
+                     <p><b>autobuffer</b></p>
+                     <p>This Boolean attribute if specified, the video will automatically begin buffering even if it's
+                        not set to automatically play.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">3</td>
+                  <td>
+                     <p><b>controls</b></p>
+                     <p>If this attribute is present, it will allow the user to control video playback, including
+                        volume, seeking, and pause/resume playback.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">4</td>
+                  <td>
+                     <p><b>height</b></p>
+                     <p>This attribute specifies the height of the video's display area, in CSS pixels.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">5</td>
+                  <td>
+                     <p><b>loop</b></p>
+                     <p>This Boolean attribute if specified, will allow video automatically seek back to the start after
+                        reaching at the end.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">6</td>
+                  <td>
+                     <p><b>preload</b></p>
+                     <p>This attribute specifies that the video will be loaded at page load, and ready to run. Ignored
+                        if autoplay is present.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">7</td>
+                  <td>
+                     <p><b>poster</b></p>
+                     <p>This is a URL of an image to show until the user plays or seeks.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">8</td>
+                  <td>
+                     <p><b>src</b></p>
+                     <p>The URL of the video to embed. This is optional; you may instead use the &lt;source&gt; element
+                        within the video block to specify the video to embed.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">9</td>
+                  <td>
+                     <p><b>width</b></p>
+                     <p>This attribute specifies the width of the video's display area, in CSS pixels.</p>
+                  </td>
+               </tr>
+            </table>
+            <h2>Embedding Audio</h2>
+            <p>HTML5 supports &lt;audio&gt; tag which is used to embed sound content in an HTML or XHTML document as
+               follows.</p>
+            <pre class="result notranslate">
+&lt;audio src = "foo.wav" controls autoplay&gt;
+   Your browser does not support the &lt;audio&gt; element.   
+&lt;/audio&gt;
+</pre>
+            <p>The current HTML5 draft specification does not specify which audio formats browsers should support in the
+               audio tag. But most commonly used audio formats are <b>ogg, mp3</b> and <b>wav</b>.</p>
+            <p>You can use &lt;source&ggt; tag to specify media along with media type and many other attributes. An
+               audio element allows multiple source elements and browser will use the first recognized format &minus;
+            </p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/j0IBar" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE HTML&gt;
+
+&lt;html&gt;
+   &lt;body&gt;
+      
+      &lt;audio controls autoplay&gt;
+         &lt;source src = "/html5/audio.ogg" type = "audio/ogg" /&gt;
+         &lt;source src = "/html5/audio.wav" type = "audio/wav" /&gt;
+         Your browser does not support the &lt;audio&gt; element.
+      &lt;/audio&gt;
+      
+   &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/html5/src/embedding-audio.htm" height="100px"
+               width="660px"></iframe>
+            <h2>Audio Attribute Specification</h2>
+            <p>The HTML5 audio tag can have a number of attributes to control the look and feel and various
+               functionalities of the control &minus;</p>
+            <table class="table table-bordered">
+               <tr>
+                  <th style="text-align:center;">Sr.No.</th>
+                  <th style="text-align:center;">Attribute &amp; Description</th>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">1</td>
+                  <td>
+                     <p><b>autoplay</b></p>
+                     <p>This Boolean attribute if specified, the audio will automatically begin to play back as soon as
+                        it can do so without stopping to finish loading the data.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">2</td>
+                  <td>
+                     <p><b>autobuffer</b></p>
+                     <p>This Boolean attribute if specified, the audio will automatically begin buffering even if it's
+                        not set to automatically play.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">3</td>
+                  <td>
+                     <p><b>controls</b></p>
+                     <p>If this attribute is present, it will allow the user to control audio playback, including
+                        volume, seeking, and pause/resume playback.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">4</td>
+                  <td>
+                     <p><b>loop</b></p>
+                     <p>This Boolean attribute if specified, will allow audio automatically seek back to the start after
+                        reaching at the end.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">5</td>
+                  <td>
+                     <p><b>preload</b></p>
+                     <p>This attribute specifies that the audio will be loaded at page load, and ready to run. Ignored
+                        if autoplay is present.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">6</td>
+                  <td>
+                     <p><b>src</b></p>
+                     <p>The URL of the audio to embed. This is optional; you may instead use the &lt;source&gt; element
+                        within the video block to specify the video to embed.</p>
+                  </td>
+               </tr>
+            </table>
+            <h2>Handling Media Events</h2>
+            <p>The HTML5 audio and video tag can have a number of attributes to control various functionalities of the
+               control using JavaScript &minus;</p>
+            <table class="table table-bordered">
+               <tr>
+                  <th style="text-align:center;">S.No.</th>
+                  <th style="text-align:center;">Event &amp; Description</th>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">1</td>
+                  <td>
+                     <p><b>abort</b></p>
+                     <p>This event is generated when playback is aborted.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">2</td>
+                  <td>
+                     <p><b>canplay</b></p>
+                     <p>This event is generated when enough data is available that the media can be played.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">3</td>
+                  <td>
+                     <p><b>ended</b></p>
+                     <p>This event is generated when playback completes.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">4</td>
+                  <td>
+                     <p><b>error</b></p>
+                     <p>This event is generated when an error occurs.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">5</td>
+                  <td>
+                     <p><b>loadeddata</b></p>
+                     <p>This event is generated when the first frame of the media has finished loading.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">6</td>
+                  <td>
+                     <p><b>loadstart</b></p>
+                     <p>This event is generated when loading of the media begins.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">7</td>
+                  <td>
+                     <p><b>pause</b></p>
+                     <p>This event is generated when playback is paused.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">8</td>
+                  <td>
+                     <p><b>play</b></p>
+                     <p>This event is generated when playback starts or resumes.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">9</td>
+                  <td>
+                     <p><b>progress</b></p>
+                     <p>This event is generated periodically to inform the progress of the downloading the media.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">10</td>
+                  <td>
+                     <p><b>ratechange</b></p>
+                     <p>This event is generated when the playback speed changes.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">11</td>
+                  <td>
+                     <p><b>seeked</b></p>
+                     <p>This event is generated when a seek operation completes.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">12</td>
+                  <td>
+                     <p><b>seeking</b></p>
+                     <p>This event is generated when a seek operation begins.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">13</td>
+                  <td>
+                     <p><b>suspend</b></p>
+                     <p>This event is generated when loading of the media is suspended.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">14</td>
+                  <td>
+                     <p><b>volumechange</b></p>
+                     <p>This event is generated when the audio volume changes.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">15</td>
+                  <td>
+                     <p><b>waiting</b></p>
+                     <p>This event is generated when the requested operation (such as playback) is delayed pending the
+                        completion of another operation (such as a seek).</p>
+                  </td>
+               </tr>
+            </table>
+            <p>Following is the example which allows to play the given video &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/6lCtEJ" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE HTML&gt;
+
+&lt;html&gt;
+   &lt;head&gt;
+   
+      &lt;script type = "text/javascript"&gt;
+         function PlayVideo() {
+            var v = document.getElementsByTagName("video")[0];  
+            v.play(); 
+         }
+      &lt;/script&gt;
+   &lt;/head&gt;
+   
+   &lt;body&gt;
+   
+      &lt;form&gt;         
+         &lt;video width = "300" height = "200" src = "/html5/foo.mp4"&gt;
+         Your browser does not support the video element.
+         &lt;/video&gt;
+         &lt;br /&gt;
+         &lt;input type = "button" onclick = "PlayVideo();" value = "Play"/&gt;
+      &lt;/form&gt;
+      
+   &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/html5/src/video.htm" height="250px"
+               width="660px"></iframe>
+            <h2>Configuring Servers for Media Type</h2>
+            <p>Most servers don't by default serve Ogg or mp4 media with the correct MIME types, so you'll likely need
+               to add the appropriate configuration for this.</p>
+            <pre class="result notranslate">
+AddType audio/ogg .oga
+AddType audio/wav .wav
+AddType video/ogg .ogv .ogg
+AddType video/mp4 .mp4
+</pre>
+            <div class="mui-container-fluid button-borders show" id="bottom_navigation">
+               <div class="pre-btn">
+                  <a href="canvas.html"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+               </div>
+               <div class="nxt-btn">
+                  <a href="geolocation.html">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <footer id="footer">
+      <div class="mui--text-center">
+         <div class="mui--text-caption mui--text-light">
+            <a href="../index.html">
+               <img class="img-responsive" src="../images/logo-black.png" alt="Tutorials" title="Tutorials">
+            </a>
+         </div>
+         <ul class="mui-list--inline mui--text-body2 mui--text-light">
+            <li><a href="../about/index.html"><i class="fal fa-home"></i> About us</a></li>
+            <li><a href="../about/about_terms_of_use.html"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+            <li><a href="../about/about_privacy.html"><i class="fal fa-globe"></i> Privacy Policy</a></li>
+            <li><a href="../about/about_cookies.html"><i class="fal fa-question-circle"></i> Cookies Policy</a></li>
+            <li><a href="../about/tutorials_writing.html"><i class="fal fa-hands-helping"></i> Write for us</a></li>
+            <li><a href="../about/contact_us.html"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+            <li><a href="../about/about_careers.html"><i class="fal fa-shield-check"></i> Careers</a></li>
+         </ul>
+         <div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights
+            Reserved.</div>
+      </div>
+   </footer>
+</body>
+
+</html>

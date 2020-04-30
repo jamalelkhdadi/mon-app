@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <title>tap panne</title>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+     <hr>
+     <div>
+          <div>
+               <button class="tabbtn" onclick="openTabdiv(event,'div1')">Programming Langages</button>
+               <button class="tabbtn" onclick="openTabdiv(event,'div2')">Query languages</button>
+               <button class="tabbtn" onclick="openTabdiv(event,'div3')">Query languages2</button>
+               <button class="tabbtn" onclick="openTabdiv(event,'div4')">Descriptive languages</button>
+               <button class="tabbtn" onclick="openTabdiv(event,'div5')">Framework</button>
+          </div>
+          <!--langages Programming-->
+          <div id="div1" class="Tabdiv">
+               <h2>Programming Languages</h2>
+
+
+
+          </div>
+          <!--Descriptive languages-->
+          <div id="div2" class="Tabdiv">
+               Descriptive languages
+
+          </div>
+          <!--Descriptive languages-->
+          <div id="div3" class="Tabdiv">
+               <h1>Query languages</h1>
+
+          </div>
+          <!--Framework-->
+          <div id="div4" class="Tabdiv">
+
+
+          </div>
+          <!--Descriptive languages-->
+          <div id="div5" class="Tabdiv">
+               <h1>Query languages2</h1>
+
+          </div>
+     </div>
+     <hr>
+     <!-- div2 -->
+     <div>
+          <div>
+               <button class="tabbtn2" onclick="openTabdiv2(event,'div6')">6</button>
+               <button class="tabbtn2" onclick="openTabdiv2(event,'div7')">7</button>
+               <button class="tabbtn2" onclick="openTabdiv2(event,'div8')">8</button>
+               <button class="tabbtn2" onclick="openTabdiv2(event,'div9')">9</button>
+               <button class="tabbtn2" onclick="openTabdiv2(event,'div10')">10</button>
+          </div>
+          <!--langages Programming-->
+          <div id="div6" class="Tabdiv2">
+               <h2>6</h2>
+          </div>
+          <!--Descriptive languages-->
+          <div id="div7" class="Tabdiv2">
+               <h2>7</h2>
+          </div>
+          <!--Framework-->
+          <div id="div8" class="Tabdiv2">
+               <h2>8</h2>
+          </div>
+          <!--Descriptive languages-->
+          <div id="div9" class="Tabdiv2">
+               <h2>9</h2>
+          </div>
+          <!--Descriptive languages-->
+          <div id="div10" class="Tabdiv2">
+               <h2>10</h2>
+          </div>
+     </div>
+
+     <!-- script -->
+     <script>
+          // tab panne
+          function openTabdiv(evt, TabdivName) {
+               var i;
+               var x = document.getElementsByClassName("Tabdiv");
+               for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+               }
+               var activebtn = document.getElementsByClassName("tabbtn");
+               for (i = 0; i < x.length; i++) {
+                    activebtn[i].className = activebtn[i].className.replace("", "");
+               }
+               document.getElementById(TabdivName).style.display = "block";
+               evt.currentTarget.className += "";
+          }
+          var mybtn = document.getElementsByClassName("tabbtn")[0];
+          mybtn.click();
+     </script>
+     <!-- script2 -->
+     <script>
+          // tab panne
+          function openTabdiv2(evt, Tabdiv2Name) {
+               var i;
+               var x = document.getElementsByClassName("Tabdiv2");
+               for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+               }
+               var activebtn = document.getElementsByClassName("tabbtn2");
+               for (i = 0; i < x.length; i++) {
+                    activebtn[i].className = activebtn[i].className.replace("", "");
+               }
+               document.getElementById(Tabdiv2Name).style.display = "block";
+               evt.currentTarget.className += "";
+          }
+          var mybtn = document.getElementsByClassName("tabbtn2")[0];
+          mybtn.click();
+     </script>
+</body>
+
+</html>

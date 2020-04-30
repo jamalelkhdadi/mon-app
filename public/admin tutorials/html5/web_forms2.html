@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+   <title>HTML5 - Web Forms 2.0 - Tutorialspoint</title>
+   <meta charset="utf-8">
+   <meta name="description"
+      content="HTML5 - Web Forms 2.0 - Web Forms 2.0 is an extension to the forms features found in HTML4. Form elements and attributes in HTML5 provide a greater degree of semantic mark-up than HTML" />
+   <meta name="keywords"
+      content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Programming, examples, code" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+   <link rel="stylesheet" href="../style.css">
+   <script src="../script.js"></script>
+</head>
+
+<body>
+   <header id="header">
+      <!-- Top main-menu Starts Here -->
+      <div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+         <div class="mui-container">
+            <div class="left-menu">
+               <img class="tp-logo" alt="tutorialspoint" src="../images/logo.png">
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> HTML5 Tutorial <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="index.html">01 - Home</a></li>
+                           <li><a target="_top" href="overview.html">02 - Overview</a></li>
+                           <li><a target="_top" href="syntax.html">03 - Syntax</a></li>
+                           <li><a target="_top" href="attributes.html">04 - Attributes</a></li>
+                           <li><a target="_top" href="events.html">05 - Events</a></li>
+                           <li><a target="_top" href="web_forms2.html">06 - Web Forms 2.0</a></li>
+                           <li><a target="_top" href="svg.html">07 - SVG</a></li>
+                           <li><a target="_top" href="mathml.html">08 - MathML</a></li>
+                           <li><a target="_top" href="web_storage.html">09 - Web Storage</a></li>
+                           <li><a target="_top" href="web_sql.html">10 - Web SQL Database</a></li>
+                           <li><a target="_top" href="server_sent_events.html">11 - Server-Sent Events</a></li>
+                           <li><a target="_top" href="websocket.html">12 - WebSocket</a></li>
+                           <li><a target="_top" href="canvas.html">13 - Canvas</a></li>
+                           <li><a target="_top" href="audio_video.html">14 - Audio &amp; Video</a></li>
+                           <li><a target="_top" href="geolocation.html">15 - Geolocation</a></li>
+                           <li><a target="_top" href="microdata.html">16 - Microdata</a></li>
+                           <li><a target="_top" href="drag_drop.html">17 - Drag &amp; drop</a></li>
+                           <li><a target="_top" href="web_workers.html">18 - Web Workers</a></li>
+                           <li><a target="_top" href="indexeddb.html">19 - IndexedDB</a></li>
+                           <li><a target="_top" href="web_messaging.html">20 - Web Messaging</a></li>
+                           <li><a target="_top" href="cors.html">21 - Web CORS</a></li>
+                           <li><a target="_top" href="web_rtc.html">22 - Web RTC</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> HTML5 Demo <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="web_storage-demo.html">23 - Web Storage Demo</a></li>
+                           <li><a target="_top" href="server_sent_events-demo.html">24 - Server SentEvents</a>
+                           </li>
+                           <li><a target="_top" href="canvas_demo.html">25 - Canvas Demo</a></li>
+                           <li><a target="_top" href="audio_demo.html">26 - Audio Players Demo</a></li>
+                           <li><a target="_top" href="video_demo.html">27 - Video Players Demo</a></li>
+                           <li><a target="_top" href="geo_demo.html">28 - Geo-Location Demo</a></li>
+                           <li><a target="_top" href="drag_demo.html">29 - Drag and Drop Demo</a></li>
+                           <li><a target="_top" href="web_workers-demo.html">30 - Web Worker Demo</a></li>
+                           <li><a target="_top" href="slide_desk-demo.html">31 - Web slide Desk Demo</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> HTML5 Tools <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="svg_tool.html">32 - SVG Generator </a></li>
+                           <li><a target="_top" href="mathml-tool.html">33 - MathML Tool</a></li>
+                           <li><a target="_top" href="velocity.html">34 - Velocity Draw </a></li>
+                           <li><a target="_top" href="qr_code.html">35 - QR Code </a></li>
+                           <li><a target="_top" href="validator.html">36 - Validator.nu Validation</a></li>
+                           <li><a target="_top" href="modernizr.html">37 - Modernizr</a></li>
+                           <li><a target="_top" href="validation.html">38 - Validation</a></li>
+                           <li><a target="_top" href="online_editor.html">39 - Online Editor</a></li>
+                           <li><a target="_top" href="color_code_builder.html">40 - Color Code Builder</a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class=" mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> HTML5 References <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="color_names.html">41 - Color Names</a></li>
+                           <li><a target="_top" href="fonts.html">42 - Fonts Reference</a></li>
+                           <li><a target="_top" href="url_encoding.html">43 - UR Encoding</a></li>
+                           <li><a target="_top" href="entities.html">44 - Entities</a></li>
+                           <li><a target="_top" href="character_encodings.html">45 - Char Encodings</a></li>
+                           <li><a target="_top" href="tags.html">46 - Tags Reference</a></li>
+                           <li><a target="_top" href="deprecated_tags.html">47 - Deprecated Tags</a></li>
+                           <li><a target="_top" href="new_tags.html">48 - New Tags</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="right-menu">
+               <a href="../index.html">
+                  <button class="mui-btn mui-btn--primary mobile-menu">home</button>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- Top main-menu Ends Here jamal -->
+   </header>
+   <div class="mui-container-fluid content">
+      <div class="mui-container">
+         <!-- Tutorial Content Starts Here -->
+         <div class="mui-col-md-12 tutorial-content">
+            <div class="cover">
+               <img class="img-responsive" src="../images/html5.jpg" alt="HTML5" />
+            </div>
+            <h1>HTML5 - Web Forms 2.0</h1>
+            <hr />
+            <br>
+            <p>Web Forms 2.0 is an extension to the forms features found in HTML4. Form elements and attributes in HTML5
+               provide a greater degree of semantic mark-up than HTML4 and free us from a great deal of tedious
+               scripting and styling that was required in HTML4.</p>
+            <h2>The &lt;input&gt; element in HTML4</h2>
+            <p>HTML4 input elements use the <b>type</b> attribute to specify the data type.HTML4 provides following
+               types &minus;</p>
+            <table class="table table-bordered">
+               <tr>
+                  <th style="text-align:center;">Sr.No.</th>
+                  <th style="text-align:center;">Type &amp; Description</th>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">1</td>
+                  <td>
+                     <p><b>text</b></p>
+                     <p>A free-form text field, nominally free of line breaks.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">2</td>
+                  <td>
+                     <p><b>password</b></p>
+                     <p>A free-form text field for sensitive information, nominally free of line breaks.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">3</td>
+                  <td>
+                     <p><b>checkbox</b></p>
+                     <p>A set of zero or more values from a predefined list.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">4</td>
+                  <td>
+                     <p><b>radio</b></p>
+                     <p>An enumerated value.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">5</td>
+                  <td>
+                     <p><b>submit</b></p>
+                     <p>A free form of button initiates form submission.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">6</td>
+                  <td>
+                     <p><b>file</b></p>
+                     <p>An arbitrary file with a MIME type and optionally a file name.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">7</td>
+                  <td>
+                     <p><b>image</b></p>
+                     <p>A coordinate, relative to a particular image's size, with the extra semantic that it must be the
+                        last value selected and initiates form submission.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">8</td>
+                  <td>
+                     <p><b>hidden</b></p>
+                     <p>An arbitrary string that is not normally displayed to the user.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">9</td>
+                  <td>
+                     <p><b>select</b></p>
+                     <p>An enumerated value, much like the radio type.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">10</td>
+                  <td>
+                     <p><b>textarea</b></p>
+                     <p>A free-form text field, nominally with no line break restrictions.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">11</td>
+                  <td>
+                     <p><b>button</b></p>
+                     <p>A free form of button which can initiates any event related to button.</p>
+                  </td>
+               </tr>
+            </table>
+            <p>Following is the simple example of using labels, radio buttons, and submit buttons &minus;</p>
+            <pre class="prettyprint notranslate">
+... 
+&lt;form action = "http://example.com/cgiscript.pl" method = "post"&gt;  
+   &lt;p&gt; 
+      &lt;label for = "firstname"&gt;first name: &lt;/label&gt; 
+      &lt;input type = "text" id = "firstname"&gt;&lt;br /&gt; 
+   
+      &lt;label for = "lastname"&gt;last name: &lt;/label&gt; 
+      &lt;input type = "text" id = "lastname"&gt;&lt;br /&gt; 
+   
+      &lt;label for = "email"&gt;email: &lt;/label&gt; 
+      &lt;input type = "text" id = "email"&gt;&lt;br&gt; 
+   
+      &lt;input type = "radio" name = "sex" value = "male"&gt; Male&lt;br&gt; 
+      &lt;input type = "radio" name = "sex" value = "female"&gt; Female&lt;br&gt; 
+      &lt;input type = "submit" value = "send"&gt; &lt;input type = "reset"&gt; 
+   &lt;/p&gt; 
+&lt;/form&gt; 
+ ... 
+</pre>
+            <h2>The &lt;input&gt; element in HTML5</h2>
+            <p>Apart from the above-mentioned attributes, HTML5 input elements introduced several new values for the
+               <b>type</b> attribute. These are listed below.</p>
+            <p><b>NOTE</b> &minus; Try all the following example using latest version of <b>Opera</b> browser.</p>
+            <table class="table table-bordered">
+               <tr>
+                  <th style="text-align:center;">Sr.No.</th>
+                  <th style="text-align:center;">Type &amp; Description</th>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">1</td>
+                  <td><a href="/html5/html5_datetime.htm">datetime</a>
+                     <p>A date and time (year, month, day, hour, minute, second, fractions of a second) encoded
+                        according to ISO 8601 with the time zone set to UTC.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">2</td>
+                  <td><a href="/html5/html5_datetime_local.htm">datetime-local</a>
+                     <p>A date and time (year, month, day, hour, minute, second, fractions of a second) encoded
+                        according to ISO 8601, with no time zone information.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">3</td>
+                  <td><a href="/html5/html5_date.htm">date</a>
+                     <p>A date (year, month, day) encoded according to ISO 8601.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">4</td>
+                  <td><a href="/html5/html5_month.htm">month </a>
+                     <p>A date consisting of a year and a month encoded according to ISO 8601.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">5</td>
+                  <td><a href="/html5/html5_week.htm">week</a>
+                     <p>A date consisting of a year and a week number encoded according to ISO 8601.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">6</td>
+                  <td><a href="/html5/html5_time.htm">time</a>
+                     <p>A time (hour, minute, seconds, fractional seconds) encoded according to ISO 8601.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">7</td>
+                  <td><a href="/html5/html5_number.htm">number</a>
+                     <p>It accepts only numerical value. The step attribute specifies the precision, defaulting to 1.
+                     </p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">8</td>
+                  <td><a href="/html5/html5_range.htm">range</a>
+                     <p>The range type is used for input fields that should contain a value from a range of numbers.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">9</td>
+                  <td><a href="/html5/html5_email.htm">email</a>
+                     <p>It accepts only email value. This type is used for input fields that should contain an e-mail
+                        address. If you try to submit a simple text, it forces to enter only email address in
+                        email@example.com format.</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="text-align:center;vertical-align:middle">10</td>
+                  <td><a href="/html5/html5_url.htm">url</a>
+                     <p>It accepts only URL value. This type is used for input fields that should contain a URL address.
+                        If you try to submit a simple text, it forces to enter only URL address either in
+                        http://www.example.com format or in http://example.com format.</p>
+                  </td>
+               </tr>
+            </table>
+            <h2>The &lt;output&gt; element</h2>
+            <p>HTML5 introduced a new element &lt;output&gt; which is used to represent the result of different types of
+               output, such as output written by a script.</p>
+            <p>You can use the <b>for</b> attribute to specify a relationship between the output element and other
+               elements in the document that affected the calculation (for example, as inputs or parameters). The value
+               of the for attribute is a space-separated list of IDs of other elements.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/p59YNK" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE HTML&gt;
+
+&lt;html&gt;
+   &lt;head&gt;
+      &lt;script type = "text/javascript"&gt;
+         
+         function showResult() {
+            x = document.forms["myform"]["newinput"].value;
+            document.forms["myform"]["result"].value = x;
+         }
+      &lt;/script&gt;
+   &lt;/head&gt;
+   
+   &lt;body&gt;
+
+      &lt;form action = "/cgi-bin/html5.cgi" method = "get" name = "myform"&gt;
+         Enter a value : &lt;input type = "text" name = "newinput" /&gt;
+         &lt;input type = "button" value = "Result"  onclick = "showResult();" /&gt;
+         &lt;output name = "result"&gt;&lt;/output&gt;
+      &lt;/form&gt;
+		
+   &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            <p>It will produce the following result &minus;</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html5/src/output_element.htm" height="100px"
+               width="600px"></iframe>
+            <h2>The placeholder attribute</h2>
+            <p>HTML5 introduced a new attribute called <b>placeholder</b>. This attribute on &lt;input&gt; and
+               &lt;textarea&gt; elements provide a hint to the user of what can be entered in the field. The placeholder
+               text must not contain carriage returns or line-feeds.</p>
+            <p>Here is the simple syntax for placeholder attribute &minus;</p>
+            <pre class="result notranslate">
+&lt;input type = "text" name = "search" placeholder = "search the web"/&gt;
+</pre>
+            <p>This attribute is supported by latest versions of Mozilla, Safari and Crome browsers only.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/IfCb48" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE HTML&gt;
+
+&lt;html&gt;
+   &lt;body&gt;
+
+      &lt;form action = "/cgi-bin/html5.cgi" method = "get"&gt;
+         Enter email : &lt;input type = "email" name = "newinput" 
+            placeholder = "email@example.com"/&gt;
+         &lt;input type = "submit" value = "submit" /&gt;
+      &lt;/form&gt;
+
+   &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/html5/src/placeholder_attribute.htm" height="100px"
+               width="660px"></iframe>
+            <h2>The autofocus attribute</h2>
+            <p>This is a simple one-step pattern, easily programmed in JavaScript at the time of document load,
+               automatically focus one particular form field.</p>
+            <p>HTML5 introduced a new attribute called <b>autofocus</b> which would be used as follows &minus;</p>
+            <pre class="result notranslate">
+&lt;input type = "text" name = "search" autofocus/&gt;
+</pre>
+            <p>This attribute is supported by latest versions of Mozilla, Safari and Chrome browsers only.</p>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE HTML&gt;
+
+&lt;html&gt;
+   &lt;body&gt;
+   
+      &lt;form action = "/cgi-bin/html5.cgi" method = "get"&gt;
+         Enter email : &lt;input type = "text" name = "newinput" autofocus/&gt;
+         &lt;p&gt;Try to submit using Submit button&lt;/p&gt;
+         &lt;input type = "submit" value = "submit" /&gt;
+      &lt;/form&gt;
+      
+   &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            <h2>The required attribute</h2>
+            <p>Now you do not need to have JavaScript for client-side validations like empty text box would never be
+               submitted because HTML5 introduced a new attribute called <b>required</b> which would be used as follows
+               and would insist to have a value &minus;</p>
+            <pre class="result notranslate">
+&lt;input type = "text" name = "search" required/&gt;
+</pre>
+            <p>This attribute is supported by latest versions of Mozilla, Safari and Chrome browsers only.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/EeqaE4" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE HTML&gt;
+
+&lt;html&gt;
+   &lt;body&gt;
+   
+      &lt;form action = "/cgi-bin/html5.cgi" method = "get"&gt;
+         Enter email : &lt;input type = "text" name = "newinput" required/&gt;
+         &lt;p&gt;Try to submit using Submit button&lt;/p&gt;
+         &lt;input type = "submit" value = "submit" /&gt;
+      &lt;/form&gt;
+      
+   &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            <p>It will produce the following result &minus;</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html5/src/required_attribute.htm" height="130px"
+               width="600px"></iframe>
+            <div class="mui-container-fluid button-borders show" id="bottom_navigation">
+               <div class="pre-btn">
+                  <a href="events.html"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+               </div>
+               <div class="nxt-btn">
+                  <a href="svg.html">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <footer id="footer">
+      <div class="mui--text-center">
+         <div class="mui--text-caption mui--text-light">
+            <a href="../index.html">
+               <img class="img-responsive" src="../images/logo-black.png" alt="Tutorials" title="Tutorials">
+            </a>
+         </div>
+         <ul class="mui-list--inline mui--text-body2 mui--text-light">
+            <li><a href="../about/index.html"><i class="fal fa-home"></i> About us</a></li>
+            <li><a href="../about/about_terms_of_use.html"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+            <li><a href="../about/about_privacy.html"><i class="fal fa-globe"></i> Privacy Policy</a></li>
+            <li><a href="../about/about_cookies.html"><i class="fal fa-question-circle"></i> Cookies Policy</a></li>
+            <li><a href="../about/tutorials_writing.html"><i class="fal fa-hands-helping"></i> Write for us</a></li>
+            <li><a href="../about/contact_us.html"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+            <li><a href="../about/about_careers.html"><i class="fal fa-shield-check"></i> Careers</a></li>
+         </ul>
+         <div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights
+            Reserved.</div>
+      </div>
+   </footer>
+</body>
+
+</html>

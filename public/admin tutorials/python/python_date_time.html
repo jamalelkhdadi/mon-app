@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Python - Date & Time - Tutorialspoint</title>
+    <meta charset="utf-8">
+    <meta name="description"
+        content="Python - Date & Time - A Python program can handle date and time in several ways. Converting between date formats is a common chore for computers. Python's time and calendar modules h" />
+    <meta name="keywords"
+        content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Programming, examples, code" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <!-- Top main-menu Starts Here -->
+        <div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+            <div class="mui-container">
+                <div class="left-menu">
+                    <img class="tp-logo" alt="tutorialspoint" src="../images/logo.png">
+                    <div class="mui-dropdown">
+                        <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                            <i class="fa fa-th-large"></i>
+                            <span> Python Tutorial <span class="mui-caret"></span></span>
+                        </a>
+                        <ul class="mui-dropdown__menu cat-menu">
+                            <li>
+                                <ul>
+                                    <li><a target="_top" href="index.html">01 : Home</a></li>
+                                    <li><a target="_top" href="python_overview.html">02 : Overview</a></li>
+                                    <li><a target="_top" href="python_environment.html">03 : Environment Setup</a></li>
+                                    <li><a target="_top" href="python_basic_syntax.html">04 : Basic Syntax</a></li>
+                                    <li><a target="_top" href="python_variable_types.html">05 : Variable Types</a></li>
+                                    <li><a target="_top" href="python_basic_operators.html">06 : Basic Operators</a>
+                                    </li>
+                                    <li><a target="_top" href="python_decision_making.html">07 : Decision Making</a>
+                                    </li>
+                                    <li><a target="_top" href="python_loops.html">08 : Loops</a></li>
+                                    <li><a target="_top" href="python_numbers.html">09 : Numbers</a></li>
+                                    <li><a target="_top" href="python_strings.html">10 : Strings</a></li>
+                                    <li><a target="_top" href="python_lists.html">11 : Lists</a></li>
+                                    <li><a target="_top" href="python_tuples.html">12 : Tuples</a></li>
+                                    <li><a target="_top" href="python_dictionary.html">13 : Dictionary</a></li>
+                                    <li><a target="_top" href="python_date_time.html">14 : Date &amp; Time</a></li>
+                                    <li><a target="_top" href="python_functions.html">15 : Functions</a></li>
+                                    <li><a target="_top" href="python_modules.html">16 : Modules</a></li>
+                                    <li><a target="_top" href="python_files_io.html">17 : Files I/O</a></li>
+                                    <li><a target="_top" href="python_exceptions.html">18 : Exceptions</a></li>
+                                    <li><a target="_top" href="python_classes_objects.html">19 : Classes/Objects</a>
+                                    </li>
+                                    <li><a target="_top" href="python_reg_expressions.html">20 : Reg Expressions</a>
+                                    </li>
+                                    <li><a target="_top" href="python_cgi_programming.html">21 : CGI Programming</a>
+                                    </li>
+                                    <li><a target="_top" href="python_database_access.html">22 : Database Access</a>
+                                    </li>
+                                    <li><a target="_top" href="python_networking.html">23 : Networking</a></li>
+                                    <li><a target="_top" href="python_sending_email.html">24 : Sending Email</a></li>
+                                    <li><a target="_top" href="python_multithreading.html">25 : Multithreading</a></li>
+                                    <li><a target="_top" href="python_xml_processing.html">26 : XML Processing</a></li>
+                                    <li><a target="_top" href="python_gui_programming.html">27 : GUI Programming</a>
+                                    </li>
+                                    <li><a target="_top" href="python_further_extensions.html">28 : Further
+                                            Extensions</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right-menu">
+                    <a href="../index.html">
+                        <button class="mui-btn mui-btn--primary mobile-menu">home</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Top main-menu Ends Here jamal -->
+    </header>
+    <div class="mui-container-fluid content">
+        <div class="mui-container">
+            <!-- Tutorial Content Starts Here -->
+            <div class="mui-col-md-12 tutorial-content">
+                <div class="cover">
+                    <img class="img-responsive" src="../images/python.jpg" />
+                </div>
+                <h1>Python - Date &amp; Time</h1>
+                <p>A Python program can handle date and time in several ways. Converting between date formats is a
+                    common chore for computers. Python's time and calendar modules help track dates and times.</p>
+                <h2>What is Tick?</h2>
+                <p>Time intervals are floating-point numbers in units of seconds. Particular instants in time are
+                    expressed in seconds since 12:00am, January 1, 1970(epoch).</p>
+                <p>There is a popular <b>time</b> module available in Python which provides functions for working with
+                    times, and for converting between representations. The function <i>time.time()</i> returns the
+                    current system time in ticks since 12:00am, January 1, 1970(epoch).</p>
+                <h2>Example</h2>
+                <div class="demo-view">
+                    <a href="http://tpcg.io/AiJa9O" target="_blank" rel="nofollow" class="demo"><i
+                            class="fa-external-link"></i> Live Demo</a>
+                </div>
+                <pre class="prettyprint notranslate">
+#!/usr/bin/python
+import time;  # This is required to include time module.
+
+ticks = time.time()
+print "Number of ticks since 12:00am, January 1, 1970:", ticks
+</pre>
+                <p>This would produce a result something as follows &minus;</p>
+                <pre class="result notranslate">
+Number of ticks since 12:00am, January 1, 1970: 7186862.73399
+</pre>
+                <p>Date arithmetic is easy to do with ticks. However, dates before the epoch cannot be represented in
+                    this form. Dates in the far future also cannot be represented this way - the cutoff point is
+                    sometime in 2038 for UNIX and Windows.</p>
+                <h2>What is TimeTuple?</h2>
+                <p>Many of Python's time functions handle time as a tuple of 9 numbers, as shown below &minus;</p>
+                <table class="table table-bordered">
+                    <tr>
+                        <th style="text-align:center;width:10%">Index</th>
+                        <th style="text-align:center;width:40%">Field</th>
+                        <th style="text-align:center;">Values</th>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">0</td>
+                        <td style="text-align:center;">4-digit year</td>
+                        <td>2008</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">1</td>
+                        <td style="text-align:center;">Month</td>
+                        <td>1 to 12</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">2</td>
+                        <td style="text-align:center;">Day</td>
+                        <td>1 to 31</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">3</td>
+                        <td style="text-align:center;">Hour</td>
+                        <td>0 to 23</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">4</td>
+                        <td style="text-align:center;">Minute</td>
+                        <td>0 to 59</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">5</td>
+                        <td style="text-align:center;">Second</td>
+                        <td>0 to 61 (60 or 61 are leap-seconds)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">6</td>
+                        <td style="text-align:center;">Day of Week</td>
+                        <td>0 to 6 (0 is Monday)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">7</td>
+                        <td style="text-align:center;">Day of year</td>
+                        <td>1 to 366 (Julian day)</td>
+                    </tr>
+                    <tr>
+                        <td class="ts">8</td>
+                        <td class="ts">Daylight savings</td>
+                        <td>-1, 0, 1, -1 means library determines DST</td>
+                    </tr>
+                </table>
+                <p>The above tuple is equivalent to <b>struct_time</b> structure. This structure has following
+                    attributes &minus;</p>
+                <table class="table table-bordered">
+                    <tr>
+                        <th style="text-align:center;width:10%">Index</th>
+                        <th style="text-align:center;width:40%">Attributes</th>
+                        <th style="text-align:center;">Values</th>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">0</td>
+                        <td style="text-align:center;">tm_year</td>
+                        <td>2008</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">1</td>
+                        <td style="text-align:center;">tm_mon</td>
+                        <td>1 to 12</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">2</td>
+                        <td style="text-align:center;">tm_mday</td>
+                        <td>1 to 31</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">3</td>
+                        <td style="text-align:center;">tm_hour</td>
+                        <td>0 to 23</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">4</td>
+                        <td style="text-align:center;">tm_min</td>
+                        <td>0 to 59</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">5</td>
+                        <td style="text-align:center;">tm_sec</td>
+                        <td>0 to 61 (60 or 61 are leap-seconds)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">6</td>
+                        <td style="text-align:center;">tm_wday</td>
+                        <td>0 to 6 (0 is Monday)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;">7</td>
+                        <td style="text-align:center;">tm_yday</td>
+                        <td>1 to 366 (Julian day)</td>
+                    </tr>
+                    <tr>
+                        <td class="ts">8</td>
+                        <td class="ts">tm_isdst</td>
+                        <td>-1, 0, 1, -1 means library determines DST</td>
+                    </tr>
+                </table>
+                <h2>Getting current time</h2>
+                <p>To translate a time instant from a <i>seconds since the epoch</i> floating-point value into a
+                    time-tuple, pass the floating-point value to a function (e.g., localtime) that returns a time-tuple
+                    with all nine items valid.</p>
+                <div class="demo-view">
+                    <a href="http://tpcg.io/T9ZAOe" target="_blank" rel="nofollow" class="demo"><i
+                            class="fa-external-link"></i> Live Demo</a>
+                </div>
+                <pre class="prettyprint notranslate">
+#!/usr/bin/python
+import time;
+
+localtime = time.localtime(time.time())
+print "Local current time :", localtime
+</pre>
+                <p>This would produce the following result, which could be formatted in any other presentable form
+                    &minus;</p>
+                <pre class="result notranslate">
+Local current time : time.struct_time(tm_year=2013, tm_mon=7, 
+tm_mday=17, tm_hour=21, tm_min=26, tm_sec=3, tm_wday=2, tm_yday=198, tm_isdst=0)
+</pre>
+                <h2>Getting formatted time</h2>
+                <p>You can format any time as per your requirement, but simple method to get time in readable format is
+                    asctime() &minus;</p>
+                <div class="demo-view">
+                    <a href="http://tpcg.io/Pn2IUS" target="_blank" rel="nofollow" class="demo"><i
+                            class="fa-external-link"></i> Live Demo</a>
+                </div>
+                <pre class="prettyprint notranslate">
+#!/usr/bin/python
+import time;
+
+localtime = time.asctime( time.localtime(time.time()) )
+print "Local current time :", localtime
+</pre>
+                <p>This would produce the following result &minus;</p>
+                <pre class="result notranslate">
+Local current time : Tue Jan 13 10:17:09 2009
+</pre>
+                <h2>Getting calendar for a month</h2>
+                <p>The calendar module gives a wide range of methods to play with yearly and monthly calendars. Here, we
+                    print a calendar for a given month ( Jan 2008 ) &minus;</p>
+                <div class="demo-view">
+                    <a href="http://tpcg.io/R9vlY8" target="_blank" rel="nofollow" class="demo"><i
+                            class="fa-external-link"></i> Live Demo</a>
+                </div>
+                <pre class="prettyprint notranslate">
+#!/usr/bin/python
+import calendar
+
+cal = calendar.month(2008, 1)
+print "Here is the calendar:"
+print cal
+</pre>
+                <p>This would produce the following result &minus;</p>
+                <pre class="result notranslate">
+Here is the calendar:
+   January 2008
+Mo Tu We Th Fr Sa Su
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30 31
+</pre>
+                <h2>The <i>time</i> Module</h2>
+                <p>There is a popular <b>time</b> module available in Python which provides functions for working with
+                    times and for converting between representations. Here is the list of all available methods &minus;
+                </p>
+                <table class="table table-bordered">
+                    <tr>
+                        <th style="text-align:center;width:5%">Sr.No.</th>
+                        <th style="text-align:center;width:95%">Function with Description</th>
+                    </tr>
+                    <tr>
+                        <td class="ts">1</td>
+                        <td><a href="/python/time_altzone.htm">time.altzone</a>
+                            <p>The offset of the local DST timezone, in seconds west of UTC, if one is defined. This is
+                                negative if the local DST timezone is east of UTC (as in Western Europe, including the
+                                UK). Only use this if daylight is nonzero.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">2</td>
+                        <td><a href="/python/time_asctime.htm">time.asctime([tupletime])</a>
+                            <p>Accepts a time-tuple and returns a readable 24-character string such as 'Tue Dec 11
+                                18:07:14 2008'.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">3</td>
+                        <td><a href="/python/time_clock.htm">time.clock( )</a>
+                            <p>Returns the current CPU time as a floating-point number of seconds. To measure
+                                computational costs of different approaches, the value of time.clock is more useful than
+                                that of time.time().</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">4</td>
+                        <td><a href="/python/time_ctime.htm">time.ctime([secs])</a>
+                            <p>Like asctime(localtime(secs)) and without arguments is like asctime( )</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">5</td>
+                        <td><a href="/python/time_gmtime.htm">time.gmtime([secs])</a>
+                            <p>Accepts an instant expressed in seconds since the epoch and returns a time-tuple t with
+                                the UTC time. Note : t.tm_isdst is always 0</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">6</td>
+                        <td><a href="/python/time_localtime.htm">time.localtime([secs])</a>
+                            <p>Accepts an instant expressed in seconds since the epoch and returns a time-tuple t with
+                                the local time (t.tm_isdst is 0 or 1, depending on whether DST applies to instant secs
+                                by local rules).</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">7</td>
+                        <td><a href="/python/time_mktime.htm">time.mktime(tupletime)</a>
+                            <p>Accepts an instant expressed as a time-tuple in local time and returns a floating-point
+                                value with the instant expressed in seconds since the epoch.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">8</td>
+                        <td><a href="/python/time_sleep.htm">time.sleep(secs)</a>
+                            <p>Suspends the calling thread for secs seconds.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">9</td>
+                        <td><a href="/python/time_strftime.htm">time.strftime(fmt[,tupletime])</a>
+                            <p>Accepts an instant expressed as a time-tuple in local time and returns a string
+                                representing the instant as specified by string fmt.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">10</td>
+                        <td><a href="/python/time_strptime.htm">time.strptime(str,fmt='%a %b %d %H:%M:%S %Y')</a>
+                            <p>Parses str according to format string fmt and returns the instant in time-tuple format.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">11</td>
+                        <td><a href="/python/time_time.htm">time.time( )</a>
+                            <p>Returns the current time instant, a floating-point number of seconds since the epoch.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">12</td>
+                        <td><a href="/python/time_tzset.htm">time.tzset()</a>
+                            <p>Resets the time conversion rules used by the library routines. The environment variable
+                                TZ specifies how this is done.</p>
+                        </td>
+                    </tr>
+                </table>
+                <p>Let us go through the functions briefly &minus;</p>
+                <p>There are following two important attributes available with time module &minus;</p>
+                <table class="table table-bordered">
+                    <tr>
+                        <th style="text-align:center;width:5%">Sr.No.</th>
+                        <th style="text-align:center;width:95%">Attribute with Description</th>
+                    </tr>
+                    <tr>
+                        <td class="ts">1</td>
+                        <td>
+                            <p><b>time.timezone</b></p>
+                            <p>Attribute time.timezone is the offset in seconds of the local time zone (without DST)
+                                from UTC (&gt;0 in the Americas; &lt;=0 in most of Europe, Asia, Africa).</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">2</td>
+                        <td>
+                            <p><b>time.tzname</b></p>
+                            <p>Attribute time.tzname is a pair of locale-dependent strings, which are the names of the
+                                local time zone without and with DST, respectively.</p>
+                        </td>
+                    </tr>
+                </table>
+                <h2>The <i>calendar</i> Module</h2>
+                <p>The calendar module supplies calendar-related functions, including functions to print a text calendar
+                    for a given month or year.</p>
+                <p>By default, calendar takes Monday as the first day of the week and Sunday as the last one. To change
+                    this, call calendar.setfirstweekday() function.</p>
+                <p>Here is a list of functions available with the <i>calendar</i> module &minus;</p>
+                <table class="table table-bordered">
+                    <tr>
+                        <th style="text-align:center;width:5%">Sr.No.</th>
+                        <th style="text-align:center;width:95%">Function with Description</th>
+                    </tr>
+                    <tr>
+                        <td class="ts">1</td>
+                        <td>
+                            <p><b>calendar.calendar(year,w=2,l=1,c=6)</b></p>
+                            <p>Returns a multiline string with a calendar for year year formatted into three columns
+                                separated by c spaces. w is the width in characters of each date; each line has length
+                                21*w+18+2*c. l is the number of lines for each week.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">2</td>
+                        <td>
+                            <p><b>calendar.firstweekday( )</b></p>
+                            <p>Returns the current setting for the weekday that starts each week. By default, when
+                                calendar is first imported, this is 0, meaning Monday.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">3</td>
+                        <td>
+                            <p><b>calendar.isleap(year)</b></p>
+                            <p>Returns True if year is a leap year; otherwise, False.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">4</td>
+                        <td>
+                            <p><b>calendar.leapdays(y1,y2)</b></p>
+                            <p>Returns the total number of leap days in the years within range(y1,y2).</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">5</td>
+                        <td>
+                            <p><b>calendar.month(year,month,w=2,l=1)</b></p>
+                            <p>Returns a multiline string with a calendar for month month of year year, one line per
+                                week plus two header lines. w is the width in characters of each date; each line has
+                                length 7*w+6. l is the number of lines for each week.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">6</td>
+                        <td>
+                            <p><b>calendar.monthcalendar(year,month)</b></p>
+                            <p>Returns a list of lists of ints. Each sublist denotes a week. Days outside month month of
+                                year year are set to 0; days within the month are set to their day-of-month, 1 and up.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">7</td>
+                        <td>
+                            <p><b>calendar.monthrange(year,month)</b></p>
+                            <p>Returns two integers. The first one is the code of the weekday for the first day of the
+                                month month in year year; the second one is the number of days in the month. Weekday
+                                codes are 0 (Monday) to 6 (Sunday); month numbers are 1 to 12.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">8</td>
+                        <td>
+                            <p><b>calendar.prcal(year,w=2,l=1,c=6)</b></p>
+                            <p>Like print calendar.calendar(year,w,l,c).</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">9</td>
+                        <td>
+                            <p><b>calendar.prmonth(year,month,w=2,l=1)</b></p>
+                            <p>Like print calendar.month(year,month,w,l).</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">10</td>
+                        <td>
+                            <p><b>calendar.setfirstweekday(weekday)</b></p>
+                            <p>Sets the first day of each week to weekday code weekday. Weekday codes are 0 (Monday) to
+                                6 (Sunday).</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">11</td>
+                        <td>
+                            <p><b>calendar.timegm(tupletime)</b></p>
+                            <p>The inverse of time.gmtime: accepts a time instant in time-tuple form and returns the
+                                same instant as a floating-point number of seconds since the epoch.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ts">12</td>
+                        <td>
+                            <p><b>calendar.weekday(year,month,day)</b></p>
+                            <p>Returns the weekday code for the given date. Weekday codes are 0 (Monday) to 6 (Sunday);
+                                month numbers are 1 (January) to 12 (December).</p>
+                        </td>
+                    </tr>
+                </table>
+                <h2>Other Modules &amp; Functions</h2>
+                <p>If you are interested, then here you would find a list of other important modules and functions to
+                    play with date &amp; time in Python &minus;</p>
+                <ul class="list">
+                    <li>
+                        <p><a href="http://docs.python.org/library/datetime.html#module-datetime" target="_blank"
+                                rel="nofollow">The <i>datetime</i> Module</a></p>
+                    </li>
+                    <li>
+                        <p><a href="http://www.twinsun.com/tz/tz-link.htm" target="_blank" rel="nofollow">The <i>pytz
+                                </i>Module</a></p>
+                    </li>
+                    <li>
+                        <p><a href="http://labix.org/python-dateutil" target="_blank" rel="nofollow">The <i>dateutil</i>
+                                Module</a></p>
+                    </li>
+                </ul>
+                <div class="mui-container-fluid button-borders show" id="bottom_navigation">
+                    <div class="pre-btn">
+                        <a href="python_dictionary.html"><i class="fal fa-chevron-circle-left"></i> Previous
+                            Page</a>
+                    </div>
+                    <div class="nxt-btn">
+                        <a href="python_functions.html">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="mui--text-center">
+            <div class="mui--text-caption mui--text-light">
+                <a href="../index.html">
+                    <img class="img-responsive" src="../images/logo-black.png" alt="Tutorials" title="Tutorials">
+                </a>
+            </div>
+            <ul class="mui-list--inline mui--text-body2 mui--text-light">
+                <li><a href="../about/index.html"><i class="fal fa-home"></i> About us</a></li>
+                <li><a href="../about/about_terms_of_use.html"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+                <li><a href="../about/about_privacy.html"><i class="fal fa-globe"></i> Privacy Policy</a></li>
+                <li><a href="../about/about_cookies.html"><i class="fal fa-question-circle"></i> Cookies Policy</a></li>
+                <li><a href="../about/tutorials_writing.html"><i class="fal fa-hands-helping"></i> Write for us</a></li>
+                <li><a href="../about/contact_us.html"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+                <li><a href="../about/about_careers.html"><i class="fal fa-shield-check"></i> Careers</a></li>
+            </ul>
+            <div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights
+                Reserved.</div>
+        </div>
+    </footer>
+</body>
+
+</html>

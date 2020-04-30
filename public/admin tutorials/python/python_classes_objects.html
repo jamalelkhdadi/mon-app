@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+   <title>Python - Object Oriented - Tutorialspoint</title>
+   <meta charset="utf-8">
+   <meta name="description"
+      content="Python - Object Oriented - Python has been an object-oriented language since it existed. Because of this, creating and using classes and objects are downright easy. This chapter helps you" />
+   <meta name="keywords"
+      content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Programming, examples, code" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+   <link rel="stylesheet" href="../style.css">
+   <script src="../script.js"></script>
+</head>
+
+<body>
+   <header id="header">
+      <!-- Top main-menu Starts Here -->
+      <div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+         <div class="mui-container">
+            <div class="left-menu">
+               <img class="tp-logo" alt="tutorialspoint" src="../images/logo.png">
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> Python Tutorial <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="index.html">01 : Home</a></li>
+                           <li><a target="_top" href="python_overview.html">02 : Overview</a></li>
+                           <li><a target="_top" href="python_environment.html">03 : Environment Setup</a></li>
+                           <li><a target="_top" href="python_basic_syntax.html">04 : Basic Syntax</a></li>
+                           <li><a target="_top" href="python_variable_types.html">05 : Variable Types</a></li>
+                           <li><a target="_top" href="python_basic_operators.html">06 : Basic Operators</a></li>
+                           <li><a target="_top" href="python_decision_making.html">07 : Decision Making</a></li>
+                           <li><a target="_top" href="python_loops.html">08 : Loops</a></li>
+                           <li><a target="_top" href="python_numbers.html">09 : Numbers</a></li>
+                           <li><a target="_top" href="python_strings.html">10 : Strings</a></li>
+                           <li><a target="_top" href="python_lists.html">11 : Lists</a></li>
+                           <li><a target="_top" href="python_tuples.html">12 : Tuples</a></li>
+                           <li><a target="_top" href="python_dictionary.html">13 : Dictionary</a></li>
+                           <li><a target="_top" href="python_date_time.html">14 : Date &amp; Time</a></li>
+                           <li><a target="_top" href="python_functions.html">15 : Functions</a></li>
+                           <li><a target="_top" href="python_modules.html">16 : Modules</a></li>
+                           <li><a target="_top" href="python_files_io.html">17 : Files I/O</a></li>
+                           <li><a target="_top" href="python_exceptions.html">18 : Exceptions</a></li>
+                           <li><a target="_top" href="python_classes_objects.html">19 : Classes/Objects</a></li>
+                           <li><a target="_top" href="python_reg_expressions.html">20 : Reg Expressions</a></li>
+                           <li><a target="_top" href="python_cgi_programming.html">21 : CGI Programming</a></li>
+                           <li><a target="_top" href="python_database_access.html">22 : Database Access</a></li>
+                           <li><a target="_top" href="python_networking.html">23 : Networking</a></li>
+                           <li><a target="_top" href="python_sending_email.html">24 : Sending Email</a></li>
+                           <li><a target="_top" href="python_multithreading.html">25 : Multithreading</a></li>
+                           <li><a target="_top" href="python_xml_processing.html">26 : XML Processing</a></li>
+                           <li><a target="_top" href="python_gui_programming.html">27 : GUI Programming</a></li>
+                           <li><a target="_top" href="python_further_extensions.html">28 : Further Extensions</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="right-menu">
+               <a href="../index.html">
+                  <button class="mui-btn mui-btn--primary mobile-menu">home</button>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- Top main-menu Ends Here jamal -->
+   </header>
+   <div class="mui-container-fluid content">
+      <div class="mui-container">
+         <!-- Tutorial Content Starts Here -->
+         <div class="mui-col-md-12 tutorial-content">
+            <div class="cover">
+               <img class="img-responsive" src="../images/python.jpg" />
+            </div>
+            <h1>Python - Object Oriented</h1>
+            <p>Python has been an object-oriented language since it existed. Because of this, creating and using classes
+               and objects are downright easy. This chapter helps you become an expert in using Python's object-oriented
+               programming support.</p>
+            <p>If you do not have any previous experience with object-oriented (OO) programming, you may want to consult
+               an introductory course on it or at least a tutorial of some sort so that you have a grasp of the basic
+               concepts.</p>
+            <p>However, here is small introduction of Object-Oriented Programming (OOP) to bring you at speed &minus;
+            </p>
+            <h2>Overview of OOP Terminology</h2>
+            <ul class="list">
+               <li>
+                  <p><b>Class</b> &minus; A user-defined prototype for an object that defines a set of attributes that
+                     characterize any object of the class. The attributes are data members (class variables and instance
+                     variables) and methods, accessed via dot notation.</p>
+               </li>
+               <li>
+                  <p><b>Class variable</b> &minus; A variable that is shared by all instances of a class. Class
+                     variables are defined within a class but outside any of the class's methods. Class variables are
+                     not used as frequently as instance variables are.</p>
+               </li>
+               <li>
+                  <p><b>Data member</b> &minus; A class variable or instance variable that holds data associated with a
+                     class and its objects.</p>
+               </li>
+               <li>
+                  <p><b>Function overloading</b> &minus; The assignment of more than one behavior to a particular
+                     function. The operation performed varies by the types of objects or arguments involved.</p>
+               </li>
+               <li>
+                  <p><b>Instance variable</b> &minus; A variable that is defined inside a method and belongs only to the
+                     current instance of a class.</p>
+               </li>
+               <li>
+                  <p><b>Inheritance</b> &minus; The transfer of the characteristics of a class to other classes that are
+                     derived from it.</p>
+               </li>
+               <li>
+                  <p><b>Instance</b> &minus; An individual object of a certain class. An object obj that belongs to a
+                     class Circle, for example, is an instance of the class Circle.</p>
+               </li>
+               <li>
+                  <p><b>Instantiation</b> &minus; The creation of an instance of a class.</p>
+               </li>
+               <li>
+                  <p><b>Method</b> &minus; A special kind of function that is defined in a class definition.</p>
+               </li>
+               <li>
+                  <p><b>Object</b> &minus; A unique instance of a data structure that's defined by its class. An object
+                     comprises both data members (class variables and instance variables) and methods.</p>
+               </li>
+               <li>
+                  <p><b>Operator overloading</b> &minus; The assignment of more than one function to a particular
+                     operator.</p>
+               </li>
+            </ul>
+            <h2>Creating Classes</h2>
+            <p>The <i>class</i> statement creates a new class definition. The name of the class immediately follows the
+               keyword <i>class</i> followed by a colon as follows &minus;</p>
+            <pre class="result notranslate">
+class ClassName:
+   'Optional class documentation string'
+   class_suite
+</pre>
+            <ul class="list">
+               <li>
+                  <p>The class has a documentation string, which can be accessed via <i>ClassName.__doc__</i>.</p>
+               </li>
+               <li>
+                  <p>The <i>class_suite</i> consists of all the component statements defining class members, data
+                     attributes and functions.</p>
+               </li>
+            </ul>
+            <h3>Example</h3>
+            <p>Following is the example of a simple Python class &minus;</p>
+            <pre class="prettyprint notranslate">
+class Employee:
+   'Common base class for all employees'
+   empCount = 0
+
+   def __init__(self, name, salary):
+      self.name = name
+      self.salary = salary
+      Employee.empCount += 1
+   
+   def displayCount(self):
+     print "Total Employee %d" % Employee.empCount
+
+   def displayEmployee(self):
+      print "Name : ", self.name,  ", Salary: ", self.salary
+</pre>
+            <ul class="list">
+               <li>
+                  <p>The variable <i>empCount</i> is a class variable whose value is shared among all instances of a
+                     this class. This can be accessed as <i>Employee.empCount</i> from inside the class or outside the
+                     class.</p>
+               </li>
+               <li>
+                  <p>The first method <i>__init__()</i> is a special method, which is called class constructor or
+                     initialization method that Python calls when you create a new instance of this class.</p>
+               </li>
+               <li>
+                  <p>You declare other class methods like normal functions with the exception that the first argument to
+                     each method is <i>self</i>. Python adds the <i>self</i> argument to the list for you; you do not
+                     need to include it when you call the methods.</p>
+               </li>
+            </ul>
+            <h2>Creating Instance Objects</h2>
+            <p>To create instances of a class, you call the class using class name and pass in whatever arguments its
+               <i>__init__</i> method accepts.</p>
+            <pre class="result notranslate">
+"This would create first object of Employee class"
+emp1 = Employee("Zara", 2000)
+"This would create second object of Employee class"
+emp2 = Employee("Manni", 5000)
+</pre>
+            <h2>Accessing Attributes</h2>
+            <p>You access the object's attributes using the dot operator with object. Class variable would be accessed
+               using class name as follows &minus;</p>
+            <pre class="result notranslate">
+emp1.displayEmployee()
+emp2.displayEmployee()
+print "Total Employee %d" % Employee.empCount
+</pre>
+            <p>Now, putting all the concepts together &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/hbnZb4" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+#!/usr/bin/python
+
+class Employee:
+   'Common base class for all employees'
+   empCount = 0
+
+   def __init__(self, name, salary):
+      self.name = name
+      self.salary = salary
+      Employee.empCount += 1
+   
+   def displayCount(self):
+     print "Total Employee %d" % Employee.empCount
+
+   def displayEmployee(self):
+      print "Name : ", self.name,  ", Salary: ", self.salary
+
+"This would create first object of Employee class"
+emp1 = Employee("Zara", 2000)
+"This would create second object of Employee class"
+emp2 = Employee("Manni", 5000)
+emp1.displayEmployee()
+emp2.displayEmployee()
+print "Total Employee %d" % Employee.empCount
+</pre>
+            <p>When the above code is executed, it produces the following result &minus;</p>
+            <pre class="result notranslate">
+Name :  Zara ,Salary:  2000
+Name :  Manni ,Salary:  5000
+Total Employee 2
+</pre>
+            <p>You can add, remove, or modify attributes of classes and objects at any time &minus;</p>
+            <pre class="result notranslate">
+emp1.age = 7  # Add an 'age' attribute.
+emp1.age = 8  # Modify 'age' attribute.
+del emp1.age  # Delete 'age' attribute.
+</pre>
+            <p>Instead of using the normal statements to access attributes, you can use the following functions &minus;
+            </p>
+            <ul class="list">
+               <li>
+                  <p>The <b>getattr(obj, name[, default])</b> &minus; to access the attribute of object.</p>
+               </li>
+               <li>
+                  <p>The <b>hasattr(obj,name)</b> &minus; to check if an attribute exists or not.</p>
+               </li>
+               <li>
+                  <p>The <b>setattr(obj,name,value)</b> &minus; to set an attribute. If attribute does not exist, then
+                     it would be created.</p>
+               </li>
+               <li>
+                  <p>The <b>delattr(obj, name)</b> &minus; to delete an attribute.</p>
+               </li>
+            </ul>
+            <pre class="result notranslate">
+hasattr(emp1, 'age')    # Returns true if 'age' attribute exists
+getattr(emp1, 'age')    # Returns value of 'age' attribute
+setattr(emp1, 'age', 8) # Set attribute 'age' at 8
+delattr(empl, 'age')    # Delete attribute 'age'
+</pre>
+            <h2>Built-In Class Attributes</h2>
+            <p>Every Python class keeps following built-in attributes and they can be accessed using dot operator like
+               any other attribute &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>__dict__</b> &minus; Dictionary containing the class's namespace.</p>
+               </li>
+               <li>
+                  <p><b>__doc__</b> &minus; Class documentation string or none, if undefined. </p>
+               </li>
+               <li>
+                  <p><b>__name__</b> &minus; Class name.</p>
+               </li>
+               <li>
+                  <p><b>__module__</b> &minus; Module name in which the class is defined. This attribute is "__main__"
+                     in interactive mode. </p>
+               </li>
+               <li>
+                  <p><b>__bases__</b> &minus; A possibly empty tuple containing the base classes, in the order of their
+                     occurrence in the base class list.</p>
+               </li>
+            </ul>
+            <p>For the above class let us try to access all these attributes &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/CESJr8" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+#!/usr/bin/python
+
+class Employee:
+   'Common base class for all employees'
+   empCount = 0
+
+   def __init__(self, name, salary):
+      self.name = name
+      self.salary = salary
+      Employee.empCount += 1
+   
+   def displayCount(self):
+     print "Total Employee %d" % Employee.empCount
+
+   def displayEmployee(self):
+      print "Name : ", self.name,  ", Salary: ", self.salary
+
+print "Employee.__doc__:", Employee.__doc__
+print "Employee.__name__:", Employee.__name__
+print "Employee.__module__:", Employee.__module__
+print "Employee.__bases__:", Employee.__bases__
+print "Employee.__dict__:", Employee.__dict__
+</pre>
+            <p>When the above code is executed, it produces the following result &minus;</p>
+            <pre class="result notranslate">
+Employee.__doc__: Common base class for all employees
+Employee.__name__: Employee
+Employee.__module__: __main__
+Employee.__bases__: ()
+Employee.__dict__: {'__module__': '__main__', 'displayCount':
+&lt;function displayCount at 0xb7c84994&gt;, 'empCount': 2, 
+'displayEmployee': &lt;function displayEmployee at 0xb7c8441c&gt;, 
+'__doc__': 'Common base class for all employees', 
+'__init__': &lt;function __init__ at 0xb7c846bc&gt;}
+</pre>
+            <h2>Destroying Objects (Garbage Collection)</h2>
+            <p>Python deletes unneeded objects (built-in types or class instances) automatically to free the memory
+               space. The process by which Python periodically reclaims blocks of memory that no longer are in use is
+               termed Garbage Collection.</p>
+            <p>Python's garbage collector runs during program execution and is triggered when an object's reference
+               count reaches zero. An object's reference count changes as the number of aliases that point to it
+               changes.</p>
+            <p>An object's reference count increases when it is assigned a new name or placed in a container (list,
+               tuple, or dictionary). The object's reference count decreases when it's deleted with <i>del</i>, its
+               reference is reassigned, or its reference goes out of scope. When an object's reference count reaches
+               zero, Python collects it automatically.</p>
+            <pre class="result notranslate">
+a = 40      # Create object &lt;40&gt;
+b = a       # Increase ref. count  of &lt;40&gt; 
+c = [b]     # Increase ref. count  of &lt;40&gt; 
+
+del a       # Decrease ref. count  of &lt;40&gt;
+b = 100     # Decrease ref. count  of &lt;40&gt; 
+c[0] = -1   # Decrease ref. count  of &lt;40&gt; 
+</pre>
+            <p>You normally will not notice when the garbage collector destroys an orphaned instance and reclaims its
+               space. But a class can implement the special method <i>__del__()</i>, called a destructor, that is
+               invoked when the instance is about to be destroyed. This method might be used to clean up any non memory
+               resources used by an instance.</p>
+            <h3>Example</h3>
+            <p>This __del__() destructor prints the class name of an instance that is about to be destroyed &minus;</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/x2iiCA" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+#!/usr/bin/python
+
+class Point:
+   def __init__( self, x=0, y=0):
+      self.x = x
+      self.y = y
+   def __del__(self):
+      class_name = self.__class__.__name__
+      print class_name, "destroyed"
+
+pt1 = Point()
+pt2 = pt1
+pt3 = pt1
+print id(pt1), id(pt2), id(pt3) # prints the ids of the obejcts
+del pt1
+del pt2
+del pt3
+</pre>
+            <p>When the above code is executed, it produces following result &minus;</p>
+            <pre class="result notranslate">
+3083401324 3083401324 3083401324
+Point destroyed
+</pre>
+            <p><b>Note</b> &minus; Ideally, you should define your classes in separate file, then you should import them
+               in your main program file using <i>import</i> statement.</p>
+            <h2>Class Inheritance</h2>
+            <p>Instead of starting from scratch, you can create a class by deriving it from a preexisting class by
+               listing the parent class in parentheses after the new class name.</p>
+            <p>The child class inherits the attributes of its parent class, and you can use those attributes as if they
+               were defined in the child class. A child class can also override data members and methods from the
+               parent.</p>
+            <h3>Syntax</h3>
+            <p>Derived classes are declared much like their parent class; however, a list of base classes to inherit
+               from is given after the class name &minus;</p>
+            <pre class="prettyprint notranslate">
+class SubClassName (ParentClass1[, ParentClass2, ...]):
+   'Optional class documentation string'
+   class_suite
+</pre>
+            <h3>Example</h3>
+            <div class="demo-view">
+               <a href="http://tpcg.io/6qlvTh" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+#!/usr/bin/python
+
+class Parent:        # define parent class
+   parentAttr = 100
+   def __init__(self):
+      print "Calling parent constructor"
+
+   def parentMethod(self):
+      print 'Calling parent method'
+
+   def setAttr(self, attr):
+      Parent.parentAttr = attr
+
+   def getAttr(self):
+      print "Parent attribute :", Parent.parentAttr
+
+class Child(Parent): # define child class
+   def __init__(self):
+      print "Calling child constructor"
+
+   def childMethod(self):
+      print 'Calling child method'
+
+c = Child()          # instance of child
+c.childMethod()      # child calls its method
+c.parentMethod()     # calls parent's method
+c.setAttr(200)       # again call parent's method
+c.getAttr()          # again call parent's method
+</pre>
+            <p>When the above code is executed, it produces the following result &minus;</p>
+            <pre class="result notranslate">
+Calling child constructor
+Calling child method
+Calling parent method
+Parent attribute : 200
+</pre>
+            <p>Similar way, you can drive a class from multiple parent classes as follows &minus;</p>
+            <pre class="result notranslate">
+class A:        # define your class A
+.....
+
+class B:         # define your class B
+.....
+
+class C(A, B):   # subclass of A and B
+.....
+</pre>
+            <p>You can use issubclass() or isinstance() functions to check a relationships of two classes and instances.
+            </p>
+            <ul class="list">
+               <li>
+                  <p>The <b>issubclass(sub, sup)</b> boolean function returns true if the given subclass <b>sub</b> is
+                     indeed a subclass of the superclass <b>sup</b>.</p>
+               </li>
+               <li>
+                  <p>The <b>isinstance(obj, Class)</b> boolean function returns true if <i>obj</i> is an instance of
+                     class <i>Class</i> or is an instance of a subclass of Class</p>
+               </li>
+            </ul>
+            <h2>Overriding Methods</h2>
+            <p>You can always override your parent class methods. One reason for overriding parent's methods is because
+               you may want special or different functionality in your subclass.</p>
+            <h3>Example</h3>
+            <div class="demo-view">
+               <a href="http://tpcg.io/94KY94" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+#!/usr/bin/python
+
+class Parent:        # define parent class
+   def myMethod(self):
+      print 'Calling parent method'
+
+class Child(Parent): # define child class
+   def myMethod(self):
+      print 'Calling child method'
+
+c = Child()          # instance of child
+c.myMethod()         # child calls overridden method
+</pre>
+            <p>When the above code is executed, it produces the following result &minus;</p>
+            <pre class="prettyprint notranslate">
+Calling child method
+</pre>
+            <h2>Base Overloading Methods</h2>
+            <p>Following table lists some generic functionality that you can override in your own classes &minus;</p>
+            <table class="table table-bordered">
+               <tr>
+                  <th style="text-align:center;width:10%">Sr.No.</th>
+                  <th style="text-align:center;">Method, Description &amp; Sample Call</th>
+               </tr>
+               <tr>
+                  <td class="ts">1</td>
+                  <td>
+                     <p><b>__init__ ( self [,args...] )</b></p>
+                     <p>Constructor (with any optional arguments)</p>
+                     <p>Sample Call : <i>obj = className(args)</i></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">2</td>
+                  <td>
+                     <p><b>__del__( self )</b></p>
+                     <p>Destructor, deletes an object</p>
+                     <p>Sample Call : <i>del obj</i></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">3</td>
+                  <td>
+                     <p><b>__repr__( self )</b></p>
+                     <p>Evaluable string representation</p>
+                     <p>Sample Call : <i>repr(obj)</i></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">4</td>
+                  <td>
+                     <p><b>__str__( self )</b></p>
+                     <p>Printable string representation</p>
+                     <p>Sample Call : <i>str(obj)</i></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">5</td>
+                  <td>
+                     <p><b>__cmp__ ( self, x )</b></p>
+                     <p>Object comparison</p>
+                     <p>Sample Call : <i>cmp(obj, x)</i></p>
+                  </td>
+               </tr>
+            </table>
+            <h2>Overloading Operators</h2>
+            <p>Suppose you have created a Vector class to represent two-dimensional vectors, what happens when you use
+               the plus operator to add them? Most likely Python will yell at you.</p>
+            <p>You could, however, define the <i>__add__</i> method in your class to perform vector addition and then
+               the plus operator would behave as per expectation &minus;</p>
+            <h3>Example</h3>
+            <div class="demo-view">
+               <a href="http://tpcg.io/HNbb5f" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+#!/usr/bin/python
+
+class Vector:
+   def __init__(self, a, b):
+      self.a = a
+      self.b = b
+
+   def __str__(self):
+      return 'Vector (%d, %d)' % (self.a, self.b)
+   
+   def __add__(self,other):
+      return Vector(self.a + other.a, self.b + other.b)
+
+v1 = Vector(2,10)
+v2 = Vector(5,-2)
+print v1 + v2
+</pre>
+            <p>When the above code is executed, it produces the following result &minus;</p>
+            <pre class="result notranslate">
+Vector(7,8)
+</pre>
+            <h2>Data Hiding</h2>
+            <p>An object's attributes may or may not be visible outside the class definition. You need to name
+               attributes with a double underscore prefix, and those attributes then are not be directly visible to
+               outsiders.</p>
+            <h3>Example</h3>
+            <div class="demo-view">
+               <a href="http://tpcg.io/T0JYMC" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+#!/usr/bin/python
+
+class JustCounter:
+   __secretCount = 0
+  
+   def count(self):
+      self.__secretCount += 1
+      print self.__secretCount
+
+counter = JustCounter()
+counter.count()
+counter.count()
+print counter.__secretCount
+</pre>
+            <p>When the above code is executed, it produces the following result &minus;</p>
+            <pre class="result notranslate">
+1
+2
+Traceback (most recent call last):
+   File "test.py", line 12, in &lt;module&gt;
+      print counter.__secretCount
+AttributeError: JustCounter instance has no attribute '__secretCount'
+</pre>
+            <p>Python protects those members by internally changing the name to include the class name. You can access
+               such attributes as <i>object._className__attrName</i>. If you would replace your last line as following,
+               then it works for you &minus;</p>
+            <pre class="result notranslate">
+.........................
+print counter._JustCounter__secretCount
+</pre>
+            <p>When the above code is executed, it produces the following result &minus;</p>
+            <pre class="result notranslate">
+1
+2
+2
+</pre>
+            <div class="mui-container-fluid button-borders show" id="bottom_navigation">
+               <div class="pre-btn">
+                  <a href="python_exceptions.html"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+               </div>
+               <div class="nxt-btn">
+                  <a href="python_reg_expressions.html">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <footer id="footer">
+      <div class="mui--text-center">
+         <div class="mui--text-caption mui--text-light">
+            <a href="../index.html">
+               <img class="img-responsive" src="../images/logo-black.png" alt="Tutorials" title="Tutorials">
+            </a>
+         </div>
+         <ul class="mui-list--inline mui--text-body2 mui--text-light">
+            <li><a href="../about/index.html"><i class="fal fa-home"></i> About us</a></li>
+            <li><a href="../about/about_terms_of_use.html"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+            <li><a href="../about/about_privacy.html"><i class="fal fa-globe"></i> Privacy Policy</a></li>
+            <li><a href="../about/about_cookies.html"><i class="fal fa-question-circle"></i> Cookies Policy</a></li>
+            <li><a href="../about/tutorials_writing.html"><i class="fal fa-hands-helping"></i> Write for us</a></li>
+            <li><a href="../about/contact_us.html"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+            <li><a href="../about/about_careers.html"><i class="fal fa-shield-check"></i> Careers</a></li>
+         </ul>
+         <div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights
+            Reserved.</div>
+      </div>
+   </footer>
+</body>
+
+</html>

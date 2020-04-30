@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+   <title>CSS - Aural Media - Tutorialspoint</title>
+   <meta charset="utf-8">
+   <meta name="description"
+      content="CSS - Aural Media - A web document can be rendered by a speech synthesizer. CSS2 allows you to attach specific sound style features to specific document elements." />
+   <meta name="keywords"
+      content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Programming, examples, code" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+   <link rel="stylesheet" href="../style.css">
+   <script src="../script.js"></script>
+</head>
+
+<body>
+   <header id="header">
+      <!-- Top main-menu Starts Here -->
+      <div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+         <div class="mui-container">
+            <div class="left-menu">
+               <img class="tp-logo" alt="tutorialspoint" src="../images/logo.png">
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> CSS Tutorial <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="index.html">CSS - Home</a></li>
+                           <li><a target="_top" href="what_is_css.html">CSS - Introduction</a></li>
+                           <li><a target="_top" href="css_syntax.html">CSS - Syntax</a></li>
+                           <li><a target="_top" href="css_inclusion.html">CSS - Inclusion</a></li>
+                           <li><a target="_top" href="css_measurement_units.html">CSS - Measurement Units</a></li>
+                           <li><a target="_top" href="css_colors.html">CSS - Colors</a></li>
+                           <li><a target="_top" href="css_backgrounds.html">CSS - Backgrounds</a></li>
+                           <li><a target="_top" href="css_fonts.html">CSS - Fonts</a></li>
+                           <li><a target="_top" href="css_text.html">CSS - Text</a></li>
+                           <li><a target="_top" href="css_images.html">CSS - Images</a></li>
+                           <li><a target="_top" href="css_links.html">CSS - Links</a></li>
+                           <li><a target="_top" href="css_tables.html">CSS - Tables</a></li>
+                           <li><a target="_top" href="css_borders.html">CSS - Borders</a></li>
+                           <li><a target="_top" href="css_margins.html">CSS - Margins</a></li>
+                           <li><a target="_top" href="css_lists.html">CSS - Lists</a></li>
+                           <li><a target="_top" href="css_padding.html">CSS - Padding</a></li>
+                           <li><a target="_top" href="css_cursors.html">CSS - Cursors</a></li>
+                           <li><a target="_top" href="css_outlines.html">CSS - Outlines</a></li>
+                           <li><a target="_top" href="css_dimension.html">CSS - Dimension</a></li>
+                           <li><a target="_top" href="css_scrollbars.html">CSS - Scrollbars</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> CSS Advanced <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="css_visibility.html">CSS - Visibility</a></li>
+                           <li><a target="_top" href="css_positioning.html">CSS - Positioning</a></li>
+                           <li><a target="_top" href="css_layers.html">CSS - Layers</a></li>
+                           <li><a target="_top" href="css_pseudo_classes.html">CSS - Pseudo Classes</a></li>
+                           <li><a target="_top" href="css_pseudo_elements.html">CSS - Pseudo Elements</a></li>
+                           <li><a target="_top" href="css_at_rules.html">CSS - @ Rules</a></li>
+                           <li><a target="_top" href="css_text_effects.html">CSS - Text Effects</a></li>
+                           <li><a target="_top" href="css_media_types.html">CSS - Media Types</a></li>
+                           <li><a target="_top" href="css_paged_media.html">CSS - Paged Media</a></li>
+                           <li><a target="_top" href="css_aural_media.html">CSS - Aural Media</a></li>
+                           <li><a target="_top" href="css_printing.html">CSS - Printing</a></li>
+                           <li><a target="_top" href="css_layouts.html">CSS - Layouts</a></li>
+                           <li><a target="_top" href="css_validations.html">CSS - Validations</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> CSS3 Tutorial <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="css3_tutorial.html">CSS3 - Tutorial</a></li>
+                           <li><a target="_top" href="css3_rounded_corner.html">CSS3 - Rounded Corner</a></li>
+                           <li><a target="_top" href="css3_boarder_image.html">CSS3 - Border Images</a></li>
+                           <li><a target="_top" href="css3_multi_background.html">CSS3 - Multi Background</a></li>
+                           <li><a target="_top" href="css3_color.html">CSS3 - Color</a></li>
+                           <li><a target="_top" href="css3_gradients.html">CSS3 - Gradients</a></li>
+                           <li><a target="_top" href="css3_shadow.html">CSS3 - Shadow</a></li>
+                           <li><a target="_top" href="css3_text.html">CSS3 - Text</a></li>
+                           <li><a target="_top" href="css3_web_font.html">CSS3 - Web font</a></li>
+                           <li><a target="_top" href="css3_2d_transform.html">CSS3 - 2d transform</a></li>
+                           <li><a target="_top" href="css3_3d_transform.html">CSS3 - 3d transform</a></li>
+                           <li><a target="_top" href="css3_animation.html">CSS3 - Animation</a></li>
+                           <li><a target="_top" href="css3_multi_columns.html">CSS3 - Multi columns</a></li>
+                           <li><a target="_top" href="css3_userinterface.html">CSS3 - User Interface</a></li>
+                           <li><a target="_top" href="css3_box_sizing.html">CSS3 - Box Sizing</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> CSS References & tools <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="css_responsive.html">Responsive Web Design</a></li>
+                           <li><a target="_top" href="css_references.html">CSS - References</a></li>
+                           <li><a target="_top" href="css_color_references.html">CSS - Color References</a></li>
+                           <li><a target="_top" href="css_web_fonts.html">CSS - Web safe fonts</a></li>
+                           <li><a target="_top" href="css_units.html">CSS - Units</a></li>
+                           <li><a target="_top" href="css_animation.html">CSS - Animation</a></li>
+                           <li><a target="_top" href="css_converter.html">CSS - PX to EM converter</a></li>
+                           <li><a target="_top" href="css_color_picker.html">Color Chooser &amp; Animation</a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="right-menu">
+               <a href="../index.html">
+                  <button class="mui-btn mui-btn--primary mobile-menu">home</button>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- Top main-menu Ends Here jamal -->
+   </header>
+   <div class="mui-container-fluid content">
+      <div class="mui-container">
+         <!-- Tutorial Content Starts Here -->
+         <div class="mui-col-md-12 tutorial-content">
+            <div class="cover">
+               <img class="img-responsive" src="../images/css.jpg" />
+            </div>
+            <h1>CSS - Aural Media</h1>
+            <hr />
+            <br>
+            <p>A web document can be rendered by a speech synthesizer. CSS2 allows you to attach specific sound style
+               features to specific document elements.</p>
+            <p>Aural rendering of documents is mainly used by the visually impaired. Some of the situations in which a
+               document can be accessed by means of aural rendering rather than visual rendering are the following.</p>
+            <ul class="list">
+               <li>Learning to read</li>
+               <li>Training</li>
+               <li>Web access in vehicles</li>
+               <li>Home entertainment</li>
+               <li>Industrial documentation</li>
+               <li>Medical documentation</li>
+            </ul>
+            <p>When using aural properties, the canvas consists of a three-dimensional physical space (sound surrounds)
+               and a temporal space (one may specify sounds before, during, and after other sounds).</p>
+            <p>The CSS properties also allow you to vary the quality of synthesized speech (voice type, frequency,
+               inflection, etc.).</p>
+            <p>Here is an example &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+      &lt;style type = "text/css"&gt;
+         h1, h2, h3, h4, h5, h6 {
+            voice-family: paul;
+            stress: 20;
+            richness: 90;
+            cue-before: url("../audio/pop.au");
+         }
+         p {
+            azimuth:center-right;
+         }
+      &lt;/style&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+   
+      &lt;h1&gt;Tutorialspoint.com&lt;/h1&gt;
+      &lt;h2&gt;Tutorialspoint.com&lt;/h2&gt;
+      &lt;h3&gt;Tutorialspoint.com&lt;/h3&gt;
+      &lt;h4&gt;Tutorialspoint.com&lt;/h4&gt;
+      &lt;h5&gt;Tutorialspoint.com&lt;/h5&gt;
+      &lt;h6&gt;Tutorialspoint.com&lt;/h6&gt;
+      &lt;p&gt;Tutorialspoint.com&lt;/p&gt;
+      
+   &lt;/body&gt;
+&lt;/html&gt; 
+</pre>
+            <p>It will produce the following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/aural_media.htm" height="330px"
+               width="660px"></iframe>
+            <p>It will direct the speech synthesizer to speak headers in a voice (a kind of audio font) called "paul",
+               on a flat tone, but in a very rich voice. Before speaking the headers, a sound sample will be played from
+               the given URL.</p>
+            <p>Paragraphs with class ‘heidi’ will appear to come from front left (if the sound system is capable of
+               spatial audio), and paragraphs of class ‘peter’ from the right.</p>
+            <p>Now we will see the various properties related to aural media.</p>
+            <ul class="list">
+               <li>
+                  <p>The <b>azimuth</b> property sets, where the sound should come from horizontally.</p>
+               </li>
+               <li>
+                  <p>The <b>elevation</b> property sets, where the sound should come from vertically.</p>
+               </li>
+               <li>
+                  <p>The <b>cue-after </b> specifies a sound to be played after speaking an element's content to delimit
+                     it from other.</p>
+               </li>
+               <li>
+                  <p>The <b>cue-before </b> specifies a sound to be played before speaking an element's content to
+                     delimit it from other.</p>
+               </li>
+               <li>
+                  <p>The <b>cue</b> is a shorthand for setting cue-before and cue-after.</p>
+               </li>
+               <li>
+                  <p>The <b>pause-after </b> specifies a pause to be observed after speaking an element's content.</p>
+               </li>
+               <li>
+                  <p>The <b>pause-before </b> specifies a pause to be observed before speaking an element's content.</p>
+               </li>
+               <li>
+                  <p>The <b>pause</b> is a shorthand for setting pause-before and pause-after.</p>
+               </li>
+               <li>
+                  <p>The <b>pitch</b> specifies the average pitch (a frequency) of the speaking voice.</p>
+               </li>
+               <li>
+                  <p>The <b>pitch-range </b> specifies variation in average pitch.</p>
+               </li>
+               <li>
+                  <p>The <b>play-during</b> specifies a sound to be played as a background while an element's content is
+                     spoken.</p>
+               </li>
+               <li>
+                  <p>The <b>richness</b> specifies the richness, or brightness, of the speaking voice.</p>
+               </li>
+               <li>
+                  <p>The <b>speak</b> specifies whether text will be rendered aurally and if so, in what manner.</p>
+               </li>
+               <li>
+                  <p>The <b>speak-numeral</b> controls how numerals are spoken.</p>
+               </li>
+               <li>
+                  <p>The <b>speak-punctuation</b> specifies how punctuation is spoken.</p>
+               </li>
+               <li>
+                  <p>The <b>speech-rate</b> specifies the speaking rate.</p>
+               </li>
+               <li>
+                  <p>The <b>stress</b> specifies the height of "local peaks" in the intonation contour of a voice.</p>
+               </li>
+               <li>
+                  <p>The <b>voice-family</b> specifies the prioritized list of voice family names.</p>
+               </li>
+               <li>
+                  <p>The <b>volume</b> refers to the median volume of the voice.</p>
+               </li>
+            </ul>
+            <h2>The azimuth Property</h2>
+            <p>The azimuth property sets where the sound should come from horizontally. The possible values are listed
+               below &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>angle</b> &minus; Position is described in terms of an angle within the range <i>-360deg</i> to
+                     <i>360deg</i>. The value <i>0deg</i> means directly ahead in the center of the sound stage.
+                     <i>90deg</i> is to the right, <i>180deg</i> behind, and <i>270deg</i> (or, equivalently and more
+                     conveniently, <i>-90deg</i>) to the left.</p>
+               </li>
+               <li>
+                  <p><b>left-side</b> &minus; Same as '270deg'. With 'behind', '270deg'.</p>
+               </li>
+               <li>
+                  <p><b>far-left</b> &minus; Same as '300deg'. With 'behind', '240deg'.</p>
+               </li>
+               <li>
+                  <p><b>left</b> &minus; Same as '320deg'. With 'behind', '220deg'.</p>
+               </li>
+               <li>
+                  <p><b>center-left</b> &minus; Same as '340deg'. With 'behind', '200deg'.</p>
+               </li>
+               <li>
+                  <p><b>center</b> &minus; Same as '0deg'. With 'behind', '180deg'.</p>
+               </li>
+               <li>
+                  <p><b>center-right</b> &minus; Same as '20deg'. With 'behind', '160deg'.</p>
+               </li>
+               <li>
+                  <p><b>right</b> &minus; Same as '40deg'. With 'behind', '140deg'.</p>
+               </li>
+               <li>
+                  <p><b>far-right</b> &minus; Same as '60deg'. With 'behind', '120deg'.</p>
+               </li>
+               <li>
+                  <p><b>right-side</b> &minus; Same as '90deg'. With 'behind', '90deg'.</p>
+               </li>
+               <li>
+                  <p><b>leftwards</b> &minus; Moves the sound to the left and relative to the current angle. More
+                     precisely, subtracts 20 degrees.</p>
+               </li>
+               <li>
+                  <p><b>rightwards</b> &minus; Moves the sound to the right, relative to the current angle. More
+                     precisely, adds 20 degrees.</p>
+               </li>
+            </ul>
+            <p>Here is an example &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;style type = "text/css"&gt;
+   &lt;!--
+      h1   { azimuth: 30deg }
+      td.a { azimuth: far-right }          /*  60deg */
+      #12  { azimuth: behind far-right }   /* 120deg */
+      p.comment { azimuth: behind }        /* 180deg */
+   --&gt;
+&lt;/style&gt;
+</pre>
+            <h2>The elevation Property</h2>
+            <p>The elevation property sets where the sound should come from vertically. The possible values are as
+               follows &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>angle</b> &minus; Specifies the elevation as an angle, between <i>-90deg</i> and <i>90deg</i>.
+                     <i>0deg</i> means on the forward horizon, which loosely means level with the listener. <i>90deg</i>
+                     means directly overhead and <i>-90deg</i> means directly below.</p>
+               </li>
+               <li>
+                  <p><b>below</b> &minus; Same as '-90deg'.</p>
+               </li>
+               <li>
+                  <p><b>level</b> &minus; Same as '0deg'.</p>
+               </li>
+               <li>
+                  <p><b>above</b> &minus; Same as '90deg'.</p>
+               </li>
+               <li>
+                  <p><b>higher</b> &minus; Adds 10 degrees to the current elevation.</p>
+               </li>
+               <li>
+                  <p><b>lower</b> &minus; Subtracts 10 degrees from the current elevation.</p>
+               </li>
+            </ul>
+            <p>Here is an example &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;style type = "text/css"&gt;
+   &lt;!--
+      h1   { elevation: above }
+      tr.a { elevation: 60deg }
+      tr.b { elevation: 30deg }
+      tr.c { elevation: level }
+   --&gt;
+&lt;/style&gt;
+</pre>
+            <h2>The cue-after Property</h2>
+            <p>The cue-after property specifies a sound to be played after speaking an element's content to delimit it
+               from other. The possible values include &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>url</b> &minus; The URL of a sound file to be played.</p>
+               </li>
+               <li>
+                  <p><b>none</b> &minus; Nothing has to be played.</p>
+               </li>
+            </ul>
+            <p>Here is an example &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;style type = "text/css"&gt;
+   &lt;!--
+      a {cue-after: url("dong.wav");}
+      h1 {cue-after: url("pop.au"); }
+   --&gt;
+&lt;/style&gt;
+</pre>
+            <h2>The cue-before Property</h2>
+            <p>This property specifies a sound to be played before speaking an element's content to delimit it from
+               other. The possible values are &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>url</b> &minus; The URL of a sound file to be played.</p>
+               </li>
+               <li>
+                  <p><b>none</b> &minus; Nothing has to be played.</p>
+               </li>
+            </ul>
+            <p>Here is an example &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;style type = "text/css"&gt;
+   &lt;!--
+      a {cue-before: url("bell.aiff");}
+      h1 {cue-before: url("pop.au"); }
+   --&gt;
+&lt;/style&gt;
+</pre>
+            <h2>The cue Property</h2>
+            <p>The cue property is a shorthand for setting <i>cue-before</i> and <i>cue-after</i>. If two values are
+               given, the first value is <i>cue-before</i> and the second is <i>cue-after</i>. If only one value is
+               given, it applies to both properties.</p>
+            <p>For example, the following two rules are equivalent &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;style type = "text/css"&gt;
+   &lt;!--
+      h1 {cue-before: url("pop.au"); cue-after: url("pop.au") }
+      h1 {cue: url("pop.au") }
+   --&gt;
+&lt;/style&gt;
+</pre>
+            <h2>The pause-after Property</h2>
+            <p>This property specifies a pause to be observed after speaking an element's content. The possible values
+               are &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>time</b> &minus; Expresses the pause in absolute time units (seconds and milliseconds).</p>
+               </li>
+               <li>
+                  <p><b>percentage</b> &minus; Refers to the inverse of the value of the <i>speech-rate</i> property.
+                     For example, if the speech-rate is 120 words per minute (i.e. a word takes half a second, or
+                     500ms), then a <i>pause-after</i> of 100&#37; means a pause of 500 ms and a <i>pause-after</i> of
+                     20&#37; means 100ms.</p>
+               </li>
+            </ul>
+            <h2>The pause-before Property</h2>
+            <p>This property specifies a pause to be observed before speaking an element's content. The possible values
+               are &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>time</b> &minus; Expresses the pause in absolute time units (seconds and milliseconds).</p>
+               </li>
+               <li>
+                  <p><b>percentage</b> &minus; Refers to the inverse of the value of the <i>speech-rate</i> property.
+                     For example, if the speech-rate is 120 words per minute (i.e. a word takes half a second, or
+                     500ms), then a <i>pause-before</i> of 100&#37; means a pause of 500 ms and a <i>pause-before</i> of
+                     20&#37; means 100ms.</p>
+               </li>
+            </ul>
+            <h2>The pause Property</h2>
+            <p>This property is a shorthand for setting <i>pause-before</i> and <i>pause-after</i>. If two values are
+               given, the first value is <i>pause-before</i> and the second is </i>pause-after</i>.</p>
+            <p>Here is an example &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;style type = "text/css"&gt;
+   &lt;!--
+      /* pause-before: 20ms; pause-after: 20ms */
+      h1 { pause : 20ms }  
+	
+      /* pause-before: 30ms; pause-after: 40ms */
+      h2{ pause : 30ms 40ms }  
+	
+      /* pause-before: ?; pause-after: 10ms */
+      h3 { pause-after : 10ms }
+   --&gt;
+&lt;/style&gt;
+</pre>
+            <h2>The pitch Property</h2>
+            <p>This property specifies the average pitch (a frequency) of the speaking voice. The average pitch of a
+               voice depends on the voice family. For example, the average pitch for a standard male voice is around
+               120Hz, but for a female voice, it's around 210Hz. The possible values are &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>frequency</b> &minus; Specifies the average pitch of the speaking voice in hertz (Hz).</p>
+               </li>
+               <li>
+                  <p><b>x-low, low, medium, high, x-high</b> &minus; These values do not map to absolute frequencies
+                     since these values depend on the voice family.</p>
+               </li>
+            </ul>
+            <h2>The pitch-range Property</h2>
+            <p>This property specifies variation in average pitch. The possible values are &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>number</b> &minus; A value between '0' and '100'. A pitch range of '0' produces a flat,
+                     monotonic voice. A pitch range of 50 produces normal inflection. Pitch ranges greater than 50
+                     produce animated voices.</p>
+               </li>
+            </ul>
+            <h2>The play-during Property</h2>
+            <p>This property specifies a sound to be played as a background while an element's content is spoken.
+               Possible values could be any of the followings &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>URI</b> &minus; The sound designated by this &lt;uri&gt; is played as a background while the
+                     element's content is spoken.</p>
+               </li>
+               <li>
+                  <p><b>mix</b> &minus; When present, this keyword means that the sound inherited from the parent
+                     element's <i>play-during</i> property continues to play and the sound designated by the <i>uri</i>
+                     is mixed with it. If <i>mix</i> is not specified, the element's background sound replaces the
+                     parent's.</p>
+               </li>
+               <li>
+                  <p><b>repeat</b> &minus; When present, this keyword means that the sound will repeat if it is too
+                     short to fill the entire duration of the element. Otherwise, the sound plays once and then stops.
+                  </p>
+               </li>
+               <li>
+                  <p><b>auto</b> &minus; The sound of the parent element continues to play.</p>
+               </li>
+               <li>
+                  <p><b>none</b> &minus; This keyword means that there is silence.</p>
+               </li>
+            </ul>
+            <p>Here is an example &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;style type = "text/css"&gt;
+   &lt;!--
+      blockquote.sad { play-during: url("violins.aiff") }
+      blockquote q   { play-during: url("harp.wav") mix }
+      span.quiet     { play-during: none }
+   --&gt;
+&lt;/style&gt;
+</pre>
+            <h2>The richness Property</h2>
+            <p>This property specifies the richness or brightness of the speaking voice. The possible values are &minus;
+            </p>
+            <ul class="list">
+               <li>
+                  <p><b>number</b> &minus; A value between '0' and '100'. The higher the value, the more the voice will
+                     carry. A lower value will produce a soft, mellifluous voice.</p>
+               </li>
+            </ul>
+            <h2>The speak Property</h2>
+            <p>This property specifies whether text will be rendered aurally and if so, in what manner. The possible
+               values are &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>none</b> &minus; Suppresses aural rendering so that the element requires no time to render.</p>
+               </li>
+               <li>
+                  <p><b>normal</b> &minus; Uses language-dependent pronunciation rules for rendering an element and its
+                     children.</p>
+               </li>
+               <li>
+                  <p><b>spell-out</b> &minus; Spells the text one letter at a time.</p>
+               </li>
+            </ul>
+            <p>Note the difference between an element whose 'volume' property has a value of 'silent' and an element
+               whose 'speak' property has the value 'none'. The former takes up the same time as if it had been spoken,
+               including any pause before and after the element, but no sound is generated. The latter requires no time
+               and is not rendered.</p>
+            <h2>The speak-numeral Property</h2>
+            <p>This property controls how numerals are spoken. The possible values are &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>digits</b> &minus; Speak the numeral as individual digits. Thus, "237" is spoken "Two Three
+                     Seven".</p>
+               </li>
+               <li>
+                  <p><b>continuous</b> &minus; Speak the numeral as a full number. Thus, "237" is spoken "Two hundred
+                     thirty seven". Word representations are language-dependent.</p>
+               </li>
+            </ul>
+            <h2>The speak-punctuation Property</h2>
+            <p>This property specifies how punctuation is spoken. The possible values are &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>code</b> &minus; Punctuation such as semicolons, braces, and so on are to be spoken literally.
+                  </p>
+               </li>
+               <li>
+                  <p><b>none</b> &minus; Punctuation is not to be spoken, but instead rendered naturally as various
+                     pauses.</p>
+               </li>
+            </ul>
+            <h2>The speech-rate property</h2>
+            <p>This property specifies the speaking rate. Note that both absolute and relative keyword values are
+               allowed. The possible values are &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>number</b> &minus; Specifies the speaking rate in words per minute.</p>
+               </li>
+               <li>
+                  <p><b>x-slow</b> &minus; Same as 80 words per minute.</p>
+               </li>
+               <li>
+                  <p><b>slow</b> &minus; Same as 120 words per minute.</p>
+               </li>
+               <li>
+                  <p><b>medium</b> &minus; Same as 180 - 200 words per minute.</p>
+               </li>
+               <li>
+                  <p><b>fast</b> &minus; Same as 300 words per minute.</p>
+               </li>
+               <li>
+                  <p><b>x-fast</b> &minus; Same as 500 words per minute.</p>
+               </li>
+               <li>
+                  <p><b>faster</b> &minus; Adds 40 words per minute to the current speech rate.</p>
+               </li>
+               <li>
+                  <p><b>slower</b> &minus; Subtracts 40 words per minutes from the current speech rate.</p>
+               </li>
+            </ul>
+            <h2>The stress Property</h2>
+            <p>This property specifies the height of "local peaks" in the intonation contour of a voice. English is a
+               stressed language, and different parts of a sentence are assigned primary, secondary, or tertiary stress.
+               The possible values are &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>number</b> &minus; A value between '0' and '100'. The meaning of values depends on the language
+                     being spoken. For example, a level of '50' for a standard, English-speaking male voice (average
+                     pitch = 122Hz), speaking with normal intonation and emphasis would have a different meaning than
+                     '50' for an Italian voice.</p>
+               </li>
+            </ul>
+            <h2>The voice-family Property</h2>
+            <p>The value is a comma-separated, prioritized list of voice family names. It can have following values
+               &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>generic-voice</b> &minus; Values are voice families. Possible values are 'male', 'female', and
+                     'child'.</p>
+               </li>
+               <li>
+                  <p><b>specific-voice</b> &minus; Values are specific instances (e.g., comedian, trinoids, carlos,
+                     lani).</p>
+               </li>
+            </ul>
+            <p>Here is an example &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;style type = "text/css"&gt;
+   &lt;!--
+      h1 { voice-family: announcer, male }
+      p.part.romeo  { voice-family: romeo, male }
+      p.part.juliet { voice-family: juliet, female }
+   --&gt;
+&lt;/style&gt;
+</pre>
+            <h2>The volume Property</h2>
+            <p>Volume refers to the median volume of the voice. It can have following values &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>numbers</b> &minus; Any number between '0' and '100'. '0' represents the minimum audible volume
+                     level and 100 corresponds to the maximum comfortable level.</p>
+               </li>
+               <li>
+                  <p><b>percentage</b> &minus; These values are calculated relative to the inherited value, and are then
+                     clipped to the range '0' to '100'.</p>
+               </li>
+               <li>
+                  <p><b>silent</b> &minus; No sound at all. The value '0' does not mean the same as 'silent'.</p>
+               </li>
+               <li>
+                  <p><b>x-soft</b> &minus; Same as '0'.</p>
+               </li>
+               <li>
+                  <p><b>soft</b> &minus; Same as '25'.</p>
+               </li>
+               <li>
+                  <p><b>medium</b> &minus; Same as '50'.</p>
+               </li>
+               <li>
+                  <p><b>loud</b> &minus; Same as '75'.</p>
+               </li>
+               <li>
+                  <p><b>x-loud</b> &minus; Same as '100'.</p>
+               </li>
+            </ul>
+            <p>Here is an example &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;style type = "text/css"&gt;
+   &lt;!--
+      P.goat  { volume: x-soft }
+   --&gt;
+&lt;/style&gt;
+</pre>
+            <p>Paragraphs with class <b>goat</b> will be very soft.</p>
+            <div class="mui-container-fluid button-borders show" id="bottom_navigation">
+               <div class="pre-btn">
+                  <a href="/css/css_paged_media.htm"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+                  <a class="hide-on-mobile" href="javascript:printPage();"><i class="fa fa-print"></i> Print Page</a>
+               </div>
+               <div class="nxt-btn">
+                  <a href="/css/css_printing.htm">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+               </div>
+            </div>
+            <div class="google-bottom-ads">
+               <div>Advertisements</div>
+               <div>
+                  <div id="vi_bottom_ads"></div>
+                  <script>
+                     (function () {
+                        var adPos = document.getElementById('vi_bottom_ads');
+                        var mobile_ad_id = "vi_9017967";
+                        var desktop_ad_id = "vi_9013190";
+                        var ad_id = window.innerWidth <= 768 ? mobile_ad_id : desktop_ad_id;
+                        adPos.innerHTML = '<div class="adsbyvli" data-ad-slot="' + ad_id + '"></div>';
+                        (vitag.displayInit = window.vitag.displayInit || []).push(function () {
+                           viAPItag.display(ad_id);
+                        });
+                     }())
+                  </script>
+               </div>
+               <div class="space-bottom"></div>
+            </div>
+         </div>
+         <!-- Tutorial Content Ends Here -->
+         <!-- Right Column Starts Here -->
+         <div class="mui-col-md-2 google-right-ads">
+            <div class="space-top"></div>
+            <div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;">
+               <div class="adsbyvli" data-ad-slot="vi_9017966"></div>
+               <script>(vitag.Init = window.vitag.Init || []).push(function () { viAPItag.display("vi_9017966") })</script>
+            </div>
+            <div class="google-right-ad" style="margin-top:16px;">
+               <div class="adsbyvli" data-ad-slot="vi_9017967"></div>
+               <script>(vitag.Init = window.vitag.Init || []).push(function () { viAPItag.display("vi_9017967") })</script>
+            </div>
+            <div class="google-right-ad" style="margin-top:16px;margin-bottom:15px;">
+               <div class="adsbyvli" data-ad-slot="vi_9013289"></div>
+               <script>(vitag.Init = window.vitag.Init || []).push(function () { viAPItag.display("vi_9013289") })</script>
+            </div>
+            <div class="space-bottom" style="margin-bottom:15px;"></div>
+         </div>
+         <!-- Right Column Ends Here -->
+      </div>
+   </div>
+   <div class="clear"></div>
+   <footer id="footer">
+      <div class="mui--text-center">
+         <div class="mui--text-caption mui--text-light">
+            <a href="/index.htm" class="logo"><img class="img-responsive" src="/images/logo-black.png"
+                  alt="Tutorials Point" title="Tutorials Point"></a>
+         </div>
+         <ul class="mui-list--inline mui--text-body2 mui--text-light">
+            <li><a href="/about/index.htm"><i class="fal fa-globe"></i> About us</a></li>
+            <li><a href="/about/about_terms_of_use.htm"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+            <li><a href="/about/about_privacy.htm"> <i class="fal fa-shield-check"></i> Privacy Policy</a></li>
+            <li><a href="/about/faq.htm"><i class="fal fa-question-circle"></i> FAQ's</a></li>
+            <li><a href="/about/about_helping.htm"><i class="fal fa-hands-helping"></i> Helping</a></li>
+            <li><a href="/about/contact_us.htm"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+         </ul>
+         <div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights
+            Reserved.</div>
+      </div>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-232293-17"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag() { dataLayer.push(arguments); }
+         gtag('js', new Date());
+         gtag('config', 'UA-232293-6');
+      </script>
+   </footer>
+</body>
+
+</html>

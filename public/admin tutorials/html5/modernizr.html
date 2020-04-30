@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+   <title>HTML5 - Modernizr - Tutorialspoint</title>
+   <meta charset="utf-8">
+   <meta name="description"
+      content="HTML5 - Modernizr - Modernizr is a small JavaScript Library that detects the availability of native implementations for next-generation web technologies" />
+   <meta name="keywords"
+      content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Programming, examples, code" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+   <link rel="stylesheet" href="../style.css">
+   <script src="../script.js"></script>
+</head>
+
+<body>
+   <header id="header">
+      <!-- Top main-menu Starts Here -->
+      <div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+         <div class="mui-container">
+            <div class="left-menu">
+               <img class="tp-logo" alt="tutorialspoint" src="../images/logo.png">
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> HTML5 Tutorial <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="index.html">01 - Home</a></li>
+                           <li><a target="_top" href="overview.html">02 - Overview</a></li>
+                           <li><a target="_top" href="syntax.html">03 - Syntax</a></li>
+                           <li><a target="_top" href="attributes.html">04 - Attributes</a></li>
+                           <li><a target="_top" href="events.html">05 - Events</a></li>
+                           <li><a target="_top" href="web_forms2.html">06 - Web Forms 2.0</a></li>
+                           <li><a target="_top" href="svg.html">07 - SVG</a></li>
+                           <li><a target="_top" href="mathml.html">08 - MathML</a></li>
+                           <li><a target="_top" href="web_storage.html">09 - Web Storage</a></li>
+                           <li><a target="_top" href="web_sql.html">10 - Web SQL Database</a></li>
+                           <li><a target="_top" href="server_sent_events.html">11 - Server-Sent Events</a></li>
+                           <li><a target="_top" href="websocket.html">12 - WebSocket</a></li>
+                           <li><a target="_top" href="canvas.html">13 - Canvas</a></li>
+                           <li><a target="_top" href="audio_video.html">14 - Audio &amp; Video</a></li>
+                           <li><a target="_top" href="geolocation.html">15 - Geolocation</a></li>
+                           <li><a target="_top" href="microdata.html">16 - Microdata</a></li>
+                           <li><a target="_top" href="drag_drop.html">17 - Drag &amp; drop</a></li>
+                           <li><a target="_top" href="web_workers.html">18 - Web Workers</a></li>
+                           <li><a target="_top" href="indexeddb.html">19 - IndexedDB</a></li>
+                           <li><a target="_top" href="web_messaging.html">20 - Web Messaging</a></li>
+                           <li><a target="_top" href="cors.html">21 - Web CORS</a></li>
+                           <li><a target="_top" href="web_rtc.html">22 - Web RTC</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> HTML5 Demo <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="web_storage-demo.html">23 - Web Storage Demo</a></li>
+                           <li><a target="_top" href="server_sent_events-demo.html">24 - Server SentEvents</a>
+                           </li>
+                           <li><a target="_top" href="canvas_demo.html">25 - Canvas Demo</a></li>
+                           <li><a target="_top" href="audio_demo.html">26 - Audio Players Demo</a></li>
+                           <li><a target="_top" href="video_demo.html">27 - Video Players Demo</a></li>
+                           <li><a target="_top" href="geo_demo.html">28 - Geo-Location Demo</a></li>
+                           <li><a target="_top" href="drag_demo.html">29 - Drag and Drop Demo</a></li>
+                           <li><a target="_top" href="web_workers-demo.html">30 - Web Worker Demo</a></li>
+                           <li><a target="_top" href="slide_desk-demo.html">31 - Web slide Desk Demo</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> HTML5 Tools <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="svg_tool.html">32 - SVG Generator </a></li>
+                           <li><a target="_top" href="mathml-tool.html">33 - MathML Tool</a></li>
+                           <li><a target="_top" href="velocity.html">34 - Velocity Draw </a></li>
+                           <li><a target="_top" href="qr_code.html">35 - QR Code </a></li>
+                           <li><a target="_top" href="validator.html">36 - Validator.nu Validation</a></li>
+                           <li><a target="_top" href="modernizr.html">37 - Modernizr</a></li>
+                           <li><a target="_top" href="validation.html">38 - Validation</a></li>
+                           <li><a target="_top" href="online_editor.html">39 - Online Editor</a></li>
+                           <li><a target="_top" href="color_code_builder.html">40 - Color Code Builder</a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class=" mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> HTML5 References <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="color_names.html">41 - Color Names</a></li>
+                           <li><a target="_top" href="fonts.html">42 - Fonts Reference</a></li>
+                           <li><a target="_top" href="url_encoding.html">43 - UR Encoding</a></li>
+                           <li><a target="_top" href="entities.html">44 - Entities</a></li>
+                           <li><a target="_top" href="character_encodings.html">45 - Char Encodings</a></li>
+                           <li><a target="_top" href="tags.html">46 - Tags Reference</a></li>
+                           <li><a target="_top" href="deprecated_tags.html">47 - Deprecated Tags</a></li>
+                           <li><a target="_top" href="new_tags.html">48 - New Tags</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="right-menu">
+               <a href="../index.html">
+                  <button class="mui-btn mui-btn--primary mobile-menu">home</button>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- Top main-menu Ends Here jamal -->
+   </header>
+   <div class="mui-container-fluid content">
+      <div class="mui-container">
+         <!-- Tutorial Content Starts Here -->
+         <div class="mui-col-md-12 tutorial-content">
+            <div class="cover">
+               <img class="img-responsive" src="../images/html5.jpg" alt="HTML5" />
+            </div>
+            <h1>HTML5 - Modernizr</h1>
+            <hr />
+            <br>
+            <p>Modernizr is a small <b>JavaScript Library</b> that detects the availability of native implementations
+               for next-generation web technologies</p>
+            <p>There are several new features which are being introduced through HTML5 and CSS3 but same time many
+               browsers do not support these news features.</p>
+            <p>Modernizr provides an easy way to detect any new feature so that you can take corresponding action. For
+               example, if a browser does not support video feature then you would like to display a simple page.</p>
+            <p>You can create CSS rules based on the feature availability and these rules would apply automatically on
+               the webpage if browser does not support a new feature.</p>
+            <p>You can download latest version of this utility from <a rel="nofollow" href="https://www.modernizr.com/"
+                  target="_blank">Modernizr Download</a>.</p>
+            <h2>Syntax</h2>
+            <p>Before you start using Modernizr, you would have to include its javascript library in your HTML page
+               header as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;script src="modernizr.min.js" type="text/javascript"&gt;&lt;/script&gt;
+</pre>
+            <p>As mentioned above, you can create CSS rules based on the feature availability and these rules would
+               apply automatically on the webpage if browser does not support a new featur.</p>
+            <p>Following is the simple syntax to handle supported and non supported features &minus;</p>
+            <pre class="prettyprint notranslate">
+/* In your CSS: */
+.no-audio #music {
+   display: none; /* Don't show Audio options */
+}
+.audio #music button {
+   /* Style the Play and Pause buttons nicely */
+}
+
+&lt;!-- In your HTML: --&gt;
+&lt;div id="music"&gt;
+   
+   &lt;audio&gt;
+      &lt;source src="audio.ogg" /&gt;
+      &lt;source src="audio.mp3" /&gt;
+   &lt;/audio&gt;
+   
+   &lt;button id="play"&gt;Play&lt;/button&gt;
+   &lt;button id="pause"&gt;Pause&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+            <p>Here it is notable that you need to prefix "no-" to every feature/property you want to handle for the
+               browser which does not support them.</p>
+            <p>Following is the syntax to detect a particular feature through Javascript &minus;</p>
+            <pre class="result notranslate">
+if (Modernizr.audio) {
+   /* properties for browsers that
+   support audio */
+}
+
+else{
+   /* properties for browsers that
+   does not support audio */
+}
+</pre>
+            <h2>Features detected by Modernizr</h2>
+            <p>Following is the list of features which can be detected by Modernizr &minus;</p>
+            <table class="table table-bordered">
+               <tr>
+                  <th width="35%">Feature</th>
+                  <th width="33%">CSS Property</th>
+                  <th width="33%">JavaScript Check</th>
+               </tr>
+               <tr>
+                  <td>@font-face</td>
+                  <td>.fontface</td>
+                  <td>Modernizr.fontface</td>
+               </tr>
+               <tr>
+                  <td>Canvas</td>
+                  <td>.canvas</td>
+                  <td>Modernizr.canvas</td>
+               </tr>
+               <tr>
+                  <td>Canvas Text</td>
+                  <td>.canvastext</td>
+                  <td>Modernizr.canvastext</td>
+               </tr>
+               <tr>
+                  <td>HTML5 Audio</td>
+                  <td>.audio</td>
+                  <td>Modernizr.audio</td>
+               </tr>
+               <tr>
+                  <td>HTML5 Audio formats</td>
+                  <td>NA</td>
+                  <td>Modernizr.audio[format]</td>
+               </tr>
+               <tr>
+                  <td>HTML5 Video</td>
+                  <td>.video</td>
+                  <td>Modernizr.video</td>
+               </tr>
+               <tr>
+                  <td>HTML5 Video Formats</td>
+                  <td>NA</td>
+                  <td>Modernizr.video[format]</td>
+               </tr>
+               <tr>
+                  <td>rgba()</td>
+                  <td>.rgba</td>
+                  <td>Modernizr.rgba</td>
+               </tr>
+               <tr>
+                  <td>hsla()</td>
+                  <td>.hsla</td>
+                  <td>Modernizr.hsla</td>
+               </tr>
+               <tr>
+                  <td>border-image</td>
+                  <td>.borderimage</td>
+                  <td>Modernizr.borderimage</td>
+               </tr>
+               <tr>
+                  <td>border-radius</td>
+                  <td>.borderradius</td>
+                  <td>Modernizr.borderradius</td>
+               </tr>
+               <tr>
+                  <td>box-shadow</td>
+                  <td>.boxshadow</td>
+                  <td>Modernizr.boxshadow</td>
+               </tr>
+               <tr>
+                  <td>Multiple backgrounds</td>
+                  <td>.multiplebgs</td>
+                  <td>Modernizr.multiplebgs</td>
+               </tr>
+               <tr>
+                  <td>opacity</td>
+                  <td>.opacity</td>
+                  <td>Modernizr.opacity</td>
+               </tr>
+               <tr>
+                  <td>CSS Animations</td>
+                  <td>.cssanimations</td>
+                  <td>Modernizr.cssanimations</td>
+               </tr>
+               <tr>
+                  <td>CSS Columns</td>
+                  <td>.csscolumns</td>
+                  <td>Modernizr.csscolumns</td>
+               </tr>
+               <tr>
+                  <td>CSS Gradients</td>
+                  <td>.cssgradients</td>
+                  <td>Modernizr.cssgradients</td>
+               </tr>
+               <tr>
+                  <td>CSS Reflections</td>
+                  <td>.cssreflections</td>
+                  <td>Modernizr.cssreflections</td>
+               </tr>
+               <tr>
+                  <td>CSS 2D Transforms</td>
+                  <td>.csstransforms</td>
+                  <td>Modernizr.csstransforms</td>
+               </tr>
+               <tr>
+                  <td>CSS 3D Transforms</td>
+                  <td>.csstransforms3d</td>
+                  <td>Modernizr.csstransforms3d</td>
+               </tr>
+               <tr>
+                  <td>CSS Transitions</td>
+                  <td>.csstransitions </td>
+                  <td>Modernizr.csstransitions</td>
+               </tr>
+               <tr>
+                  <td>Geolocation API</td>
+                  <td>.geolocation </td>
+                  <td>Modernizr.geolocation</td>
+               </tr>
+               <tr>
+                  <td>Input Types</td>
+                  <td>NA</td>
+                  <td>Modernizr.inputtypes[type]</td>
+               </tr>
+               <tr>
+                  <td>Input Attributes</td>
+                  <td>NA</td>
+                  <td>Modernizr.input[attribute]</td>
+               </tr>
+               <tr>
+                  <td>localStorage</td>
+                  <td>.localstorage </td>
+                  <td>Modernizr.localstorage</td>
+               </tr>
+               <tr>
+                  <td>sessionStorage</td>
+                  <td>.sessionstorage </td>
+                  <td>Modernizr.sessionstorage</td>
+               </tr>
+               <tr>
+                  <td>Web Workers</td>
+                  <td>.webworkers</td>
+                  <td>Modernizr.webworkers</td>
+               </tr>
+               <tr>
+                  <td>applicationCache</td>
+                  <td>.applicationcache </td>
+                  <td>Modernizr.applicationcache</td>
+               </tr>
+               <tr>
+                  <td>SVG</td>
+                  <td>.svg </td>
+                  <td>Modernizr.svg</td>
+               </tr>
+               <tr>
+                  <td>SVG Clip Paths</td>
+                  <td>.svgclippaths </td>
+                  <td>Modernizr.svgclippaths</td>
+               </tr>
+               <tr>
+                  <td>SMIL</td>
+                  <td>.smil </td>
+                  <td>Modernizr.smil</td>
+               </tr>
+               <tr>
+                  <td>Web SQL Database</td>
+                  <td>.websqldatabase</td>
+                  <td>Modernizr.websqldatabase</td>
+               </tr>
+               <tr>
+                  <td>IndexedDB</td>
+                  <td>.indexeddb </td>
+                  <td>Modernizr.indexeddb</td>
+               </tr>
+               <tr>
+                  <td>Web Sockets</td>
+                  <td>.websockets </td>
+                  <td>Modernizr.websockets</td>
+               </tr>
+               <tr>
+                  <td>Hashchange Event</td>
+                  <td>.hashchange </td>
+                  <td>Modernizr.hashchange</td>
+               </tr>
+               <tr>
+                  <td>History Management</td>
+                  <td>.historymanagement </td>
+                  <td>Modernizr.historymanagement</td>
+               </tr>
+               <tr>
+                  <td>Drag and Drop</td>
+                  <td>.draganddrop </td>
+                  <td>Modernizr.draganddrop</td>
+               </tr>
+               <tr>
+                  <td>Cross-window Messaging</td>
+                  <td>.crosswindowmessaging </td>
+                  <td>Modernizr.crosswindowmessaging</td>
+               </tr>
+               <tr>
+                  <td>addTest() Plugin API</td>
+                  <td>NA</td>
+                  <td>Modernizr.addTest(str,fn)</td>
+               </tr>
+            </table>
+            <div class="mui-container-fluid button-borders show" id="bottom_navigation">
+               <div class="pre-btn">
+                  <a href="validator.html"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+               </div>
+               <div class="nxt-btn">
+                  <a href="validation.html">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <footer id="footer">
+      <div class="mui--text-center">
+         <div class="mui--text-caption mui--text-light">
+            <a href="../index.html">
+               <img class="img-responsive" src="../images/logo-black.png" alt="Tutorials" title="Tutorials">
+            </a>
+         </div>
+         <ul class="mui-list--inline mui--text-body2 mui--text-light">
+            <li><a href="../about/index.html"><i class="fal fa-home"></i> About us</a></li>
+            <li><a href="../about/about_terms_of_use.html"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+            <li><a href="../about/about_privacy.html"><i class="fal fa-globe"></i> Privacy Policy</a></li>
+            <li><a href="../about/about_cookies.html"><i class="fal fa-question-circle"></i> Cookies Policy</a></li>
+            <li><a href="../about/tutorials_writing.html"><i class="fal fa-hands-helping"></i> Write for us</a></li>
+            <li><a href="../about/contact_us.html"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+            <li><a href="../about/about_careers.html"><i class="fal fa-shield-check"></i> Careers</a></li>
+         </ul>
+         <div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights
+            Reserved.</div>
+      </div>
+   </footer>
+</body>
+
+</html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+   <title>HTML - Tables - Tutorialspoint</title>
+   <meta charset="utf-8">
+   <meta name="description"
+      content="HTML - Tables - The HTML tables allow web authors to arrange data like text, images, links, other tables, etc. into rows and columns of cells." />
+   <meta name="keywords"
+      content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Programming, examples, code" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+   <link rel="stylesheet" href="../style.css">
+   <script src="../script.js"></script>
+</head>
+
+<body>
+   <header id="header">
+      <!-- Top main-menu Starts Here -->
+      <div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+         <div class="mui-container">
+            <div class="left-menu">
+               <img class="tp-logo" alt="tutorialspoint" src="../images/logo.png">
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> HTML Tutorial <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="index.html">01 : Home</a></li>
+                           <li><a target="_top" href="overview.html">02 : Overview</a></li>
+                           <li><a target="_top" href="basic_tags.html">03 : Basic Tags</a></li>
+                           <li><a target="_top" href="elements.html">04 : Elements</a></li>
+                           <li><a target="_top" href="attributes.html">05 : Attributes</a></li>
+                           <li><a target="_top" href="formatting.html">06 : Formatting</a></li>
+                           <li><a target="_top" href="phrase_elements.html">07 : Phrase Tags</a></li>
+                           <li><a target="_top" href="meta_tags.html">08 : Meta Tags</a></li>
+                           <li><a target="_top" href="comments.html">09 : Comments</a></li>
+                           <li><a target="_top" href="images.html">10 : Images</a></li>
+                           <li><a target="_top" href="tables.html">11 : Tables</a></li>
+                           <li><a target="_top" href="lists.html">12 : Lists</a></li>
+                           <li><a target="_top" href="links.html">13 : Text Links</a></li>
+                           <li><a target="_top" href="image_links.html">14 : Image Links</a></li>
+                           <li><a target="_top" href="email_links.html">15 : Email Links</a></li>
+                           <li><a target="_top" href="frames.html">16 : Frames</a></li>
+                           <li><a target="_top" href="iframes.html">17 : Iframes</a></li>
+                           <li><a target="_top" href="blocks.html">18 : Blocks</a></li>
+                           <li><a target="_top" href="backgrounds.html">19 : Backgrounds</a></li>
+                           <li><a target="_top" href="colors.html">20 : Colors</a></li>
+                           <li><a target="_top" href="fonts.html">21 : Fonts</a></li>
+                           <li><a target="_top" href="forms.html">22 : Forms</a></li>
+                           <li><a target="_top" href="embed_multimedia.html">23 : Embed Multimedia</a>
+                           </li>
+                           <li><a target="_top" href="marquees.html">24 : Marquees</a></li>
+                           <li><a target="_top" href="header.html">25 : Header</a></li>
+                           <li><a target="_top" href="style_sheet.html">26 : Style Sheet</a></li>
+                           <li><a target="_top" href="javascript.html">27 : Javascript</a></li>
+                           <li><a target="_top" href="layouts.html">28 : Layouts</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> HTML References <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="tags_reference.html">29 : Tags Reference</a></li>
+                           <li><a target="_top" href="attributes_reference.html">30 : Attributes
+                                 Reference</a></li>
+                           <li><a target="_top" href="events_reference.html">31 : Events Reference </a>
+                           </li>
+                           <li><a target="_top" href="fonts_reference.html">32 : Fonts Reference</a></li>
+                           <li><a target="_top" href="ascii_codes.html">33 : ASCII Codes</a></li>
+                           <li><a target="_top" href="ascii_table_lookup.html">34 : ASCII Table Lookup</a>
+                           </li>
+                           <li><a target="_top" href="color_names.html">35 : Color Names</a></li>
+                           <li><a target="_top" href="entities.html">36 : Entities</a></li>
+                           <li><a target="_top" href="fonts_ref.html">37 : Fonts Ref</a></li>
+                           <li><a target="_top" href="events_ref.html">38 : Events Ref</a></li>
+                           <li><a target="_top" href="mime_media_types.html">39 : MIME Media Types</a></li>
+                           <li><a target="_top" href="url_encoding.html">40 : URL Encoding</a></li>
+                           <li><a target="_top" href="language_iso_codes.html">41 : Language ISO Codes</a>
+                           </li>
+                           <li><a target="_top" href="character_encodings.html">42 : Character
+                                 Encodings</a></li>
+                           <li><a target="_top" href="deprecated_tags.html">43 : Deprecated Tags</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="right-menu">
+               <a href="../index.html">
+                  <button class="mui-btn mui-btn--primary mobile-menu">home</button>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- Top main-menu Ends Here jamal -->
+   </header>
+   <div class="mui-container-fluid content">
+      <div class="mui-container">
+         <!-- Tutorial Content Starts Here -->
+         <div class="mui-col-md-12 tutorial-content">
+            <div class="cover">
+               <img class="img-responsive" src="../images/html.jpg" />
+            </div>
+            <h1>HTML - Tables</h1>
+            <hr />
+            <br>
+            <p>The HTML tables allow web authors to arrange data like text, images, links, other tables, etc. into rows
+               and columns of cells.</p>
+            <p>The HTML tables are created using the <b>&lt;table&gt;</b> tag in which the <b>&lt;tr&gt;</b> tag is used
+               to create table rows and <b>&lt;td&gt;</b> tag is used to create data cells. The elements under
+               &lt;td&gt; are regular and left aligned by default</p>
+            <h2>Example</h2>
+            <div class="demo-view">
+               <a href="http://tpcg.io/mZMibe" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;HTML Tables&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;table border = "1"&gt;
+         &lt;tr&gt;
+            &lt;td&gt;Row 1, Column 1&lt;/td&gt;
+            &lt;td&gt;Row 1, Column 2&lt;/td&gt;
+         &lt;/tr&gt;
+         
+         &lt;tr&gt;
+            &lt;td&gt;Row 2, Column 1&lt;/td&gt;
+            &lt;td&gt;Row 2, Column 2&lt;/td&gt;
+         &lt;/tr&gt;
+      &lt;/table&gt;
+      
+   &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html/src/table.htm" height="100px"
+               width="660px"></iframe>
+            <p>Here, the <b>border</b> is an attribute of &lt;table&gt; tag and it is used to put a border across all
+               the cells. If you do not need a border, then you can use border = "0".</p>
+            <h2>Table Heading</h2>
+            <p>Table heading can be defined using <b>&lt;th&gt;</b> tag. This tag will be put to replace &lt;td&gt; tag,
+               which is used to represent actual data cell. Normally you will put your top row as table heading as shown
+               below, otherwise you can use &lt;th&gt; element in any row. Headings, which are defined in &lt;th&gt; tag
+               are centered and bold by default.</p>
+            <h3>Example</h3>
+            <div class="demo-view">
+               <a href="http://tpcg.io/7LeM8F" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;HTML Table Header&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;table border = "1"&gt;
+         &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Salary&lt;/th&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td&gt;Ramesh Raman&lt;/td&gt;
+            &lt;td&gt;5000&lt;/td&gt;
+         &lt;/tr&gt;
+         
+         &lt;tr&gt;
+            &lt;td&gt;Shabbir Hussein&lt;/td&gt;
+            &lt;td&gt;7000&lt;/td&gt;
+         &lt;/tr&gt;
+      &lt;/table&gt;
+   &lt;/body&gt;
+   
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html/src/table_heading.htm" height="100px"
+               width="660px"></iframe>
+            <h2>Cellpadding and Cellspacing Attributes</h2>
+            <p>There are two attributes called <i>cellpadding</i> and <i>cellspacing</i> which you will use to adjust
+               the white space in your table cells. The cellspacing attribute defines space between table cells, while
+               cellpadding represents the distance between cell borders and the content within a cell.</p>
+            <h3>Example</h3>
+            <div class="demo-view">
+               <a href="http://tpcg.io/P5QBh7" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;HTML Table Cellpadding&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;table border = "1" cellpadding = "5" cellspacing = "5"&gt;
+         &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Salary&lt;/th&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td&gt;Ramesh Raman&lt;/td&gt;
+            &lt;td&gt;5000&lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td&gt;Shabbir Hussein&lt;/td&gt;
+            &lt;td&gt;7000&lt;/td&gt;
+         &lt;/tr&gt;
+      &lt;/table&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html/src/cellpadding_cellspacing.htm" height="150px"
+               width="660px"></iframe>
+            <h2>Colspan and Rowspan Attributes</h2>
+            <p>You will use <b>colspan</b> attribute if you want to merge two or more columns into a single column.
+               Similar way you will use <b>rowspan</b> if you want to merge two or more rows.</p>
+            <h3>Example</h3>
+            <div class="demo-view">
+               <a href="http://tpcg.io/ltvfv5" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;HTML Table Colspan/Rowspan&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;table border = "1"&gt;
+         &lt;tr&gt;
+            &lt;th&gt;Column 1&lt;/th&gt;
+            &lt;th&gt;Column 2&lt;/th&gt;
+            &lt;th&gt;Column 3&lt;/th&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td rowspan = "2"&gt;Row 1 Cell 1&lt;/td&gt;
+            &lt;td&gt;Row 1 Cell 2&lt;/td&gt;
+            &lt;td&gt;Row 1 Cell 3&lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td&gt;Row 2 Cell 2&lt;/td&gt;
+            &lt;td&gt;Row 2 Cell 3&lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td colspan = "3"&gt;Row 3 Cell 1&lt;/td&gt;
+         &lt;/tr&gt;
+      &lt;/table&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html/src/colspan_and_rowspan_attributes.htm"
+               height="150px" width="660px"></iframe>
+            <h2>Tables Backgrounds</h2>
+            <p>You can set table background using one of the following two ways &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>bgcolor</b> attribute &minus; You can set background color for whole table or just for one cell.
+                  </p>
+               </li>
+               <li>
+                  <p><b>background</b> attribute &minus; You can set background image for whole table or just for one
+                     cell.</p>
+               </li>
+            </ul>
+            <p>You can also set border color also using <b>bordercolor</b> attribute.</p>
+            <blockquote>
+               <p><b>Note</b> &minus; The <i>bgcolor</i>, <i>background</i>, and <i>bordercolor</i> attributes
+                  deprecated in HTML5. Do not use these attributes.</p>
+            </blockquote>
+            <h3>Example</h3>
+            <div class="demo-view">
+               <a href="http://tpcg.io/pPuSKz" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;HTML Table Background&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;table border = "1" bordercolor = "green" bgcolor = "yellow"&gt;
+         &lt;tr&gt;
+            &lt;th&gt;Column 1&lt;/th&gt;
+            &lt;th&gt;Column 2&lt;/th&gt;
+            &lt;th&gt;Column 3&lt;/th&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td rowspan = "2"&gt;Row 1 Cell 1&lt;/td&gt;
+            &lt;td&gt;Row 1 Cell 2&lt;/td&gt;
+            &lt;td&gt;Row 1 Cell 3&lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td&gt;Row 2 Cell 2&lt;/td&gt;
+            &lt;td&gt;Row 2 Cell 3&lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td colspan = "3"&gt;Row 3 Cell 1&lt;/td&gt;
+         &lt;/tr&gt;
+      &lt;/table&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html/src/table_background.htm" height="150px"
+               width="660px"></iframe>
+            <p>Here is an example of using <b>background</b> attribute. Here we will use an image available in /images
+               directory.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/MBJetN" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;HTML Table Background&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;table border = "1" bordercolor = "green" background = "/images/test.png"&gt;
+         &lt;tr&gt;
+            &lt;th&gt;Column 1&lt;/th&gt;
+            &lt;th&gt;Column 2&lt;/th&gt;
+            &lt;th&gt;Column 3&lt;/th&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td rowspan = "2"&gt;Row 1 Cell 1&lt;/td&gt;
+            &lt;td&gt;Row 1 Cell 2&lt;/td&gt;&lt;td&gt;Row 1 Cell 3&lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td&gt;Row 2 Cell 2&lt;/td&gt;
+            &lt;td&gt;Row 2 Cell 3&lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td colspan = "3"&gt;Row 3 Cell 1&lt;/td&gt;
+         &lt;/tr&gt;
+      &lt;/table&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result. Here background image did not apply to table's header.</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html/src/image_background.htm" height="150px"
+               width="660px"></iframe>
+            <h2>Table Height and Width</h2>
+            <p>You can set a table width and height using <b>width</b> and <b>height</b> attributes. You can specify
+               table width or height in terms of pixels or in terms of percentage of available screen area.</p>
+            <h3>Example</h3>
+            <div class="demo-view">
+               <a href="http://tpcg.io/HUEBv2" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;HTML Table Width/Height&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;table border = "1" width = "400" height = "150"&gt;
+         &lt;tr&gt;
+            &lt;td&gt;Row 1, Column 1&lt;/td&gt;
+            &lt;td&gt;Row 1, Column 2&lt;/td&gt;
+         &lt;/tr&gt;
+         
+         &lt;tr&gt;
+            &lt;td&gt;Row 2, Column 1&lt;/td&gt;
+            &lt;td&gt;Row 2, Column 2&lt;/td&gt;
+         &lt;/tr&gt;
+      &lt;/table&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html/src/table_height_width.htm" height="170px"
+               width="660px"></iframe>
+            <h2>Table Caption</h2>
+            <p>The <b>caption</b> tag will serve as a title or explanation for the table and it shows up at the top of
+               the table. This tag is deprecated in newer version of HTML/XHTML.</p>
+            <h3>Example</h3>
+            <div class="demo-view">
+               <a href="http://tpcg.io/H0tfxX" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;HTML Table Caption&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;table border = "1" width = "100%"&gt;
+         &lt;caption&gt;This is the caption&lt;/caption&gt;
+         
+         &lt;tr&gt;
+            &lt;td&gt;row 1, column 1&lt;/td&gt;&lt;td&gt;row 1, columnn 2&lt;/td&gt;
+         &lt;/tr&gt;
+         
+         &lt;tr&gt;
+            &lt;td&gt;row 2, column 1&lt;/td&gt;&lt;td&gt;row 2, columnn 2&lt;/td&gt;
+         &lt;/tr&gt;
+      &lt;/table&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html/src/table_caption.htm" height="100px"
+               width="660px"></iframe>
+            <h2>Table Header, Body, and Footer</h2>
+            <p>Tables can be divided into three portions &minus; a header, a body, and a foot. The head and foot are
+               rather similar to headers and footers in a word-processed document that remain the same for every page,
+               while the body is the main content holder of the table.</p>
+            <p>The three elements for separating the head, body, and foot of a table are &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>&lt;thead&gt;</b> &minus; to create a separate table header.</p>
+               </li>
+               <li>
+                  <p><b>&lt;tbody&gt;</b> &minus; to indicate the main body of the table.</p>
+               </li>
+               <li>
+                  <p><b>&lt;tfoot&gt;</b> &minus; to create a separate table footer.</p>
+               </li>
+            </ul>
+            <p>A table may contain several &lt;tbody&gt; elements to indicate <i>different pages</i> or groups of data.
+               But it is notable that &lt;thead&gt; and &lt;tfoot&gt; tags should appear before &lt;tbody&gt;</p>
+            <h3>Example</h3>
+            <div class="demo-view">
+               <a href="http://tpcg.io/tGLRYt" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;HTML Table&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;table border = "1" width = "100%"&gt;
+         &lt;thead&gt;
+            &lt;tr&gt;
+               &lt;td colspan = "4"&gt;This is the head of the table&lt;/td&gt;
+            &lt;/tr&gt;
+         &lt;/thead&gt;
+         
+         &lt;tfoot&gt;
+            &lt;tr&gt;
+               &lt;td colspan = "4"&gt;This is the foot of the table&lt;/td&gt;
+            &lt;/tr&gt;
+         &lt;/tfoot&gt;
+         
+         &lt;tbody&gt;
+            &lt;tr&gt;
+               &lt;td&gt;Cell 1&lt;/td&gt;
+               &lt;td&gt;Cell 2&lt;/td&gt;
+               &lt;td&gt;Cell 3&lt;/td&gt;
+               &lt;td&gt;Cell 4&lt;/td&gt;
+            &lt;/tr&gt;
+         &lt;/tbody&gt;
+         
+      &lt;/table&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html/src/header_body_footer.htm" height="100px"
+               width="660px"></iframe>
+            <h2>Nested Tables</h2>
+            <p>You can use one table inside another table. Not only tables you can use almost all the tags inside table
+               data tag &lt;td&gt;.</p>
+            <h3>Example</h3>
+            <p>Following is the example of using another table and other tags inside a table cell.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/yGjb0U" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;HTML Table&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;table border = "1" width = "100%"&gt;
+         
+         &lt;tr&gt;
+            &lt;td&gt;
+               &lt;table border = "1" width = "100%"&gt;
+                  &lt;tr&gt;
+                     &lt;th&gt;Name&lt;/th&gt;
+                     &lt;th&gt;Salary&lt;/th&gt;
+                  &lt;/tr&gt;
+                  &lt;tr&gt;
+                     &lt;td&gt;Ramesh Raman&lt;/td&gt;
+                     &lt;td&gt;5000&lt;/td&gt;
+                  &lt;/tr&gt;
+                  &lt;tr&gt;
+                     &lt;td&gt;Shabbir Hussein&lt;/td&gt;
+                     &lt;td&gt;7000&lt;/td&gt;
+                  &lt;/tr&gt;
+               &lt;/table&gt;
+            &lt;/td&gt;
+         &lt;/tr&gt;
+         
+      &lt;/table&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe onLoad="resizeFrame(this)" class="result" src="/html/src/nested_table.htm" height="150px"
+               width="660px"></iframe>
+
+            <div class="mui-container-fluid button-borders show" id="bottom_navigation">
+               <div class="pre-btn">
+                  <a href="images.html"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+               </div>
+               <div class="nxt-btn">
+                  <a href="lists.html">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+               </div>
+            </div>
+         </div>
+         <!-- Tutorial Content Ends Here -->
+      </div>
+   </div>
+   <footer id="footer">
+      <div class="mui--text-center">
+         <div class="mui--text-caption mui--text-light">
+            <a href="../index.html">
+               <img class="img-responsive" src="../images/logo-black.png" alt="Tutorials" title="Tutorials">
+            </a>
+         </div>
+         <ul class="mui-list--inline mui--text-body2 mui--text-light">
+            <li><a href="../about/index.html"><i class="fal fa-home"></i> About us</a></li>
+            <li><a href="../about/about_terms_of_use.html"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+            <li><a href="../about/about_privacy.html"><i class="fal fa-globe"></i> Privacy Policy</a></li>
+            <li><a href="../about/about_cookies.html"><i class="fal fa-question-circle"></i> Cookies Policy</a></li>
+            <li><a href="../about/tutorials_writing.html"><i class="fal fa-hands-helping"></i> Write for us</a></li>
+            <li><a href="../about/contact_us.html"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+            <li><a href="../about/about_careers.html"><i class="fal fa-shield-check"></i> Careers</a></li>
+         </ul>
+         <div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights
+            Reserved.</div>
+      </div>
+   </footer>
+</body>
+
+</html>

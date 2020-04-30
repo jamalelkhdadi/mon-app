@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+   <title>HTML5 - Web SQL Database - Tutorialspoint</title>
+   <meta charset="utf-8">
+   <meta name="description"
+      content="HTML5 - Web SQL Database - The Web SQL Database API isn't actually part of the HTML5 specification but it is a separate specification which introduces a set of APIs to manipulate client-s" />
+   <meta name="keywords"
+      content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Programming, examples, code" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+   <link rel="stylesheet" href="../style.css">
+   <script src="../script.js"></script>
+</head>
+
+<body>
+   <header id="header">
+      <!-- Top main-menu Starts Here -->
+      <div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+         <div class="mui-container">
+            <div class="left-menu">
+               <img class="tp-logo" alt="tutorialspoint" src="../images/logo.png">
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> HTML5 Tutorial <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="index.html">01 - Home</a></li>
+                           <li><a target="_top" href="overview.html">02 - Overview</a></li>
+                           <li><a target="_top" href="syntax.html">03 - Syntax</a></li>
+                           <li><a target="_top" href="attributes.html">04 - Attributes</a></li>
+                           <li><a target="_top" href="events.html">05 - Events</a></li>
+                           <li><a target="_top" href="web_forms2.html">06 - Web Forms 2.0</a></li>
+                           <li><a target="_top" href="svg.html">07 - SVG</a></li>
+                           <li><a target="_top" href="mathml.html">08 - MathML</a></li>
+                           <li><a target="_top" href="web_storage.html">09 - Web Storage</a></li>
+                           <li><a target="_top" href="web_sql.html">10 - Web SQL Database</a></li>
+                           <li><a target="_top" href="server_sent_events.html">11 - Server-Sent Events</a></li>
+                           <li><a target="_top" href="websocket.html">12 - WebSocket</a></li>
+                           <li><a target="_top" href="canvas.html">13 - Canvas</a></li>
+                           <li><a target="_top" href="audio_video.html">14 - Audio &amp; Video</a></li>
+                           <li><a target="_top" href="geolocation.html">15 - Geolocation</a></li>
+                           <li><a target="_top" href="microdata.html">16 - Microdata</a></li>
+                           <li><a target="_top" href="drag_drop.html">17 - Drag &amp; drop</a></li>
+                           <li><a target="_top" href="web_workers.html">18 - Web Workers</a></li>
+                           <li><a target="_top" href="indexeddb.html">19 - IndexedDB</a></li>
+                           <li><a target="_top" href="web_messaging.html">20 - Web Messaging</a></li>
+                           <li><a target="_top" href="cors.html">21 - Web CORS</a></li>
+                           <li><a target="_top" href="web_rtc.html">22 - Web RTC</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> HTML5 Demo <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="web_storage-demo.html">23 - Web Storage Demo</a></li>
+                           <li><a target="_top" href="server_sent_events-demo.html">24 - Server SentEvents</a>
+                           </li>
+                           <li><a target="_top" href="canvas_demo.html">25 - Canvas Demo</a></li>
+                           <li><a target="_top" href="audio_demo.html">26 - Audio Players Demo</a></li>
+                           <li><a target="_top" href="video_demo.html">27 - Video Players Demo</a></li>
+                           <li><a target="_top" href="geo_demo.html">28 - Geo-Location Demo</a></li>
+                           <li><a target="_top" href="drag_demo.html">29 - Drag and Drop Demo</a></li>
+                           <li><a target="_top" href="web_workers-demo.html">30 - Web Worker Demo</a></li>
+                           <li><a target="_top" href="slide_desk-demo.html">31 - Web slide Desk Demo</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> HTML5 Tools <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="svg_tool.html">32 - SVG Generator </a></li>
+                           <li><a target="_top" href="mathml-tool.html">33 - MathML Tool</a></li>
+                           <li><a target="_top" href="velocity.html">34 - Velocity Draw </a></li>
+                           <li><a target="_top" href="qr_code.html">35 - QR Code </a></li>
+                           <li><a target="_top" href="validator.html">36 - Validator.nu Validation</a></li>
+                           <li><a target="_top" href="modernizr.html">37 - Modernizr</a></li>
+                           <li><a target="_top" href="validation.html">38 - Validation</a></li>
+                           <li><a target="_top" href="online_editor.html">39 - Online Editor</a></li>
+                           <li><a target="_top" href="color_code_builder.html">40 - Color Code Builder</a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class=" mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> HTML5 References <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="color_names.html">41 - Color Names</a></li>
+                           <li><a target="_top" href="fonts.html">42 - Fonts Reference</a></li>
+                           <li><a target="_top" href="url_encoding.html">43 - UR Encoding</a></li>
+                           <li><a target="_top" href="entities.html">44 - Entities</a></li>
+                           <li><a target="_top" href="character_encodings.html">45 - Char Encodings</a></li>
+                           <li><a target="_top" href="tags.html">46 - Tags Reference</a></li>
+                           <li><a target="_top" href="deprecated_tags.html">47 - Deprecated Tags</a></li>
+                           <li><a target="_top" href="new_tags.html">48 - New Tags</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="right-menu">
+               <a href="../index.html">
+                  <button class="mui-btn mui-btn--primary mobile-menu">home</button>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- Top main-menu Ends Here jamal -->
+   </header>
+   <div class="mui-container-fluid content">
+      <div class="mui-container">
+         <!-- Tutorial Content Starts Here -->
+         <div class="mui-col-md-12 tutorial-content">
+            <div class="cover">
+               <img class="img-responsive" src="../images/html5.jpg" alt="HTML5" />
+            </div>
+            <h1>HTML5 - Web SQL Database</h1>
+            <hr />
+            <br>
+            <p>The Web SQL Database API isn't actually part of the HTML5 specification but it is a separate
+               specification which introduces a set of APIs to manipulate client-side databases using SQL.</p>
+            <p>I'm assuming you are a great web developer and if that is the case then no doubt, you would be well aware
+               of SQL and RDBMS concepts. If you still want to have a session with SQL then, you can go through our <a
+                  target="_blank" href="/sql/index.htm">SQL Tutorial</a>.</p>
+            <p>Web SQL Database will work in latest version of Safari, Chrome and Opera.</p>
+            <h2>The Core Methods</h2>
+            <p>There are following three core methods defined in the spec that I am going to cover in this tutorial
+               &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>openDatabase</b> &minus; This method creates the database object either using existing database
+                     or creating new one.</p>
+               </li>
+               <li>
+                  <p><b>transaction</b> &minus; This method gives us the ability to control a transaction and performing
+                     either commit or rollback based on the situation.</p>
+               </li>
+               <li>
+                  <p><b>executeSql</b> &minus; This method is used to execute actual SQL query.</p>
+               </li>
+            </ul>
+            <h2>Opening Database</h2>
+            <p>The <i>openDatabase</i> method takes care of opening a database if it already exists, this method will
+               create it if it already does not exist.</p>
+            <p>To create and open a database, use the following code &minus;</p>
+            <pre class="result notranslate">
+var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+</pre>
+            <p>The above method took the following five parameters &minus;</p>
+            <ul class="list">
+               <li>Database name</li>
+               <li>Version number</li>
+               <li>Text description</li>
+               <li>Size of database</li>
+               <li>Creation callback</li>
+            </ul>
+            <p>The last and 5th argument, creation callback will be called if the database is being created. Without
+               this feature, however, the databases are still being created on the fly and correctly versioned.</p>
+            <!--
+<p>The version number is a required argument to openDatabase, so you must know the version number before you try to open it. Otherwise, an exception is thrown.</p>
+<p>But you can't determine which version of database the user is on, whether it is 1.0 or 2.0. So we are in problem. In this case we keep version number as blank which means <i>I don't care what version the db is</i>.</p>
+<table cellpadding="5" class="src">
+<tr><td><pre>
+var db = openDatabase('mydb', '', 'Test DB', 2 * 1024 * 1024);
+</pre></td></tr>
+</table>
+-->
+            <h2>Executing queries</h2>
+            <p>To execute a query you use the database.transaction() function. This function needs a single argument,
+               which is a function that takes care of actually executing the query as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024); 
+
+db.transaction(function (tx) {   
+   tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)'); 
+});
+</pre>
+            <p>The above query will create a table called LOGS in 'mydb' database.</p>
+            <h2>INSERT Operation</h2>
+            <p>To create enteries into the table we add simple SQL query in the above example as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024); 
+
+db.transaction(function (tx) { 
+   tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)'); 
+   tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "foobar")'); 
+   tx.executeSql('INSERT INTO LOGS (id, log) VALUES (2, "logmsg")'); 
+}); 
+</pre>
+            <p>We can pass dynamic values while creating entering as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);  
+
+db.transaction(function (tx) {   
+   tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)'); 
+   tx.executeSql('INSERT INTO LOGS (id,log) VALUES (?, ?'), [e_id, e_log]; 
+});
+</pre>
+            <p>Here <b>e_id</b> and <b>e_log</b> are external variables, and executeSql maps each item in the array
+               argument to the "?"s.</p>
+            <h2>READ Operation</h2>
+            <p>To read already existing records we use a callback to capture the results as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);  
+
+db.transaction(function (tx) { 
+   tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)');
+   tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "foobar")'); 
+   tx.executeSql('INSERT INTO LOGS (id, log) VALUES (2, "logmsg")'); 
+});  
+
+db.transaction(function (tx) { 
+   tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) { 
+      var len = results.rows.length, i; 
+      msg = "&lt;p&gt;Found rows: " + len + "&lt;/p&gt;"; 
+      document.querySelector('#status').innerHTML +=  msg; 
+  
+      for (i = 0; i &lt; len; i++) { 
+         alert(results.rows.item(i).log ); 
+      } 
+  
+   }, null); 
+});
+</pre>
+            <h2>Final Example</h2>
+            <p>So finally, let us keep this example in a full-fledged HTML5 document as follows and try to run it with
+               Safari browser.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/rMAhs5" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;!DOCTYPE HTML&gt; 
+
+&lt;html&gt;  
+   &lt;head&gt; 
+  
+      &lt;script type = "text/javascript"&gt; 
+         var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024); 
+         var msg; 
+    
+         db.transaction(function (tx) { 
+            tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)'); 
+            tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "foobar")'); 
+            tx.executeSql('INSERT INTO LOGS (id, log) VALUES (2, "logmsg")'); 
+            msg = '&lt;p&gt;Log message created and row inserted.&lt;/p&gt;'; 
+            document.querySelector('#status').innerHTML =  msg; 
+         })
+
+         db.transaction(function (tx) { 
+            tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) { 
+               var len = results.rows.length, i; 
+               msg = "&lt;p&gt;Found rows: " + len + "&lt;/p&gt;"; 
+               document.querySelector('#status').innerHTML +=  msg; 
+      
+               for (i = 0; i &lt; len; i++) { 
+                  msg = "&lt;p&gt;&lt;b&gt;" + results.rows.item(i).log + "&lt;/b&gt;&lt;/p&gt;"; 
+                  document.querySelector('#status').innerHTML +=  msg; 
+               } 
+            }, null); 
+         }); 
+      &lt;/script&gt; 
+   &lt;/head&gt; 
+  
+   &lt;body&gt; 
+      &lt;div id = "status" name = "status"&gt;Status Message&lt;/div&gt; 
+   &lt;/body&gt; 
+&lt;/html&gt;
+</pre>
+            <p>This will produce the following result &minus;</p>
+            <iframe class="result" src="/html5/src/web_sql.htm" height="200px" width="600px"></iframe>
+            <div class="mui-container-fluid button-borders show" id="bottom_navigation">
+               <div class="pre-btn">
+                  <a href="web_storage.html"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+               </div>
+               <div class="nxt-btn">
+                  <a href="server_sent_events.html">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <footer id="footer">
+      <div class="mui--text-center">
+         <div class="mui--text-caption mui--text-light">
+            <a href="../index.html">
+               <img class="img-responsive" src="../images/logo-black.png" alt="Tutorials" title="Tutorials">
+            </a>
+         </div>
+         <ul class="mui-list--inline mui--text-body2 mui--text-light">
+            <li><a href="../about/index.html"><i class="fal fa-home"></i> About us</a></li>
+            <li><a href="../about/about_terms_of_use.html"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+            <li><a href="../about/about_privacy.html"><i class="fal fa-globe"></i> Privacy Policy</a></li>
+            <li><a href="../about/about_cookies.html"><i class="fal fa-question-circle"></i> Cookies Policy</a></li>
+            <li><a href="../about/tutorials_writing.html"><i class="fal fa-hands-helping"></i> Write for us</a></li>
+            <li><a href="../about/contact_us.html"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+            <li><a href="../about/about_careers.html"><i class="fal fa-shield-check"></i> Careers</a></li>
+         </ul>
+         <div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights
+            Reserved.</div>
+      </div>
+   </footer>
+</body>
+
+</html>

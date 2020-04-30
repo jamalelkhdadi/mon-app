@@ -1,0 +1,2366 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Cordova - Quick Guide - Tutorialspoint</title>
+<meta charset="utf-8">
+<meta name="description" content="Cordova - Quick Guide - Cordova is a platform for building hybrid mobile applications using HTML, CSS and JavaScript."/>
+<meta name="keywords" content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Tutorials, Articles, Programming, training, learning, quiz, preferences, examples, code"/>
+<link rel="canonical" href="https://www.tutorialspoint.com/cordova/cordova_quick_guide.htm" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<link rel="stylesheet" href="/themes/css/style-min-v1.css?v=2.0.94">
+<script src="/themes/js/script-min-v1.js?v=2.0.0"></script>
+<script>function printPage() { window.print(); }</script>
+
+<script type="text/javascript" src="//services.bilsyndication.com/adv1/?q=0a8a90220201327770f6c986bea026a3" defer="" async=""></script>
+<script>
+var vitag = vitag || {};
+vitag.outStreamConfig = { enablePC:false, enableMobile:false};
+vitag.smartBannerConfig = { enablePC: false, enableMobile: true, disableHorizontalPosition: "right left middle", disableVerticalPosition: "top middle" };
+</script>
+
+<script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/18107/adRecover.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
+<style>
+.right-menu .mui-btn {
+    background-color:#027474;
+}
+a.demo {
+    background:#027474;
+}
+li.heading {
+    background:#027474;
+}
+.course-box{background:#027474}
+.home-intro-sub p{color:#027474}
+</style>
+</head>
+<body>
+<header id="header">
+<!-- Top sub-menu Starts Here -->
+<div class="mui-appbar mui-container-fulid top-menu">
+<div class="mui-container">
+<div class="top-menu-item home">
+<a href="https://www.tutorialspoint.com/index.htm" target="_blank" title="TutorialsPoint - Home"><i class="fal fa-home"></i> <span>Home</span></a>
+</div>
+<div class="top-menu-item qa">
+<a href="https://www.tutorialspoint.com/about/about_careers.htm" target="_blank" title="Job @ Tutorials Point"><i class="fa fa-suitcase"></i> <span>Jobs</span></a>
+</div>
+<div class="top-menu-item tools">
+<a href="https://www.tutorialspoint.com/online_dev_tools.htm" target="_blank" title="Tools - Online Development and Testing Tools"><i class="fal fa-cogs"></i> <span>Tools</span></a>
+</div>
+<div class="top-menu-item coding-ground">
+<a href="https://www.tutorialspoint.com/codingground.htm" target="_blank" title="Coding Ground - Free Online IDE and Terminal"><i class="fal fa-code"></i> <span>Coding Ground </span></a> 
+</div>
+<div class="top-menu-item current-affairs">
+<a href="https://www.tutorialspoint.com/current_affairs.htm" target="_blank" title="Daily Current Affairs"><i class="fal fa-layer-plus"></i> <span>Current Affairs</span></a>
+</div>
+<div class="top-menu-item upsc-notes">
+<a href="https://www.tutorialspoint.com/upsc_ias_exams.htm" target="_blank" title="UPSC IAS Exams Notes - TutorialsPoint"><i class="fal fa-user-tie"></i> <span>UPSC Notes</span></a>
+</div>      
+<div class="top-menu-item online-tutoris">
+<a href="https://www.tutorialspoint.com/tutor_connect/index.php" target="_blank" title="Top Online Tutors - Tutor Connect"><i class="fal fa-user"></i> <span>Online Tutors</span></a>
+</div>
+<div class="top-menu-item whiteboard">
+<a href="https://www.tutorialspoint.com/whiteboard.htm" target="_blank" title="Free Online Whiteboard"><i class="fal fa-chalkboard"></i> <span>Whiteboard</span></a>
+</div>
+<div class="top-menu-item net-meeting">
+<a href="https://www.tutorialspoint.com/netmeeting.php" target="_blank" title="A free tool for online video conferencing"><i class="fal fa-chalkboard-teacher"></i> <span>Net Meeting</span></a> 
+</div>
+<div class="top-menu-item articles">
+<a href="https://www.tutorix.com" target="_blank" title="Tutorx - The Best Learning App" rel="nofollow"><i class="fal fa-video"></i> <span>Tutorix</span></a> 
+</div>        
+<div class="social-menu-item">
+<a href="https://www.facebook.com/tutorialspointindia" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Facebook"><i class="fab fa-facebook-f"></i></a> 
+<a href="https://www.twitter.com/tutorialspoint" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Twitter"><i class="fab fa-twitter"></i></a>
+<a href="https://www.linkedin.com/company/tutorialspoint" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint @ Linkedin"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://www.youtube.com/channel/UCVLbzhxVTiTLiVKeGV7WEBg" target="_blank" rel="nofollow" data-placement="bottom" title="tutorialspoint YouTube"><i class="fab fa-youtube"></i></a>
+</div>        
+</div>
+</div>
+<!-- Top sub-menu Ends Here -->
+<!-- Top main-menu Starts Here -->
+<div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+<div class="mui-container">
+<div class="left-menu">
+<a href="https://www.tutorialspoint.com/index.htm" title="Tutorialspoint">
+<img class="tp-logo" alt="tutorialspoint" src="/cordova/images/logo.png">
+</a>
+<div class="mui-dropdown">
+<a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown"><i class="fa fa-th-large"></i> 
+<span>Categories <span class="mui-caret"></span></span></a>            
+<ul class="mui-dropdown__menu cat-menu">
+<li>
+<ul>
+<li><a href="/academic_tutorials.htm"><i class="fa fa-caret-right"></i> Academic Tutorials</a></li>
+<li><a href="/big_data_tutorials.htm"><i class="fa fa-caret-right"></i> Big Data &amp; Analytics </a></li>
+<li><a href="/computer_programming_tutorials.htm"><i class="fa fa-caret-right"></i> Computer Programming </a></li>
+<li><a href="/computer_science_tutorials.htm"><i class="fa fa-caret-right"></i> Computer Science </a></li>
+<li><a href="/database_tutorials.htm"><i class="fa fa-caret-right"></i> Databases </a></li>
+<li><a href="/devops_tutorials.htm"><i class="fa fa-caret-right"></i> DevOps </a></li>
+<li><a href="/digital_marketing_tutorials.htm"><i class="fa fa-caret-right"></i> Digital Marketing </a></li>
+<li><a href="/engineering_tutorials.htm"><i class="fa fa-caret-right"></i> Engineering Tutorials </a></li>
+<li><a href="/upsc_ias_exams.htm"><i class="fa fa-caret-right"></i> Exams Syllabus </a></li>
+<li><a href="/famous_monuments.htm"><i class="fa fa-caret-right"></i> Famous Monuments </a></li>
+<li><a href="/gate_exams_tutorials.htm"><i class="fa fa-caret-right"></i> GATE Exams Tutorials</a></li>
+<li><a href="/latest_technologies.htm"><i class="fa fa-caret-right"></i> Latest Technologies </a></li>
+<li><a href="/machine_learning_tutorials.htm"><i class="fa fa-caret-right"></i> Machine Learning </a></li>
+<li><a href="/mainframe_tutorials.htm"><i class="fa fa-caret-right"></i> Mainframe Development </a></li>
+<li><a href="/management_tutorials.htm"><i class="fa fa-caret-right"></i> Management Tutorials </a></li>
+<li><a href="/maths_tutorials.htm"><i class="fa fa-caret-right"></i> Mathematics Tutorials</a></li>
+<li><a href="/microsoft_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> Microsoft Technologies </a></li>
+<li><a href="/misc_tutorials.htm"><i class="fa fa-caret-right"></i> Misc tutorials </a></li>
+<li><a href="/mobile_development_tutorials.htm"><i class="fa fa-caret-right"></i> Mobile Development </a></li>
+<li><a href="/java_technology_tutorials.htm"><i class="fa fa-caret-right"></i> Java Technologies </a></li>
+<li><a href="/python_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> Python Technologies </a></li>
+<li><a href="/sap_tutorials.htm"><i class="fa fa-caret-right"></i> SAP Tutorials </a></li>
+<li><a href="/scripting_lnaguage_tutorials.htm"><i class="fa fa-caret-right"></i>Programming Scripts </a></li>
+<li><a href="/selected_reading.htm"><i class="fa fa-caret-right"></i> Selected Reading </a></li>
+<li><a href="/software_quality_tutorials.htm"><i class="fa fa-caret-right"></i> Software Quality </a></li>
+<li><a href="/soft_skill_tutorials.htm"><i class="fa fa-caret-right"></i> Soft Skills </a></li>
+<li><a href="/telecom_tutorials.htm"><i class="fa fa-caret-right"></i> Telecom Tutorials </a></li>
+<li><a href="/upsc_ias_exams.htm"><i class="fa fa-caret-right"></i> UPSC IAS Exams </a></li>
+<li><a href="/web_development_tutorials.htm"><i class="fa fa-caret-right"></i> Web Development </a></li>
+<li><a href="/sports_tutorials.htm"><i class="fa fa-caret-right"></i> Sports Tutorials </a></li>
+<li><a href="/xml_technologies_tutorials.htm"><i class="fa fa-caret-right"></i> XML Technologies </a></li>
+<li><a href="/multi_language_tutorials.htm"><i class="fa fa-caret-right"></i> Multi-Language</a></li>
+<li><a href="/questions_and_answers.htm"><i class="fa fa-caret-right"></i> Interview Questions</a></li>
+</ul>
+</li>
+</ul>
+<div class="clear"></div>
+</div> 
+</div>
+<div class="right-menu">
+<div class="toc-toggle">
+<a href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+</div>
+<div class="mobile-search-btn">
+<a href="https://www.tutorialspoint.com/index.htm"><i class="fal fa-search"></i></a>
+</div>
+<div class="search-box">
+<script async src="https://cse.google.com/cse.js?cx=000263362972888060243:yfed6eu421q"></script>
+<div class='gcse-search'></div>
+</div>
+<div class="menu-btn library-btn">
+<a href="https://www.tutorialspoint.com/tutorialslibrary.htm"><i class="fal fa-cubes"></i> <span>Library</span></a>
+</div>
+<div class="menu-btn videos-btn">
+<a href="https://www.tutorialspoint.com/videotutorials/index.php"><i class="fal fa-video"></i> <span>Videos</span></a> 
+</div>
+<div class="menu-btn videos-btn">
+<a href="https://www.tutorialspoint.com/questions/index.php"><i class="fa fa-location-arrow"></i> <span>Q/A</span></a>
+</div>
+<div class="menu-btn ebooks-btn">
+<a href="https://store.tutorialspoint.com"><i class="fal fa-book"></i> <span>eBooks</span></a>
+</div>
+<div class="mui-dropdown">
+<button class="mui-btn mui-btn--primary mobile-menu" data-mui-toggle="dropdown">
+<span class="mui-caret"></span>
+</button>
+<ul class="mui-dropdown__menu">
+<li><a href="https://www.tutorialspoint.com/tutorialslibrary.htm"><i class="fal fa-cubes"></i> <span>Library</span></a></li>
+<li><a href="https://www.tutorialspoint.com/videotutorials/index.php"><i class="fal fa-video"></i> <span>Videos</span></a></li>
+<li><a href="https://store.tutorialspoint.com"><i class="fal fa-book"></i> <span>eBooks</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Top main-menu Ends Here -->
+</header>
+<div class="mui-container-fluid content">
+<div class="mui-container">
+<!-- Tutorial ToC Starts Here -->
+<div class="mui-col-md-3 tutorial-toc">
+<div class="mini-logo">
+<img src="/cordova/images/cordova-mini-logo.jpg" alt="Cordova Tutorial" />
+</div>
+<ul class="toc chapters">
+<li class="heading">Cordova Tutorial</li>
+<li><a href="/cordova/index.htm">Cordova - Home</a></li>
+<li><a href="/cordova/cordova_overview.htm">Cordova - Overview</a></li>
+<li><a href="/cordova/cordova_environment_setup.htm">Cordova - Environment Setup</a></li>
+<li><a href="/cordova/cordova_first_application.htm">Cordova - First Application</a></li>
+<li><a href="/cordova/cordova_config_xml.htm">Cordova - Config.xml File</a></li>
+<li><a href="/cordova/cordova_storage.htm">Cordova - Storage</a></li>
+<li><a href="/cordova/cordova_events.htm">Cordova - Events</a></li>
+<li><a href="/cordova/cordova_back_button.htm">Cordova - Back Button</a></li>
+<li><a href="/cordova/cordova_plugman.htm">Cordova - Plugman</a></li>
+<li><a href="/cordova/cordova_battery_status.htm">Cordova - Battery Status</a></li>
+<li><a href="/cordova/cordova_camera.htm">Cordova - Camera</a></li>
+<li><a href="/cordova/cordova_contacts.htm">Cordova - Contacts</a></li>
+<li><a href="/cordova/cordova_device.htm">Cordova - Device</a></li>
+<li><a href="/cordova/cordova_accelometer.htm">Cordova - Accelerometer</a></li>
+<li><a href="/cordova/cordova_device_orientation.htm">Cordova - Device Orientation</a></li>
+<li><a href="/cordova/cordova_dialogs.htm">Cordova - Dialogs</a></li>
+<li><a href="/cordova/cordova_file_system.htm">Cordova - File System</a></li>
+<li><a href="/cordova/cordova_file_transfer.htm">Cordova - File Transfer</a></li>
+<li><a href="/cordova/cordova_geolocation.htm">Cordova - Geolocation</a></li>
+<li><a href="/cordova/cordova_globalisation.htm">Cordova - Globalization</a></li>
+<li><a href="/cordova/cordova_inappbrowser.htm">Cordova - InAppBrowser</a></li>
+<li><a href="/cordova/cordova_media.htm">Cordova - Media</a></li>
+<li><a href="/cordova/cordova_media_capture.htm">Cordova - Media Capture</a></li>
+<li><a href="/cordova/cordova_network.htm">Cordova - Network Information</a></li>
+<li><a href="/cordova/cordova_splash_screen.htm">Cordova - Splash Screen</a></li>
+<li><a href="/cordova/cordova_vibration.htm">Cordova - Vibration</a></li>
+<li><a href="/cordova/cordova_whitelist.htm">Cordova - Whitelist</a></li>
+<li><a href="/cordova/cordova_best_practices.htm">Cordova - Best Practices</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Cordova Useful Resources</li>
+<li><a href="/cordova/cordova_quick_guide.htm">Cordova - Quick Guide</a></li>
+<li><a href="/cordova/cordova_useful_resources.htm">Cordova - Useful Resources</a></li>
+<li><a href="/cordova/cordova_discussion.htm">Cordova - Discussion</a></li>
+</ul>
+<ul class="toc reading">
+<li class="sreading">Selected Reading</li>
+<li><a target="_top" href="/upsc_ias_exams.htm">UPSC IAS Exams Notes</a></li>
+<li><a target="_top" href="/developers_best_practices/index.htm">Developer's Best Practices</a></li>
+<li><a target="_top" href="/questions_and_answers.htm">Questions and Answers</a></li>
+<li><a target="_top" href="/effective_resume_writing.htm">Effective Resume Writing</a></li>
+<li><a target="_top" href="/hr_interview_questions/index.htm">HR Interview Questions</a></li>
+<li><a target="_top" href="/computer_glossary.htm">Computer Glossary</a></li>
+<li><a target="_top" href="/computer_whoiswho.htm">Who is Who</a></li>
+</ul>
+<div id="stickyparent">
+<div style="height:250px;width:300px;" id="sticky-ad">
+<div class="adsbyvli" data-ad-slot="vi_9012177"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9012177")})</script>
+</div>
+</div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+<!-- Tutorial Content Starts Here -->
+<div class="mui-col-md-6 tutorial-content">
+<h1>Cordova - Quick Guide</h1>
+<hr />
+<div class="top-ad-heading">Advertisements</div>
+<div style="text-align:center" class="google-top-ads">
+<div id="vi_top_ads" style="text-align:center !important;"></div>
+   <script>
+     (function() {
+     var adPos = document.getElementById('vi_top_ads');
+     var ad_id_728 = "vi_9012178";
+     var ad_id_650 = "vi_9014435";
+     var ad_id_300 = "vi_9017967";
+     var width = window.innerWidth;
+     var ad_id = ad_id_728;
+     if( width <= 768 ){
+        ad_id =  ad_id_300;
+     }else if( width <= 1435 ){
+        ad_id =  ad_id_650;
+     }
+     adPos.innerHTML = '<div class="adsbyvli" data-ad-slot="' + ad_id + '"></div>';
+     (vitag.displayInit = window.vitag.displayInit || []).push(function () {
+         viAPItag.display(ad_id);
+     });
+     }())
+   </script>
+</div>
+<br>
+<div class="mui-container-fluid button-borders">
+<div class="pre-btn">
+<a href="/cordova/cordova_best_practices.htm"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="/cordova/cordova_useful_resources.htm">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+<div class="clearer"></div>
+<h1>Cordova - Overview</h1>
+<p><b>Cordova</b> is a platform for building hybrid mobile applications using HTML, CSS and JavaScript.</p>
+<p>The official documentation gives us the definition of the Cordova &minus;</p>
+<blockquote>
+<p>"Apache Cordova is an open-source mobile development framework. It allows you to use standard web technologies such as HTML5, CSS3, and JavaScript for crossplatform development, avoiding each mobile platform native development language. Applications execute within wrappers targeted to each platform, and rely on standards-compliant API bindings to access each device's sensors, data, and network status."</p>
+</blockquote>
+<h2>Cordova Features</h2>
+<p>Let us now understand the features of Cordova in brief.</p>
+<h3>Command Line Interface (Cordova CLI)</h3>
+<p>This tool can be used for starting projects, building processes for different platforms, installing plugins and lot of other useful things that make the development process easier. You will learn how to use the Command Line Interface in the subsequent chapters.</p>
+<h3>Cordova Core Components</h3>
+<p>Cordova offers a set of core components that every mobile application needs. These components will be used for creating base of the app so we can spend more time to implement our own logic.</p>
+<h3>Cordova Plugins</h3>
+<p>Cordova offers API that will be used for implementing native mobile functions to our JavaScript app.</p>
+<h3>License</h3>
+<p>Cordova is licensed under the Apache License, Version 2.0. Apache and the Apache feather logos are trademarks of The Apache Software Foundation.</p>
+<h2>Cordova Advantages</h2>
+<p>We will now discuss the advantages of Cordova.</p>
+<ul class="list">
+<li><p>Cordova offers one platform for building hybrid mobile apps so we can develop one app that will be used on different mobile platforms – IOS, Android, Windows Phone, Amazon-fireos, blackberry, Firefox OS, Ubuntu and tizien.</p></li>
+<li><p>It is faster to develop hybrid app then native app so Cordova can save on the development time.</p></li>
+<li><p>Since we are using JavaScript when working with Cordova, we don't need to learn platform specific programming languages.</p></li>
+<li><p>There are many community add-ons that can be used with Cordova, these have several libraries and frameworks, which are optimized for working with it.</p></li>
+</ul>
+<h2>Cordova Limitations</h2>
+<p>Following are the limitations of Cordova.</p>
+<ul class="list">
+<li><p>Hybrid apps are slower than native ones so it is not optimal to use Cordova for large apps that require lots of data and functionality.</p></li>
+<li><p>Cross browser compatibility can create lots of issues. Most of the time we are building apps for different platforms so the testing and optimizing can be time consuming since we need to cover large number of devices and operating systems.</p></li>
+<li><p>Some plugins have compatibility issues with different devices and platforms. There are also some native APIs that are not yet supported by Cordova.</p></li>
+</ul>
+<h1>Cordova - Environment Setup</h1>
+<p>In this chapter, we will understand the Environment Setup of Cordova. To begin with the setup, we need to first install a few components. The components are listed in the following table.</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">S.No</th>
+<th style="text-align:center;">Software &amp; Description</th>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1</td>
+<td><p><b>NodeJS and NPM</b></p>
+<p>NodeJS is the platform needed for Cordova development. Check out our <a href="/nodejs/nodejs_environment_setup.htm" target="_blank">NodeJS Environment Setup</a> for more details.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">2</td>
+<td><p><b>Android SDK</b></p>
+<p>For Android platform, you need to have Android SDK installed on your machine. Check out <a href="/android/android_environment_setup.htm" target="_blank">Android Environment Setup</a> for more details.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">3</td>
+<td><p><b>XCode</b></p>
+<p>For iOS platform, you need to have xCode installed on your machine. Check out <a href="/ios/ios_environment_setup.htm" target="_blank">iOS Environment Setup</a> for more details</p></td>
+</tr>
+</table>
+<h2>Installing Cordova</h2>
+<p>Before we start, you need to know that we will use Windows <b>command prompt</b> in our tutorial.</p>
+<h3>Step 1 - Installing git</h3>
+<p>Even if you don't use git, it should be installed since Cordova is using it for some background processes. You can download git <a rel="nofollow" href="https://git-scm.com/downloads" target="_blank">here</a>. After you install git, open your environment variable.</p>
+<ul class="list">
+<li>Right-Click on Computer</li>
+<li>Properties</li>
+<li>Advanced System settings</li>
+<li>Environment Variables</li>
+<li>System Variables</li>
+<li>Edit</li>
+</ul>
+<p>Copy the following at the end of the <b>variable value field</b>. This is default path of the git installation. If you installed it on a different path you should use that instead of our example code below.</p>
+<pre class="result notranslate">
+;C:\Program Files (x86)\Git\bin;C:\Program Files (x86)\Git\cmd
+</pre>
+<p>Now you can type <b>git</b> in your command prompt to test if the installation is successful.</p>
+<h3>Step 2 - Installing Cordova</h3>
+<p>This step will download and install Cordova module globally. Open the command prompt and run the following &minus;</p>
+<pre class="result notranslate">
+C:\Users\username&gt;npm install -g cordova 
+</pre>
+<p>You can check the installed version by running &minus;</p>
+<pre class="result notranslate">
+C:\Users\username&gt;cordova -v 
+</pre>
+<p>This is everything you need to start developing the Cordova apps on Windows operating system. In our next tutorial, we will show you how to create first application.</p>
+<h1>Cordova - First Application</h1>
+<p>We have understood how to install Cordova and set up the environment for it. Once everything is ready, we can create our first hybrid Cordova application.</p>
+<h2>Step 1 - Creating App</h2>
+<p>Open the directory where you want the app to be installed in command prompt. We will create it on desktop.</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop&gt;cordova 
+   create CordovaProject io.cordova.hellocordova CordovaApp
+</pre>
+<ul class="list">
+<li><p><b>CordovaProject</b> is the directory name where the app is created.</p></li>
+<li><p><b>io.cordova.hellocordova</b> is the default reverse domain value. You should use your own domain value if possible.</p></li>
+<li><p><b>CordovaApp</b> is the title of your app.</p></li>
+</ul>
+<h2>Step 2 - Adding Platforms</h2>
+<p>You need to open your project directory in the command prompt. In our example, it is the <b>CordovaProject</b>. You should only choose platforms that you need. To be able to use the specified platform, you need to have installed the specific platform SDK. Since we are developing on windows, we can use the following platforms. We have already installed Android SDK, so we will only install android platform for this tutorial.</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova platform add android 
+</pre>
+<p>There are other platforms that can be used on Windows OS.</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova platform add wp8 
+</pre>
+<p></p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova platform add amazon-fireos 
+</pre>
+<p></p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova platform add windows 
+</pre>
+<p></p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova platform add blackberry10
+</pre>
+<p></p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova platform add firefoxos 
+</pre>
+<p>If you are developing on Mac, you can use &minus;</p>
+<pre class="result notranslate">
+$ cordova platform add IOS 
+</pre>
+<p></p>
+<pre class="result notranslate">
+$ cordova platform add amazon-fireos 
+</pre>
+<p></p>
+<pre class="result notranslate">
+$ cordova platform add android 
+</pre>
+<p></p>
+<pre class="result notranslate">
+$ cordova platform add blackberry10 
+</pre>
+<p></p>
+<pre class="result notranslate">
+$ cordova platform add firefoxos 
+</pre>
+<p>You can also remove platform from your project by using &minus;</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova platform rm android 
+</pre>
+<h2>Step 3 - Building and Running</h2>
+<p>In this step we will build the app for a specified platform so we can run it on mobile device or emulator.</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova build android 
+</pre>
+<p>Now we can run our app. If you are using the default emulator you should use &minus;</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova emulate android 
+</pre>
+<p>If you want to use the external emulator or real device you should use &minus;</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova run android 
+</pre>
+<p><b>NOTE</b> &minus; We will use the <b>Genymotion android emulator</b> since it is faster and more responsive than the default one. You can find the emulator <a rel="nofollow" href="https://www.genymotion.com/#!/store" target="_blank">here</a>. You can also use real device for testing by enabling <b>USB debugging</b> from the options and connecting it to your computer via USB cable. For some devices, you will also need to install the USB driver.</p>
+<p>Once we run the app, it will install it on the platform we specified. If everything is finished without errors, the output should show the default start screen of the app.</p>
+<img src="/cordova/images/cordova-app.jpg" alt="Cordova App" />
+<p>In our next tutorial, we will show you how to configure the Cordova Application.</p>
+<h1>Cordova - config.xml File</h1>
+<p>The <b>config.xml</b> file is the place where we can change the configuration of the app. When we created our app in the last tutorial, we set reverse domain and name. The values can be changed in the <b>config.xml</b> file. When we create the app, the default config file will also be created.</p>
+<img src="/cordova/images/config-xml-default.jpg" alt="Config XML Default" />
+<p>The following table explains configuration elements in <b>config.xml</b>.</p>
+<h2>config.xml Configuration Table</h2>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">S.No</th>
+<th style="text-align:center;">Element &amp; Details</th>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1</td>
+<td><p><b>widget</b></p>
+<p>The app reverse domain value that we specified when creating the app.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">2</td>
+<td><p><b>name</b></p>
+<p>The name of the app that we specified when creating the app.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">3</td>
+<td><p><b>description</b></p>
+<p>Description for the app.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">4</td>
+<td><p><b>author</b></p>
+<p>Author of the app.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">5</td>
+<td><p><b>content</b></p>
+<p>The app's starting page. It is placed inside the <b>www</b> directory.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">6</td>
+<td><p><b>plugin</b></p>
+<p>The plugins that are currently installed.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">7</td>
+<td><p><b>access</b></p>
+<p>Used to control access to external domains. The default <b>origin</b> value is set to &ast; which means that access is allowed to any domain. This value will not allow some specific URLs to be opened to protect information.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">8</td>
+<td><p><b>allow-intent</b></p>
+<p>Allows specific URLs to ask the app to open. For example, <b>&lt;allow-intent href = "tel:*" /&gt;</b> will allow tel: links to open the dialer.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">9</td>
+<td><p><b>platform</b></p>
+<p>The platforms for building the app.</p></td>
+</tr>
+</table>
+<h1>Cordova - Storage</h1>
+<p>We can use storage API available for storing data on the client apps. This will help the usage of the app when the user is offline and it can also improve performance. Since this tutorial is for beginners, we will show you how to use <b>local storage</b>. In one of our later tutorials, we will show you the other plugins that can be used.</p>
+<h2>Step 1 - Adding Buttons</h2>
+<p>We will create four buttons in the <b>index.html</b> file. The buttons will be located inside the <b>div class = "app"</b> element.</p>
+<pre class="prettyprint notranslate">
+&lt;button id = "setLocalStorage"&gt;SET LOCAL STORAGE&lt;/button&gt;
+&lt;button id = "showLocalStorage"&gt;SHOW LOCAL STORAGE&lt;/button&gt;
+&lt;button id = "removeProjectFromLocalStorage"&gt;REMOVE PROJECT&lt;/button&gt;
+&lt;button id = "getLocalStorageByKey"&gt;GET BY KEY&lt;/button&gt;
+</pre>
+<p>It will produce the following screen &minus;</p>
+<img src="/cordova/images/local-storage-buttons.jpg" alt="Local Storage Buttons" />
+<h2>Step 2 - Adding Event Listeners</h2>
+<p>Cordova security policy doesn't allow inline events so we will add event listeners inside index.js files. We will also assign <b>window.localStorage</b> to a <b>localStorage</b> variable that we will use later.</p>
+<pre class="prettyprint notranslate">
+document.getElementById("setLocalStorage").addEventListener("click", setLocalStorage); 
+document.getElementById("showLocalStorage").addEventListener("click", showLocalStorage); 
+document.getElementById("removeProjectFromLocalStorage").addEventListener 
+   ("click", removeProjectFromLocalStorage); 
+document.getElementById("getLocalStorageByKey").addEventListener 
+   ("click", getLocalStorageByKey);  
+var localStorage = window.localStorage; 	
+</pre>
+<h2>Step 3 - Creating Functions</h2>
+<p>Now we need to create functions that will be called when the buttons are tapped. First function is used for adding data to local storage.</p>
+<pre class="prettyprint notranslate">
+function setLocalStorage() { 
+   localStorage.setItem("Name", "John"); 
+   localStorage.setItem("Job", "Developer"); 
+   localStorage.setItem("Project", "Cordova Project"); 
+} 
+</pre>
+<p>The next one will log the data we added to console.</p>
+<pre class="prettyprint notranslate">
+function showLocalStorage() { 
+   console.log(localStorage.getItem("Name")); 
+   console.log(localStorage.getItem("Job")); 
+   console.log(localStorage.getItem("Project")); 
+} 	
+</pre>
+<p>If we tap <b>SET LOCAL STORAGE</b> button, we will set three items to local storage. If we tap <b>SHOW LOCAL STORAGE</b> afterwards, the console will log items that we want.</p>
+<img src="/cordova/images/show-local-storage.jpg" alt="Local Storage Log" />
+<p>Let us now create function that will delete the project from local storage.</p>
+<pre class="prettyprint notranslate">
+function removeProjectFromLocalStorage() {
+   localStorage.removeItem("Project");
+}
+</pre>
+<p>If we click the <b>SHOW LOCAL STORAGE</b> button after we deleted the project, the output will show <b>null</b> value for the project field.</p>
+<img src="/cordova/images/show-local-storage-2.jpg" alt="Show Local Storage 2" />
+<p>We can also get the local storage elements by using the <b>key()</b> method which will take the index as an argument and return the element with corresponding index value.</p>
+<pre class="prettyprint notranslate">
+function getLocalStorageByKey() {
+   console.log(localStorage.key(0));
+}
+</pre>
+<p>Now when we tap the <b>GET BY KEY</b> button, the following output will be displayed.</p>
+<img src="/cordova/images/show-local-storage-key.jpg" alt="Show Local Storage Key" />
+<h3>NOTE</h3>
+<p>When we use the <b>key()</b> method, the console will log the <b>job</b> instead of the <b>name</b> even though we passed argument <b>0</b> to retrieve the  first object. This is because the local storage is storing data in alphabetical order.</p>
+<p>The following table shows all the available local storage methods.</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">S.No</th>
+<th style="text-align:center;">Methods &amp; Details</th>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1</td>
+<td><p><b>setItem(key, value)</b></p>
+<p>Used for setting the item to local storage.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">2</td>
+<td><p><b>getItem(key)</b></p>
+<p>Used for getting the item from local storage.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">3</td>
+<td><p><b>removeItem(key)</b></p>
+<p>Used for removing the item from local storage.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">4</td>
+<td><p><b>key(index)</b></p>
+<p>Used for getting the item by using the <b>index</b> of the item in local storage. This helps sort the items alphabetically.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">5</td>
+<td><p><b>length()</b></p>
+<p>Used for retrieving the number of items that exists in local storage.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">6</td>
+<td><p><b>clear()</b></p>
+<p>Used for removing all the key/value pairs from local storage.</p></td>
+</tr>
+</table>
+<h1>Cordova - Events</h1>
+<p>There are various events that can be used in Cordova projects. The following table shows the available events.</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">S.No</th>
+<th style="text-align:center;">Events &amp; Details</th>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1</td>
+<td><p><b>deviceReady</b></p>
+<p>This event is triggered once Cordova is fully loaded. This helps to ensure that no Cordova functions are called before everything is loaded.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">2</td>
+<td><p><b>pause</b></p>
+<p>This event is triggered when the app is put into background.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">3</td>
+<td><p><b>resume</b></p>
+<p>This event is triggered when the app is returned from background.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">4</td>
+<td><p><b>backbutton</b></p>
+<p>This event is triggered when the back button is pressed.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">5</td>
+<td><p><b>menubutton</b></p>
+<p>This event is triggered when the menu button is pressed.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">6</td>
+<td><p><b>searchbutton</b></p>
+<p>This event is triggered when the Android search button is pressed.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">7</td>
+<td><p><b>startcallbutton</b></p>
+<p>This event is triggered when the start call button is pressed.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">8</td>
+<td><p><b>endcallbutton</b></p>
+<p>This event is triggered when the end call button is pressed.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">9</td>
+<td><p><b>volumedownbutton</b></p>
+<p>This event is triggered when the volume down button is pressed.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">10</td>
+<td><p><b>volumeupbutton</b></p>
+<p>This event is triggered when the volume up button is pressed.</p></td>
+</tr>
+</table>
+<h2>Using Events</h2>
+<p>All of the events are used almost the same way. We should always add event listeners in our <b>js</b> instead of the <b>inline event calling</b> since the <b>Cordova Content Security Policy</b> doesn't allow inline Javascript. If we try to call event inline, the following error will be displayed.</p>
+<img src="/cordova/images/event-error.jpg" alt="Event Error" />
+<p>The right way of working with events is by using <b>addEventListener</b>. We will understand how to use the <b>volumeupbutton</b> event through an example.</p>
+<pre class="prettyprint notranslate">
+document.addEventListener("volumeupbutton", callbackFunction, false);  
+function callbackFunction() { 
+   alert('Volume Up Button is pressed!');
+}
+</pre>
+<p>Once we press the <b>volume up</b> button, the screen will display the following alert.</p>
+<img src="/cordova/images/event-volume-up.jpg" alt="Event Volume Up" />
+<h2>Handling Back Button</h2>
+<p>We should use the Android back button for app functionalities like returning to the previous screen. To implement your own functionality, we should first disable the back button that is used to exit the App.</p>
+<pre class="prettyprint notranslate">
+document.addEventListener("backbutton", onBackKeyDown, false);  
+function onBackKeyDown(e) { 
+   e.preventDefault(); 
+   alert('Back Button is Pressed!'); 
+} 
+</pre>
+<p>Now when we press the native Android back button, the alert will appear on the screen instead of exiting the app. This is done by using the <b>e.preventDefault()</b> command.</p>
+<img src="/cordova/images/event-back-button.jpg" alt="Event Back Button" />
+<h1>Cordova - Back Button</h1>
+<h2>Handling Back Button</h2>
+<p>You will usually want to use Android back button for some app functionality like returning to previous screen. To be able to implement your own functionality, you first need to disable exiting the app when the back button is pressed.</p>
+<pre class="prettyprint notranslate">
+document.addEventListener("backbutton", onBackKeyDown, false);  
+function onBackKeyDown(e) { 
+   e.preventDefault(); 
+   alert('Back Button is Pressed!'); 
+}
+</pre>
+<p>Now when we press the native Android back button, the alert will appear on the screen instead of exiting the app. This is done by using <b>e.preventDefault()</b>.</p>
+<img src="/cordova/images/event-back-button.jpg" alt="Event Back Button" />
+<h1>Cordova - Plugman</h1>
+<p>Cordova Plugman is a useful command line tool for installing and managing plugins. You should use <b>plugman</b> if your app needs to run on one specific platform. If you want to create a <b>cross-platform</b> app you should use <b>cordova-cli</b> which will modify plugins for different platforms.</p>
+<h2>Step 1 - Installing Plugman</h2>
+<p>Open the <b>command prompt</b> window and run the following code snippet to install plugman.</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;npm install -g plugman
+</pre>
+<h2>Step 2 - Installing Plugins</h2>
+<p>To understand how to install the Cordova plugin using plugman, we will use the Camera plugin as an example.</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;plugman  
+   install --platform android --project platforms\android  
+   --plugin cordova-plugin-camera 
+   plugman uninstall --platform android --project platforms\android  
+   --plugin cordova-plugin-camera 
+</pre>
+<p>We need to consider three parameters as shown above.</p>
+<ul class="list">
+<li><p><b>--platform</b> &minus; platform that we are using (android, ios, amazon-fireos, wp8, blackberry10).</p></li>
+<li><p><b>--project</b> &minus;  path where the project is built. In our case, it is <b>platforms\android</b> directory.</p></li>
+<li><p><b>--plugin</b> &minus; the plugin that we want to install.</p></li>
+</ul>
+<p>If you set valid parameters, the command prompt window should display the following output.</p>
+<img src="/cordova/images/plugman-plugin-install-cmd.jpg" alt="Plugman Install CMD Output" />
+<h2>Additional Methods</h2>
+<p>You can use the <b>uninstall</b> method in similar way.</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;plugman uninstall  
+   --platform android --project platforms\android --plugin cordova-plugin-camera 
+</pre>
+<p>The <b>command prompt</b> console will display the following output.</p>
+<img src="/cordova/images/plugman-plugin-uninstall-cmd.jpg" alt="Plugman Uninstall CMD Output" />
+<p>Plugman offers some additional methods that can be used. The methods are listed in the following table.</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">S.No</th>
+<th style="text-align:center;">Method &amp; Details</th>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1</td>
+<td><p><b>install</b></p>
+<p>Used for installing Cordova plugins.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">2</td>
+<td><p><b>uninstall</b></p>
+<p>Used for uninstalling Cordova plugins.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">3</td>
+<td><p><b>fetch</b></p>
+<p>Used for copying Cordova plugin to specific location.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">4</td>
+<td><p><b>prepare</b></p>
+<p>Used for updating configuration file to help JS module support.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">5</td>
+<td><p><b>adduser</b></p>
+<p>Used for adding user account to the registry.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">6</td>
+<td><p><b>publish</b></p>
+<p>Used for publishing plugin to the registry.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">7</td>
+<td><p><b>unpublish</b></p>
+<p>Used for unpublishing plugin from the registry.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">8</td>
+<td><p><b>search</b></p>
+<p>Used for searching the plugins in the registry.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">9</td>
+<td><p><b>config</b></p>
+<p>Used for registry settings configuration.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">10</td>
+<td><p><b>create</b></p>
+<p>Used for creating custom plugin.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">11</td>
+<td><p><b>platform</b></p>
+<p>Used for adding or removing platform from the custom created plugin.</p></td>
+</tr>
+</table>
+<h2>Additional Commands</h2>
+<p>If you are stuck, you can always use the <b>plugman -help</b> command. The version can be checked by using <b>plugman -v</b>. To search for the plugin, you can use <b>plugman search</b> and finally you can change the plugin registry by using the <b>plugman config set registry</b> command.</p>
+<h3>NOTE</h3>
+<p>Since Cordova is used for cross platform development, in our subsequent chapters we will use <b>Cordova CLI</b> instead of <b>Plugman</b> for installing plugins.</p>
+<h1>Cordova - Battery Status</h1>
+<p>This Cordova plugin is used for monitoring device's battery status. The plugin will monitor every change that happens to device's battery.</p>
+<h2>Step 1 - Installing Battery Plugin</h2>
+<p>To install this plugin, we need to open the <b>command prompt</b> window and run the following code.</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova plugin add cordova-pluginbattery-status 
+</pre>
+<h2>Step 2 - Add Event Listener</h2>
+<p>When you open the <b>index.js</b> file, you will find the <b>onDeviceReady</b> function. This is where the event listener should be added.</p>
+<pre class="result notranslate">
+window.addEventListener("batterystatus", onBatteryStatus, false); 
+</pre>
+<h2>Step 3 - Create Callback Function</h2>
+<p>We will create the <b>onBatteryStatus</b> callback function at the bottom of the <b>index.js</b> file.</p>
+<pre class="prettyprint notranslate">
+function onBatteryStatus(info) { 
+   alert("BATTERY STATUS:  Level: " + info.level + " isPlugged: " + info.isPlugged); 
+}
+</pre>
+<p>When we run the app, an alert will be triggered. At the moment, the battery is 100% charged.</p>
+<p>When the status is changed, a new alert will be displayed. The battery status shows that the battery is now charged 99%.</p>
+<img src="/cordova/images/battery-status-change.jpg" alt="Battery Status Change" />
+<p>If we plug in the device to the charger, the new alert will show that the <b>isPlugged</b> value is changed to <b>true</b>.</p>
+<img src="/cordova/images/battery-status-plugged.jpg" alt="Battery Status Plugged" />
+<h2>Additional Events</h2>
+<p>This plugin offers two additional events besides the <b>batterystatus</b> event. These events can be used in the same way as the <b>batterystatus</b> event.</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">S.No</th>
+<th style="text-align:center;">Event &amp; Details</th>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1</td>
+<td><p><b>batterylow</b></p>
+<p>The event is triggered when the battery charge percentage reaches low value. This value varies with different devices.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">2</td>
+<td><p><b>batterycritical</b></p>
+<p>The event is triggered when the battery charge percentage reaches critical value. This value varies with different devices.</p></td>
+</tr>
+</table>
+<h1>Cordova - Camera</h1>
+<p>This plugin is used for taking photos or using files from the image gallery.</p>
+<h2>Step 1 - Install Camera Plugin</h2>
+<p>Run the following code in the <b>command prompt</b> window to install this plugin.</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova plugin add cordova-plugincamera
+</pre>
+<h2>Step 2 - Adding Button and Image </h2>
+<p>Now, we will create the button for calling the camera and <b>img</b> where the image will be displayed once taken. This will be added to <b>index.html</b> inside the <b>div class = "app"</b> element.</p>
+<pre class="prettyprint notranslate">
+&lt;button id = "cameraTakePicture"&gt;TAKE PICTURE&lt;/button&gt;
+&lt;img id = "myImage"&gt;&lt;/img&gt;
+</pre>
+<h2>Step 3 - Adding Event Listener</h2>
+<p>The event listener is added inside the <b>onDeviceReady</b> function to ensure that Cordova is loaded before we start using it.</p>
+<pre class="prettyprint notranslate">
+document.getElementById("cameraTakePicture").addEventListener 
+   ("click", cameraTakePicture); 
+</pre>
+<h2>Step 4 - Adding Functions (taking photo)</h2>
+<p>We will create the <b>cameraTakePicture</b> function that is passed as a callback to our event listener. It will be fired when the button is tapped. Inside this function, we will call the <b>navigator.camera</b> global object provided by the plugin API. If taking picture is successful, the data will be sent to the <b>onSuccess</b> callback function, if not, the alert with error message will be shown. We will place this code at the bottom of <b>index.js</b>.</p>
+<pre class="prettyprint notranslate">
+function cameraTakePicture() { 
+   navigator.camera.getPicture(onSuccess, onFail, {  
+      quality: 50, 
+      destinationType: Camera.DestinationType.DATA_URL 
+   });  
+   
+   function onSuccess(imageData) { 
+      var image = document.getElementById('myImage'); 
+      image.src = "data:image/jpeg;base64," + imageData; 
+   }  
+   
+   function onFail(message) { 
+      alert('Failed because: ' + message); 
+   } 
+}
+</pre>
+<p>When we run the app and press the button, native camera will be triggered.</p>
+<img src="/cordova/images/camera-take-img.jpg" alt="Cordova Camera Take Picture" />
+<p>When we take and save picture, it will be displayed on screen.</p>
+<img src="/cordova/images/camera-display-img.jpg" alt="Cordova Camera Display Image" />
+<p>The same procedure can be used for getting image from the local file system. The only difference is the function created in the last step. You can see that the <b>sourceType</b> optional parameter has been added.</p>
+<h2>Step 1 B</h2>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova plugin add cordova-plugincamera
+</pre>
+<h2>Step 2 B</h2>
+<pre class="prettyprint notranslate">
+&lt;button id = "cameraGetPicture"&gt;GET PICTURE&lt;/button&gt;
+</pre>
+<h2>Step 3 B</h2>
+<pre class="result notranslate">
+document.getElementById("cameraGetPicture").addEventListener("click", cameraGetPicture); 
+</pre>
+<h2>Step 4 B</h2>
+<pre class="prettyprint notranslate">
+function cameraGetPicture() {
+   navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+      destinationType: Camera.DestinationType.DATA_URL,
+      sourceType: Camera.PictureSourceType.PHOTOLIBRARY
+   });
+
+   function onSuccess(imageURL) {
+      var image = document.getElementById('myImage');
+      image.src = imageURL;
+   }
+
+   function onFail(message) {
+      alert('Failed because: ' + message);
+   }
+
+}
+</pre>
+<p>When we press the second button, the file system will open instead of the camera so we can choose the image that is to be displayed.</p>
+<img src="/cordova/images/camera-file-system.jpg" alt="Cordova Camera File System" />
+<p>This plugin offers lots of optional parameters for customization.</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">S.No</th>
+<th style="text-align:center;">Parameter &amp; Details</th>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1</td>
+<td><p><b>quality</b></p>
+<p>Quality of the image in the range of 0-100. Default is 50.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">2</td>
+<td><p><b>destinationType</b></p>
+<p><b>DATA_URL</b> or <b>0</b> Returns base64 encoded string.</p>
+<p><b>FILE_URI</b> or <b>1</b> Returns image file URI.</p>
+<p><b>NATIVE_URI</b> or <b>2</b> Returns image native URI.</p>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">3</td>
+<td><p><b>sourceType</b></p>
+<p><b>PHOTOLIBRARY</b> or <b>0</b> Opens photo library.</p>
+<p><b>CAMERA</b> or <b>1</b> Opens native camera.</p>
+<p><b>SAVEDPHOTOALBUM</b> or <b>2</b> Opens saved photo album.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">4</td>
+<td><p><b>allowEdit</b></p>
+<p>Allows image editing.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">5</td>
+<td><p><b>encodingType</b></p>
+<p><b>JPEG</b> or <b>0</b> Returns JPEG encoded image.</p>
+<p><b>PNG</b> or <b>1</b> Returns PNG encoded image.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">6</td>
+<td><p><b>targetWidth</b></p>
+<p>Image scaling width in pixels.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">7</td>
+<td><p><b>targetHeight</b></p>
+<p>Image scaling height in pixels.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">8</td>
+<td><p><b>mediaType</b></p>
+<p><b>PICTURE</b> or <b>0</b> Allows only picture selection.</p>
+<p><b>VIDEO</b> or <b>1</b> Allows only video selection.</p>
+<p><b>ALLMEDIA</b> or <b>2</b> Allows all media type selection.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">9</td>
+<td><p><b>correctOrientation</b></p>
+<p>Used for correcting orientation of the image.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">10</td>
+<td><p><b>saveToPhotoAlbum</b></p>
+<p>Used to save the image to the photo album.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">11</td>
+<td><p><b>popoverOptions</b></p>
+<p>Used for setting popover location on IOS.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">12</td>
+<td><p><b>cameraDirection</b></p>
+<p><b>FRONT</b> or <b>0</b> Front camera.</p>
+<p><b>BACK</b> or <b>1</b> Back camera.</p>
+<p><b>ALLMEDIA</b></p></td>
+</tr>
+</table>
+<h1>Cordova - Contacts</h1>
+<p>This plugin is used for accessing the contacts database of the device. In this tutorial we will show you how to create, query and delete contacts.</p>
+<h2>Step 1 - Install Contacts Plugin</h2>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova plugin add cordova-plugincontacts
+</pre>
+<h2>Step 2 - Adding Buttons</h2>
+<p>The button will be used for calling the <b>createContact</b> function. We will place it in the <b>div class = "app"</b> in <b>index.html</b> file.</p>
+<pre class="prettyprint notranslate">
+&lt;button id = "createContact"&gt;ADD CONTACT&lt;/button&gt;
+&lt;button id = "findContact"&gt;FIND CONTACT&lt;/button&gt;
+&lt;button id = "deleteContact"&gt;DELETE CONTACT&lt;/button&gt;
+</pre>
+<h2>Step 2 - Add Event Listeners</h2>
+<p>Open <b>index.js</b> and copy the following code snippet into the <b>onDeviceReady</b> function.</p>
+<pre class="prettyprint notranslate">
+document.getElementById("createContact").addEventListener("click", createContact);
+document.getElementById("findContact").addEventListener("click", findContact);
+document.getElementById("deleteContact").addEventListener("click", deleteContact);
+</pre>
+<h2>Step 3A - Callback Function (navigator.contacts.create)</h2>
+<p>Now, we do not have any contacts stored on the device.</p>
+<img src="/cordova/images/cordova-contacts-empty.jpg" alt="Cordova Contact Empty" />
+<p>Our first callback function will call the <b>navigator.contacts.create</b> method where we can specify the new contact data. This will create a contact and assign it to the <b>myContact</b> variable but it will not be stored on the device. To store it, we need to call the <b>save</b> method and create success and error callback functions.</p>
+<pre class="prettyprint notranslate">
+function createContact() {
+   var myContact = navigator.contacts.create({"displayName": "Test User"});
+   myContact.save(contactSuccess, contactError);
+    
+   function contactSuccess() {
+      alert("Contact is saved!");
+   }
+	
+   function contactError(message) {
+      alert('Failed because: ' + message);
+   }
+	
+}
+</pre>
+<p>When we click the <b>ADD CONTACT</b> button, new contact will be stored to the device contact list.</p>
+<img src="/cordova/images/cordova-contacts-create.jpg" alt="Cordova Contact Create" />
+<h2>Step 3B - Callback Function (navigator.contacts.find)</h2>
+<p>Our second callback function will query all contacts. We will use the <b>navigator.contacts.find</b> method. The options object has filter parameter which is used to specify the search filter. <b>multiple = true</b> is used since we want to return all contacts from device. The <b>field</b> key to search contacts by <b>displayName</b> since we used it when saving contact.</p>
+<p>After the options are set, we are using <b>find</b> method to query contacts. The alert message will be triggered for every contact that is found.</p>
+<pre class="prettyprint notranslate">
+function findContacts() {
+   var options = new ContactFindOptions();
+   options.filter = "";
+   options.multiple = true;
+   fields = ["displayName"];
+   navigator.contacts.find(fields, contactfindSuccess, contactfindError, options);
+    
+   function contactfindSuccess(contacts) {
+      for (var i = 0; i &lt; contacts.length; i++) {
+         alert("Display Name = " + contacts[i].displayName);
+      }
+   }
+	
+   function contactfindError(message) {
+      alert('Failed because: ' + message);
+   }
+	
+}
+</pre>
+<p>When we press the <b>FIND CONTACT</b> button, one alert popup will be triggered since we have saved only one contact.</p>
+<img src="/cordova/images/cordova-contacts-find.jpg" alt="Cordova Contacts Find" />
+<h2>Step 3C - Callback function (delete)</h2>
+<p>In this step, we will use the find method again but this time we will set different options. The <b>options.filter</b> is set to search that <b>Test User</b> which has to be deleted. After the <b>contactfindSuccess</b> callback function has returned the contact we want, we will delete it by using the <b>remove</b> method that requires its own success and error callbacks.</p>
+<pre class="prettyprint notranslate">
+function deleteContact() {
+   var options = new ContactFindOptions();
+   options.filter = "Test User";
+   options.multiple = false;
+   fields = ["displayName"];
+   navigator.contacts.find(fields, contactfindSuccess, contactfindError, options);
+
+   function contactfindSuccess(contacts) {
+      var contact = contacts[0];
+      contact.remove(contactRemoveSuccess, contactRemoveError);
+
+      function contactRemoveSuccess(contact) {
+         alert("Contact Deleted");
+      }
+
+      function contactRemoveError(message) {
+         alert('Failed because: ' + message);
+      }
+   }
+
+   function contactfindError(message) {
+      alert('Failed because: ' + message);
+   }
+	
+}
+</pre>
+<p>Now, we have only one contact stored on the device. We will manually add one more to show you the deleting process.</p>
+<img src="/cordova/images/cordova-contacts-multiple.jpg" alt="Cordova Contacts Multiple" />
+<p>We will now click the <b>DELETE CONTACT</b> button to delete the <b>Test User</b>. If we check the contact list again, we will see that the <b>Test User</b> does not exist anymore.</p>
+<img src="/cordova/images/cordova-contacts-deleted.jpg" alt="Cordova Contact Deleted" />
+<h1>Cordova - Device</h1>
+<p>This plugin is used for getting information about the user’s device.</p>
+<h2>Step 1 - Installing Device Plugin</h2>
+<p>To install this plugin, we need to run the following snippet in the <b>command prompt</b>.</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova plugin add cordova-plugin-device
+</pre>
+<h2>Step 2 - Adding Button</h2>
+<p>We will be using this plugin the same way we used the other Cordova plugins. Let us add a button in the <b>index.html</b> file. This button will be used for getting information about the device.</p>
+<pre class="prettyprint notranslate">
+&lt;button id = "cordovaDevice"&gt;CORDOVA DEVICE&lt;/button&gt;
+</pre>
+<h2>Step 3 - Adding Event Listener</h2>
+<p>Cordova plugins are available after the <b>deviceready</b> event so we will place the event listener inside the <b>onDeviceReady</b> function in <b>index.js</b>.</p>
+<pre class="prettyprint notranslate">
+document.getElementById("cordovaDevice").addEventListener("click", cordovaDevice);	
+</pre>
+<h2>Step 4 - Creating Function</h2>
+<p>The following function will show how to use all possibilities the plugin provides. We will place it in <b>index.js</b>.</p>
+<pre class="prettyprint notranslate">
+function cordovaDevice() {
+   alert("Cordova version: " + device.cordova + "\n" +
+      "Device model: " + device.model + "\n" +
+      "Device platform: " + device.platform + "\n" +
+      "Device UUID: " + device.uuid + "\n" +
+      "Device version: " + device.version);
+}
+</pre>
+<p>When we click the <b>CORDOVA DEVICE</b> button, the alert will display the Cordova version, device model, platform, UUID and device version.</p>
+<img src="/cordova/images/cordova-device-alert.jpg" alt="Cordova Device Alert" />
+<h1>Cordova - Accelerometer</h1>
+<p>The Accelerometer plugin is also called the <b>device-motion</b>. It is used to track device motion in three dimensions.</p>
+<h2>Step 1 - Install Accelerometer Plugin</h2>
+<p>We will install this plugin by using <b>cordova-CLI</b>. Type the following code in the <b>command prompt</b> window.</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova plugin add cordova-plugin-device-motion 
+</pre>
+<h2>Step 2 - Add Buttons</h2>
+<p>In this step, we will add two buttons in the <b>index.html</b> file. One will be used for getting the current acceleration and the other will watch for the acceleration changes.</p>
+<pre class="prettyprint notranslate">
+&lt;button id = "getAcceleration"&gt;GET ACCELERATION&lt;/button&gt;
+&lt;button id = "watchAcceleration"&gt;WATCH ACCELERATION&lt;/button&gt;
+</pre>
+<h2>Step 3 - Add Event Listeners</h2>
+<p>Let us now add event listeners for our buttons to <b>onDeviceReady</b> function inside <b>index.js</b>.</p>
+<pre class="prettyprint notranslate">
+document.getElementById("getAcceleration").addEventListener("click", getAcceleration);
+document.getElementById("watchAcceleration").addEventListener(
+   "click", watchAcceleration);
+</pre>
+<h2>Step 4 - Creating Functions</h2>
+<p>Now, we will create two functions. The first function will be used to get the current acceleration and the second function will watch the acceleration and the information about the acceleration will be triggered every three seconds. We will also add the <b>clearWatch</b> function wrapped by the <b>setTimeout</b> function to stop watching acceleration after the specified time frame. The <b>frequency</b> parameter is used to trigger the callback function every three seconds.</p>
+<pre class="prettyprint notranslate">
+function getAcceleration() {
+   navigator.accelerometer.getCurrentAcceleration(
+      accelerometerSuccess, accelerometerError);
+
+   function accelerometerSuccess(acceleration) {
+      alert('Acceleration X: ' + acceleration.x + '\n' +
+         'Acceleration Y: ' + acceleration.y + '\n' +
+         'Acceleration Z: ' + acceleration.z + '\n' +
+         'Timestamp: '      + acceleration.timestamp + '\n');
+   };
+
+   function accelerometerError() {
+      alert('onError!');
+   };
+}
+
+function watchAcceleration() {
+   var accelerometerOptions = {
+      frequency: 3000
+   }
+   var watchID = navigator.accelerometer.watchAcceleration(
+      accelerometerSuccess, accelerometerError, accelerometerOptions);
+
+   function accelerometerSuccess(acceleration) {
+      alert('Acceleration X: ' + acceleration.x + '\n' +
+         'Acceleration Y: ' + acceleration.y + '\n' +
+         'Acceleration Z: ' + acceleration.z + '\n' +
+         'Timestamp: '      + acceleration.timestamp + '\n');
+
+      setTimeout(function() {
+         navigator.accelerometer.clearWatch(watchID);
+      }, 10000);
+   };
+
+   function accelerometerError() {
+      alert('onError!');
+   };
+	
+}
+</pre>
+<p>Now if we press the <b>GET ACCELERATION</b> button, we will get the current acceleration value. If we press the <b>WATCH ACCELERATION</b> button, the alert will be triggered every three seconds. After third alert is shown the <b>clearWatch</b> function will be called and we will not get any more alerts since we set timeout to 10000 milliseconds.</p>
+<img src="/cordova/images/cordova-get-acceleration.jpg" alt="Cordova Acceleration" />
+<h1>Cordova - Device Orientation</h1>
+<p>Compass is used to show direction relative to geographic north cardinal point.</p>
+<h2>Step 1 - Install Device Orientation plugin</h2>
+<p>Open the <b>command prompt</b> window and run the following.</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova plugin 
+   add cordova-plugindevice-orientation
+</pre>
+<h2>Step 2 - Add Buttons</h2>
+<p>This plugin is similar to the <b>acceleration</b> plugin. Let us now create two buttons in <b>index.html</b>.</p>
+<pre class="prettyprint notranslate">
+&lt;button id = "getOrientation"&gt;GET ORIENTATION&lt;/button&gt;
+&lt;button id = "watchOrientation"&gt;WATCH ORIENTATION&lt;/button&gt;
+</pre>
+<h2>Step 3 - Add Event Listeners</h2>
+<p>Now, we will add <b>event listeners</b> inside the <b>onDeviceReady</b> function in <b>index.js</b>.</p>
+<pre class="prettyprint notranslate">
+document.getElementById("getOrientation").addEventListener("click", getOrientation);
+document.getElementById("watchOrientation").addEventListener("click", watchOrientation);
+</pre>
+<h2>Step 4 - Creating Functions</h2>
+<p>We will create two functions; the first function will generate the current acceleration and the other will check on the orientation changes. You can see that we are using the <b>frequency</b> option again to keep a watch on changes that occur every three seconds.</p>
+<pre class="prettyprint notranslate">
+function getOrientation() {
+   navigator.compass.getCurrentHeading(compassSuccess, compassError);
+
+   function compassSuccess(heading) {
+      alert('Heading: ' + heading.magneticHeading);
+   };
+
+   function compassError(error) {
+      alert('CompassError: ' + error.code);
+   };
+}
+
+function watchOrientation(){
+   var compassOptions = {
+      frequency: 3000
+   }
+   var watchID = navigator.compass.watchHeading(compassSuccess, 
+      compassError, compassOptions);
+
+   function compassSuccess(heading) {
+      alert('Heading: ' + heading.magneticHeading);
+
+      setTimeout(function() {
+         navigator.compass.clearWatch(watchID);
+      }, 10000);
+   };
+
+   function compassError(error) {
+      alert('CompassError: ' + error.code);
+   };
+}
+</pre>
+<p>Since the compass plugin is almost the same as the acceleration plugin, we will show you an error code this time. Some devices do not have the magnetic sensor that is needed for the compass to work. If your device doesn't have it, the following error will be displayed.</p>
+<img src="/cordova/images/cordova-compass-error.jpg" alt="Cordova Compass Error" />
+<h1>Cordova - Dialogs</h1>
+<p>The Cordova Dialogs plugin will call the platform native dialog UI element.</p>
+<h2>Step 1 - Installing Dialog</h2>
+<p>Type the following command in the <b>command prompt</b> window to install this plugin.</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova plugin add cordova-plugin-dialogs
+</pre>
+<h2>Step 2 - Add Buttons</h2>
+<p>Let us now open <b>index.html</b> and add four buttons, one for every type of dialog.</p>
+<pre class="prettyprint notranslate">
+&lt;button id = "dialogAlert"&gt;ALERT&lt;/button&gt;
+&lt;button id = "dialogConfirm"&gt;CONFIRM&lt;/button&gt;
+&lt;button id = "dialogPrompt"&gt;PROMPT&lt;/button&gt;
+&lt;button id = "dialogBeep"&gt;BEEP&lt;/button&gt;
+</pre>
+<h2>Step 3 - Add Event Listeners</h2>
+<p>Now we will add the event listeners inside the <b>onDeviceReady</b> function in <b>index.js</b>. The listeners will call the callback function once the corresponding button is clicked.</p>
+<pre class="prettyprint notranslate">
+document.getElementById("dialogAlert").addEventListener("click", dialogAlert);
+document.getElementById("dialogConfirm").addEventListener("click", dialogConfirm);
+document.getElementById("dialogPrompt").addEventListener("click", dialogPrompt);
+document.getElementById("dialogBeep").addEventListener("click", dialogBeep);	
+</pre>
+<h2>Step 4A - Create Alert Function</h2>
+<p>Since we added four event listeners, we will now create the callback functions for all of them in <b>index.js</b>. The first one is <b>dialogAlert</b>.</p>
+<pre class="prettyprint notranslate">
+function dialogAlert() {
+   var message = "I am Alert Dialog!";
+   var title = "ALERT";
+   var buttonName = "Alert Button";
+   navigator.notification.alert(message, alertCallback, title, buttonName);
+   
+   function alertCallback() {
+      console.log("Alert is Dismissed!");
+   }
+}
+</pre>
+<p>If we click the <b>ALERT</b> button, we will get see the alert dialog box.</p>
+<img src="/cordova/images/cordova-alert-dialog.jpg" alt="Cordova Alert Dialog" />
+<p>When we click the dialog button, the following output will be displayed on the console.</p>
+<img src="/cordova/images/cordova-alert-dialog-dismissed.jpg" alt="Cordova Alert DIalog Dismissed" />
+<h2>Step 4B - Create Confirm Function</h2>
+<p>The second function we need to create is the <b>dialogConfirm</b> function.</p>
+<pre class="prettyprint notranslate">
+function dialogConfirm() {
+   var message = "Am I Confirm Dialog?";
+   var title = "CONFIRM";
+   var buttonLabels = "YES,NO";
+   navigator.notification.confirm(message, confirmCallback, title, buttonLabels);
+
+   function confirmCallback(buttonIndex) {
+      console.log("You clicked " + buttonIndex + " button!");
+   }
+	
+}
+</pre>
+<p>When the <b>CONFIRM</b> button is pressed, the new dialog will pop up.</p>
+<img src="/cordova/images/cordova-confirm-dialog.jpg" alt="Cordova Dialog Confirm" />
+<p>We will click the <b>YES</b> button to answer the question. The following output will be displayed on the console.</p>
+<img src="/cordova/images/cordova-confirm-dialog-dismissed.jpg" alt="Cordova Platform Confirm Dismissed" />
+<h2>Step 4C - Create Prompt Function</h2>
+<p>The third function is the <b>dialogPrompt</b> function. This allows the users to type text into the dialog input element.</p>
+<pre class="prettyprint notranslate">
+function dialogPrompt() {
+   var message = "Am I Prompt Dialog?";
+   var title = "PROMPT";
+   var buttonLabels = ["YES","NO"];
+   var defaultText = "Default"
+   navigator.notification.prompt(message, promptCallback, 
+      title, buttonLabels, defaultText);
+
+   function promptCallback(result) {
+      console.log("You clicked " + result.buttonIndex + " button! \n" + 
+         "You entered " +  result.input1);
+   }
+	
+}
+</pre>
+<p>The <b>PROMPT</b> button will trigger a dialog box as in the following screenshot.</p>
+<img src="/cordova/images/cordova-prompt-dialog.jpg" alt="Cordova Dialog Prompt" />
+<p>In this dialog box, we have an option to type the text. We will log this text in the console, together with a button that is clicked.</p>
+<img src="/cordova/images/cordova-prompt-dialog-dismissed.jpg" alt="Cordova Dialog Prompt Dismissed" />
+<h2>Step 4D - Create Beep Function</h2>
+<p>The last one is the <b>dialogBeep</b> function. This is used for calling the audio beep notification. The <b>times</b> parameter will set the number of repeats for the beep signal.</p>
+<pre class="prettyprint notranslate">
+function dialogBeep() {
+   var times = 2;
+   navigator.notification.beep(times);
+}
+</pre>
+<p>When we click the <b>BEEP</b> button, we will hear the notification sound twice, since the <b>times</b> value is set to <b>2</b>.</p>
+<h1>Cordova - File System</h1>
+<p>This plugin is used for manipulating the native file system on the user's device.</p>
+<h2>Step 1 - Installing File Plugin</h2>
+<p>We need to run the following code in the <b>command prompt</b> to install this plugin.</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova plugin add cordova-plugin-file
+</pre>
+<h2>Step 2 - Add Buttons</h2>
+<p>In this example, we will show you how to create file, write to file, read it and delete it. For this reason, we will create four buttons in <b>index.html</b>. We will also add <b>textarea</b> wherein, the content of our file will be shown.</p>
+<pre class="prettyprint notranslate">
+&lt;button id = "createFile"&gt;CREATE FILE&lt;/button&gt;
+&lt;button id = "writeFile"&gt;WRITE FILE&lt;/button&gt;
+&lt;button id = "readFile"&gt;READ FILE&lt;/button&gt;
+&lt;button id = "removeFile"&gt;DELETE FILE&lt;/button&gt;
+&lt;textarea id = "textarea"&gt;&lt;/textarea&gt;
+</pre>
+<h2>Step 3 - Add Event Listeners</h2>
+<p>We will add <b>event listeners</b> in <b>index.js</b> inside the <b>onDeviceReady</b> function to ensure that everything has started before the plugin is used.</p>
+<pre class="prettyprint notranslate">
+document.getElementById("createFile").addEventListener("click", createFile);
+document.getElementById("writeFile").addEventListener("click", writeFile);
+document.getElementById("readFile").addEventListener("click", readFile);
+document.getElementById("removeFile").addEventListener("click", removeFile);
+</pre>
+<h2>Step 4A - Create File function</h2>
+<p>The file will be created in the apps root folder on the device. To be able to access the root folder you need to provide <b>superuser</b> access to your folders. In our case, the path to root folder is <b>\data\data\com.example.hello\cache</b>. At the moment this folder is empty.</p>
+<img src="/cordova/images/cordova-file-root-empty.jpg" alt="Cordova File Root Empty" />
+<p>Let us now add a function that will create the log.txt file. We will write this code in <b>index.js</b> and send a request to the file system. This method uses WINDOW.TEMPORARY or WINDOW.PERSISTENT. The size that will be required for storage is valued in bytes (5MB in our case).</p>
+<pre class="prettyprint notranslate">
+function createFile() {
+   var type = window.TEMPORARY;
+   var size = 5*1024*1024;
+   window.requestFileSystem(type, size, successCallback, errorCallback)
+
+   function successCallback(fs) {
+      fs.root.getFile('log.txt', {create: true, exclusive: true}, function(fileEntry) {
+         alert('File creation successfull!')
+      }, errorCallback);
+   }
+
+   function errorCallback(error) {
+      alert("ERROR: " + error.code)
+   }
+	
+}
+</pre>
+<p>Now we can press the <b>CREATE FILE</b> button and the alert will confirm that we successfully created the file.</p>
+<img src="/cordova/images/cordova-file-create.jpg" alt="Cordova File Create" />
+<p>Now, we can check our apps root folder again and we can find our new file there.</p>
+<img src="/cordova/images/cordova-file-root-log.jpg" alt="Cordova File Root" />
+<h2>Step 4B - Write File Function</h2>
+<p>In this step, we will write some text to our file. We will again send a request to the file system, and then create the file writer to be able to write <b>Lorem Ipsum</b> text that we assigned to the <b>blob</b> variable.</p>
+<pre class="prettyprint notranslate">
+function writeFile() {
+   var type = window.TEMPORARY;
+   var size = 5*1024*1024;
+   window.requestFileSystem(type, size, successCallback, errorCallback)
+
+   function successCallback(fs) {
+      fs.root.getFile('log.txt', {create: true}, function(fileEntry) {
+
+         fileEntry.createWriter(function(fileWriter) {
+            fileWriter.onwriteend = function(e) {
+               alert('Write completed.');
+            };
+
+            fileWriter.onerror = function(e) {
+               alert('Write failed: ' + e.toString());
+            };
+
+            var blob = new Blob(['Lorem Ipsum'], {type: 'text/plain'});
+            fileWriter.write(blob);
+         }, errorCallback);
+      }, errorCallback);
+   }
+
+   function errorCallback(error) {
+      alert("ERROR: " + error.code)
+   }
+}
+</pre>
+<p>After pressing the <b>WRITE FILE</b> button, the alert will inform us that the writing is successful as in the following screenshot.</p>
+<img src="/cordova/images/cordova-file-write.jpg" alt="Cordova File Write" />
+<p>Now we can open <b>log.txt</b> and see that <b>Lorem Ipsum</b> is written inside.</p>
+<img src="/cordova/images/cordova-file-root-log-text.jpg" alt="Cordova FIle Root Log Text" />
+<h2>Step 4C - Read File Function</h2>
+<p>In this step, we will read the log.txt file and display it in the <b>textarea</b> element. We will send a request to the file system and get the file object, then we are creating <b>reader</b>. When the reader is loaded, we will assign the returned value to <b>textarea</b>.</p>
+<pre class="prettyprint notranslate">
+function readFile() {
+   var type = window.TEMPORARY;
+   var size = 5*1024*1024;
+   window.requestFileSystem(type, size, successCallback, errorCallback)
+
+   function successCallback(fs) {
+      fs.root.getFile('log.txt', {}, function(fileEntry) {
+
+         fileEntry.file(function(file) {
+            var reader = new FileReader();
+
+            reader.onloadend = function(e) {
+               var txtArea = document.getElementById('textarea');
+               txtArea.value = this.result;
+            };
+            reader.readAsText(file);
+         }, errorCallback);
+      }, errorCallback);
+   }
+
+   function errorCallback(error) {
+      alert("ERROR: " + error.code)
+   }
+}	
+</pre>
+<p>When we click the <b>READ FILE</b> button, the text from the file will be written inside <b>textarea</b>.</p>
+<img src="/cordova/images/cordova-file-read.jpg" alt="Cordova File Read" />
+<h2>Step 4D - Delete File Function</h2>
+<p>And finally we will create function for deleting <b>log.txt</b> file.</p>
+<pre class="prettyprint notranslate">
+function removeFile() {
+   var type = window.TEMPORARY;
+   var size = 5*1024*1024;
+   window.requestFileSystem(type, size, successCallback, errorCallback)
+
+   function successCallback(fs) {
+      fs.root.getFile('log.txt', {create: false}, function(fileEntry) {
+
+         fileEntry.remove(function() {
+            alert('File removed.');
+         }, errorCallback);
+      }, errorCallback);
+   }
+
+   function errorCallback(error) {
+      alert("ERROR: " + error.code)
+   }
+}	
+</pre>
+<p>We can now press the <b>DELETE FILE</b> button to remove the file from the apps root folder. The alert will notify us that the delete operation is successful.</p>
+<img src="/cordova/images/cordova-file-delete.jpg" alt="Cordova File Delete" />
+<p>If we check the apps root folder, we will see that it is empty.</p>
+<img src="/cordova/images/cordova-file-root-empty.jpg" alt="Cordova File Root Empty" />
+<h1>Cordova - File Transfer</h1>
+<p>This plugin is used for uploading and downloading files.</p>
+<h2>Step 1 - Installing File Transfer Plugin</h2>
+<p>We need to open <b>command prompt</b> and run the following command to install the plugin.</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject>cordova plugin add cordova-plugin-file-transfer
+</pre>
+<h2>Step 2 - Create Buttons</h2>
+<p>In this chapter, we will show you how to upload and download files. Let's create two buttons in <b>index.html</b></p>
+<pre class="prettyprint notranslate">
+&lt;button id = "uploadFile"&gt;UPLOAD&lt;/button&gt;
+&lt;button id = "downloadFile"&gt;DOWNLOAD&lt;/button&gt;
+</pre>
+<h2>Step 3 - Add Event Listeners</h2>
+<p>Event listeners will be created in <b>index.js</b> inside the <b>onDeviceReady</b> function. We are adding <b>click</b> events and <b>callback</b> functions.</p>
+<pre class="prettyprint notranslate">
+document.getElementById("uploadFile").addEventListener("click", uploadFile);
+document.getElementById("downloadFile").addEventListener("click", downloadFile);
+</pre>
+<h2>Step 4A - Download Function</h2>
+<p>This function will be used for downloading the files from server to device. We uploaded file to <b>postimage.org</b> to make things more simple. You will probably want to use your own server. The function is placed in <b>index.js</b> and will be triggered when the corresponding button is pressed. <b>uri</b> is the server download link and <b>fileURI</b> is the path to the DCIM folder on our device.</p>
+<pre class="prettyprint notranslate">
+function downloadFile() {
+   var fileTransfer = new FileTransfer();
+   var uri = encodeURI("http://s14.postimg.org/i8qvaxyup/bitcoin1.jpg");
+   var fileURL =  "///storage/emulated/0/DCIM/myFile";
+
+   fileTransfer.download(
+      uri, fileURL, function(entry) {
+         console.log("download complete: " + entry.toURL());
+      },
+		
+      function(error) {
+         console.log("download error source " + error.source);
+         console.log("download error target " + error.target);
+         console.log("download error code" + error.code);
+      },
+		
+      false, {
+         headers: {
+            "Authorization": "Basic dGVzdHVzZXJuYW1lOnRlc3RwYXNzd29yZA=="
+         }
+      }
+   );
+}
+</pre>
+<p>Once we press the <b>DOWNLOAD</b> button, the file will be downloaded from the <b>postimg.org</b> server to our mobile device. We can check the specified folder and see that <b>myFile</b> is there.</p>
+<img src="/cordova/images/cordova-file-transfer-download.jpg" alt="Cordova File Transfer Download" />
+<p>The console output will look like this &minus;</p>
+<img src="/cordova/images/cordova-file-transfer-download-log.jpg" alt="Cordova File Transfer Download Log" />
+<h2>Step 4B - Upload Function</h2>
+<p>Now let's create a function that will take the file and upload it to the server. Again, we want to simplify this as much as possible, so we will use <b>posttestserver.com</b> online server for testing. The uri value will be linked for posting to <b>posttestserver</b>.</p>
+<pre class="prettyprint notranslate">
+function uploadFile() {
+   var fileURL = "///storage/emulated/0/DCIM/myFile"
+   var uri = encodeURI("http://posttestserver.com/post.php");
+   var options = new FileUploadOptions();
+   options.fileKey = "file";
+   options.fileName = fileURL.substr(fileURL.lastIndexOf('/')+1);
+   options.mimeType = "text/plain";
+   
+   var headers = {'headerParam':'headerValue'};
+   options.headers = headers;
+   var ft = new FileTransfer();
+   ft.upload(fileURL, uri, onSuccess, onError, options);
+
+   function onSuccess(r) {
+      console.log("Code = " + r.responseCode);
+      console.log("Response = " + r.response);
+      console.log("Sent = " + r.bytesSent);
+   }
+
+   function onError(error) {
+      alert("An error has occurred: Code = " + error.code);
+      console.log("upload error source " + error.source);
+      console.log("upload error target " + error.target);
+   }
+	
+}
+</pre>
+<p>Now we can press the <b>UPLOAD</b> button to trigger this function. We will get a console output as confirmation that the uploading was successful.</p>
+<img src="/cordova/images/cordova-file-transfer-upload-log.jpg" alt="Cordova File Transfer Upload Log" />
+<p>We can also check the server to make sure that the file was uploaded.</p>
+<img src="/cordova/images/cordova-file-transfer-upload-server-response.jpg" alt="Cordova File Transfer Upload Server Response" />
+<h1>Cordova - Geolocation</h1>
+<p>Geolocation is used for getting info about device's latitude and longitude.</p>
+<h2>Step 1 - Installing Plugin</h2>
+<p>We can install this plugin by typing the following code to <b>command prompt</b> window.</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova plugin add cordova-plugin-geolocation
+</pre>
+<h2>Step 2 - Add Buttons</h2>
+<p>In this tutorial we will show you how to get current position and how to watch for changes. We first need to create buttons that will call these functions.</p>
+<pre class="prettyprint notranslate">
+&lt;button id = "getPosition"&gt;CURRENT POSITION&lt;/button&gt;
+&lt;button id = "watchPosition"&gt;WATCH POSITION&lt;/button&gt;
+</pre>
+<h2>Step 3 - Add Event Listeners</h2>
+<p>Now we want to add event listeners when the device is ready. We will add the code sample below to <b>onDeviceReady</b> function in <b>index.js</b>.</p>
+<pre class="prettyprint notranslate">
+document.getElementById("getPosition").addEventListener("click", getPosition);
+document.getElementById("watchPosition").addEventListener("click", watchPosition);	
+</pre>
+<h2>Step 3 - Create Functions</h2>
+<p>Two functions have to be created for two event listeners. One will be used for getting the current position and the other for watching the position.</p>
+<pre class="prettyprint notranslate">
+function getPosition() {
+   var options = {
+      enableHighAccuracy: true,
+      maximumAge: 3600000
+   }
+   var watchID = navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
+
+   function onSuccess(position) {
+      alert('Latitude: '          + position.coords.latitude          + '\n' +
+         'Longitude: '         + position.coords.longitude         + '\n' +
+         'Altitude: '          + position.coords.altitude          + '\n' +
+         'Accuracy: '          + position.coords.accuracy          + '\n' +
+         'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+         'Heading: '           + position.coords.heading           + '\n' +
+         'Speed: '             + position.coords.speed             + '\n' +
+         'Timestamp: '         + position.timestamp                + '\n');
+   };
+
+   function onError(error) {
+      alert('code: '    + error.code    + '\n' + 'message: ' + error.message + '\n');
+   }
+}
+
+function watchPosition() {
+   var options = {
+      maximumAge: 3600000,
+      timeout: 3000,
+      enableHighAccuracy: true,
+   }
+   var watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
+
+   function onSuccess(position) {
+      alert('Latitude: '          + position.coords.latitude          + '\n' +
+         'Longitude: '         + position.coords.longitude         + '\n' +
+         'Altitude: '          + position.coords.altitude          + '\n' +
+         'Accuracy: '          + position.coords.accuracy          + '\n' +
+         'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+         'Heading: '           + position.coords.heading           + '\n' +
+         'Speed: '             + position.coords.speed             + '\n' +
+         'Timestamp: '         + position.timestamp                + '\n');
+   };
+
+   function onError(error) {
+      alert('code: '    + error.code    + '\n' +'message: ' + error.message + '\n');
+   }
+}
+</pre>
+<p>In example above we are using two methods − <b>getCurrentPosition</b> and <b>watchPosition</b>. Both functions are using three parameters. Once we click <b>CURRENT POSITION</b> button, the alert will show geolocation values.</p>
+<img src="/cordova/images/cordova-geolocation-get.jpg" alt="Cordova Geolocation" />
+<p>If we click <b>WATCH POSITION</b> button, the same alert will be triggered every three seconds. This way we can track movement changes of the user's device.</p>
+<h2>NOTE</h2>
+<p>This plugin is using GPS. Sometimes it can't return the values on time and the request will return timeout error. This is why we specified <b>enableHighAccuracy: true</b> and <b>maximumAge: 3600000.</b> This means that if a request isn't completed on time, we will use the last known value instead. In our example, we are setting maximumAge to 3600000 milliseconds.</p>
+<h1>Cordova - Globalization</h1>
+<p>This plugin is used for getting information about users’ locale language, date and time zone, currency, etc.</p>
+<h2>Step 1 - Installing Globalization Plugin</h2>
+<p>Open <b>command prompt</b> and install the plugin by typing the following code</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject>cordova plugin add cordova-plugin-globalization
+</pre>
+<h2>Step 2 - Add Buttons</h2>
+<p>We will add several buttons to <b>index.html</b> to be able to call different methods that we will create later.</p>
+<pre class="prettyprint notranslate">
+&lt;button id = "getLanguage"&gt;LANGUAGE&lt;/button&gt;
+&lt;button id = "getLocaleName"&gt;LOCALE NAME&lt;/button&gt;
+&lt;button id = "getDate"&gt;DATE&lt;/button&gt;
+&lt;button id = "getCurrency"&gt;CURRENCY&lt;/button&gt;
+</pre>
+<h2>Step 3 - Add Event Listeners</h2>
+<p>Event listeners will be added inside <b>getDeviceReady</b> function in <b>index.js</b> file to ensure that our app and Cordova are loaded before we start using it.</p>
+<pre class="prettyprint notranslate">
+document.getElementById("getLanguage").addEventListener("click", getLanguage);
+document.getElementById("getLocaleName").addEventListener("click", getLocaleName);
+document.getElementById("getDate").addEventListener("click", getDate);
+document.getElementById("getCurrency").addEventListener("click", getCurrency);
+</pre>
+<h2>Step 4A - Language Function</h2>
+<p>The first function that we are using returns BCP 47 language tag of the client's device. We will use <b>getPreferredLanguage</b> method. The function has two parameters onSuccess and <b>onError</b>. We are adding this function in <b>index.js</b>.</p>
+<pre class="prettyprint notranslate">
+function getLanguage() {
+   navigator.globalization.getPreferredLanguage(onSuccess, onError);
+
+   function onSuccess(language) {
+      alert('language: ' + language.value + '\n');
+   }
+
+   function onError(){
+      alert('Error getting language');
+   }
+}
+</pre>
+<p>Once we press the <b>LANGUAGE</b> button, the alert will be shown on screen.</p>
+<img src="/cordova/images/cordova-globalization-language.jpg" alt="Cordova Globalization Language" />
+<h2>Step 4B - Locale Function</h2>
+<p>This function returns BCP 47 tag for the client's local settings. This function is similar as the one we created before. The only difference is that we are using <b>getLocaleName</b> method this time.</p>
+<pre class="prettyprint notranslate">
+function getLocaleName() {
+   navigator.globalization.getLocaleName(onSuccess, onError);
+
+   function onSuccess(locale) {
+      alert('locale: ' + locale.value);
+   }
+
+   function onError(){
+      alert('Error getting locale');
+   }
+}
+</pre>
+<p>When we click the <b>LOCALE</b> button, the alert will show our locale tag.</p>
+<img src="/cordova/images/cordova-globalization-locale.jpg" alt="Cordova Globalization Locale" />
+<h2>Step 4C - Date Function</h2>
+<p>This function is used for returning date according to client's locale and timezone setting. <b>date</b> parameter is the current date and <b>options</b> parameter is optional.</p>
+<pre class="prettyprint notranslate">
+function getDate() {
+   var date = new Date();
+
+   var options = {
+      formatLength:'short',
+      selector:'date and time'
+   }
+   navigator.globalization.dateToString(date, onSuccess, onError, options);
+
+   function onSuccess(date) {
+      alert('date: ' + date.value);
+   }
+
+   function onError(){
+      alert('Error getting dateString');
+   }
+}
+</pre>
+<p>We can now run the app and press <b>DATE</b> button to see the current date.</p>
+<img src="/cordova/images/cordova-globalization-date.jpg" alt="Cordova Globalization Date" />
+<p>The last function that we will show is returning currency values according to client's device settings and ISO 4217 currency code. You can see that the concept is the same.</p>
+<pre class="prettyprint notranslate">
+function getCurrency() {
+   var currencyCode = 'EUR';
+   navigator.globalization.getCurrencyPattern(currencyCode, onSuccess, onError);
+
+   function onSuccess(pattern) {
+      alert('pattern: '  + pattern.pattern  + '\n' +
+         'code: '     + pattern.code     + '\n' +
+         'fraction: ' + pattern.fraction + '\n' +
+         'rounding: ' + pattern.rounding + '\n' +
+         'decimal: '  + pattern.decimal  + '\n' +
+         'grouping: ' + pattern.grouping);
+   }
+
+   function onError(){
+      alert('Error getting pattern');
+   }
+}
+</pre>
+<p>The <b>CURRENCY</b> button will trigger alert that will show users currency pattern.</p>
+<img src="/cordova/images/cordova-globalization-currency.jpg" alt="Cordova Globalization Currency" />
+<p>This plugin offers other methods. You can see all of it in the table below.</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">method</th>
+<th style="text-align:center;">parameters</th>
+<th style="text-align:center;">details</th>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">getPreferredLanguage</td>
+<td style="text-align:center;vertical-align:middle;">onSuccess, onError</td>
+<td style="vertical-align:middle;">Returns client's current language.</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">getLocaleName</td>
+<td style="text-align:center;vertical-align:middle;">onSuccess, onError</td>
+<td style="vertical-align:middle;">Returns client's current locale settings.</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">dateToString</td>
+<td style="text-align:center;vertical-align:middle;">date, onSuccess, onError, options</td>
+<td style="vertical-align:middle;">Returns date according to client's locale and timezone.</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">stringToDate</td>
+<td style="text-align:center;vertical-align:middle;">dateString, onSuccess, onError, options</td>
+<td style="vertical-align:middle;">Parses a date according to client's settings.</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">getCurrencyPattern</td>
+<td style="text-align:center;vertical-align:middle;">currencyCode, onSuccess, onError</td>
+<td style="vertical-align:middle;">Returns client's currency pattern.</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">getDatePattern</td>
+<td style="text-align:center;vertical-align:middle;">onSuccess, onError, options</td>
+<td style="vertical-align:middle;">Returns client's date pattern.</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">getDateNames</td>
+<td style="text-align:center;vertical-align:middle;">onSuccess, onError, options</td>
+<td style="vertical-align:middle;">Returns an array of names of the months, weeks or days according to client's settings.</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">isDayLightSavingsTime</td>
+<td style="text-align:center;vertical-align:middle;">date, successCallback, errorCallback</td>
+<td style="vertical-align:middle;">Used to determine if the daylight saving time is active according to client's time zone and calendar.</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">getFirstDayOfWeek</td>
+<td style="text-align:center;vertical-align:middle;">onSuccess, onError</td>
+<td style="vertical-align:middle;">Returns the first day of the week according to client settings.</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">numberToString</td>
+<td style="text-align:center;vertical-align:middle;">number, onSuccess, onError, options</td>
+<td style="vertical-align:middle;">Returns number according to client's settings.</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">stringToNumber</td>
+<td style="text-align:center;vertical-align:middle;">string, onSuccess, onError, options</td>
+<td style="vertical-align:middle;">Parses a number according to client's settings.</td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">getNumberPattern</td>
+<td style="text-align:center;vertical-align:middle;">onSuccess, onError, options</td>
+<td style="vertical-align:middle;">Returns the number pattern according to client's settings.</td>
+</tr>
+</table>
+<h1>Cordova - InAppBrowser</h1>
+<p>This plugin is used for opening web browser inside Cordova app.</p>
+<h2>Step 1 - Installing Plugin</h2>
+<p>We need to install this plugin in <b>command prompt</b> window before we are able to use it.</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova plugin add cordova-plugin-inappbrowser
+</pre>
+<h2>Step 2 - Add button</h2>
+<p>We will add one button that will be used for opening <b>inAppBrowser</b> window in <b>index.html</b>.</p>
+<h2>Step 3 - Add Event Listener</h2>
+<p>Now let's add event listener for our button in <b>onDeviceReady</b> function in <b>index.js</b>.</p>
+<pre class="prettyprint notranslate">
+document.getElementById("openBrowser").addEventListener("click", openBrowser);
+</pre>
+<h2>Step 4 - Create Function</h2>
+<p>In this step we are creating function that will open browser inside our app. We are assigning it to the <b>ref</b> variable that we can use later to add event listeners.</p>
+<pre class="prettyprint notranslate">
+function openBrowser() {
+   var url = 'https://cordova.apache.org';
+   var target = '_blank';
+   var options = "location = yes"
+   var ref = cordova.InAppBrowser.open(url, target, options);
+   
+   ref.addEventListener('loadstart', loadstartCallback);
+   ref.addEventListener('loadstop', loadstopCallback);
+   ref.addEventListener('loaderror', loaderrorCallback);
+   ref.addEventListener('exit', exitCallback);
+
+   function loadstartCallback(event) {
+      console.log('Loading started: '  + event.url)
+   }
+
+   function loadstopCallback(event) {
+      console.log('Loading finished: ' + event.url)
+   }
+
+   function loaderrorCallback(error) {
+      console.log('Loading error: ' + error.message)
+   }
+
+   function exitCallback() {
+      console.log('Browser is closed...')
+   }
+}
+</pre>
+<p>If we press <b>BROWSER</b> button, we will see the following output on screen.</p>
+<img src="/cordova/images/cordova-inappbrowser-open.jpg" alt="Cordova InAppBrowser Open" />
+<p>Console will also listen to events. <b>loadstart</b> event will fire when URL is started loading and <b>loadstop</b> will fire when URL is loaded. We can see it in console.</p>
+<img src="/cordova/images/cordova-inappbrowser-console.jpg" alt="Cordova InAppBrowser Console" />
+<p>Once we close the browser, <b>exit</b> event will fire.</p>
+<img src="/cordova/images/cordova-inappbrowser-exit-console.jpg" alt="Cordova InAppBrowser Exit Console" />
+<p>There are other possible options for InAppBrowser window. We will explain it in the table below.</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">S.No</th>
+<th style="text-align:center;">option &amp; details</th>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1</td>
+<td><p><b>location</b></p>
+<p>Used to turn the browser location bar on or off. Values are <b>yes</b> or <b>no</b>.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">2</td>
+<td><p><b>hidden</b></p>
+<p>Used to hide or show inAppBrowser. Values are <b>yes</b> or <b>no</b>.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">3</td>
+<td><p><b>clearCache</b></p>
+<p>Used to clear browser cookie cache. Values are <b>yes</b> or <b>no</b>.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">4</td>
+<td><p><b>clearsessioncache</b></p>
+<p>Used to clear session cookie cache. Values are <b>yes</b> or <b>no</b>.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">5</td>
+<td><p><b>zoom</b></p>
+<p>Used to hide or show Android browser's zoom controls. Values are <b>yes</b> or <b>no</b>.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">6</td>
+<td><p><b>hardwareback</b></p>
+<p><b>yes</b> to use the hardware back button to navigate back through the browser history. <b>no</b> to close the browser once back button is clicked.</p></td>
+</tr>
+</table>
+<p>We can use <b>ref</b> (reference) variable for some other functionalities. We will show you just quick examples of it. For removing event listeners we can use &minus;</p>
+<pre class="result notranslate">
+ref.removeEventListener(eventname, callback); 
+</pre>
+<p>For closing InAppBrowser we can use &minus;</p>
+<pre class="result notranslate">
+ref.close();
+</pre>
+<p>If we opened hidden window, we can show it &minus;</p>
+<pre class="result notranslate">
+ref.show();
+</pre>
+<p>Even JavaScript code can be injected to the InAppBrowser &minus;</p>
+<pre class="result notranslate">
+var details = "javascript/file/url"
+ref.executeScript(details, callback);
+</pre>
+<p>The same concept can be used for injecting CSS &minus;</p>
+<pre class="result notranslate">
+var details = "css/file/url"
+ref.inserCSS(details, callback);
+</pre>
+<h1>Cordova - Media</h1>
+<p>Cordova media plugin is used for recording and playing audio sounds in Cordova apps.</p>
+<h2>Step 1 - Installing Media Plugin</h2>
+<p>Media plugin can be installed by running the following code in <b>command prompt</b> window.</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova plugin add cordova-plugin-media
+</pre>
+<h2>Step 2 - Add Buttons</h2>
+<p>In this tutorial, we will create simple audio player. Let's create buttons that we need in <b>index.html</b>.</p>
+<pre class="prettyprint notranslate">
+&lt;button id = "playAudio"&gt;PLAY&lt;/button&gt;
+&lt;button id = "pauseAudio"&gt;PAUSE&lt;/button&gt;
+&lt;button id = "stopAudio"&gt;STOP&lt;/button&gt;
+&lt;button id = "volumeUp"&gt;VOLUME UP&lt;/button&gt;
+&lt;button id = "volumeDown"&gt;VOLUME DOWN&lt;/button&gt;
+</pre>
+<h2>Step 3 - Add Event Listeners</h2>
+<p>Now we need to add event listeners for our buttons inside <b>onDeviceReady</b> function inside <b>index.js</b>.</p>
+<pre class="prettyprint notranslate">
+document.getElementById("playAudio").addEventListener("click", playAudio);
+document.getElementById("pauseAudio").addEventListener("click", pauseAudio);
+document.getElementById("stopAudio").addEventListener("click", stopAudio);
+document.getElementById("volumeUp").addEventListener("click", volumeUp);
+document.getElementById("volumeDown").addEventListener("click", volumeDown);
+</pre>
+<h2>Step 4A - Play Function</h2>
+<p>The first function that we are going to add is <b>playAudio</b>. We are defining <b>myMedia</b> outside of the function because we want to use it in functions that are going to be added later (pause, stop, volumeUp and volumeDown). This code is placed in <b>index.js</b> file.</p>
+<pre class="prettyprint notranslate">
+var myMedia = null;
+function playAudio() {
+   var src = "/android_asset/www/audio/piano.mp3";
+
+   if(myMedia === null) {
+      myMedia = new Media(src, onSuccess, onError);
+
+      function onSuccess() {
+         console.log("playAudio Success");
+      }
+
+      function onError(error) {
+         console.log("playAudio Error: " + error.code);
+      }
+   }
+   myMedia.play();
+}
+</pre>
+<p>We can click <b>PLAY</b> button to start the piano music from the <b>src</b> path.</p>
+<h2>Step 4B - Pause and Stop Functions</h2>
+<p>The next functions that we need is <b>pauseAudio</b> and <b>stopAudio</b>.</p>
+<pre class="prettyprint notranslate">
+function pauseAudio() {
+   if(myMedia) {
+      myMedia.pause();
+   }
+}
+
+function stopAudio() {
+   if(myMedia) {
+      myMedia.stop(); 
+   }
+   myMedia = null;
+}
+</pre>
+<p>Now we can pause or stop the piano sound by clicking <b>PAUSE</b> or <b>STOP</b> buttons.</p>
+<h2>Step 4C - Volume Functions</h2>
+<p>To set the volume, we can use <b>setVolume</b> method. This method takes parameter with values from <b>0</b> to <b>1</b>. We will set starting value to <b>0.5</b>.</p>
+<pre class="prettyprint notranslate">
+var volumeValue = 0.5;
+function volumeUp() {
+   if(myMedia &amp;&amp; volumeValue &lt; 1) {
+      myMedia.setVolume(volumeValue += 0.1);
+   }
+}
+
+function volumeDown() {
+   if(myMedia &amp;&amp; volumeValue &gt; 0) {
+      myMedia.setVolume(volumeValue -= 0.1);
+   }
+}
+</pre>
+<p>Once we press <b>VOLUME UP</b> or <b>VOLUME DOWN</b> we can change the volume value by <b>0.1</b>.</p>
+<p>The following table shows other methods that this plugin provides.</p>
+<table class="table table-bordered">
+<tr>
+<th style="text-align:center;">S.No</th>
+<th style="text-align:center;">Method &amp; Details</th>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">1</td>
+<td><p><b>getCurrentPosition</b></p>
+<p>Returns current position of an audio.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">2</td>
+<td><p><b>getDuration</b></p>
+<p>Returns duration of an audio.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">3</td>
+<td><p><b>play</b></p>
+<p>Used for starting or resuming audio.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">4</td>
+<td><p><b>pause</b></p>
+<p>Used for pausing audio.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">5</td>
+<td><p><b>release</b></p>
+<p>Releases the underlying operating system's audio resources.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">6</td>
+<td><p><b>seekTo</b></p>
+<p>Used for changing position of an audio.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">7</td>
+<td><p><b>setVolume</b></p>
+<p>Used for setting volume for audio.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">8</td>
+<td><p><b>startRecord</b></p>
+<p>Start recording an audio file.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">9</td>
+<td><p><b>stopRecord</b></p>
+<p>Stop recording an audio file.</p></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align:middle;">10</td>
+<td><p><b>stop</b></p>
+<p>Stop playing an audio file.</p></td>
+</tr>
+</table>
+<h1>Cordova - Media Capture</h1>
+<p>This plugin is used for accessing device's capture options.</p>
+<h2>Step 1 - Installing Media Capture Plugin</h2>
+<p>To install this plugin, we will open <b>command prompt</b> and run the following code &minus;</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova plugin add cordova-plugin-media-capture
+</pre>
+<h2>Step 2 - Add Buttons</h2>
+<p>Since we want to show you how to capture audio, image and video, we will create three buttons in <b>index.html</b>.</p>
+<pre class="prettyprint notranslate">
+&lt;button id = "audioCapture"&gt;AUDIO&lt;/button&gt;
+&lt;button id = "imageCapture"&gt;IMAGE&lt;/button&gt;
+&lt;button id = "videoCapture"&gt;VIDEO&lt;/button&gt;
+</pre>
+<h2>Step 3 - Add Event Listeners</h2>
+<p>The next step is adding event listeners inside <b>onDeviceReady</b> in <b>index.js</b>.</p>
+<pre class="prettyprint notranslate">
+document.getElementById("audioCapture").addEventListener("click", audioCapture);
+document.getElementById("imageCapture").addEventListener("click", imageCapture);
+document.getElementById("videoCapture").addEventListener("click", videoCapture);
+</pre>
+<h2>Step 4A - Capture Audio Function</h2>
+<p>The first callback function in <b>index.js</b> is <b>audioCapture</b>. To start sound recorder, we will use <b>captureAudio</b> method. We are using two options − <b>limit</b> will allow recording only one audio clip per single capture operation and <b>duration</b> is number of seconds of a sound clip.</p>
+<pre class="prettyprint notranslate">
+function audioCapture() {
+   var options = {
+      limit: 1,
+      duration: 10
+   };
+   navigator.device.capture.captureAudio(onSuccess, onError, options);
+
+   function onSuccess(mediaFiles) {
+      var i, path, len;
+      for (i = 0, len = mediaFiles.length; i &lt; len; i += 1) {
+         path = mediaFiles[i].fullPath;
+         console.log(mediaFiles);
+      }
+   }
+
+   function onError(error) {
+      navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+   }
+}
+</pre>
+<p>When we press <b>AUDIO</b> button, sound recorder will open.</p>
+<img src="/cordova/images/cordova-media-capture-audio.jpg" alt="Cordova Capture Audio" />
+<p>Console will show returned array of objects that users captured.</p>
+<img src="/cordova/images/cordova-media-capture-audio-log.jpg" alt="Cordova Capture Audio Log" />
+<h2>Step 4B - Capture Image Function</h2>
+<p>The function for capturing image will be the same as the last one. The only difference is that we are using <b>captureImage</b> method this time.</p>
+<pre class="prettyprint notranslate">
+function imageCapture() {
+   var options = {
+      limit: 1
+   };
+   navigator.device.capture.captureImage(onSuccess, onError, options);
+
+   function onSuccess(mediaFiles) {
+      var i, path, len;
+      for (i = 0, len = mediaFiles.length; i &lt; len; i += 1) {
+         path = mediaFiles[i].fullPath;
+         console.log(mediaFiles);
+      }
+   }
+
+   function onError(error) {
+      navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+   }
+}
+</pre>
+<p>Now we can click <b>IMAGE</b> button to start the camera.</p>
+<img src="/cordova/images/cordova-media-capture-image.jpg" alt="Cordova Capture Image" />
+<p>When we take picture, the console will log the array with image object.</p>
+<img src="/cordova/images/cordova-media-capture-image-log.jpg" alt="Cordova Capture Image Log" />
+<h2>Step 4C - Capture Video Function</h2>
+<p>Let's repeat the same concept for capturing video. We will use <b>videoCapture</b> method this time.</p>
+<pre class="prettyprint notranslate">
+function videoCapture() {
+   var options = {
+      limit: 1,
+      duration: 10
+   };
+   navigator.device.capture.captureVideo(onSuccess, onError, options);
+
+   function onSuccess(mediaFiles) {
+      var i, path, len;
+      for (i = 0, len = mediaFiles.length; i &lt; len; i += 1) {
+         path = mediaFiles[i].fullPath;
+         console.log(mediaFiles);
+      }
+   }
+
+   function onError(error) {
+      navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
+   }
+}
+</pre>
+<p>If we press <b>VIDEO</b> button, the camera will open and we can record the video.</p>
+<img src="/cordova/images/cordova-media-capture-video.jpg" alt="Cordova Capture Video" />
+<p>Once the video is saved, the console will return array once more. This time with video object inside.</p>
+<img src="/cordova/images/cordova-media-capture-video-log.jpg" alt="Cordova Capture Video Log" />
+<h1>Cordova - Network Information</h1>
+<p>This plugin provides information about device's network.</p>
+<h2>Step 1 - Installing Network Information Plugin</h2>
+<p>To install this plugin, we will open <b>command prompt</b> and run the following code &minus;</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova plugin 
+   add cordova-plugin-network-information
+</pre>
+<h2>Step 2 - Add Buttons</h2>
+<p>Let's create one button in <b>index.html</b> that will be used for getting info about network.</p>
+<pre class="prettyprint notranslate">
+&lt;button id = "networkInfo"&gt;INFO&lt;/button&gt;
+</pre>
+<h2>Step 3 - Add Event Listeners</h2>
+<p>We will add three event listeners inside <b>onDeviceReady</b> function in <b>index.js</b>. One will listen for clicks on the button we created before and the other two will listen for changes in connection status.</p>
+<pre class="prettyprint notranslate">
+document.getElementById("networkInfo").addEventListener("click", networkInfo);
+document.addEventListener("offline", onOffline, false);
+document.addEventListener("online", onOnline, false);
+</pre>
+<h2>Step 4 - Creating Functions</h2>
+<p><b>networkInfo</b> function will return info about current network connection once button is clicked. We are calling <b>type</b> method. The other functions are <b>onOffline</b> and <b>onOnline</b>. These functions are listening to the connection changes and any change will trigger the corresponding alert message.</p>
+<pre class="prettyprint notranslate">
+function networkInfo() {
+   var networkState = navigator.connection.type;
+   var states = {};
+   states[Connection.UNKNOWN]  = 'Unknown connection';
+   states[Connection.ETHERNET] = 'Ethernet connection';
+   states[Connection.WIFI]     = 'WiFi connection';
+   states[Connection.CELL_2G]  = 'Cell 2G connection';
+   states[Connection.CELL_3G]  = 'Cell 3G connection';
+   states[Connection.CELL_4G]  = 'Cell 4G connection';
+   states[Connection.CELL]     = 'Cell generic connection';
+   states[Connection.NONE]     = 'No network connection';
+   alert('Connection type: ' + states[networkState]);
+}
+
+function onOffline() {
+   alert('You are now offline!');
+}
+
+function onOnline() {
+   alert('You are now online!');
+}
+</pre>
+<p>When we start the app connected to the network, <b>onOnline</b> function will trigger alert.</p>
+<img src="/cordova/images/cordova-network-online.jpg" alt="Cordova Network Online" />
+<p>If we press <b>INFO</b> button the alert will show our network state.</p>
+<img src="/cordova/images/cordova-network-info.jpg" alt="Cordova Network Info" />
+<p>If we disconnect from the network, <b>onOffline</b> function will be called.</p>
+<img src="/cordova/images/cordova-network-offline.jpg" alt="Cordova Network Offline" />
+<h1>Cordova - Splash Screen</h1>
+<p>This plugin is used to display a splash screen on application launch.</p>
+<h2>Step 1 - Installing Splash Screen Plugin</h2>
+<p>Splash screen plugin can be installed in <b>command prompt</b> window by running the following code.</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova plugin add cordova-plugin-splashscreen
+</pre>
+<h2>Step 2 - Add Splash Screen</h2>
+<p>Adding splash screen is different from adding the other Cordova plugins. We need to open <b>config.xml</b> and add the following code snippets inside the <b>widget</b> element.</p>
+<p>First snippet is <b>SplashScreen</b>. It has <b>value</b> property which is the name of the images in <b>platform/android/res/drawable</b>- folders. Cordova offers default <b>screen.png</b> images that we are using in this example, but you will probably want to add your own images. Important thing is to add images for portrait and landscape view and also to cover different screen sizes.</p>
+<pre class="prettyprint notranslate">
+&lt;preference name = "SplashScreen" value = "screen" /&gt;
+</pre>
+<p>Second snippet we need to add is <b>SplashScreenDelay</b>. We are setting <b>value</b> to <b>3000</b> to hide the splash screen after three seconds.</p>
+<pre class="prettyprint notranslate">
+&lt;preference name = "SplashScreenDelay" value = "3000" /&gt;
+</pre>
+<p>The last preference is optional. If value is set to <b>true</b>, the image will not be stretched to fit screen. If it is set to <b>false</b>, it will be stretched.</p>
+<pre class="prettyprint notranslate">
+&lt;preference name = "SplashMaintainAspectRatio" value = "true" /&gt;
+</pre>
+<p>Now when we run the app, we will see the splash screen.</p>
+<img src="/cordova/images/cordova-splashscreen.jpg" alt="Cordova Splash Screen" />
+<h1>Cordova - Vibration</h1>
+<p>This plugin is used for connecting to device's vibration functionality.</p>
+<h2>Step 1 - Installing Vibration Plugin</h2>
+<p>We can install this plugin in <b>command prompt</b> window by running the following code &minus;</p>
+<pre class="result notranslate">
+C:\Users\username\Desktop\CordovaProject&gt;cordova plugin add cordova-plugin-vibration
+</pre>
+<h2>Step 2 - Add Buttons</h2>
+<p>Once the plugin is installed we can add buttons in <b>index.html</b> that will be used later to trigger the vibration.</p>
+<pre class="prettyprint notranslate">
+&lt;button id = "vibration"&gt;VIBRATION&lt;/button&gt;
+&lt;button id = "vibrationPattern"&gt;PATTERN&lt;/button&gt;
+</pre>
+<h2>Step 3 - Add Event Listeners</h2>
+<p>Now we are going to add event listeners inside <b>onDeviceReady</b> in <b>index.js</b>.</p>
+<pre class="prettyprint notranslate">
+document.getElementById("vibration").addEventListener("click", vibration);
+document.getElementById("vibrationPattern").addEventListener("click", vibrationPattern);
+</pre>
+<h2>Step 4 - Create Functions</h2>
+<p>This plugin is very easy to use. We will create two functions.</p>
+<pre class="prettyprint notranslate">
+function vibration() {
+   var time = 3000;
+   navigator.vibrate(time);
+}
+
+function vibrationPattern() {
+   var pattern = [1000, 1000, 1000, 1000];
+   navigator.vibrate(pattern);
+}
+</pre>
+<p>The first function is taking time parameter. This parameter is used for setting the duration of the vibration. Device will vibrate for three seconds once we press <b>VIBRATION</b> button.</p>
+<p>The second function is using <b>pattern</b> parameter. This array will ask device to vibrate for one second, then wait for one second, then repeat the process again.</p>
+<h1>Cordova - Whitelist</h1>
+<p>This plugin allows us to implement whitelist policy for app's navigation. When we create a new Cordova project, the <b>whitelist</b> plugin is installed and implemented by default. You can open the <b>config.xml</b> file to see <b>allow-intent</b> default settings provided by Cordova.</p>
+<h2>Navigation Whitelist</h2>
+<p>In the simple example below we are allowing links to some external URL. This code is placed in <b>config.xml</b>. Navigation to <b>file://</b> URLs is allowed by default.</p>
+<pre class="prettyprint notranslate">
+&lt;allow-navigation href = "http://example.com/*" /&gt;
+</pre>
+<p>The asterix sign, *, is used to allow navigation to multiple values. In the above example, we are allowing navigation to all sub-domains of the <b>example.com</b>. The same can be applied to protocol or prefix to the host.</p>
+<pre class="prettyprint notranslate">
+&lt;allow-navigation href = "*://*.example.com/*" /&gt;
+</pre>
+<h2>Intent Whitelist</h2>
+<p>There is also the <b>allow-intent</b> element which is used to specify which URLs are allowed to open the system. You can see in the <b>config.xml</b> that Cordova already allowed most of the needed links for us.</p>
+<h2>Network Request Whitelist</h2>
+<p>When you look inside <b>config.xml</b> file, there is <b>&lt;access origin="*" /&gt;</b> element. This element allows all network requests to our app via Cordova hooks. If you want to allow only specific requests, you can delete it from the config.xml and set it yourself.</p>
+<p>The same principle is used as in previous examples.</p>
+<pre class="prettyprint notranslate">
+&lt;access origin = "http://example.com" /&gt;
+</pre>
+<p>This will allow all network requests from <b>http://example.com</b>.</p>
+<h2>Content Security Policy</h2>
+<p>You can see the current security policy for your app inside the <b>head</b> element in <b>index.html</b>.</p>
+<pre class="prettyprint notranslate">
+&lt;meta http-equiv = "Content-Security-Policy" content = "default-src 
+   'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 
+   'self' 'unsafe-inline'; media-src *"&gt;
+</pre>
+<p>This is default configuration. If you want to allow everything from the same origin and <b>example.com</b>, then you can use &minus;</p>
+<pre class="prettyprint notranslate">
+&lt;meta http-equiv = "Content-Security-Policy" content = "default-src 'self' foo.com"&gt;
+</pre>
+<p>You can also allow everything, but restrict CSS and JavaScript to the same origin.</p>
+<pre class="prettyprint notranslate">
+&lt;meta http-equiv = "Content-Security-Policy" content = "default-src *; 
+   style-src 'self' 'unsafe-inline'; script-src 'self' 
+   'unsafe-inline' 'unsafe-eval'"&gt;
+</pre>
+<p>Since this is a beginners’ tutorial, we are recommending the default Cordova options. Once you get familiar with Cordova, you can try some different values.</p>
+<h1>Cordova - Best Practices</h1>
+<p>Cordova is used for creating hybrid mobile apps, so you need to consider this before you choose it for your project. Below are the best practices for Cordova apps development.</p>
+<h2>Single Page Apps</h2>
+<p>This is the recommended design for all Cordova apps. SPA is using client-side router and navigation loaded on the single page (usually <b>index.html</b>). The routing is handled via AJAX. If you have followed our tutorials, you probably noticed that almost every Cordova plugin needs to wait until the device is ready before it can be used. SPA design will improve loading speed and overall performance.</p>
+<h2>Touch Events</h2>
+<p>Since Cordova is used for mobile world it is natural to use <b>touchstart</b> and <b>touchend</b> events instead of <b>click</b> events. The click events have 300ms delay, so the clicks don’t feel native. On the other hand, touch events aren't supported on every platform. You should take this into consideration before you decide what to use.</p>
+<h2>Animations</h2>
+<p>You should always use hardware accelerated <b>CSS Transitions</b> instead of JavaScript animations since they will perform better on mobile devices.</p>
+<h2>Storage</h2>
+<p>Use storage caching as much as possible. Mobile network connections are usually bad, so you should minimize network calls inside your app. You should also handle offline status of the app, since there will be times when user's devices are offline.</p>
+<h2>Scrolling</h2>
+<p>Most of the time the first slow part inside your app will be scrolling lists. There are couple of ways to improve scrolling performance of the app. Our recommendation is to use native scrolling. When there are lots of items in the list, you should load them partially. Use loaders when necessary.</p>
+<h2>Images</h2>
+<p>Images can also slow the mobile app. You should use CSS image sprites whenever possible. Try to fit the images perfectly instead of scaling it.</p>
+<h2>CSS styles</h2>
+<p>You should avoid shadows and gradients, since they slow the rendering time of the page.</p>
+<h2>Simplification</h2>
+<p>Browser's DOM is slow, so you should try to minimize DOM manipulation and number of DOM elements.</p>
+<h2>Testing</h2>
+<p>Ensure that you test your app on as many devices and operating system versions as possible. If app works flawlessly on one device, it doesn't necessary mean that it will work on some other device or platform.</p>
+<div class="mui-container-fluid button-borders show" id="bottom_navigation">
+<div class="pre-btn">
+<a href="/cordova/cordova_best_practices.htm"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+<a class="hide-on-mobile" href="javascript:printPage();"><i class="fa fa-print"></i> Print Page</a>
+</div>
+<div class="nxt-btn">
+<a href="/cordova/cordova_useful_resources.htm">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+<div class="google-bottom-ads">
+<div>Advertisements</div>
+<div>
+<div id="vi_bottom_ads"></div>
+   <script>
+     (function() {
+     var adPos = document.getElementById('vi_bottom_ads');
+     var mobile_ad_id = "vi_9017967";
+     var desktop_ad_id = "vi_9013190";
+     var ad_id = window.innerWidth <= 768 ? mobile_ad_id : desktop_ad_id;
+     adPos.innerHTML = '<div class="adsbyvli" data-ad-slot="' + ad_id + '"></div>';
+     (vitag.displayInit = window.vitag.displayInit || []).push(function () {
+         viAPItag.display(ad_id);
+     });
+     }())
+   </script>
+</div>
+<div class="space-bottom"></div>
+</div>
+</div>
+<!-- Tutorial Content Ends Here -->
+<!-- Right Column Starts Here -->
+<div class="mui-col-md-2 google-right-ads">
+<div class="space-top"></div>
+<div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;">
+<div class="adsbyvli" data-ad-slot="vi_9017966"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9017966")})</script>
+</div>
+<div class="google-right-ad" style="margin-top:16px;">
+<div class="adsbyvli" data-ad-slot="vi_9017967"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9017967")})</script>
+</div>
+<div class="google-right-ad" style="margin-top:16px;margin-bottom:15px;">
+<div class="adsbyvli" data-ad-slot="vi_9013289"></div><script>(vitag.Init = window.vitag.Init || []).push(function(){viAPItag.display("vi_9013289")})</script>
+</div>
+<div class="space-bottom" style="margin-bottom:15px;"></div>
+</div>
+<!-- Right Column Ends Here -->
+</div>
+</div>
+<div class="clear"></div>
+<footer id="footer">
+<div class="mui--text-center">
+<div class="mui--text-caption mui--text-light">
+<a href="/index.htm" class="logo"><img class="img-responsive" src="/images/logo-black.png" alt="Tutorials Point" title="Tutorials Point"></a>
+</div>
+<ul class="mui-list--inline mui--text-body2 mui--text-light">
+<li><a href="/about/index.htm"><i class="fal fa-globe"></i> About us</a></li>
+<li><a href="/about/about_terms_of_use.htm"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+<li><a href="/about/about_privacy.htm"> <i class="fal fa-shield-check"></i> Privacy Policy</a></li>
+<li><a href="/about/faq.htm"><i class="fal fa-question-circle"></i> FAQ's</a></li>
+<li><a href="/about/about_helping.htm"><i class="fal fa-hands-helping"></i> Helping</a></li>
+<li><a href="/about/contact_us.htm"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+</ul>
+<div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights Reserved.</div>
+</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-232293-17"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-232293-6');
+</script>
+</footer>
+</body>
+</html>

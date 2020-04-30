@@ -1,0 +1,3796 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+   <title>Angular7 - Quick Guide - Tutorialspoint</title>
+   <meta charset="utf-8">
+   <meta name="description"
+      content="Angular7 - Quick Guide - Angular 7 is owned by Google and the stable release was done on 18th October 2018. This is the latest version of Angular." />
+   <meta name="keywords"
+      content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Programming, examples, code" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+   <link rel="stylesheet" href="../style.css">
+   <script src="../script.js"></script>
+</head>
+
+<body>
+   <header id="header">
+      <!-- Top main-menu Starts Here -->
+      <div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+         <div class="mui-container">
+            <div class="left-menu">
+               <img class="tp-logo" alt="tutorialspoint" src="../images/logo.png">
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> Angular7 Tutorial <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="index.html">Home</a></li>
+                           <li><a target="_top" href="overview.html">Overview</a></li>
+                           <li><a target="_top" href="environment_setup.html">Environment Setup</a></li>
+                           <li><a target="_top" href="project_setup.html">Project Setup</a></li>
+                           <li><a target="_top" href="components.html">Components</a></li>
+                           <li><a target="_top" href="modules.html">Modules</a></li>
+                           <li><a target="_top" href="data_binding.html">Data Binding</a></li>
+                           <li><a target="_top" href="event_binding.html">Event Binding</a></li>
+                           <li><a target="_top" href="templates.html">Templates</a></li>
+                           <li><a target="_top" href="directives.html">Directives</a></li>
+                           <li><a target="_top" href="pipes.html">Pipes</a></li>
+                           <li><a target="_top" href="routing.html">Routing</a></li>
+                           <li><a target="_top" href="services.html">Services</a></li>
+                           <li><a target="_top" href="http_client.html">Http Client</a></li>
+                           <li><a target="_top" href="cli_prompts.html">CLI Prompts</a></li>
+                           <li><a target="_top" href="forms.html">Forms</a></li>
+                           <li><a target="_top" href="materials_cdk_virtual_scrolling.html">Materials/CDK-Virtual
+                                 Scrolling</a></li>
+                           <li><a target="_top" href="materials_cdk_drag_and_drop.html">Materials/CDK-Drag & Drop</a>
+                           </li>
+                           <li><a target="_top" href="animations.html">Animations</a></li>
+                           <li><a target="_top" href="materials.html">Materials</a></li>
+                           <li><a target="_top" href="testing_and_building_project.html">Testing & Building Project</a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="right-menu">
+               <a href="../index.html">
+                  <button class="mui-btn mui-btn--primary mobile-menu">home</button>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- Top main-menu Ends Here -->
+   </header>
+   <div class="mui-container-fluid content">
+      <div class="mui-container">
+         <!-- Tutorial Content Starts Here -->
+         <div class="mui-col-md-12 tutorial-content">
+            <h1>Angular7 - Quick Guide</h1>
+            <hr />
+            <br>
+            <h1>Angular7 - Overview</h1>
+            <p><b>Angular 7</b> is owned by Google and the stable release was done on 18<sup>th</sup> October 2018. This
+               is the latest version of Angular.</p>
+            <p>Below is the list of Angular versions released so far &minus;</p>
+            <table class="table table-bordered" style="text-align:center;">
+               <tr>
+                  <th style="text-align:center;">Version</th>
+                  <th style="text-align:center;">Released Date</th>
+               </tr>
+               <tr>
+                  <td>Angular JS</td>
+                  <td>October 2010</td>
+               </tr>
+               <tr>
+                  <td>Angular 2.0</td>
+                  <td>Sept 2016</td>
+               </tr>
+               <tr>
+                  <td>Angular 4.0</td>
+                  <td>March 2017</td>
+               </tr>
+               <tr>
+                  <td>Angular 5.0</td>
+                  <td>November 2017</td>
+               </tr>
+               <tr>
+                  <td>Angular 6.0</td>
+                  <td>May 2018</td>
+               </tr>
+               <tr>
+                  <td>Angular 7.0</td>
+                  <td>October 2018</td>
+               </tr>
+            </table>
+            <p>The release dates for the next two major upcoming versions of Angular are given below &minus;</p>
+            <table class="table table-bordered" style="text-align:center;">
+               <tr>
+                  <th style="text-align:center;">Version</th>
+                  <th style="text-align:center;">Released Date</th>
+               </tr>
+               <tr>
+                  <td>Angular 8.0</td>
+                  <td>March/April 2019</td>
+               </tr>
+               <tr>
+                  <td>Angular 9.0</td>
+                  <td>September/ October 2019</td>
+               </tr>
+            </table>
+            <p>Google plans to release the major Angular version every 6 months. The version released so far are
+               backward compatible and can be updated to the newer one very easily.</p>
+            <p>Let us discuss the new features added to Angular 7.</p>
+            <h2>Angular Update to V7</h2>
+            <p>Angular 7 is a major release where in the angular core framework, Angular CLI, Angular Materials are
+               updated. In case you are using Angular 5 or 6 and want to update to Angular 7, below is the command which
+               will update your app to the recent version of Angular &minus;</p>
+            <pre class="result notranslate">
+ng update @angular/cli @angular/core
+</pre>
+            <h2>Angular CLI</h2>
+            <p>While doing project setup using angular CLI, it prompts you about the built-in features available, i.e.,
+               routing and stylesheet support as shown below &minus;</p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/angular_cli.jpg"
+               alt="Angular CLI" />
+            <h2>Application Performance</h2>
+            <p>In Angular 7, there is bundle budget added in angular.json as shown below &minus;</p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/budgets.jpg" alt="Budgets" />
+            <p><b>Budgets</b> is a feature added to Angular CLI which allows you to set limit inside your configuration
+               to make sure your application size is within the limit set. You can set the size so that the app can be
+               warned when the limit is crossed.</p>
+            <h2>Angular Material and CDK</h2>
+            <p>The version of Angular Material/CDK is updated in Angular 7. Also there are 2 features added to CDK
+               &minus; <b>virtual scrolling, and drag and drop</b>.</p>
+            <h3>Virtual Scrolling</h3>
+            <p>Virtual scrolling feature shows up the visible dom elements to the user, as the user scrolls, the next
+               list is displayed. This gives faster experience as the full list is not loaded at one go and only loaded
+               as per the visibility on the screen.</p>
+            <h3>Drag and Drop</h3>
+            <p>You can drag and drop elements from a list and place it wherever required within the list. The new
+               feature is very smooth and fast.</p>
+            <h1>Angular7 - Environment Setup</h1>
+            <p>In this chapter, we will discuss the Environment Setup required for Angular 7. To install Angular 7, we
+               require the following &minus;</p>
+            <ul class="list">
+               <li>Nodejs</li>
+               <li>Npm</li>
+               <li>Angular CLI</li>
+               <li>IDE for writing your code</li>
+            </ul>
+            <h2>Nodejs</h2>
+            <p>To check if nodejs is installed on your system, type <b>node -v</b> in the terminal. This will help you
+               see the version of nodejs currently installed on your system.</p>
+            <p>Nodejs has to be greater than 8.x or 10.x, and npm has to be greater than 5.6 or 6.4.</p>
+            <pre class="result notranslate">
+C:\>node 
+–v v10.15.1
+</pre>
+            <p>If it does not print anything, install nodejs on your system. To install nodejs, go to the homepage, <a
+                  target="_blank" rel="nofollow"
+                  href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a>of nodejs and install the
+               package based on your OS.</p>
+            <p>The homepage of nodejs is as follows &minus;</p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/nodejs.jpg" alt="Nodejs" />
+            <p>Based on your OS, install the required package. Once nodejs is installed, npm will also get installed
+               along with it. To check if npm is installed or not, type npm –v in the terminal as given below. It will
+               display the version of the npm.</p>
+            <pre class="result notranslate">
+C:\>npm 
+–v 6.4.1
+</pre>
+            <p>Angular 7 installations are very simple with the help of angular CLI. Visit the homepage <a
+                  target="_blank" rel="nofollow" href="https://cli.angular.io/">https://cli.angular.io/</a> of angular
+               to get the reference of the command.</p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/cli_angular.jpg"
+               alt=" CLI Angular" />
+            <p>Type <b>npm install –g @angular/cli</b> in your command prompt, to install angular cli on your system. It
+               will take a while to install and once done you can check the version using below command &minus;</p>
+            <pre class="result notranslate">
+ng version
+</pre>
+            <p>It will display version details of angular - cli as well version of others packages as shown below
+               &minus;</p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/version_cli.jpg"
+               alt="Version CLI" />
+            <p>We are done with the installation of Angular 7. You can use any IDE of your choice, i.e., WebStorm, Atom,
+               Visual Studio Code to start working with Angular 7.</p>
+            <p>The details of the project setup are explained in the next chapter.</p>
+            <h1>Angular7 - Project Setup</h1>
+            <p>In this chapter, we shall discuss about the Project Setup in Angular 7.</p>
+            <p>To get started with the project setup, make sure you have nodejs installed. <b>You can check the version
+                  of node in the command line using the command, node –v</b>, as shown below &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/node.jpg" alt="Node" />
+            <p>If you do not get the version, install nodejs from their official site &minus;<a target="_blank"
+                  rel="nofollow" href="https://nodejs.org/en/.">https://nodejs.org/en/.</a>
+            </p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/version.jpg" alt="Version" />
+            <p>Once you have nodejs installed, npm will also get installed with it. To check npm version, run npm -v in
+               command line as shown below &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/npm_version.jpg"
+               alt="Npm Version" />
+            <p>So we have node version 10 and npm version 6.4.1.</p>
+            <p>To install Angular 7, go to the site, <a target="_blank" rel="nofollow"
+                  href="https://cli.angular.io">https://cli.angular.io</a> to install Angular CLI.</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/install_angular_cli.jpg"
+               alt="Install Angular CLI" />
+            <p>You will see the following commands on the webpage &minus;</p>
+            <pre class="result notranslate">
+npm install -g @angular/cli //command to install angular 7
+ng new my-dream-app // name of the project
+cd my-dream-app
+ng serve
+</pre>
+            <p>The above commands help to get the project setup in Angular 7.</p>
+            <p>We will create a folder called <b>projectA7</b> and install <b>angular/cli</b> as shown below &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/project_a7.jpg"
+               alt="Project A7" />
+            <p>Once the installation is done, check the details of the packages installed by using the command ng
+               version as shown below &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/command_ng_version.jpg"
+               alt="Command Ng Version" />
+            <p>It gives the version for Angular CLI, typescript version and other packages available for Angular 7.</p>
+            <p>We are done with the installation of Angular 7, now we will start with the project setup.</p>
+            <p>To create a project in Angular 7, we will use the following command &minus;</p>
+            <pre class="result notranslate">
+ng new projectname
+</pre>
+            <p>You can use the <i>projectname</i> of your choice. Let us now run the above command in the command line.
+            </p>
+            <p>Here, we use the <i>projectname as angular7-app</i>. Once you run the command it will ask you about
+               routing as shown below &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/angular7_app_routing.jpg"
+               alt="Angular7 App Routing" />
+            <p>Type y to add routing to your project setup.</p>
+            <p>The next question is about the stylesheet &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/stylesheet.jpg"
+               alt="StyleSheet" />
+            <p>The options available are CSS, Sass, Less and Stylus. In the above screenshot, the arrow is on CSS. To
+               change, you can use arrow keys to select the one required for your project setup. At present, we shall
+               discuss CSS for our project-setup.</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/css.jpg" alt="CSS" />
+            <p>The project <i>angular7-app</i> is created successfully. It installs all the required packages necessary
+               for our project to run in Angular7. Let us now switch to the project created, which is in the directory
+               <b><i>angular7-app</i></b>.</p>
+            <p>Change the directory in the command line using the given line of code &minus;</p>
+            <pre class="result notranslate">
+cd angular7-app
+</pre>
+            <p>We will use Visual Studio Code IDE for working with Angular 7, you can use any IDE, i.e., Atom, WebStorm,
+               etc.</p>
+            <p>To download Visual Studio Code, go to <a target="_blank" rel="nofollow"
+                  href="https://code.visualstudio.com/">https://code.visualstudio.com/</a> and click Download for
+               Windows.</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/code_ide.jpg" alt="Code IDE" />
+            <p>Click Download for Windows for installing the IDE and run the setup to start using IDE.</p>
+            <p>Following is the Editor &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/visual_studio.jpg"
+               alt="Visual Studio" />
+            <p>We have not started any project in it. Let us now take the project we have created using angular-cli.</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/project.jpg" alt="Project" />
+            <p>We will consider the <b><i>angular7-app</i></b> project. Let us open the <b><i>angular7-app</i></b> and
+               see how the folder structure looks like.</p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/angular7_app.jpg"
+               alt="Angular7 App" />
+            <p>Now that we have the file structure for our project, let us compile our project with the following
+               command &minus;</p>
+            <pre class="result notranslate">
+ng serve
+</pre>
+            <p><b>The ng serve command builds the application and starts the web server.</b></p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/angular7_ng_serve.jpg"
+               alt="Angular7 Ng Serve" />
+            <p>You will see the below when the command starts executing &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/ng_serve.jpg" alt="Ng Serve" />
+            <p>The web server starts on port 4200. Type the url, <b>"http://localhost:4200/"</b> in the browser and see
+               the output. Once the project is compiled, you will receive the following output &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/web_server_starts.jpg"
+               alt="Ng Serve2" />
+            <p>Once you run url, <b>http://localhost:4200/</b> in the browser, you will be directed to the following
+               screen &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/welcome.jpg" alt="Welcome" />
+            <p>Let us now make some changes to display the following content &minus;</p>
+            <p><b>“Welcome to Angular 7!”</b></p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/welcome_angular7.jpg"
+               alt="Welcome Angular7" />
+            <p>We have made changes in the files &minus; <b>app.component.html</b> and <b>app.component.ts</b>. We will
+               discuss more about this in our subsequent chapters.</p>
+            <p>Let us complete the project setup. If you see we have used port 4200, which is the default port that
+               angular–cli makes use of while compiling. You can change the port if you wish using the following command
+               &minus;</p>
+            <pre class="result notranslate">
+ng serve --host 0.0.0.0 –port 4205
+</pre>
+            <p>The angular7-app/ folder has the following <b>folder structure</b>&minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>e2e/</b> &minus; end to end test folder. Mainly e2e is used for integration testing and helps
+                     ensure the application works fine.</p>
+               </li>
+               <li>
+                  <p><b>node_modules/</b> &minus; The npm package installed is node_modules. You can open the folder and
+                     see the packages available.</p>
+               </li>
+               <li>
+                  <p><b>src/</b> &minus; This folder is where we will work on the project using Angular 7.Inside src/
+                     you will app/ folder created during the project setup and holds all the required files required for
+                     the project.</p>
+               </li>
+            </ul>
+            <p>The angular7-app/ folder has the following <b>file structure</b> &minus;</p>
+            <ul class="list">
+               <li>
+                  <p><b>angular.json</b> &minus; It basically holds the project name, version of cli, etc.</p>
+               </li>
+               <li>
+                  <p><b>.editorconfig</b> &minus; This is the config file for the editor.</p>
+               </li>
+               <li>
+                  <p><b>.gitignore</b> &minus; A .gitignore file should be committed into the repository, in order to
+                     share the ignore rules with any other users that clone the repository.</p>
+               </li>
+               <li>
+                  <p><b>package.json</b> &minus; The package.json file tells which libraries will be installed into
+                     node_modules when you run npm install.</p>
+               </li>
+            </ul>
+            <p>At present, if you open the file package.json in the editor, you will get the following modules added in
+               it &minus;</p>
+            <pre class="result notranslate">
+"@angular/animations": "~7.2.0", 
+"@angular/common": "~7.2.0", 
+"@angular/compiler": "~7.2.0", 
+"@angular/core": "~7.2.0", 
+"@angular/forms": "~7.2.0", 
+"@angular/platform-browser": "~7.2.0", 
+"@angular/platform-browser-dynamic": "~7.2.0", 
+"@angular/router": "~7.2.0", 
+"core-js": "^2.5.4", 
+"rxjs": "~6.3.3", 
+"tslib": "^1.9.0", 
+"zone.js": "~0.8.26"
+</pre>
+            <p>In case you need to add more libraries, you can add those over here and run the npm install command.</p>
+            <ul class="list">
+               <li>
+                  <p><b>tsconfig.json</b> &minus; This basically contains the compiler options required during
+                     compilation.</p>
+               </li>
+               <li>
+                  <p><b>tslint.json</b> &minus; This is the config file with rules to be considered while compiling.</p>
+               </li>
+            </ul>
+            <p>The <b>src/</b> folder is the main folder, which internally has a different file structure.</p>
+            <h2>app</h2>
+            <p>It contains the files described below. These files are installed by angular-cli by default.</p>
+            <h3>app.module.ts</h3>
+            <p>If you open the file, you will see that the code has reference to different libraries, which are
+               imported. Angular-cli has used these default libraries for the import: angular/core, platform-browser.
+            </p>
+            <p>The names itself explain the usage of the libraries. They are imported and saved into variables such as
+               declarations, imports, providers, and bootstrap.</p>
+            <p>We can see <b>app-routing.module</b> is also added. This is because we had selected routing at the start
+               of the installation. The module is added by @angular/cli.</p>
+            <p>Following is the structure of the file &minus;</p>
+            <pre class="prettyprint notranslate">
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
+@NgModule({
+   declarations: [
+      AppComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule
+   ],
+   providers: [],
+   bootstrap: [AppComponent]
+})
+export class AppModule { }
+</pre>
+            <p>@NgModule is imported from @angular/core and it has object with following properties &minus;</p>
+            <p><b>Declarations</b> &minus; In declarations, the reference to the components is stored. The App component
+               is the default component that is created whenever a new project is initiated. We will learn about
+               creating new components in a different section.</p>
+            <p><b>Imports</b> &minus; This will have the modules imported as shown above. At present, BrowserModule is
+               part of the imports which is imported from @angular/platform-browser. There is also routing module added
+               AppRoutingModule.</p>
+            <p><b>Providers</b> &minus; This will have reference to the services created. The service will be discussed
+               in a subsequent chapter.</p>
+            <p><b>Bootstrap</b> &minus; This has reference to the default component created, i.e., AppComponent.</p>
+            <p><b>app.component.css</b> &minus; You can write your css over here. Right now, we have added the
+               background color to the div as shown below.</p>
+            <p>The structure of the file is as follows &minus;</p>
+            <pre class="result notranslate">
+.divdetails {
+   background-color: #ccc; 
+}
+</pre>
+            <h3>app.component.html</h3>
+            <p>The html code will be available in this file.</p>
+            <p>The structure of the file is as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;!--The content below is only a placeholder and can be replaced.--&gt; 
+&lt;div style = "text-align:center"&gt;
+   &lt;h1&gt;Welcome to {{ title }}!&lt;/h1&gt; 
+   &lt;img width = "300" alt = "Angular Logo" 
+   src = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZp
+   ZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA
+   2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBma
+   WxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSA
+   zMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2
+   wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3I
+   DQwLjl6IiAvPgogIDwvc3ZnPg=="7&gt; 
+&lt;/div&gt; 
+
+&lt;h2&gt;Here are some links to help you start:&lt;/h2&gt; 
+&lt;ul&gt; 
+   &lt;li&gt; 
+      &lt;h2&gt;&lt;a target = "_blank" rel = "noopener" 
+         href = "https://angular.io/tutorial"&gt;Tour of Heroes&lt;/a&gt;
+      &lt;/h2&gt;
+   &lt;/li&gt; 
+   &lt;li&gt; 
+      &lt;h2&gt;&lt;a target = "_blank" rel = "noopener" 
+         href = https://angular.io/cli"&gt;CLI Documentation&lt;/&gt;
+      &lt;/h2&gt; 
+   &lt;/li&gt; 
+   &lt;li&gt; 
+      &lt;h2&gt;&lt;a target = "_blank" rel = "noopener" 
+         href = "https://blog.angular.io/"&gt;Angular blog&lt;/a&gt;
+      &lt;/h2&gt; 
+   &lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;router-outlet&gt;&lt;/router-outlet&gt;
+</pre>
+            <p>This is the default html code currently available with the project creation.</p>
+            <h3>app.component.spec.ts</h3>
+            <p>These are automatically generated files which contain unit tests for source component.</p>
+            <h3>app.component.ts</h3>
+            <p>The class for the component is defined over here. You can do the processing of the html structure in the
+               .ts file. The processing will include activities such as connecting to the database, interacting with
+               other components, routing, services, etc.</p>
+            <p>The structure of the file is as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+@Component({
+   selector: 'app-root',  
+   templateUrl: './app.component.html', 
+   styleUrls: ['./app.component.css'] 
+})
+export class AppComponent { 
+   title = 'Angular 7';
+}
+</pre>
+            <h3>app-routing.module.ts</h3>
+            <p>This file will deal with the routing required for your project. It is connected with the main module,
+               i.e., app.module.ts.</p>
+            <p>The structure of the file is as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+import { NgModule } from '@angular/core'; 
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [];
+@NgModule({ 
+   imports: [RouterModule.forRoot(routes)], 
+   exports: [RouterModule] 
+}) 
+export class AppRoutingModule { }
+</pre>
+            <h3>Assets</h3>
+            <p>You can save your images, js files in this folder.</p>
+            <h3>Environment</h3>
+            <p>This folder has details for the production or the dev environment. The folder contains two files.</p>
+            <ul class="list">
+               <li>environment.prod.ts</li>
+               <li>environment.ts</li>
+            </ul>
+            <p>Both the files have details of whether the final file should be compiled in the production environment or
+               the dev environment.</p>
+            <p>The additional file structure of <i>angular7-app/</i> folder includes the following &minus;</p>
+            <h3>favicon.ico</h3>
+            <p>This is a file that is usually found in the root directory of a website.</p>
+            <h3>index.html</h3>
+            <p>This is the file which is displayed in the browser.</p>
+            <pre class="prettyprint notranslate">
+&lt;html lang = "en"&gt; 
+   &lt;head&gt;
+      &lt;meta charset = "utf-8"7gt;
+      &lt;title&gt;Angular7App&lt;/title&gt; 
+      &lt;base href = "/"&gt;
+      &lt;meta name = "viewport" content = "width=device-width, initial-scale=1"&gt; 
+      &lt;link rel = "icon" type = "image/x-icon" href = "favicon.ico"&gt; 
+   &lt;/head&gt; 
+   &lt;body&gt; 
+      &lt;app-root&gt;&lt;/app-root&gt; 
+   &lt;/body&gt; 
+&lt;/html&gt;
+</pre>
+            <p>The body has <b>&lt;app-root&gt;&lt;/app-root&gt;</b>. This is the selector which is used in
+               <b>app.component.ts</b> file and will display the details from <b>app.component.html</b> file.</p>
+            <h3>main.ts</h3>
+            <p>main.ts is the file from where we start our project development. It starts with importing the basic
+               module which we need. Right now if you see angular/core, angular/platform-browser-dynamic, app.module and
+               environment is imported by default during angular-cli installation and project setup.</p>
+            <pre class="prettyprint notranslate">
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app/app.module'; 
+import { environment } from './environments/environment';
+
+if (environment.production) { 
+   enableProdMode(); 
+}
+platformBrowserDynamic().bootstrapModule(AppModule).catch(err => console.error(err));
+</pre>
+            <p>The
+               <pre class="result notranslate">
+platformBrowserDynamic().bootstrapModule(AppModule)
+</pre>
+               has the parent module reference AppModule. Hence, when it executes in the browser, the file is called
+               index.html. Index.html internally refers to main.ts which calls the parent module, i.e., AppModule when
+               the following code executes &minus;
+            </p>
+
+            <pre class="result notranslate">
+platformBrowserDynamic().bootstrapModule(AppModule).catch(err => console.error(err));
+</pre>
+            <p>When AppModule is called, it calls app.module.ts which further calls the AppComponent based on the
+               bootstrap as follows &minus;</p>
+            <pre class="result notranslate">
+bootstrap: [AppComponent]
+</pre>
+            <p>In <b>app.component.ts</b>, there is a selector: <b>app-root</b> which is used in the index.html file.
+               This will display the contents present in <b>app.component.html</b>.</p>
+            <p>The following will be displayed in the browser &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/links.jpg" alt="Links" />
+            <h3>polyfill.ts</h3>
+            <p>This is mainly used for backward compatibility.</p>
+            <h3>styles.css</h3>
+            <p>This is the style file required for the project.</p>
+            <h3>test.ts</h3>
+            <p>Here, the unit test cases for testing the project will be handled.</p>
+            <h3>tsconfig.app.json</h3>
+            <p>This is used during compilation, it has the config details that need to be used to run the application.
+            </p>
+            <h3>tsconfig.spec.json</h3>
+            <p>This helps maintain the details for testing.</p>
+            <h3>typings.d.ts</h3>
+            <p>It is used to manage the Typescript definition.</p>
+            <p>The final file structure will be as follows &minus;</p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/typescript.jpg" alt="Typescript" />
+            <h1>Angular7 - Components</h1>
+            <p>Major part of the development with Angular 7 is done in the components. Components are basically classes
+               that interact with the .html file of the component, which gets displayed on the browser. We have seen the
+               file structure in one of our previous chapters.</p>
+            <p>The file structure has the app component and it consists of the following files &minus;</p>
+            <ul class="list">
+               <li>app.component.css</li>
+               <li>app.component.html</li>
+               <li>app.component.spec.ts</li>
+               <li>app.component.ts</li>
+               <li>app.module.ts</li>
+            </ul>
+            <p>And if you have selected angular routing during your project setup, files related to routing will also
+               get added and the files are as follows &minus;</p>
+            <ul class="list">
+               <li>app-routing.module.ts</li>
+            </ul>
+            <p>The above files are created by default when we created new project using the angular-cli command.</p>
+            <p>If you open up the <b>app.module.ts</b> file, it has some libraries which are imported and also a
+               declarative which is assigned the appcomponent as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+import { BrowserModule } from '@angular/platform-browser'; 
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module'; 
+import { AppComponent } from './app.component';
+
+@NgModule({ 
+   declarations: [ 
+      AppComponent 
+   ], 
+   imports: [ 
+      BrowserModule, 
+      AppRoutingModule 
+   ], 
+   providers: [],
+   bootstrap: [AppComponent] 
+})
+export class AppModule { }
+</pre>
+            <p>The declarations include the AppComponent variable, which we have already imported. This becomes the
+               parent component.</p>
+            <p>Now, angular-cli has a command to create your own component. However, the app component which is created
+               by default will always remain the parent and the next components created will form the child components.
+            </p>
+            <p>Let us now run the command to create the component with the below line of code &minus;</p>
+            <pre class="result notranslate">
+ng g component new-cmp
+</pre>
+            <p>When you run the above command in the command line, you will receive the following output &minus;</p>
+            <pre class="result notranslate">
+C:\projectA7\angular7-app>ng g component new-cmp 
+CREATE src/app/new-cmp/new-cmp.component.html (26 bytes) 
+CREATE src/app/new-cmp/new-cmp.component.spec.ts (629 bytes) 
+CREATE src/app/new-cmp/new-cmp.component.ts (272 bytes) 
+CREATE src/app/new-cmp/new-cmp.component.css (0 bytes) 
+UPDATE src/app/app.module.ts (477 bytes)
+</pre>
+            <p>Now, if we go and check the file structure, we will get the new-cmp new folder created under the
+               <b>src/app</b> folder.</p>
+            <p>The following files are created in the new-cmp folder &minus;</p>
+            <ul class="list">
+               <li>new-cmp.component.css − css file for the new component is created.</li>
+               <li>new-cmp.component.html − html file is created.</li>
+               <li>new-cmp.component.spec.ts − this can be used for unit testing.</li>
+               <li>new-cmp.component.ts − here, we can define the module, properties, etc.</li>
+            </ul>
+            <p>Changes are added to the <b>app.module</b>.ts file as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+import { BrowserModule } from '@angular/platform-browser'; 
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module'; 
+import { AppComponent } from './app.component'; 
+import { NewCmpComponent } from './new-cmp/new-cmp.component'; 
+
+// includes the new-cmp component we created
+@NgModule({ 
+   declarations: [
+      AppComponent, 
+      NewCmpComponent 
+      // here it is added in declarations and will behave as a child component 
+   ], 
+   imports: [ 
+      BrowserModule,
+      AppRoutingModule 
+   ], 
+   providers: [], 
+      bootstrap: [AppComponent] 
+      //for bootstrap the AppComponent the main app component is given. 
+}) 
+export class AppModule { }
+</pre>
+            <p>The <b>new-cmp.component.ts</b> file is generated as follows &minus;,</p>
+            <pre class="prettyprint notranslate">
+import { Component, OnInit } from '@angular/core'; // here angular/core is imported.
+
+@Component({ 
+   // this is a declarator which starts with @ sign. 
+   // The component word marked in bold needs to be the same. 
+   selector: 'app-new-cmp', // selector to be used inside .html file. 
+   templateUrl: './new-cmp.component.html', 
+   // reference to the html file created in the new component. 
+   styleUrls: ['./new-cmp.component.css'] // reference to the style file. 
+}) 
+export class NewCmpComponent implements OnInit {   
+   constructor() { } 
+   ngOnInit() { } 
+}
+</pre>
+            <p>If you see the above new-cmp.component.ts file, it creates a new class called <b>NewCmpComponent</b>,
+               which implements OnInit in which there is a constructor and a method called ngOnInit(). ngOnInit is
+               called by default when the class is executed.</p>
+            <p>Let us check how the flow works. Now, the app component, which is created by default becomes the parent
+               component. Any component added later becomes the child component.</p>
+            <p>When we hit the url in the <b>"http://localhost:4200/"</b> browser, it first executes the index.html file
+               which is shown below &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;html lang = "en"&gt;
+ 
+   &lt;head&gt; 
+      &lt;meta charset = "utf-8"&gt; 
+      &lt;title&gt;Angular7App&lt;/title&gt; 
+      &lt;base href = "/"&gt; 
+      &lt;meta name = "viewport" content = "width = device-width, initial-scale = 1"&gt; 
+      &lt;link rel = "icon" type = "image/x-icon" href = "favicon.ico"&gt; 
+   &lt;/head&gt; 
+   &lt;body&gt; 
+      &lt;app-root&gt;&lt;/app-root&gt;
+   &lt;/body&gt; 
+
+&lt;/html&gt;
+</pre>
+            <p>The above is the normal html file and we do not see anything that is printed in the browser. We shall
+               take a look at the tag in the body section.</p>
+            <pre class="result notranslate">
+&lt;app-root&gt;&lt;/app-root&gt;
+</pre>
+            <p>This is the root tag created by the Angular by default. This tag has the reference in the <b>main.ts</b>
+               file.</p>
+            <pre class="prettyprint notranslate">
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app/app.module'; 
+import { environment } from './environments/environment';
+
+if (environment.production) { 
+   enableProdMode(); 
+}
+platformBrowserDynamic().bootstrapModule(AppModule).catch(err => console.error(err));
+</pre>
+            <p>AppModule is imported from the app of the main parent module, and the same is given to the bootstrap
+               Module, which makes the appmodule load.</p>
+            <p>Let us now see the <b>app.module.ts</b> file &minus;</p>
+            <pre class="prettyprint notranslate">
+import { BrowserModule } from '@angular/platform-browser'; 
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module'; 
+import { AppComponent } from './app.component'; 
+import { NewCmpComponent } from './new-cmp/new-cmp.component';
+
+@NgModule({ 
+   declarations: [
+      AppComponent, 
+      NewCmpComponent 
+   ],
+   imports: [ 
+      BrowserModule, 
+      AppRoutingModule '
+   ], 
+   providers: [], 
+   bootstrap: [AppComponent] 
+})
+export class AppModule { }
+</pre>
+            <p>Here, the <b>AppComponent</b> is the name given, i.e., the variable to store the reference of the
+               <b>app.component.ts</b> and the same is given to the bootstrap. Let us now see the
+               <b>app.component.ts</b> file.</p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+@Component({
+   selector: 'app-root', 
+   templateUrl: './app.component.html', 
+   styleUrls: ['./app.component.css'] 
+}) 
+export class AppComponent { 
+   title = 'Angular 7'; 
+}
+</pre>
+            <p>Angular core is imported and referred as the Component and the same is used in the Declarator as &minus;
+            </p>
+            <pre class="prettyprint notranslate">
+@Component({ 
+   selector: 'app-root', 
+   templateUrl: './app.component.html', 
+   styleUrls: ['./app.component.css'] 
+})
+</pre>
+            <p>In the declarator reference to the selector, templateUrl and styleUrl are given. The selector here is
+               nothing but the tag which is placed in the index.html file that we saw above.</p>
+            <p>The class AppComponent has a variable called title, which is displayed in the browser. The @Component
+               uses the templateUrl called app.component.html which is as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;!--The content below is only a placeholder and can be replaced.--&gt; 
+&lt;div style = "text-align:center"&gt; 
+   &lt;h1&gt; Welcome to {{ title }}! &lt;/h1&gt; 
+&lt;/div&gt;
+</pre>
+            <p>It has just the html code and the variable title in curly brackets. It gets replaced with the value,
+               which is present in the <b>app.component.ts</b> file. This is called binding. We will discuss the concept
+               of binding in the subsequent chapter.</p>
+            <p>Now that we have created a new component called new-cmp. The same gets included in the
+               <b>app.module.ts</b> file, when the command is run for creating a new component.</p>
+            <p><b>app.module.ts</b> has a reference to the new component created.</p>
+            <p>Let us now check the new files created in new-cmp.</p>
+            <p><b>new-cmp.component.ts</b></p>
+            <pre class="prettyprint notranslate">
+import { Component, OnInit } from '@angular/core';
+@Component({
+   selector: 'app-new-cmp', 
+   templateUrl: './new-cmp.component.html', 
+   styleUrls: ['./new-cmp.component.css'] 
+}) 
+export class NewCmpComponent implements OnInit {   
+   constructor() { } 
+   ngOnInit() { } 
+}
+</pre>
+            <p>Here, we have to import the core too. The reference of the component is used in the declarator.</p>
+            <p>The declarator has the selector called app-new-cmp and the templateUrl and styleUrl.</p>
+            <p>The .html called new-cmp.component.html is as follows&minus;</p>
+            <pre class="result notranslate">
+&lt;p&gt; 
+   new-cmp works!
+&lt;/p&gt;
+</pre>
+            <p>As seen above, we have the html code, i.e., the p tag. The style file is empty as we do not need any
+               styling at present. But when we run the project, we do not see anything related to the new component
+               getting displayed in the browser.</p>
+            <p>The browser displays the following screen &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/screen.jpg" alt="Screen" />
+            <p>We do not see anything related to the new component being displayed. The new component created has a
+               .html file with following details &minus;</p>
+            <pre class="result notranslate">
+&lt;p&gt;
+   new-cmp works!
+&lt;p&gt;
+</pre>
+            <p>But we are not getting the same in the browser. Let us now see the changes required to get the new
+               components contents to get displayed in the browser.</p>
+            <p>The selector '<b>app-new-cmp</b>' is created for new component from <b>new-cmp.component.ts</b> as shown
+               below &minus;</p>
+            <pre class="prettyprint notranslate">
+import { Component, OnInit } from '@angular/core';
+
+@Component({ 
+   selector: 'app-new-cmp', 
+   templateUrl: './new-cmp.component.html', 
+   styleUrls: ['./new-cmp.component.css'] 
+}) 
+export class NewCmpComponent implements OnInit {  
+   constructor() { } 
+   ngOnInit() { } 
+}
+</pre>
+            <p>The selector, i.e., <b>app-new-cmp</b> needs to be added in the app.component.html, i.e., the main parent
+               created by default as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;!--The content below is only a placeholder and can be replaced.--&gt;
+&lt;div style = "text-align:center"&gt;
+   &lt;h1&gt;
+      Welcome to {{ title }}!
+   &lt;/h1&gt;
+&lt;/div&gt;
+&lt;app-new-cmp7&gt;&lt;/app-new-cmp&gt;
+</pre>
+            <p>When the <b>&lt;app-new-cmp&gt;&lt;/app-new-cmp&gt;</b> tag is added, all that is present in the .html
+               file, i.e., new-cmp.component.html of the new component created will get displayed on the browser along
+               with the parent component data.</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/new_cmp.jpg" alt="New Cmp" />
+            <p>Let us add some more details to the new component created and see the display in the browser.</p>
+            <p><b>new-cmp.component.ts</b></p>
+            <pre class="prettyprint notranslate">
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+   selector: 'app-new-cmp',
+   templateUrl: './new-cmp.component.html',
+   styleUrls: ['./new-cmp.component.css']
+})
+export class NewCmpComponent implements OnInit {
+   newcomponent = "Entered in new component created";
+   constructor() { }
+   ngOnInit() { }
+}
+</pre>
+            <p>In the class, we have added one variable called <b>newcomponent</b> and the value is “Entered in new
+               component created”.</p>
+            <p>The above variable is added in the <b>new-cmp.component.html</b> file as follows &minus;</p>
+            <pre class="result notranslate">
+&lt;p&gt; 
+   {{newcomponent}} 
+&lt;/p&gt;
+&lt;p&gt; 
+   new-cmp works! 
+&lt;/p&gt;
+</pre>
+            <p>Now since we have included the <b>&lt;app-new-cmp&gt;&lt;/app-new-cmp&gt;</b>selector in the
+               <b>app.component.html</b> which is the .html of the parent component, the content present in the
+               <b>new-cmp.component.html</b> file gets displayed on the browser. We will also add some css for the new
+               component in the new-cmp.component.css file as follows &minus;</p>
+            <pre class="result notranslate">
+p { 
+   color: blue; 
+   font-size: 25px; 
+}
+</pre>
+            <p>So we have added blue color and font-size as 25px for the p tags.</p>
+            <p>Following screen will be displayed in the browser &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/color_font.jpg"
+               alt="Color Font" />
+            <p>Similarly, we can create components and link the same using selector in the <b>app.component.html</b>
+               file as per our requirements.</p>
+            <h1>Angular7 - Modules</h1>
+            <p>Module in Angular refers to a place where you can group the components, directives, pipes, and services,
+               which are related to the application.</p>
+            <p>In case you are developing a website, the header, footer, left, center and the right section become part
+               of a module.</p>
+            <p>To define module, we can use the NgModule. When you create a new project using the Angular –cli command,
+               the ngmodule is created in the <b>app.module.ts</b> file by default and it looks as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NewCmpComponent } from './new-cmp/new-cmp.component';
+
+@NgModule({
+   declarations: [
+      AppComponent,
+      NewCmpComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule
+   ],
+   providers: [],
+   bootstrap: [AppComponent]
+})
+export class AppModule { }
+</pre>
+            <p>The NgModule needs to be imported as follows &minus;</p>
+            <pre class="result notranslate">
+import { NgModule } from '@angular/core';
+</pre>
+            <p>The structure for the ngmodule is as shown below &minus;</p>
+            <pre class="prettyprint notranslate">
+@NgModule({ 
+   declarations: [
+      AppComponent, 
+      NewCmpComponent 
+   ],
+   imports: [ 
+      BrowserModule, 
+      AppRoutingModule 
+   ], 
+   providers: [], 
+   bootstrap: [AppComponent] 
+})
+</pre>
+            <p>It starts with <b>@NgModule</b> and contains an object which has declarations, imports, providers and
+               bootstrap.</p>
+            <h2>Declaration</h2>
+            <p>It is an array of components created. If any new component gets created, it will be imported first and
+               the reference will be included in declarations as shown below &minus;</p>
+            <pre class="result notranslate">
+declarations: [ 
+   AppComponent,  
+   NewCmpComponent 
+]
+</pre>
+            <h3>Import</h3>
+            <p>It is an array of modules required to be used in the application. It can also be used by the components
+               in the Declaration array. For example, right now in the @NgModule, we see the Browser Module imported. In
+               case your application needs forms, you can include the module with the below code &minus;</p>
+            <pre class="result notranslate">
+import { FormsModule } from '@angular/forms';
+</pre>
+            <p>The import in the <b>@NgModule</b> will be like the following &minus;</p>
+            <pre class="result notranslate">
+imports: [ 
+   BrowserModule, 
+   FormsModule 
+]
+</pre>
+            <h3>Providers</h3>
+            <p>This will include the services created.</p>
+            <h3>Bootstrap</h3>
+            <p>This includes the main app component for starting the execution.</p>
+            <h1>Angular7 - Data Binding</h1>
+            <p>Data Binding is available right from AngularJS, and all the versions of Angular released later on. We use
+               curly braces for data binding - {{}}; this process is called interpolation. We have already seen in our
+               previous examples how we declared the value to the variable title and the same is printed in the browser.
+            </p>
+            <p>The variable in the <b>app.component.html</b> file is referred as <b>{{title}}</b> and the value of
+               <b>title</b> is initialized in the <b>app.component.ts</b> file and in <b>app.component.html</b>, the
+               value is displayed.</p>
+            <p>Let us now create a dropdown of months in the browser. To do that, we have created an array of months in
+               <b>app.component.ts</b> as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+
+@Component({ 
+   selector: 'app-root', 
+   templateUrl: './app.component.html', 
+   styleUrls: ['./app.component.css'] 
+}) 
+export class AppComponent {
+   title = 'Angular 7'; 
+   
+   // declared array of months. 
+   months = ["January", "February", "March", "April", "May", "June", "July", 
+      "August", "September", "October", "November", "December"];
+}
+</pre>
+            <p>The month’s array that is shown above is to be displayed in a dropdown in the browser.</p>
+            <p>We have created the normal select tag with option. In option, we have used the <b>for loop</b>. The
+               <b>for loop</b> is used to iterate over the months’ array, which in turn will create the option tag with
+               the value present in the months.</p>
+            <p>The syntax for in Angular is as follows &minus;</p>
+            <pre class="result notranslate">
+*ngFor = “let I of months”
+</pre>
+            <p>and to get the value of months we are displaying it in &minus;</p>
+            <pre class="result notranslate">
+{{i}}
+</pre>
+            <p>The two curly brackets help with data binding. You declare the variables in your app.component.ts file
+               and the same will be replaced using the curly brackets.</p>
+            <p>Following is the output of the above month’s array in the browser &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/months.jpg" alt="Months" />
+            <p>The variable that is set in the <b>app.component.ts</b> can be binded inside the
+               <b>app.component.html</b> using the curly brackets. For example: {{}}.</p>
+            <p>Let us now display the data in the browser based on condition. Here, we have added a variable and
+               assigned the value as <b>true</b>. Using the if statement, we can hide/show the content to be displayed.
+            </p>
+            <h3>Example</h3>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+
+@Component({
+   selector: 'app-root', 
+   templateUrl: './app.component.html', 
+   styleUrls: ['./app.component.css'] 
+}) 
+export class AppComponent { 
+   title = 'Angular 7'; 
+   
+   // declared array of months. 
+   months = ["January", "February", "March", "April", "May", "June", "July", 
+      "August", "September", "October", "November", "December"]; 
+   
+   isavailable = true; //variable is set to true
+}
+</pre>
+            <p><b>app.component.html</b></p>
+            <pre class="prettyprint notranslate">
+&lt;!--The content below is only a placeholder and can be replaced.--&gt; 
+&lt;div style = "text-align:center"&gt; 
+   &lt;h1&gt; Welcome to {{title}}. &lt;/h1&gt; 
+&lt;/div&gt;
+
+&lt;div&gt; Months : 
+   &lt;select&gt; 
+      &lt;option *ngFor = "let i of months"&gt;{{i}}&lt;/option&gt; 
+   &lt;/select&gt; 
+&lt;/div&gt; 
+&lt;br/&gt;
+
+&lt;div&gt; 
+   &lt;span *ngIf = "isavailable"&gt;Condition is valid.&lt;/span&gt;  
+   //over here based on if condition the text condition is valid is displayed. 
+   //If the value of isavailable is set to false it will not display the text. 
+&lt;/div&gt;
+</pre>
+            <h3>Output</h3>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/output.jpg" alt="Output" />
+            <p>Let us explain the above example using the <b>IF THEN ELSE</b> condition.</p>
+            <h3>Example</h3>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+   title = 'Angular 7';
+   
+   // declared array of months.
+   months = ["January", "Feburary", "March", "April", "May","June", "July", 
+      "August", "September", "October", "November", "December"];
+   
+   isavailable = false; //variable is set to true
+}
+</pre>
+            <p>In this case, we have made the <b>isavailable</b> variable as false. To print the <b>else</b> condition,
+               we will have to create the <b>ng-template</b> as follows &minus;</p>
+            <pre class="result notranslate">
+&lt;ng-template #condition1&gt;Condition is invalid&lt;/ng-template&gt;
+</pre>
+            <p>The full code is given below &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;!--The content below is only a placeholder and can be replaced.--&gt; 
+&lt;div style = "text-align:center"&gt; 
+   &lt;h1&gt; Welcome to {{title}}. &lt;/h1&gt; 
+&lt;/div&gt;
+
+&lt;div&gt; Months : 
+   &lt;select&gt; 
+      &lt;option *ngFor = "let i of months"&gt;{{i}}&lt;/option&gt;
+   &lt;/select&gt;
+&lt;/div&gt; 
+&lt;br/&gt;
+
+&lt;div&gt; 
+   &lt;span *ngIf = "isavailable; else condition1"&gt;Condition is valid.&lt;/span&gt; 
+   &lt;ng-template #condition1&gt;Condition is invalid&lt;/ng-template&gt; 
+&lt;/div&gt;
+</pre>
+            <p>If is used with the else condition and the variable used is <b>condition1</b>. The same is assigned as an
+               <b>id</b> to the <b>ng-template</b>, and when the available variable is set to false the text
+               <b>Condition is invalid</b> is displayed.</p>
+            <p>Following screenshot shows the display in the browser &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/invalid.jpg" alt="Invalid" />
+            <p>Let us now use the <b>if then else</b> condition.</p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+@Component({
+   selector: 'app-root', 
+   templateUrl: './app.component.html', 
+   styleUrls: ['./app.component.css'] 
+}) 
+export class AppComponent { 
+   title = 'Angular 7'; 
+   
+   // declared array of months. 
+   months = ["January", "February", "March", "April", "May", "June", "July", 
+      "August", "September", "October", "November", "December"]; 
+   
+   isavailable = true; //variable is set to true 
+}
+</pre>
+            <p>Now, we will make the variable <b>isavailable</b> as true. In the html, the condition is written in the
+               following way &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;!--The content below is only a placeholder and can be replaced.--&gt; 
+&lt;div style = "text-align:center"&gt; 
+   &lt;h1&gt; Welcome to {{title}}. &lt;/h1&gt; 
+&lt;/div&gt;
+
+&lt;div&gt; Months : 
+   &lt;select&gt; 
+      &lt;option *ngFor="let i of months"&gt;{{i}}&lt;/option&gt;
+   &lt;/select&gt; 
+&lt;/div&gt; 
+&lt;br/&gt;
+
+&lt;div&gt; 
+   &lt;span *ngIf = "isavailable; then condition1 else condition2"&gt;
+      Condition is valid.
+   &lt;/span&gt; 
+   &lt;ng-template #condition1&gt;Condition is valid&lt;/ng-template&gt; 
+   &lt;ng-template #condition2&gt;Condition is invalid&lt;/ng-template&gt; 
+&lt;/div&gt;
+</pre>
+            <p>If the variable is true, then <b>condition1</b>, else <b>condition2</b>. Now, two templates are created
+               with id <b>#condition1</b> and <b>#condition2</b>.</p>
+            <p>The display in the browser is as follows &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/valid.jpg" alt="Valid" />
+            <h1>Angular7 - Event Binding</h1>
+            <p>In this chapter, we will discuss how Event Binding works in Angular 7. When a user interacts with an
+               application in the form of a keyboard movement, a mouse click, or a mouse over, it generates an event.
+               These events need to be handled to perform some kind of action. This is where event binding comes into
+               picture.</p>
+            <p>Let us consider an example to understand this better.</p>
+            <p><b><i>app.component.html</i></b></p>
+            <pre class="prettyprint notranslate">
+&lt;!--The content below is only a placeholder and can be replaced.--&gt;
+&lt;div style = "text-align:center"&gt;
+   &lt;h1&gt;Welcome to {{title}}.&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div&gt; Months :
+   &lt;select&gt;
+      &lt;option *ngFor = "let i of months"&gt;{{i}}&lt;/option&gt;
+   &lt;/select&gt;
+&lt;/div&gt;
+&lt;br/&gt;
+
+&lt;div&gt;
+   &lt;span *ngIf = "isavailable; then condition1 else condition2"&gt;
+      Condition is valid.
+   &lt;/span&gt;
+   &lt;ng-template #condition1&gt;Condition is valid&lt;/ng-template&gt;
+   &lt;ng-template #condition2&gt;Condition is invalid&lt;/ng-template&gt;
+&lt;/div&gt;
+&lt;button (click) = "myClickFunction($event)"&gt;
+   Click Me
+&lt;/button&gt;
+</pre>
+            <p>In the <b>app.component.html</b> file, we have defined a button and added a function to it using the
+               click event.</p>
+            <p>Following is the syntax to define a button and add a function to it.</p>
+            <pre class="result notranslate">
+(click) = "myClickFunction($event)"
+</pre>
+            <p>The function is defined in :<b>app.component.ts</b></p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+   title = 'Angular 7';
+   
+   // declared array of months.
+   months = ["January", "February", "March", "April", "May","June", "July", 
+      "August", "September", "October", "November", "December"];
+   
+   isavailable = true; //variable is set to true
+   myClickFunction(event) {
+      //just added console.log which will display the event details in browser on click of the button.
+      alert("Button is clicked");
+      console.log(event);
+   }
+}
+</pre>
+            <p>Upon clicking the button, the control will come to the function <b>myClickFunction</b> and a dialog box
+               will appear, which displays the <b>Button is clicked</b> as shown in the following screenshot &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/click.jpg" alt="Click" />
+            <p>The styling for button is added in add.component.css &minus;</p>
+            <pre class="result notranslate">
+button {
+   background-color: #2B3BCF;
+   border: none;
+   color: white;
+   padding: 10px 10px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 20px;
+}
+</pre>
+            <p>Let us now add the onchange event to the dropdown.</p>
+            <p>The following line of code will help you add the change event to the dropdown &minus;</p>
+            <p><b><i>app.component.html</i></b></p>
+            <pre class="prettyprint notranslate">
+&lt;!--The content below is only a placeholder and can be replaced.--&gt;
+&lt;div style = "text-align:center"&gt;
+   &lt;h1&gt;Welcome to {{title}}.&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div&gt; Months :
+   &lt;select (change) = "changemonths($event)"&gt;
+      &lt;option *ngFor = "let i of months"&gt;{{i}}&lt;/option&gt;
+   &lt;/select&gt;
+&lt;/div&gt;
+&lt;br/&gt;
+
+&lt;div&gt;
+   &lt;span *ngIf = "isavailable; then condition1 else condition2"&gt;
+      Condition is valid.
+   &lt;/span&gt;
+   &lt;ng-template #condition1&gt;Condition is valid&lt;/ng-template&gt;
+   &lt;ng-template #condition2&gt;Condition is invalid&lt;/ng-template&gt;
+&lt;/div&gt;
+&lt;br/&gt;
+
+&lt;button (click) = "myClickFunction($event)"&gt;
+   Click Me
+&lt;/button&gt;
+</pre>
+            <p>The function is declared in the <b>app.component.ts</b> file &minus;</p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+   title = 'Angular 7';
+   
+   // declared array of months.
+   months = ["January", "Feburary", "March", "April", "May", "June", "July", 
+      "August", "September", "October", "November", "December"];
+   
+   isavailable = true; //variable is set to true
+   myClickFunction(event) {
+      //just added console.log which will display the event 
+      details in browser on click of the button.
+      alert("Button is clicked");
+      console.log(event);
+   }
+   changemonths(event) {
+      console.log("Changed month from the Dropdown");
+      console.log(event);
+   }
+}
+</pre>
+            <p>Select month from the dropdown and you see the console message “<b>Changed month from the Dropdown</b>”
+               is displayed in the console along with the event.</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/dropdown.jpg" alt="Dropdown" />
+            <p>Let us add an alert message in <b>app.component.ts</b> when the value from the dropdown is changed as
+               shown below &minus;</p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+@Component({ 
+   selector: 'app-root', 
+   templateUrl: './app.component.html', 
+   styleUrls: ['./app.component.css'] 
+}) 
+export class AppComponent { 
+   title = 'Angular 7'; 
+   
+   // declared array of months. 
+   months = ["January", "February", "March", "April", "May", "June", "July", 
+      "August", "September", "October", "November", "December"]; 
+   
+   isavailable = true; //variable is set to true 
+   myClickFunction(event) { 
+      //just added console.log which will display the event 
+      details in browser on click of the button. 
+      alert("Button is clicked"); console.log(event); 
+   } 
+   changemonths(event) { 
+      alert("Changed month from the Dropdown");
+   } 
+}
+</pre>
+            <p>When the value in dropdown is changed, a dialog box will appear and the following message will be
+               displayed &minus;</p>
+            <p><b>“Changed month from the Dropdown”.</b></p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/condition.jpg"
+               alt="Condition" />
+            <h1>Angular7 - Templates</h1>
+            <p>Angular 7 uses the &lt;ng-template&gt; as the tag instead of &lt;template&gt;which is used in Angular2.
+               &lt;ng-template&gt; has been in use since the release of Angular 4 , and the earlier version i.e Angular
+               2 uses &lt;template&gt; for the same purpose. The reason it started to use &lt;ng-template&gt; instead of
+               &lt;template&gt; from Angular 4 onwards is because there is a name conflict between the &lt;template&gt;
+               tag and the html &lt;template&gt; standard tag. It will deprecate completely going ahead. This was one of
+               the major changes made in Angular 4 version.</p>
+            <p>Let us now use the template along with the <b>if else condition</b> and see the output.</p>
+            <p><b><i>app.component.html</i></b></p>
+            <pre class="prettyprint notranslate">
+&lt;!--The content below is only a placeholder and can be replaced.--&gt;
+&lt;div style = "text-align:center"&gt;
+   &lt;h1&gt;Welcome to {{title}}.&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div&gt; Months :
+   &lt;select (change) = "changemonths($event)" name = "month"&gt;
+      &lt;option *ngFor = "let i of months"&gt;{{i}}&lt;/option&gt;
+   &lt;/select&gt;
+&lt;/div&gt;
+&lt;br/&gt;
+
+&lt;div&gt;
+   &lt;span *ngIf = "isavailable;then condition1 else condition2"&gt;
+      Condition is valid.
+   &lt;/span&gt;
+   &lt;ng-template #condition1&gt;Condition is valid from template&lt;/ng-template&gt;
+   &lt;ng-template #condition2&gt;Condition is invalid from template&lt;/ng-template&gt;
+&lt;/div&gt;
+&lt;button (click) = "myClickFunction($event)"&gt;Click Me&lt;/button&gt;
+</pre>
+            <p>For the Span tag, we have added the <b>if</b> statement with the <b>else</b> condition and will call
+               template condition1, else condition2.</p>
+            <p>The templates are to be called as follows &minus;</p>
+            <pre class="result notranslate">
+&lt;ng-template #condition1&gt;Condition is valid from template&lt;/ng-template&gt; 
+&lt;ng-template #condition2&gt;Condition is invalid from template&lt;/ng-template&gt;
+</pre>
+            <p>If the condition is true, then the <b>condition1</b> template is called, otherwise <b>condition2</b>.</p>
+            <p><b><i>app.component.ts</i></b></p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+@Component({ 
+   selector: 'app-root', 
+   templateUrl: './app.component.html', 
+   styleUrls: ['./app.component.css'] 
+}) 
+export class AppComponent { 
+   title = 'Angular 7'; 
+   
+   // declared array of months. 
+   months = ["January", "February", "March", "April", "May", "June", "July", 
+      "August", "September", "October", "November", "December"]; 
+   isavailable = false; // variable is set to true
+   
+   myClickFunction(event) { 
+      //just added console.log which will display the event details in browser on click of the button. 
+      alert("Button is clicked"); 
+      console.log(event); 
+   }
+   changemonths(event) { 
+      alert("Changed month from the Dropdown"); 
+   } 
+}
+</pre>
+            <p>The output in the browser is as follows &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/condition_invalid.jpg"
+               alt="Condition Invalid " />
+            <p>The variable <b>isavailable</b> is false so the condition2 template is printed. If you click the button,
+               the respective template will be called.</p>
+            <p><b><i>app.component.ts</i></b></p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+@Component({ 
+   selector: 'app-root', 
+   templateUrl: './app.component.html', 
+   styleUrls: ['./app.component.css'] 
+}) 
+export class AppComponent { 
+   title = 'Angular 7'; 
+   
+   // declared array of months. 
+   months = ["January", "Feburary", "March", "April", "May", "June", "July", 
+      "August", "September", "October", "November", "December"];
+   
+   isavailable = false; //variable is set to true  
+   myClickFunction(event) { 
+      this.isavailable = !this.isavailable; 
+      // variable is toggled onclick of the button 
+   } 
+   changemonths(event) {
+      alert("Changed month from the Dropdown"); 
+   }
+}
+</pre>
+            <p>The <b>isavailable</b> variable is toggled on click of the button as shown below &minus;</p>
+            <pre class="prettyprint notranslate">
+myClickFunction(event) { 
+   this.isavailable = !this.isavailable; 
+}
+</pre>
+            <p>When you click on the button based on the value of the <b>isavailable</b> variable the respective
+               template will be displayed &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/condition_valid.jpg"
+               alt="Condition valid" />
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/invalid_template.jpg"
+               alt="Invalid Template" />
+            <p>If you inspect the browser, you will see that you never get the span tag in the dom. The following
+               example will help you understand the same.</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/template.jpg" alt="Template" />
+            <p>Though in <b>app.component.html</b> we have added span tag and the <b>&lt;ng-template&gt;</b> for the
+               condition as shown below &minus;</p>
+            <pre class="result notranslate">
+&lt;span *ngIf = "isavailable;then condition1 else condition2"&gt;
+   Condition is valid.
+&lt;/span&gt; 
+&lt;ng-template #condition1&gt;Condition is valid from template&lt;/ng-template&gt;
+&lt;ng-template #condition2&gt;Condition is invalid from template&lt;/ng-template&gt;
+</pre>
+            <p>We do not see the span tag and also the &lt;ng-template&gt; in the dom structure when we inspect the same
+               in browser.</p>
+            <p>The following line of code in html will help us get the span tag in the dom &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;!--The content below is only a placeholder and can be replaced.--&gt; 
+&lt;div style = "text-align:center"&gt; 
+   &lt;h1&gt; Welcome to {{title}}. &lt;/h1&gt; 
+&lt;/div&gt;
+
+&lt;div&gt; Months : 
+   &lt;select (change) = "changemonths($event)" name = "month"&gt; 
+      &lt;option *ngFor = "let i of months"&gt;{{i}}&lt;/option&gt;
+   &lt;/select&gt; 
+&lt;/div&gt; 
+&lt;br/&gt;
+
+&lt;div&gt; 
+   &lt;span *ngIf = "isavailable; else condition2"&gt;
+      Condition is valid.
+   &lt;/span&gt;
+   &lt;ng-template #condition1&gt;Condition is valid from template &lt;/ng-template&gt; 
+   &lt;ng-template #condition2&gt;Condition is invalid from template&lt;/ng-template&gt; 
+&lt;/div&gt;
+&lt;button (click) = "myClickFunction($event)"&gt;Click Me&lt;/button&gt;
+</pre>
+            <p>If we remove the <b>then</b> condition, we get the “Condition is valid” message in the browser and the
+               span tag is also available in the dom. For example, in <b>app.component.ts</b>, we have made the
+               <b>isavailable</b> variable as true.</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/available.jpg"
+               alt="Available" />
+            <h1>Angular7 - Directives</h1>
+            <p>Directives in Angular is a js class, which is declared as @directive. We have 3 directives in Angular.
+               The directives are listed below &minus;</p>
+            <h3>Component Directives</h3>
+            <p>These form the main class having details of how the component should be processed, instantiated and used
+               at runtime.</p>
+            <h3>Structural Directives</h3>
+            <p>A structure directive basically deals with manipulating the dom elements. Structural directives have a *
+               sign before the directive. For example, <b>*ngIf</b> and <b>*ngFor</b>.</p>
+            <h3>Attribute Directives</h3>
+            <p>Attribute directives deal with changing the look and behavior of the dom element. You can create your own
+               directives as explained in the below section.</p>
+            <h2>How to Create Custom Directives?</h2>
+            <p>In this section, we will discuss about Custom Directives to be used in components. Custom directives are
+               created by us and are not standard.</p>
+            <p>Let us see how to create the custom directive. We will create the directive using the command line. The
+               command to create the directive using the command line is as follows &minus;</p>
+            <pre class="result notranslate">
+ng g directive nameofthedirective 
+e.g 
+ng g directive changeText
+</pre>
+            <p>It appears in the command line as given in the below code &minus;</p>
+            <pre class="result notranslate">
+C:\projectA7\angular7-app&gt;ng g directive changeText 
+CREATE src/app/change-text.directive.spec.ts (241 bytes) 
+CREATE src/app/change-text.directive.ts (149 bytes) 
+UPDATE src/app/app.module.ts (565 bytes)
+</pre>
+            <p>The above files, i.e., change-text.directive.spec.ts and change-text.directive.ts get created and the
+               app.module.ts file is updated.</p>
+            <p><b><i>app.module.ts</i></b></p>
+            <pre class="prettyprint notranslate">
+import { BrowserModule } from'@angular/platform-browser'; 
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module'; 
+import { AppComponent } from './app.component'; 
+import { NewCmpComponent } from'./new-cmp/new-cmp.component'; 
+import { ChangeTextDirective } from './change-text.directive';
+
+@NgModule({ 
+   declarations: [ 
+      AppComponent, 
+      NewCmpComponent, 
+      ChangeTextDirective 
+   ], 
+   imports: [ 
+      BrowserModule, 
+      AppRoutingModule 
+   ], 
+   providers: [], 
+   bootstrap: [AppComponent] 
+}) 
+export class AppModule { }
+</pre>
+            <p>The <b>ChangeTextDirective</b> class is included in the declarations in the above file. The class is also
+               imported from the file given below &minus;</p>
+            <p><b>change-text.directive</b></p>
+            <pre class="prettyprint notranslate">
+import { Directive } from '@angular/core';
+
+@Directive({
+   selector: '[changeText]'
+})
+export class ChangeTextDirective {
+   constructor() { }
+}
+</pre>
+            <p>The above file has a directive and it also has a selector property. Whatever we define in the selector,
+               the same has to match in the view, where we assign the custom directive.</p>
+            <p>In the app.component.html view, let us add the directive as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;!--The content below is only a placeholder and can be replaced.--&gt; 
+&lt;div style = "text-align:center"&gt; 
+   &lt;h1&gt; Welcome to {{title}}. &lt;/h1&gt; 
+&lt;/div&gt;
+&lt;div style = "text-align:center"&gt; 
+   &lt;span changeText &gt;Welcome to {{title}}.&lt;/span&gt; 
+&lt;/div&gt;
+</pre>
+            <p>We will write the changes in <b>change-text.directive.ts</b> file as follows &minus;</p>
+            <p><b><i>change-text.directive.ts</i></b></p>
+            <pre class="prettyprint notranslate">
+import { Directive, ElementRef} from '@angular/core';
+@Directive({
+   selector: '[changeText]'
+})
+export class ChangeTextDirective {
+   constructor(Element: ElementRef) {
+      console.log(Element);
+      Element.nativeElement.innerText = "Text is changed by changeText Directive.";
+   }
+}
+</pre>
+            <p>In the above file, there is a class called <b>ChangeTextDirective</b> and a constructor, which takes the
+               element of type <b>ElementRef</b>, which is mandatory. The element has all the details to which the
+               <b>Change Text</b> directive is applied.</p>
+            <p>We have added the console.log element. The output of the same can be seen in the browser console. The
+               text of the element is also changed as shown above.</p>
+            <p>Now, the browser will show the following &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/change_text.jpg"
+               alt="Change Text" />
+            <p>The details of the element on which the directive selector is given in the console. Since we have added
+               the <b>changeText</b> directive to a span tag, the details of the span element is displayed.</p>
+            <h1>Angular7 - Pipes</h1>
+            <p>In this chapter, we will discuss about Pipes in Angular 7. Pipes were earlier called filters in Angular1
+               and called pipes from Angular2 onwards.</p>
+            <p>The | character is used to transform data. Following is the syntax for the same &minus;</p>
+            <pre class="result notranslate">
+{{ Welcome to Angular 7 | lowercase}}
+</pre>
+            <p>It takes integers, strings, arrays, and date as input separated with | to be converted in the format as
+               required and display the same in the browser.</p>
+            <p>Let us consider a few examples using pipes. Here, we want to display the text given to uppercase. This
+               can be done using pipes as follows &minus;</p>
+            <p>In the app.component.ts file, we have defined the title variable as follows &minus;</p>
+            <p><b><i>app.component.ts</i></b></p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+@Component({ 
+   selector: 'app-root', 
+   templateUrl: './app.component.html', 
+   styleUrls: ['./app.component.css'] 
+}) 
+export class AppComponent {
+   title = 'Angular 7 Project!'; 
+}
+</pre>
+            <p>The following line of code goes into the <b>app.component.html</b> file &minus;</p>
+            <pre class="result notranslate">
+&lt;b&gt;{{title | uppercase}}&lt;/b&gt;&lt;br/&gt; 
+&lt;b&gt;{{title | lowercase}}&lt;/b&gt;
+</pre>
+            <p>The browser appears as shown in the following screenshot &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/angular_project.jpg"
+               alt="Angular Project" />
+            <p>Here are some built-in pipes available with angular &minus;</p>
+            <ul class="list">
+               <li>Lowercasepipe</li>
+               <li>Uppercasepipe</li>
+               <li>Datepipe</li>
+               <li>Currencypipe</li>
+               <li>Jsonpipe</li>
+               <li>Percentpipe</li>
+               <li>Decimalpipe</li>
+               <li>Slicepipe</li>
+            </ul>
+            <p>We have already seen the lowercase and uppercase pipes. Let us now see how the other pipes work. The
+               following line of code will help us define the required variables in <b>app.component.ts</b> file &minus;
+            </p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+@Component({ 
+   selector: 'app-root',
+   templateUrl: './app.component.html', 
+   styleUrls: ['./app.component.css'] 
+})
+export class AppComponent {
+   title = 'Angular 7 Project!'; 
+   todaydate = new Date(); 
+   jsonval = {name:'Rox', age:'25', address:{a1:'Mumbai', a2:'Karnataka'}}; 
+   months = ["Jan", "Feb", "Mar", "April", "May", "Jun", "July", "Aug", 
+      "Sept", "Oct", "Nov", "Dec"]; 
+}
+</pre>
+            <p>We will use the pipes in the <b>app.component.html</b> file as shown below &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;!--The content below is only a placeholder and can be replaced.--&gt; 
+&lt;div style = "width:100%;"&gt; 
+   &lt;div style = "width:40%;float:left;border:solid 1px black;"&gt; 
+      &lt;h1&gt;Uppercase Pipe&lt;/h1&gt; 
+      &lt;b&gt;{{title | uppercase}}&lt;/b&gt;
+      &lt;br/&gt; 
+      
+      &lt;h1&gt;Lowercase Pipe&lt;/h1&gt; 
+      &lt;b&gt;{{title | lowercase}}&lt;/b&gt; 
+      &lt;h1&gt;Currency Pipe&lt;/h1&gt; 
+      &lt;b&gt;{{6589.23 | currency:"USD"}}&lt;/b&gt;
+      &lt;br/&gt; 
+      
+      &lt;b&gt;{{6589.23 | currency:"USD":true}}&lt;/b&gt; 
+      // Boolean true is used to get the sign of the currency. 
+      &lt;h1&gt;Date pipe&lt;/h1&gt; 
+      &lt;b&gt;{{todaydate | date:'d/M/y'}}&lt;/b&gt;
+      &lt;br/&gt; 
+      
+      &lt;b&gt;{{todaydate | date:'shortTime'}}&lt;/b&gt; 
+      &lt;h1&gt;Decimal Pipe&lt;/h1&gt; 
+      &lt;b&gt;{{ 454.78787814 | number: '3.4-4' }}&lt;/b&gt; 
+      // 3 is for main integer, 4 -4 are for integers to be displayed. 
+   &lt;/div&gt; 
+   
+   &lt;div style = "width:40%;float:left;border:solid 1px black;"&lt; 
+      &lt;h1&lt;Json Pipe&lt;/h1&gt; 
+      &lt;b&gt;{{ jsonval | json }}&lt;/b&gt;
+      &lt;h1&gt;Percent Pipe&lt;/h1&gt; 
+      &lt;b&gt;{{00.54565 | percent}}&lt;/b&gt; 
+      &lt;h1&gt;Slice Pipe&lt;/h1&gt; 
+      &lt;b&gt;{{months | slice:2:6}}&lt;/b&gt; 
+      // here 2 and 6 refers to the start and the end index 
+   &lt;/div&gt; 
+&lt;/div&gt;
+</pre>
+            <p>The following screenshots show the output for each pipe &minus;</p>
+            <img class="full-wdith" src="https://www.tutorialspoint.com/angular7/images/uppercase.jpg"
+               alt="Uppercase" />
+            <h2>How to Create a Custom Pipe?</h2>
+            <p>To create a custom pipe, we have created a new ts file. Here, we want to create the sqrt custom pipe. We
+               have given the same name to the file and it looks as follows &minus;</p>
+            <p><b><i>app.sqrt.ts</i></b></p>
+            <pre class="prettyprint notranslate">
+import {Pipe, PipeTransform} from '@angular/core'; 
+@Pipe ({ 
+   name : 'sqrt'
+}) 
+export class SqrtPipe implements PipeTransform {
+   transform(val : number) : number {
+      return Math.sqrt(val);
+   }
+}
+</pre>
+            <p>To create a custom pipe, we have to import Pipe and Pipe Transform from Angular/core. In the @Pipe
+               directive, we have to give the name to our pipe, which will be used in our .html file. Since, we are
+               creating the sqrt pipe, we will name it sqrt.</p>
+            <p>As we proceed further, we have to create the class and the class name is SqrtPipe. This class will
+               implement the PipeTransform.</p>
+            <p>The transform method defined in the class will take argument as the number and will return the number
+               after taking the square root.</p>
+            <p>Since we have created a new file, we need to add the same in <b>app.module.ts</b>. This is done as
+               follows &minus;</p>
+            <pre class="prettyprint notranslate">
+import { BrowserModule } from '@angular/platform-browser'; 
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module'; 
+import { AppComponent } from './app.component'; 
+import { NewCmpComponent } from './new-cmp/new-cmp.component'; 
+import { ChangeTextDirective } from './change-text.directive'; 
+import { SqrtPipe } from './app.sqrt';
+
+@NgModule({
+   declarations: [ 
+      SqrtPipe, 
+      AppComponent, 
+      NewCmpComponent, 
+      ChangeTextDirective 
+   ], 
+   imports: [ 
+      BrowserModule, 
+      AppRoutingModule
+   ], 
+   providers: [], 
+   bootstrap: [AppComponent] 
+}) 
+export class AppModule { }
+</pre>
+            <p>We have created the <b>app.sqrt.ts</b> class. We have to import the same in <b>app.module.ts</b> and
+               specify the path of the file. It also has to be included in the declarations as shown above.</p>
+            <p>Let us now see the call made to the sqrt pipe in the <b>app.component.html</b> file.</p>
+            <pre class="result notranslate">
+&lt;h1&gt;Custom Pipe&lt;/h1&gt; 
+&lt;b&gt;Square root of 25 is: {{25 | sqrt}}&lt;/b&gt; 
+&lt;br/&gt; 
+&lt;b&gt;Square root of 729 is: {{729 | sqrt}}&lt;/b&gt;
+</pre>
+            <p>Following is the output &minus;</p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/custom_pipe.jpg"
+               alt="Custom Pipe" />
+            <h1>Angular7 - Routing</h1>
+            <p>Routing basically means navigating between pages. You have seen many sites with links that direct you to
+               a new page. This can be achieved using routing. Here the pages that we are referring to will be in the
+               form of components. We have already seen how to create a component. Let us now create a component and see
+               how to use routing with it.</p>
+            <p>During the project setup, we have already included the routing module and the same is available in
+               app.module.ts as shown below &minus;</p>
+            <p><b>app.module.ts</b></p>
+            <pre class="prettyprint notranslate">
+import { BrowserModule } from '@angular/platform-browser'; 
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module'; 
+import { AppComponent } from './app.component'; 
+import { NewCmpComponent } from './new-cmp/new-cmp.component'; 
+import { ChangeTextDirective } from './change-text.directive'; 
+import { SqrtPipe } from './app.sqrt';
+
+@NgModule({ 
+   declarations: [ 
+      SqrtPipe, 
+      AppComponent, 
+      NewCmpComponent, 
+      ChangeTextDirective
+   ], 
+   imports: [ 
+      BrowserModule, 
+      AppRoutingModule 
+   ], 
+   providers: [], 
+   bootstrap: [AppComponent] 
+})
+export class AppModule { }
+</pre>
+            <p><b>AppRoutingModule</b> is added as shown above and included in the imports array.</p>
+            <p>File details of <b>app-routing.module</b> are given below &minus;</p>
+            <pre class="prettyprint notranslate">
+import { NgModule } from '@angular/core'; 
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [];
+@NgModule({ 
+   imports: [
+      RouterModule.forRoot(routes)
+   ],
+   exports: [RouterModule] 
+}) 
+export class AppRoutingModule { }
+</pre>
+            <p>Here, we have to note that this file is generated by default when the routing is added during project
+               setup. If not added, the above files have to be added manually.</p>
+            <p>So in the above file, we have imported Routes and RouterModule from @angular/router.</p>
+            <p>There is a const <b>routes</b> defined which is of type Routes. It is an array which holds all the routes
+               we need in our project.</p>
+            <p>The const routes is given to the RouterModule as shown in @NgModule. To display the routing details to
+               the user, we need to add &lt;router-outlet&gt; directive where we want the view to be displayed.</p>
+            <p>The same is added in app.component.html as shown below&minus;</p>
+            <pre class="result notranslate">
+&lt;h1&gt;Angular 7 Routing Demo&lt;/h1&gt; 
+&lt;router-outlet&gt;&lt;/router-outlet&gt;
+</pre>
+            <p>Now let us create 2 components called as <b>Home</b> and <b>Contact Us</b> and navigate between them
+               using routing.</p>
+            <h2>Component Home</h2>
+            <p>First, we shall discuss about Home. Following is the syntax for Component Home &minus;</p>
+            <pre class="result notranslate">
+ng g component home
+</pre>
+            <pre class="result notranslate">
+C:\projectA7\angular7-app>ng g component home CREATE 
+src/app/home/home.component.html (23 bytes) CREATE 
+src/app/home/home.component.spec.ts (614 bytes) CREATE 
+src/app/home/home.component.ts (261 bytes) CREATE 
+src/app/home/home.component.css (0 bytes) UPDATE 
+src/app/app.module.ts (692 bytes)
+</pre>
+            <h3>Component Contact Us</h3>
+            <p>Following is the syntax for Component Contact Us &minus;</p>
+            <pre class="result notranslate">
+ng g component contactus
+</pre>
+            <pre class="result notranslate">
+C:\projectA7\angular7-app>ng g component contactus 
+CREATE src/app/contactus/contactus.component.html (28 bytes) 
+CREATE src/app/contactus/contactus.component.spec.ts (649 bytes) 
+CREATE src/app/contactus/contactus.component.ts (281 bytes) 
+CREATE src/app/contactus/contactus.component.css (0 bytes) 
+UPDATE src/app/app.module.ts (786 bytes)
+</pre>
+            <p>We are done with creating components home and contact us. Below are the details of the components in
+               app.module.ts &minus;</p>
+            <pre class="prettyprint notranslate">
+import { BrowserModule } from '@angular/platform-browser'; 
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module'; 
+import { AppComponent } from './app.component'; 
+import { NewCmpComponent } from './new-cmp/new-cmp.component'; 
+import { ChangeTextDirective } from './change-text.directive'; 
+import { SqrtPipe } from './app.sqrt'; 
+import { HomeComponent } from './home/home.component'; 
+import { ContactusComponent } from './contactus/contactus.component';
+
+@NgModule({ 
+   declarations: [ 
+      SqrtPipe, 
+      AppComponent, 
+      NewCmpComponent, 
+      ChangeTextDirective, 
+      HomeComponent, 
+      ContactusComponent 
+   ],
+   imports: [ 
+      BrowserModule, 
+      AppRoutingModule 
+   ],
+   providers: [], 
+   bootstrap: [AppComponent] 
+}) 
+export class AppModule { }
+</pre>
+            <p>Now let us add the routes details in <b>app-routing.module</b>.ts as shown below &minus;</p>
+            <pre class="prettyprint notranslate">
+import { NgModule } from '@angular/core'; 
+import { Routes, RouterModule } from '@angular/router'; 
+import { HomeComponent } from './home/home.component'; 
+import { ContactusComponent } from './contactus/contactus.component';
+
+const routes: Routes = [ 
+   {path:"home", component:HomeComponent}, 
+   {path:"contactus", component:ContactusComponent} 
+];
+@NgModule({ 
+   imports: [RouterModule.forRoot(routes)], 
+   exports: [RouterModule] 
+})
+export class AppRoutingModule { }
+</pre>
+            <p>The routes array has the component details with path and component. The required component is imported as
+               shown above.</p>
+            <p>Here, we need to notice that the components we need for routing are imported in app.module.ts and also in
+               app-routing.module.ts. Let us import them in one place, i.e., in app-routing.module.ts.</p>
+            <p>So we will create an array of component to be used for routing and will export the array in
+               app-routing.module.ts and again import it in app.module.ts. So we have all the components to be used for
+               routing in app-routing.module.ts.</p>
+            <p>This is how we have done it <b>app-routing.module.ts</b> &minus;</p>
+            <pre class="prettyprint notranslate">
+import { NgModule } from '@angular/core'; 
+import { Routes, RouterModule } from '@angular/router'; 
+import { HomeComponent } from './home/home.component'; 
+import { ContactusComponent } from './contactus/contactus.component'; 
+
+const routes: Routes = [
+   {path:"home", component:HomeComponent},
+   {path:"contactus", component:ContactusComponent} 
+];
+@NgModule({
+   imports: [RouterModule.forRoot(routes)], 
+   exports: [RouterModule] 
+})
+export class AppRoutingModule { } export const 
+RoutingComponent = [HomeComponent,ContactusComponent];
+</pre>
+            <p>The array of components i.e., RoutingComponent is imported in app.module.ts as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+import { BrowserModule } from '@angular/platform-browser'; 
+import { NgModule } from '@angular/core';
+import { AppRoutingModule , RoutingComponent} from './app-routing.module'; 
+import { AppComponent } from './app.component'; 
+import { NewCmpComponent } from './new-cmp/new-cmp.component'; 
+import { ChangeTextDirective } from './change-text.directive'; 
+import { SqrtPipe } from './app.sqrt';
+
+@NgModule({ 
+   declarations: [ 
+      SqrtPipe,
+      AppComponent, 
+      NewCmpComponent, 
+      ChangeTextDirective, 
+      RoutingComponent 
+   ], 
+   imports: [ 
+      BrowserModule, 
+      AppRoutingModule 
+   ], 
+   providers: [],
+   bootstrap: [AppComponent] 
+})
+export class AppModule { }
+</pre>
+            <p>So now we are done with defining the routes. We need to display the same to the user, so let us add two
+               buttons, Home and Contact Us in app.component.html and on click of the respective buttons, it will
+               display the component view inside &lt;router-outlet&gt; directive which we have added in
+               add.component.html.</p>
+            <p>Create button inside app.component.html and give the path to the routes created.</p>
+            <p><b>app.component.html</b></p>
+            <pre class="result notranslate">
+&lt;h1&gt;Angular 7 Routing Demo&lt;/h1&gt; 
+&lt;nav&gt; 
+   &lt;a routerLink = "/home"&gt;Home&lt;/a&gt; 
+   &lt;a routerLink = "/contactus"&gt;Contact Us &lt;/a&gt; 
+&lt;/nav&gt; 
+&lt;router-outlet&gt;&lt;/router-outlet&gt;
+</pre>
+            <p>In .html, we have added anchor links, Home and Contact us and used routerLink to give the path to the
+               routes we have created in app-routing.module.ts.</p>
+            <p>Let us now test the same in the browser &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/routing_demo.jpg"
+               alt="Routing Demo" />
+            <p>This is how we get it in browser. Let us add some styling to make the links look good.</p>
+            <p>We have added following css in app.component.css &minus;</p>
+            <pre class="prettyprint notranslate">
+a:link, a:visited { 
+   background-color: #848686; 
+   color: white; 
+   padding: 10px 25px; 
+   text-align: center; 
+   text-decoration: none; 
+   display: inline-block; 
+} 
+a:hover, a:active {
+   background-color: #BD9696;
+}
+</pre>
+            <p>This is the display of the links in the browser &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/display_links.jpg"
+               alt="Display Links" />
+            <p>Click on Home link, to see the component details of home as shown below &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/home_link.jpg"
+               alt="Home Link" />
+            <p>Click on Contact Us, to see its component details as given below &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/contact_us.jpg"
+               alt="Contact Us" />
+            <p>As you click on the link, you will also see the page url in the address bar changing. It appends the path
+               details at the end of the page as seen in the screenshot shown above.</p>
+            <h1>Angular7 - Services</h1>
+            <p>We might come across a situation where we need some code to be used everywhere on the page. For example,
+               it can be for data connection that needs to be shared across components. This is achieved with the help
+               of Services. With services, we can access methods and properties across other components in the entire
+               project.</p>
+            <p>To create a service, we need to make use of the command line as given below &minus;</p>
+            <pre class="result notranslate">
+ng g service myservice
+</pre>
+            <pre class="result notranslate">
+C:\projectA7\angular7-app>ng g service myservice 
+CREATE src/app/myservice.service.spec.ts (348 bytes) 
+CREATE src/app/myservice.service.ts (138 bytes)
+</pre>
+            <p>The files created in app folder are as follows &minus;</p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/services.jpg" alt="Services" />
+            <p>Following are the files created which are shown at the bottom ― myservice.service.specs.ts and
+               myservice.service.ts.</p>
+            <p><b>myservice.service.ts</b></p>
+            <pre class="prettyprint notranslate">
+import { Injectable } from '@angular/core';
+@Injectable({
+   providedIn: 'root' 
+}) 
+export class MyserviceService {
+   constructor() { }
+}
+</pre>
+            <p>Here, the injectable module is imported from the @angular/core. It contains the @Injectable method and a
+               class called MyserviceService. We will create our service function in this class.</p>
+            <p>Before creating a new service, we need to include the service created in the main parent
+               <b>app.module.ts</b>.</p>
+            <pre class="prettyprint notranslate">
+import { BrowserModule } from '@angular/platform-browser'; 
+import { NgModule } from '@angular/core';
+import { AppRoutingModule , RoutingComponent} from './app-routing.module'; 
+import { AppComponent } from './app.component'; 
+import { NewCmpComponent } from './new-cmp/new-cmp.component'; 
+import { ChangeTextDirective } from './change-text.directive'; 
+import { SqrtPipe } from './app.sqrt'; 
+import { MyserviceService } from './myservice.service';
+
+@NgModule({ 
+   declarations: [
+      SqrtPipe, 
+      AppComponent, 
+      NewCmpComponent, 
+      ChangeTextDirective, 
+      RoutingComponent 
+   ], 
+   imports: [ 
+      BrowserModule, 
+      AppRoutingModule
+   ], 
+   providers: [MyserviceService], 
+   bootstrap: [AppComponent] 
+})
+export class AppModule { }
+</pre>
+            <p>We have imported the Service with the class name, and the same class is used in the providers. Let us now
+               switch back to the service class and create a service function.</p>
+            <p>In the service class, we will create a function which will display today’s date. We can use the same
+               function in the main parent component app.component.ts and also in the new component new-cmp.component.ts
+               that we created in the previous chapter.</p>
+            <p>Let us now see how the function looks in the service and how to use it in components.</p>
+            <pre class="prettyprint notranslate">
+import { Injectable } from '@angular/core';
+@Injectable({ 
+   providedIn: 'root' 
+}) 
+export class MyserviceService { 
+   constructor() { } 
+   showTodayDate() { 
+      let ndate = new Date(); 
+      return ndate; 
+   }  
+}
+</pre>
+            <p>In the above service file, we have created a function <b>showTodayDate</b>. Now we will return the new
+               Date () created. Let us see how we can access this function in the component class.</p>
+            <p><b>app.component.ts</b></p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core'; 
+import { MyserviceService } from './myservice.service';
+@Component({ selector: 'app-root', 
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css'] 
+})
+export class AppComponent { 
+   title = 'Angular 7 Project!'; 
+   todaydate;
+   constructor(private myservice: MyserviceService) {}
+   ngOnInit() { 
+      this.todaydate = this.myservice.showTodayDate(); 
+   } 
+}
+</pre>
+            <p>The ngOnInit function gets called by default in any component created. The date is fetched from the
+               service as shown above. To fetch more details of the service, we need to first include the service in the
+               component ts file.</p>
+            <p>We will display the date in the .html file as shown below &minus;</p>
+            <p><b>app.component.html</b></p>
+            <pre class="result notranslate">
+{{todaydate}} 
+&lt;app-new-cmp&gt;&lt;/app-new-cmp&gt;
+</pre>
+            <p>Let us now see how to use the service in the new component created.</p>
+            <p><b>new-cmp.component.ts</b></p>
+            <pre class="prettyprint notranslate">
+import { Component, OnInit } from '@angular/core'; 
+import { MyserviceService } from './../myservice.service';
+
+@Component({ 
+   selector: 'app-new-cmp', 
+   templateUrl: './new-cmp.component.html', 
+   styleUrls: ['./new-cmp.component.css'] 
+}) 
+export class NewCmpComponent implements OnInit { 
+   newcomponent = "Entered in new component created"; 
+   todaydate; 
+   constructor(private myservice: MyserviceService) { }
+   ngOnInit() { 
+      this.todaydate = this.myservice.showTodayDate(); 
+   } 
+}
+</pre>
+            <p>In the new component that we have created, we need to first import the service that we want and access
+               the methods and properties of the same. Check the code highlighted. todaydate is displayed in the
+               component html as follows &minus;</p>
+            <p><b>new-cmp.component.html</b></p>
+            <pre class="result notranslate">
+&lt;p&gt; 
+   {{newcomponent}} 
+&lt;/p&gt; 
+&lt;p&gt; 
+   Today's Date : {{todaydate}} 
+&lt;/p&gt;
+</pre>
+            <p>The selector of the new component is used in the app.component.html file. The contents from the above
+               html file will be displayed in the browser as shown below &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/todays_date.jpg"
+               alt="Todays Date" />
+            <p>If you change the property of the service in any component, the same is changed in other components too.
+               Let us now see how this works.</p>
+            <p>We will define one variable in the service and use it in the parent and the new component. We will again
+               change the property in the parent component and will see if the same is changed in the new component or
+               not.</p>
+            <p>In <b>myservice.service.ts</b>, we have created a property and used the same in other parent and new
+               component.</p>
+            <pre class="prettyprint notranslate">
+import { Injectable } from '@angular/core';
+@Injectable({ 
+   providedIn: 'root' 
+}) 
+export class MyserviceService { 
+   serviceproperty = "Service Created"; 
+   constructor() { } 
+   showTodayDate() { 
+      let ndate = new Date(); 
+      return ndate; 
+   } 
+}
+</pre>
+            <p>Let us now use the <b>serviceproperty</b> variable in other components. In <b>app.component.ts</b>, we
+               are accessing the variable as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core'; 
+import { MyserviceService } from './myservice.service';
+@Component({
+   selector: 'app-root', 
+   templateUrl: './app.component.html', 
+   styleUrls: ['./app.component.css'] 
+})
+export class AppComponent { 
+   title = 'Angular 7 Project!'; 
+   todaydate; 
+   componentproperty; 
+   constructor(private myservice: MyserviceService) {} 
+   ngOnInit() { 
+      this.todaydate = this.myservice.showTodayDate(); 
+      console.log(this.myservice.serviceproperty); 
+      this.myservice.serviceproperty = "component created"; 
+      // value is changed. this.componentproperty = 
+      this.myservice.serviceproperty; 
+   } 
+}
+</pre>
+            <p>We will now fetch the variable and work on the console.log. In the next line, we will change the value of
+               the variable to “component created”. We will do the same in new-cmp.component.ts.</p>
+            <pre class="prettyprint notranslate">
+import { Component, OnInit } from '@angular/core'; 
+import { MyserviceService } from './../myservice.service';
+@Component({ 
+   selector: 'app-new-cmp', 
+   templateUrl: './new-cmp.component.html', 
+   styleUrls: ['./new-cmp.component.css'] 
+})
+export class NewCmpComponent implements OnInit { 
+   todaydate;
+   newcomponentproperty; newcomponent = "Entered in 
+   newcomponent"; constructor(private myservice: 
+   MyserviceService) {} 
+   ngOnInit() { 
+      this.todaydate = this.myservice.showTodayDate(); 
+      this.newcomponentproperty = 
+      this.myservice.serviceproperty; 
+   } 
+}
+</pre>
+            <p>In the above component, we are not changing anything but directly assigning the property to the component
+               property.</p>
+            <p>Now when you execute it in the browser, the service property will be changed since the value of it is
+               changed in app.component.ts and the same will be displayed for the new-cmp.component.ts.</p>
+            <p>Also check the value in the console before it is changed.</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/service_property.jpg"
+               alt="Service Property" />
+            <p>Here is the app.component.html and new-cmp.component.html files &minus;</p>
+            <p><b>app.component.html</b></p>
+            <pre class="result notranslate">
+&lt;h3&gt;{{todaydate}}&gt;/h3&gt; 
+&lt;h3&gt; Service Property : {{componentproperty}} &lt;/h3&gt; 
+&lt;app-new-cmp&gt;&lt;/app-new-cmp&gt;
+</pre>
+            <p><b>new-cmp.component.html</b></p>
+            <pre class="prettyprint notranslate">
+&lt;h3&gt;{{newcomponent}} &lt;/h3&gt; 
+&lt;h3&gt; Service Property : {{newcomponentproperty}} &lt;/h3&gt; 
+&lt;h3&gt; Today's Date : {{todaydate}} &lt;/h3&gt;
+</pre>
+            <h1>Angular7 - Http Client</h1>
+            <p>HttpClient will help us fetch external data, post to it, etc. We need to import the http module to make
+               use of the http service. Let us consider an example to understand how to make use of the http service.
+            </p>
+            <p>To start using the http service, we need to import the module in app.module.ts as shown below &minus;</p>
+            <pre class="prettyprint notranslate">
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppRoutingModule , RoutingComponent} from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NewCmpComponent } from './new-cmp/new-cmp.component';
+import { ChangeTextDirective } from './change-text.directive';
+import { SqrtPipe } from './app.sqrt';
+import { MyserviceService } from './myservice.service';
+import { HttpClientModule } from '@angular/common/http';
+
+@NgModule({
+   declarations: [
+      SqrtPipe,
+      AppComponent,
+      NewCmpComponent,
+      ChangeTextDirective,
+      RoutingComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      HttpClientModule
+   ],
+   providers: [MyserviceService],
+   bootstrap: [AppComponent]
+})
+export class AppModule { }
+</pre>
+            <p>If you see the highlighted code, we have imported the <b>HttpClientModule</b> from
+               <b>@angular/common/http</b> and the same is also added in the imports array.</p>
+            <p>We will fetch the data from the server using httpclient module declared above. We will do that inside a
+               service we created in the previous chapter and use the data inside the components which we want.</p>
+            <p><b>myservice.service.ts</b></p>
+            <pre class="prettyprint notranslate">
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+@Injectable({
+   providedIn: 'root'
+})
+export class MyserviceService {
+   private finaldata = [];
+   private apiurl = "http://jsonplaceholder.typicode.com/users";
+   constructor(private http: HttpClient) { }
+   getData() {
+      return this.http.get(this.apiurl);
+   }
+}
+</pre>
+            <p>There is a method added called getData that returns the data fetched for the url given.</p>
+            <p>The method getData is called from app.component.ts as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+import { MyserviceService } from './myservice.service';
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+   title = 'Angular 7 Project!';
+   public persondata = [];
+   constructor(private myservice: MyserviceService) {}
+   ngOnInit() {
+      this.myservice.getData().subscribe((data) => {
+         this.persondata = Array.from(Object.keys(data), k=>data[k]);
+         console.log(this.persondata);
+      });
+   }
+}
+</pre>
+            <p>We are calling the method getData which gives back an observable type data. The subscribe method is used
+               on it which has an arrow function with the data we need.</p>
+            <p>When we check in the browser, the console displays the data as shown below &minus;</p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/get_data.jpg" alt="Get Data" />
+            <p>Let us use the data in app.component.html as follows &minus;</p>
+            <pre class="result notranslate">
+&lt;h3&gt;Users Data&lt;/h3&gt;
+&lt;ul&gt;
+   &lt;li *ngFor="let item of persondata; let i = index"&lt;
+      {{item.name}}
+   &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+            <p><b>Output</b></p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/users_data.jpg" alt="Users Data" />
+            <h1>Angular7 - CLI Prompts</h1>
+            <p>Angular CLI makes it easy to start with any Angular project. Angular CLI comes with commands that help us
+               create and start on our project very fast. Let us now go through the commands available to create a
+               project, a component and services, change the port, etc.</p>
+            <p>To work with Angular CLI, we need to have it installed on our system. Let us use the following command
+               for the same &minus;</p>
+            <pre class="result notranslate">
+npm install -g @angular/cli
+</pre>
+            <p>To create a new project, we can run the following command in the command line and the project will be
+               created.</p>
+            <pre class="result notranslate">
+ng new PROJECT-NAME 
+cd PROJECT-NAME 
+ng serve //
+</pre>
+            <p><b>ng serve // will compile and you can see the output of your project in the browser &minus;</b></p>
+            <pre class="result notranslate">
+http://localhost:4200/
+</pre>
+            <p>4200 is the default port used when a new project is created. You can change the port with the following
+               command &minus;</p>
+            <pre class="result notranslate">
+ng serve --host 0.0.0.0 --port 4201
+</pre>
+            <h2>Command for Angular Update</h2>
+            <p>In case you want to update your application and its dependencies, you can use the following command
+               &minus;</p>
+            <pre class="result notranslate">
+ng update @angular/cli @angular/core
+</pre>
+            <p>It will update core framework to the recent version, i.e., Angular 7 and also angular-cli. You can use
+               above command with following options &minus;</p>
+            <h2>Angular Important Command List</h2>
+            <p>The following table lists down a few important commands required while working with Angular 7 projects
+               &minus;</p>
+            <table class="table table-bordered">
+               <tr>
+                  <th style="text-align:center">Sr.No </th>
+                  <th style="text-align:center">Commands and Description</th>
+               </tr>
+               <tr>
+                  <td class="ts">1</td>
+                  <td>
+                     <p><b>Component</b></p>
+                     <p>ng g component new-component</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">2</td>
+                  <td>
+                     <p><b>Directive</b></p>
+                     <p>ng g directive new-directive</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">3</td>
+                  <td>
+                     <p><b>Pipe</b></p>
+                     <p>ng g pipe new-pipe</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">4</td>
+                  <td>
+                     <p><b>Service</b></p>
+                     <p>ng g service new-service</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">5</td>
+                  <td>
+                     <p><b>Module</b></p>
+                     <p>ng g module my-module</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">6</td>
+                  <td>
+                     <p><b>Test</b></p>
+                     <p>ng test</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="ts">7</td>
+                  <td>
+                     <p><b>Build</b></p>
+                     <p>ng build --configuration=production // for production environment</p>
+                     <p>ng build --configuration=staging // for stating environment</p>
+                  </td>
+               </tr>
+            </table>
+            <p>Whenever a new module, a component, or a service is created, the reference of the same is updated in the
+               parent module <b>app.module.ts</b>.</p>
+            <h1>Angular7 - Forms</h1>
+            <p>In this chapter, we will see how forms are used in Angular 7. We will discuss two ways of working with
+               forms &minus;</p>
+            <ul class="list">
+               <li>Template driven form</li>
+               <li>Model driven form</li>
+            </ul>
+            <h2>Template Driven Form</h2>
+            <p>With a template driven form, most of the work is done in the template. With the model driven form, most
+               of the work is done in the component class.</p>
+            <p>Let us now consider working on the Template driven form. We will create a simple login form and add the
+               email id, password and submit button in the form. To start with, we need to import to FormsModule from
+               @angular/forms which is done in app.module.ts as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+import { BrowserModule } from '@angular/platform-browser'; 
+import { NgModule } from '@angular/core';
+import { AppRoutingModule , RoutingComponent} from './app-routing.module'; 
+import { AppComponent } from './app.component'; 
+import { NewCmpComponent } from './new-cmp/new-cmp.component'; 
+import { ChangeTextDirective } from './change-text.directive'; 
+import { SqrtPipe } from './app.sqrt'; 
+import { MyserviceService } from './myservice.service'; 
+import { HttpClientModule } from '@angular/common/http'; 
+import { ScrollDispatchModule } from '@angular/cdk/scrolling'; 
+import { DragDropModule } from '@angular/cdk/drag-drop'; 
+import { FormsModule } from '@angular/forms';
+
+@NgModule({ 
+   declarations: [
+      SqrtPipe, 
+      AppComponent, 
+      NewCmpComponent, 
+      ChangeTextDirective, 
+      RoutingComponent 
+   ],
+   imports: [ 
+      BrowserModule, 
+      AppRoutingModule, 
+      HttpClientModule, 
+      ScrollDispatchModule, 
+      DragDropModule, 
+      FormsModule 
+   ], 
+   providers: [MyserviceService], 
+   bootstrap: [AppComponent] 
+}) 
+export class AppModule { }
+</pre>
+            <p>So in <b>app.module.ts</b>, we have imported the <b>FormsModule</b> and the same is added in the imports
+               array as shown in the highlighted code.</p>
+            <p>Let us now create our form in the <b>app.component.html</b> file.</p>
+            <pre class="prettyprint notranslate">
+&lt;form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)"&gt; 
+   &lt;input type = "text" name = "emailid" placeholder = "emailid" ngModel&gt; 
+   &lt;br/&gt; 
+   &lt;input type = "password" name = "passwd" placeholder = "passwd" ngModel&gt; 
+   &lt;br/&gt; 
+   &lt;input type = "submit" value = "submit"&gt; 
+&lt;/form&gt;
+</pre>
+            <p>We have created a simple form with input tags having email id, password and the submit button. We have
+               assigned type, name, and placeholder to it.</p>
+            <p>In template driven forms, we need to create the model form controls by adding the <b>ngModel</b>
+               directive and the <b>name</b> attribute. Thus, wherever we want Angular to access our data from forms,
+               add ngModel to that tag as shown above. Now, if we have to read the emailid and passwd, we need to add
+               the ngModel across it.</p>
+            <p>If you see, we have also added the ngForm to the <b>#userlogin</b>. The <b>ngForm</b> directive needs to
+               be added to the form template that we have created. We have also added function <b>onClickSubmit</b> and
+               assigned <b>userlogin.value</b> to it.</p>
+            <p>Let us now create the function in the <b>app.component.ts</b> and fetch the values entered in the form.
+            </p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core'; 
+import { MyserviceService } from './myservice.service';
+
+@Component({ 
+   selector: 'app-root', 
+   templateUrl: './app.component.html', 
+   styleUrls: ['./app.component.css']
+})
+export class AppComponent { 
+   title = 'Angular 7 Project!'; 
+   constructor(private myservice: MyserviceService) { } 
+   ngOnInit() { } 
+   onClickSubmit(data) {
+      alert("Entered Email id : " + data.emailid); 
+   }
+}
+</pre>
+            <p>In the above app.component.ts file, we have defined the function onClickSubmit. When you click on the
+               form submit button, the control will come to the above function.</p>
+            <p>The css for the login form is added in <b>app.component.css</b> &minus;</p>
+            <pre class="prettyprint notranslate">
+input[type = text], input[type = password] { 
+   width: 40%; 
+   padding: 12px 20px; 
+   margin: 8px 0; 
+   display: inline-block; 
+   border: 1px solid #B3A9A9; 
+   box-sizing: border-box; 
+} 
+input[type = submit] { 
+   padding: 12px 20px; 
+   margin: 8px 0; 
+   display: inline-block; 
+   border: 1px solid #B3A9A9; 
+   box-sizing: border-box; 
+}
+</pre>
+            <p>This is how the browser is displayed &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/emailid.jpg" alt="Email ID" />
+            <p>The form looks like as shown below. Let us enter the data in it and in the submit function, the email id
+               is alerted as shown below &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/form_looks.jpg"
+               alt="Form Looks" />
+            <h2>Model Driven Form</h2>
+            <p>In the model driven form, we need to import the ReactiveFormsModule from @angular/forms and use the same
+               in the imports array.</p>
+            <p>There is a change which goes in <b>app.module.ts</b>.</p>
+            <pre class="prettyprint notranslate">
+import { BrowserModule } from '@angular/platform-browser'; 
+import { NgModule } from '@angular/core';
+import { AppRoutingModule , RoutingComponent} from './app-routing.module'; 
+import { AppComponent } from './app.component'; 
+import { NewCmpComponent } from './new-cmp/new-cmp.component'; 
+import { ChangeTextDirective } from './change-text.directive'; 
+import { SqrtPipe } from './app.sqrt'; 
+import { MyserviceService } from './myservice.service'; 
+import { HttpClientModule } from '@angular/common/http'; 
+import { ScrollDispatchModule } from '@angular/cdk/scrolling'; 
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { ReactiveFormsModule } from '@angular/forms';
+
+@NgModule({ 
+   declarations: [ 
+      SqrtPipe, 
+      AppComponent, 
+      NewCmpComponent, 
+      ChangeTextDirective, 
+      RoutingComponent 
+   ],
+   imports: [ 
+      BrowserModule, 
+      AppRoutingModule, 
+      HttpClientModule, 
+      ScrollDispatchModule, 
+      DragDropModule, 
+      ReactiveFormsModule 
+   ], 
+   providers: [MyserviceService], 
+   bootstrap: [AppComponent] 
+}) 
+export class AppModule { }
+</pre>
+            <p>In <b>app.component.ts</b>, we need to import a few modules for the model driven form. For example,
+               <b>import { FormGroup, FormControl }</b> from '<b>@angular/forms</b>'.</p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core'; 
+import { MyserviceService } from './myservice.service'; 
+import { FormGroup, FormControl } from '@angular/forms';
+
+@Component({ 
+   selector: 'app-root', 
+   templateUrl: './app.component.html', 
+   styleUrls: ['./app.component.css'] 
+})
+export class AppComponent {
+   title = 'Angular 7 Project!'; 
+   emailid; 
+   formdata;
+   constructor(private myservice: MyserviceService) { }  
+   ngOnInit() { 
+      this.formdata = new FormGroup({ 
+         emailid: new FormControl("angular@gmail.com"),
+         passwd: new FormControl("abcd1234") 
+      }); 
+   } 
+   onClickSubmit(data) {this.emailid = data.emailid;}
+}
+</pre>
+            <p>The variable form data is initialized at the start of the class and the same is initialized with
+               FormGroup as shown above. The variables emailid and passwd are initialized with default values to be
+               displayed in the form. You can keep it blank in case you want to.</p>
+            <p>This is how the values will be seen in the form UI.</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/form_group.jpg"
+               alt="Form Group" />
+            <p>We have used formdata to initialize the form values; we need to use the same in the form UI
+               <b>app.component.html</b>.</p>
+            <pre class="prettyprint notranslate">
+&lt;div&gt; 
+   &lt;form [formGroup] = "formdata" (ngSubmit) = "onClickSubmit(formdata.value)" &gt; 
+      &lt;input type = "text" class = "fortextbox" name = "emailid" placeholder = "emailid" 
+         formControlName = "emailid"&gt; 
+      &lt;br/&gt; 
+      
+      &lt;input type = "password" class = "fortextbox" name = "passwd" 
+         placeholder = "passwd" formControlName = "passwd"&gt; 
+      &lt;br/&gt;
+      
+      &lt;input type = "submit" class = "forsubmit" value = "Log In"&gt; 
+   &lt;/form&gt;
+&lt;/div&gt; 
+&lt;p&gt; Email entered is : {{emailid}} &lt;/p&gt;
+</pre>
+            <p>In the .html file, we have used formGroup in square bracket for the form; for example, [formGroup] =
+               ”formdata”. On submit, the function is called <b>onClickSubmit</b> for which <b>formdata.value</b> is
+               passed.</p>
+            <p>The input tag <b>formControlName</b> is used. It is given a value that we have used in the
+               <b>app.component.ts</b> file.</p>
+            <p>On clicking submit, the control will pass to the function <b>onClickSubmit</b>, which is defined in the
+               <b>app.component.ts</b> file.</p>
+            <img class="full-width" src="/angular7/images/onclick_submit.jpg" alt="Onclick Submit" />
+            <p>On clicking Login, the value will be displayed as shown in the above screenshot.</p>
+            <h2>Form Validation</h2>
+            <p>Let us now discuss form validation using model driven form. You can use the built-in form validation or
+               also use the custom validation approach. We will use both the approaches in the form. We will continue
+               with the same example that we created in one of our previous sections. With Angular 7, we need to import
+               <b>Validators</b> from <b>@angular/forms</b> as shown below &minus;</p>
+            <pre class="result notranslate">
+import { FormGroup, FormControl, Validators} from '@angular/forms'
+</pre>
+            <p>Angular has built-in validators such as <b>mandatory field</b>, <b>minlength</b>, <b>maxlength</b>, and
+               <b>pattern</b>. These are to be accessed using the Validators module.</p>
+            <p>You can just add validators or an array of validators required to tell Angular if a particular field is
+               mandatory. Let us now try the same on one of the input textboxes, i.e., email id. For the email id, we
+               have added the following validation parameters &minus;</p>
+            <ul class="list">
+               <li>Required</li>
+               <li>Pattern matching</li>
+            </ul>
+            <p>This is how a code undergoes validation in <b>app.component.ts</b>.</p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators} from '@angular/forms';
+
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+   title = 'Angular 4 Project!';
+   todaydate;
+   componentproperty;
+   emailid;
+   formdata;
+   ngOnInit() {
+      this.formdata = new FormGroup({
+         emailid: new FormControl("", Validators.compose([
+            Validators.required,
+            Validators.pattern("[^ @]*@[^ @]*")
+         ])),
+         passwd: new FormControl("")
+      });
+   }
+   onClickSubmit(data) {this.emailid = data.emailid;}
+}
+</pre>
+            <p>In <b>Validators.compose</b>, you can add the list of things you want to validate on the input field.
+               Right now, we have added the <b>required</b> and the <b>pattern matching</b> parameters to take only
+               valid email.</p>
+            <p>In the <b>app.component.html</b>, the submit button is disabled if any of the form inputs are not valid.
+               This is done as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;div&gt; 
+   &lt;form [formGroup] = "formdata" (ngSubmit) = "onClickSubmit(formdata.value)"&gt; 
+      &lt;input type = "text" class = "fortextbox" name = "emailid" 
+         placeholder = "emailid" formControlName = "emailid"&gt; 
+      &lt;br/&gt; 
+    
+      &lt;input type = "password" class = "fortextbox" name = "passwd" 
+         placeholder = "passwd" formControlName = "passwd"&gt;
+      &lt;br/&gt; 
+      
+      &lt;input type = "submit" [disabled] = "!formdata.valid" class = "forsubmit" 
+         value = "Log In"&gt; 
+   &lt;/form&gt; 
+&lt;/div&gt;
+&lt;p&gt; Email entered is : {{emailid}} &lt;/p&gt;
+</pre>
+            <p>For the submit button, we have added disabled in the square bracket, which is given the following value.
+            </p>
+            <pre class="result notranslate">
+!formdata.valid.
+</pre>
+            <p>Thus, if the formdata.valid is not valid, the button will remain disabled and the user will not be able
+               to submit it.</p>
+            <p>Let us see how this works in the browser &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/formdata.jpg" alt="FormData" />
+            <p>In the above case, the email id entered is invalid, hence the login button is disabled. Let us now try
+               entering the valid email id and see the difference.</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/enter_valid_id.jpg"
+               alt="Enter Valid Id" />
+            <p>Now, the email id entered is valid. Thus, we can see the login button is enabled and the user will be
+               able to submit it. With this, the email id entered is displayed at the bottom.</p>
+            <p>Let us now try custom validation with the same form. For custom validation, we can define our own custom
+               function and add the required details in it. We will now see the below example for the same.</p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators} from '@angular/forms';
+
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+   title = 'Angular 7 Project!';
+   todaydate;
+   componentproperty;
+   emailid;
+   formdata;
+   ngOnInit() {
+      this.formdata = new FormGroup({
+         emailid: new FormControl("", Validators.compose([
+            Validators.required,
+            Validators.pattern("[^ @]*@[^ @]*")
+         ])),
+         passwd: new FormControl("", this.passwordvalidation)
+      });
+   }
+   passwordvalidation(formcontrol) {
+      if (formcontrol.value.length &lt; 5) {
+         return {"passwd" : true};
+      }
+   }
+   onClickSubmit(data) {this.emailid = data.emailid;}
+}
+</pre>
+            <p>In the above example, we have created a function <b>passwordvalidation</b> and the same is used in a
+               previous section in the formcontrol - <b>passwd: new FormControl("", this.passwordvalidation)</b>.</p>
+            <p>In the function that we have created, we will check if the length of the characters entered is
+               appropriate. If the characters are less than five, it will return with the passwd true as shown above -
+               return {"passwd" : true};. If the characters are more than five, it will consider it as valid and the
+               login will be enabled.</p>
+            <p>Let us now see how this is displayed in the browser &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/password.jpg" alt="Password" />
+            <p>We have entered only three characters in the password and the login is disabled. To enable login, we need
+               more than five characters. Let us now enter a valid length of characters and check.</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/email_displayed.jpg"
+               alt="Email Displayed" />
+            <p>The login is enabled as both the email id and the password are valid. The email is displayed at the
+               bottom as we log in.</p>
+            <h1>Angular7 - Materials/CDK-Virtual Scrolling</h1>
+            <p>This is one of the new features added to Angular 7 called as Virtual Scrolling. This feature is added to
+               CDK (Component Development Kit). Virtual scrolling shows up the visible dom elements to the user, as the
+               user scrolls, the next list is displayed. This gives faster experience as the full list is not loaded at
+               one go and only loaded as per the visibility on the screen.</p>
+            <h2>Why do we need Virtual Scrolling Module?</h2>
+            <p>Consider you have a UI which has a big list where loading all the data together can have performance
+               issues. The new feature of Angular 7 Virtual Scrolling takes care of loading the elements which are
+               visible to the user. As the user scrolls, the next list of dom elements visible to user is displayed.
+               This gives faster experience and the scrolling is also very smooth.</p>
+            <p>Let us add the dependency to our project &minus;</p>
+            <pre class="result notranslate">
+npm install @angular/cdk –save
+</pre>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/virtual_scrolling_module.jpg"
+               alt="Virutal Scrolling Module" />
+            <p>We are done with installing the dependency for virtual scrolling module.</p>
+            <p>We will work on an example to get a better understanding on how we can use virtual scrolling module in
+               our project.</p>
+            <p>We will first add the virtual scrolling module inside <b>app.module.ts</b> as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppRoutingModule , RoutingComponent} from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NewCmpComponent } from './new-cmp/new-cmp.component';
+import { ChangeTextDirective } from './change-text.directive';
+import { SqrtPipe } from './app.sqrt';
+import { MyserviceService } from './myservice.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ScrollDispatchModule } from '@angular/cdk/scrolling';
+
+@NgModule({
+   declarations: [
+      SqrtPipe,
+      AppComponent,
+      NewCmpComponent,
+      ChangeTextDirective,
+      RoutingComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      HttpClientModule,
+      ScrollDispatchModule
+   ],
+   providers: [MyserviceService],
+   bootstrap: [AppComponent]
+})
+export class AppModule { }
+</pre>
+            <p>In app.module.ts, we have imported the ScrollDispatchModule and the same is added to imports array as
+               shown in the code above.</p>
+            <p>Next step is to get data to be displayed on the screen. We will continue to use the service we created in
+               the last chapter.</p>
+            <p>We will fetch data from the url, <a target="_blank" rel="nofollow"
+                  href="https://jsonplaceholder.typicode.com/photos">https://jsonplaceholder.typicode.com/photos</a>
+               which has data for around 5000 images. We will get the data from it and display to the user using virtual
+               scrolling module.</p>
+            <p>The details in the url, <a target="_blank" rel="nofollow"
+                  href="https://jsonplaceholder.typicode.com/photos"> https://jsonplaceholder.typicode.com/photos</a>
+               are as follows &minus;</p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/jsonplaceholder.jpg"
+               alt="Jsonplaceholder" />
+            <p>It is json data that has image url and thumbnail url. We will show the thumbnail url to the users.</p>
+            <p>Following is the service which will fetch data &minus;</p>
+            <p><b>myservice.service.ts</b></p>
+            <pre class="prettyprint notranslate">
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Injectable({
+   providedIn: 'root'
+})
+export class MyserviceService {
+   private finaldata = [];
+   private apiurl = "https://jsonplaceholder.typicode.com/photos";
+   constructor(private http: HttpClient) { }
+   getData() {
+      return this.http.get(this.apiurl);
+   }
+}
+</pre>
+            <p>We will call the service from app.component.ts as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+import { MyserviceService } from './myservice.service';
+
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+   title = 'Angular 7 Project!';
+   public albumdetails = [];
+   constructor(private myservice: MyserviceService) {}
+   ngOnInit() {
+      this.myservice.getData().subscribe((data) => {
+         this.albumdetails = Array.from(Object.keys(data), k=>data[k]);
+         console.log(this.albumdetails);
+      });
+   }
+}
+</pre>
+            <p>Now the variable <b>albumdetails</b> has all the data from the api and the total count is 5000.</p>
+            <p>Now that we have the data ready to be displayed, let us work inside app.component.html to display the
+               data.</p>
+            <p>We need to add the tag, <b>&lt;cdk-virtual-scroll-viewport&gt;&lt;/cdk-virtual-scroll-viewport&gt;</b> to
+               work with virtual scroll module. The tag needs to be added to .html file where we want the data to be
+               displayed.</p>
+            <p>Here is the working of <b>&lt;cdk-virtual-scroll-viewport&gt;</b> in app.component.html.</p>
+            <pre class="prettyprint notranslate">
+&lt;h3&gt;Angular 7 - Virtual Scrolling&lt;/h3&gt;
+&lt;cdk-virtual-scroll-viewport [itemSize] = "20"&gt;
+   &lt;table&gt;
+      &lt;thead&gt;
+         &lt;tr&gt;
+            &lt;td&gt;ID&lt;/td&gt;
+            &lt;td&gt;ThumbNail&lt;/td&gt;
+         &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+         &lt;tr *cdkVirtualFor = "let album of albumdetails"&gt;
+            &lt;td&gt;{{album.id}}&lt;/td&gt;
+            &lt;td&gt;
+               &lt;img src = "{{album.thumbnailUrl}}" width = "100" height = "100"/&gt;
+            &lt;/td&gt;
+         &lt;/tr&gt;
+      &lt;/tbody&gt;
+   &lt;/table&gt;
+&lt;/cdk-virtual-scroll-viewport&gt;
+</pre>
+            <p>We are displaying the id and thumbnail url to the user on the screen. We have mostly used *ngFor so far,
+               but inside <b>&lt;cdk-virtual-scroll-viewport&gt;</b>, we have to use *cdkVirtualFor to loop through the
+               data.</p>
+            <p>We are looping through albumdetails variable which is populated inside app.component.html. There is a
+               size assigned to the virtual tag [itemSize]="20" which will display the number of items based on the
+               height of the virtual scroll module.</p>
+            <p>The css related to the virtual scroll module is as follows &minus;</p>
+            <pre class="result notranslate">
+table {
+   width: 100%;
+}
+cdk-virtual-scroll-viewport {
+   height: 500px;
+}
+</pre>
+            <p>The height given to the virtual scroll is 500px. The images that fit within that height will be displayed
+               to the user. We are done with adding the necessary code to get our virtual scroll module to be viewed.
+            </p>
+            <p>The output of Virtual Scroll Module in the browser is as follows &minus;</p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/virtual_scrolling.jpg"
+               alt="Virtual Scrolling" />
+            <p>We can see the first 4 images are displayed to the user. We have specified the height of 500px. There is
+               scroll displayed for the table, as the user scrolls, the images which will fit in that height will be
+               displayed as shown below &minus;</p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/user_scrolls.jpg"
+               alt="User Scrolls" />
+            <p>The required images are loaded as the user scrolls. This feature is very useful in terms of performance.
+               At first go, it does not load all the 5000 images, instead as the user scrolls, the urls are called and
+               displayed.</p>
+            <h1>Angular7 - Materials/CDK-Drag and Drop</h1>
+            <p>The new Drag and Drop feature added to Angular 7 CDK helps to drag and drop the elements from the list.
+               We will understand the working of Drag and Drop Module with the help of an example. The feature is added
+               to cdk. We need to first download the dependency as shown below &minus;</p>
+            <pre class="result notranslate">
+npm install @angular/cdk --save
+</pre>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/drag_and_drop_feature.jpg"
+               alt="Drag and Drop Feature" />
+            <p>Once the above step is done. Let us import the drag and drop module in app.module.ts as shown below
+               &minus;</p>
+            <pre class="prettyprint notranslate">
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppRoutingModule , RoutingComponent} from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NewCmpComponent } from './new-cmp/new-cmp.component';
+import { ChangeTextDirective } from './change-text.directive';
+import { SqrtPipe } from './app.sqrt';
+import { MyserviceService } from './myservice.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ScrollDispatchModule } from '@angular/cdk/scrolling';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+
+@NgModule({
+   declarations: [
+      SqrtPipe,
+      AppComponent,
+      NewCmpComponent,
+      ChangeTextDirective,
+      RoutingComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      HttpClientModule,
+      ScrollDispatchModule,
+      DragDropModule
+   ],
+   providers: [MyserviceService],
+   bootstrap: [AppComponent]
+})
+export class AppModule { }
+</pre>
+            <p>The DragDropModule is imported from <b>'@angular/cdk/drag-drop'</b> and the module is added to import
+               array as shown above.</p>
+            <p>We will use details from the api, <a target="_blank" rel="nofollow"
+                  href="http://jsonplaceholder.typicode.com/users"> (http://jsonplaceholder.typicode.com/users)</a> to
+               be displayed on the screen. We have service which will fetch the data from the api as shown below &minus;
+            </p>
+            <p><b>myservice.service.ts</b></p>
+            <pre class="prettyprint notranslate">
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Injectable({
+   providedIn: 'root'
+})
+export class MyserviceService {
+   private finaldata = [];
+   private apiurl = "http://jsonplaceholder.typicode.com/users";
+   constructor(private http: HttpClient) { }
+   getData() {
+      return this.http.get(this.apiurl);
+   }
+}
+</pre>
+            <p>Once done call the service inside app.component.ts as shown below &minus;</p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+import { MyserviceService } from './myservice.service';
+
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+   title = 'Angular 7 Project!';
+   public personaldetails = [];
+   constructor(private myservice: MyserviceService) {}
+   ngOnInit() {
+      this.myservice.getData().subscribe((data) => {
+         this.personaldetails = Array.from(Object.keys(data), k=>data[k]);
+         console.log(this.personaldetails);
+      });
+   }
+}
+</pre>
+            <p>We have the required data available in personaldetails variable. Now let us use the same to display to
+               the user as shown below &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;h3&gt;Angular 7 - Drag and Drop Module&lt;/h3&gt;
+&lt;div&gt;
+   &lt;div *ngFor="let item of personaldetails; let i = index" class="divlayout”&gt;
+      {{item.name}}
+   &lt;/div &gt;
+&lt;/div&gt;
+</pre>
+            <p>We have added class = ”divlayout” and the details of the class are in app.component.css.</p>
+            <pre class="result notranslate">
+.divlayout{
+   width: 40%;
+   background-color: #ccc;
+   margin-bottom: 5px;
+   padding: 10px 10px;
+   border: 3px solid #73AD21;
+}
+</pre>
+            <p>Following screen will be displayed in the browser &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/drag_drop.jpg"
+               alt="Drag Drop" />
+            <p>It will not drag and drop anything, we need to add the dragdrop cdk properties in app.component.html as
+               shown below &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;h3&gt;Angular 7 - Drag and Drop Module&lt;/h3&gt;
+&lt;div cdkDropList
+   #personList = "cdkDropList"
+   [cdkDropListData] = "personaldetails"
+   [cdkDropListConnectedTo] = "[userlist]"
+   class = "example-list"
+   (cdkDropListDropped) = "onDrop($event)" &gt;
+   
+   &lt;div *ngFor = "let item of personaldetails; 
+      let i = index" class = "divlayout" cdkDrag&gt;
+      {{item.name}}
+   &lt;/div &gt;
+&lt;/div&t;
+</pre>
+            <p>The highlighted ones are all the properties required to perform drag and drop. When you check in the
+               browser, it allows you to drag the item. It will not drop it in the list and will remain as it is when
+               you leave the mouse pointer.</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/drag_drop_module.jpg"
+               alt="Drag Drop Module" />
+            <p>Here it allows to drag the item from the list but once you leave the mouse pointer it will go and settle
+               in the same place. To add the drop feature, we need to add the event onDrop in app.component.ts as shown
+               below &minus;</p>
+            <p>First we have to import the dragdrap cdk modules as shown below &minus;</p>
+            <pre class="result notranslate">
+import {CdkDragDrop, moveItemInArray, transferArrayItem} 
+from '@angular/cdk/drag-drop';
+</pre>
+            <p>Here is the full code in app.component.ts &minus;</p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+import { MyserviceService } from './myservice.service';
+import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
+
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+   title = 'Angular 7 Project!';
+   public personaldetails = [];
+   constructor(private myservice: MyserviceService) {}
+   ngOnInit() {
+      this.myservice.getData().subscribe((data) => {
+         this.personaldetails = Array.from(Object.keys(data), 
+         k=>data[k]);
+         console.log(this.personaldetails);
+      });
+   }
+   onDrop(event: CdkDragDrop&lt;string[]&gt;) {
+      if (event.previousContainer === event.container) {
+         moveItemInArray(event.container.data, 
+            event.previousIndex, event.currentIndex);
+      } else {
+         transferArrayItem(event.previousContainer.data,
+         event.container.data,
+         event.previousIndex,
+         event.currentIndex);
+      }
+   }
+}
+</pre>
+            <p>The function onDrop takes care of dropping the item dragged in the position required.</p>
+            <p>It makes use of the <b>moveItemInArray</b> and <b>transferArrayItem</b> we have imported from cdk
+               dragdrop module.</p>
+            <p>Now let us see the demo again in the browser &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/drag_drop_position.jpg"
+               alt="Drag Drop Position" />
+            <p>Now it allows you to drag and drop the item in the position required as shown above. The feature works
+               very smoothly without any flicker issues and can be used in your application wherever the need arises.
+            </p>
+            <h1>Angular7 - Animations</h1>
+            <p>Animations add a lot of interaction between the html elements. Animation was available with Angular 2,
+               from Angular 4 onwards animation is no more a part of the @angular/core library, but is a separate
+               package that needs to be imported in app.module.ts.</p>
+            <p>To start with, we need to import the library with the below line of code &minus;</p>
+            <pre class="result notranslate">
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+</pre>
+            <p>The <b>BrowserAnimationsModule</b> needs to be added to the import array in <b>app.module.ts</b> as shown
+               below &minus;</p>
+            <pre class="prettyprint notranslate">
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppRoutingModule , RoutingComponent} from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NewCmpComponent } from './new-cmp/new-cmp.component';
+import { ChangeTextDirective } from './change-text.directive';
+import { SqrtPipe } from './app.sqrt';
+import { MyserviceService } from './myservice.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ScrollDispatchModule } from '@angular/cdk/scrolling';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+@NgModule({
+   declarations: [
+      SqrtPipe,
+      AppComponent,
+      NewCmpComponent,
+      ChangeTextDirective,
+      RoutingComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      HttpClientModule,
+      ScrollDispatchModule,
+      DragDropModule,
+      ReactiveFormsModule,
+      BrowserAnimationsModule
+   ],
+   providers: [MyserviceService],
+   bootstrap: [AppComponent]
+})
+export class AppModule { }
+</pre>
+            <p>In <b>app.component.html</b>, we have added the html elements, which are to be animated.</p>
+            <pre class="prettyprint notranslate">
+&lt;div&gt; 
+   &lt;button (click) = "animate()"&gt;Click Me&lt;/button&gt; 
+   &lt;div [@myanimation] = "state" class = "rotate"&gt; 
+      &lt;img src = "assets/images/img.png" width = "100" height = "100"&gt;
+   &lt;/div&gt; 
+&lt;/div&gt;
+</pre>
+            <p>For the main div, we have added a button and a div with an image. There is a click event for which the
+               animate function is called. And for the div, the @myanimation directive is added and given the value as
+               state.</p>
+            <p>Let us now see the <b>app.component.ts</b> where the animation is defined.</p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators} from '@angular/forms';
+import { trigger, state, style, transition, animate } from '@angular/animations';
+
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css'],
+   styles:[`
+      div {
+         margin: 0 auto;
+         text-align: center;
+         width:200px;
+      }
+      .rotate {
+         width:100px;
+         height:100px;
+         border:solid 1px red;
+      }
+   `],
+   animations: [
+      trigger('myanimation',[
+         state('smaller',style({
+            transform : 'translateY(100px)'
+         })),
+         state('larger',style({
+            transform : 'translateY(0px)'
+         })),
+         transition('smaller &lt;=&gt; larger',animate('300ms ease-in'))
+      ])
+   ]
+})
+export class AppComponent {
+   state: string = "smaller";
+   animate() {
+      this.state= this.state == 'larger' ? 'smaller' : 'larger';
+   }
+}
+</pre>
+            <p>We have to import the animation function that is to be used in the .ts file as shown above.</p>
+            <pre class="result notranslate">
+import { trigger, state, style, transition, animate } from '@angular/animations';
+</pre>
+            <p>Here we have imported trigger, state, style, transition, and animate from @angular/animations.</p>
+            <p>Now, we will add the animations property to the @Component () decorator &minus;</p>
+            <pre class="prettyprint notranslate">
+animations: [ 
+   trigger('myanimation',[
+      state('smaller',style({ 
+         transform : 'translateY(100px)' })), 
+      state('larger',style({
+         transform : 'translateY(0px)' })), 
+         transition('smaller &lt;=&gt; larger',animate('300ms ease-in')) 
+   ]) 
+]
+</pre>
+            <p>Trigger defines the start of the animation. The first param to it is the name of the animation to be
+               given to the html tag to which the animation needs to be applied. The second param are the functions we
+               have imported - state, transition, etc.</p>
+            <p>The state function involves the animation steps, which the element will transition between. Right now we
+               have defined two states, smaller and larger. For smaller state, we have given the style
+               <b>transform:translateY(100px)</b> and <b>transform:translateY(100px)</b>.</p>
+            <p>Transition function adds animation to the html element. The first argument takes the start and end
+               states, the second argument accepts the animate function. The animate function allows you to define the
+               length, delay, and ease of a transition.</p>
+            <p>Let us now see the .html file to see how the transition function works &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;div&gt;
+   &lt;button (click) = "animate()"&gt;Click Me&lt;/button&gt;
+   &lt;div [@myanimation] = "state" class = "rotate"&gt;
+      &lt;img src = "assets/images/img.png" width = "100" height = "100"&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            <p>There is a style property added in the @component directive, which centrally aligns the div. Let us
+               consider the following example to understand the same &minus;</p>
+            <pre class="prettyprint notranslate">
+styles:[` 
+   div{  
+      margin: 0 auto; 
+      text-align: center; 
+      width:200px; 
+   } 
+   .rotate{ 
+      width:100px; 
+      height:100px; 
+      border:solid 1px red;
+   } 
+`],
+</pre>
+            <p>Here, a special character [``] is used to add styles to the html element, if any. For the div, we have
+               given the animation name defined in the <b>app.component.ts</b> file.</p>
+            <p>On the click of a button it calls the animate function, which is defined in the <b>app.component.ts</b>
+               file as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+export class AppComponent {
+   state: string = "smaller"; 
+   animate() { 
+      this.state = this.state == ‘larger’? 'smaller' : 'larger'; 
+   } 
+}
+</pre>
+            <p>The state variable is defined and is given the default value as smaller. The animate function changes the
+               state on click. If the state is larger, it will convert to smaller; and if smaller, it will convert to
+               larger.</p>
+            <p>This is how the output in the browser <b>(http://localhost:4200/)</b> will look like &minus;</p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/click_me.jpg" alt="Click Me" />
+            <p>Upon clicking the <b>Click Me</b> button, the position of the image is changed as shown in the following
+               screenshot &minus;</p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/click_me_position.jpg"
+               alt="Click Me Position" />
+            <p>The transform function is applied in the y direction, which is changed from 0 to 100px when we click the
+               Click Me button. The image is stored in the <b>assets/images</b> folder.</p>
+            <h1>Angular7 - Materials</h1>
+            <p>Materials offer a lot of built-in modules for your project. Features such as autocomplete, datepicker,
+               slider, menus, grids, and toolbar are available for use with materials in Angular 7.</p>
+            <p>To use materials, we need to import the package. Angular 2 also has all the above features but they are
+               available as part of the <b>@angular/core module</b>. From Angular 4, Materials module has been made
+               available with a separate module @angular/materials. This helps the user to import only the required
+               materials in their project.</p>
+            <p>To start using materials, you need to install two packages: <b>materials and cdk</b>. Material components
+               depend on the animation module for advanced features. Hence you need the animation package for the same,
+               <b>@angular/animations</b>. The package has already been updated in the previous chapter. We have already
+               installed @angular/cdk packages in previous chapters for virtual and drag drop module.</p>
+            <p>Following is the command to add materials to your project &minus;</p>
+            <pre class="result notranslate">
+npm install --save @angular/material
+</pre>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/materials_and_cdk.jpg"
+               alt="Materials and CDK" />
+            <p>Let us now see the package.json. <b>@angular/material</b> and <b>@angular/cdk</b> are installed.</p>
+            <pre class="prettyprint notranslate">
+{ 
+   "name": "angular7-app", 
+   "version": "0.0.0", 
+   "scripts": { 
+      "ng": "ng", 
+      "start": "ng serve",
+      "build": "ng build", 
+      "test": "ng test", 
+      "lint": "ng lint", 
+      "e2e": "ng e2e" 
+   }, 
+   "private": true, 
+   "dependencies": { 
+      "@angular/animations": "~7.2.0", 
+      "@angular/cdk": "^7.3.4", 
+      "@angular/common": "~7.2.0", 
+      "@angular/compiler": "~7.2.0", 
+      "@angular/core": "~7.2.0", 
+      "@angular/forms": "~7.2.0", 
+      "@angular/material": "^7.3.4", 
+      "@angular/platform-browser": "~7.2.0", 
+      "@angular/platform-browser-dynamic": "~7.2.0", 
+      "@angular/router": "~7.2.0", 
+      "core-js": "^2.5.4", 
+      "rxjs": "~6.3.3", 
+      "tslib": "^1.9.0", 
+      "zone.js": "~0.8.26" 
+   }, 
+   "devDependencies": { 
+      "@angular-devkit/build-angular": "~0.13.0", 
+      "@angular/cli": "~7.3.2", 
+      "@angular/compiler-cli": "~7.2.0", 
+      "@angular/language-service": "~7.2.0", 
+      "@types/node": "~8.9.4", 
+      "@types/jasmine": "~2.8.8", 
+      "@types/jasminewd2": "~2.0.3", 
+      "codelyzer": "~4.5.0", 
+      "jasmine-core": "~2.99.1", 
+      "jasmine-spec-reporter": "~4.2.1", 
+      "karma": "~3.1.1", 
+      "karma-chrome-launcher": "~2.2.0", 
+      "karma-coverage-istanbul-reporter": "~2.0.1",
+      "karma-jasmine": "~1.1.2", 
+      "karma-jasmine-html-reporter": "^0.2.2", 
+      "protractor": "~5.4.0", 
+      "ts-node": "~7.0.0", 
+      "tslint": "~5.11.0", 
+      "typescript": "~3.2.2"
+   } 
+}
+</pre>
+            <p>We have highlighted the packages that are installed to work with materials.</p>
+            <p>We will now import the modules in the parent module - <b>app.module.ts</b> as shown below.</p>
+            <pre class="prettyprint notranslate">
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppRoutingModule , RoutingComponent} from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NewCmpComponent } from './new-cmp/new-cmp.component';
+import { ChangeTextDirective } from './change-text.directive';
+import { SqrtPipe } from './app.sqrt';
+import { MyserviceService } from './myservice.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ScrollDispatchModule } from '@angular/cdk/scrolling';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatMenuModule, MatSidenavModule } from '@angular/material';
+
+@NgModule({
+   declarations: [
+      SqrtPipe,
+      AppComponent,
+      NewCmpComponent,
+      ChangeTextDirective,
+      RoutingComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      HttpClientModule,
+      ScrollDispatchModule,
+      DragDropModule,
+      ReactiveFormsModule,
+      BrowserAnimationsModule,
+      MatButtonModule,
+      MatMenuModule,
+      MatSidenavModule
+   ],
+   providers: [MyserviceService],
+   bootstrap: [AppComponent]
+})
+export class AppModule { }
+</pre>
+            <p>In the above file, we have imported the following modules from <b>@angular/materials</b>.</p>
+            <pre class="result notranslate">
+import { MatButtonModule, MatMenuModule, MatSidenavModule } from '@angular/material';
+</pre>
+            <p>And the same is used in the imports array as shown below &minus;</p>
+            <pre class="result notranslate">
+imports: [
+   BrowserModule,
+   AppRoutingModule,
+   HttpClientModule,
+   ScrollDispatchModule,
+   DragDropModule,
+   ReactiveFormsModule,
+   BrowserAnimationsModule,
+   MatButtonModule,
+   MatMenuModule,
+   MatSidenavModule
+],
+</pre>
+            <p>The app.component.ts is as shown below &minus;</p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+   constructor() {}
+}
+</pre>
+            <p>Let us now add the material-css support in <b>styles.css</b>.</p>
+            <pre class="result notranslate">
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+</pre>
+            <p>Let us now add materials inside app.component.html</p>
+            <h2>Menu</h2>
+            <p>To add menu, <b>&lt;mat-menu&gt;&lt;/mat-menu&gt;</b> is used. The <b>file</b> and <b>Save As</b> items
+               are added to the button under mat-menu. There is a main button added <b>Menu</b>. The reference of the
+               same is given the <b>&lt;mat-menu&gt;</b> by using <b>[matMenuTriggerFor]="menu"</b> and using the menu
+               with <b># in&lt;mat-menu&gt;</b>.</p>
+            <p><b>app.component.html</b></p>
+            <pre class="prettyprint notranslate">
+&lt;button mat-button [matMenuTriggerFor] = "menu"&gt;Menu&lt;/button&gt; 
+&lt;mat-menu #menu = "matMenu"&gt; 
+   &lt;button mat-menu-item&gt; File &lt;/button&gt; 
+   &lt;button mat-menu-item&gt; Save As &lt;/button&gt;
+&lt;/mat-menu&gt;
+</pre>
+            <p>The below image is displayed in the browser &minus;</p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/menu.jpg" alt="Menu" />
+            <p>Clicking on Menu will display the items inside it &minus;</p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/menu_file.jpg" alt="Menu File" />
+            <h2>SideNav</h2>
+            <p>To add sidenav, we need <b>&lt;mat-sidenav-container&gt;&lt;/mat-sidenav-container&gt;</b>.
+               <b>&lt;mat-sidenav&gt;&lt;/mat-sidenav&gt;</b> is added as a child to the container. There is another div
+               added, which triggers the sidenav by using <b>(click)="sidenav.open()"</b>.</p>
+            <p><b>app.component.html</b></p>
+            <pre class="prettyprint notranslate">
+&lt;mat-sidenav-container class="example-container" fullscreen&gt; 
+   &lt;mat-sidenav #sidenav class = "example-sidenav"&gt; 
+      Angular 7 
+   &lt;/mat-sidenav&gt; 
+   &lt;div class = "example-sidenav-content"&gt; 
+      &lt;button type = "button" mat-button (click) = "sidenav.open()"&gt; 
+         Open sidenav 
+      &lt;/button&gt; 
+   &lt;/div&gt; 
+&lt;/mat-sidenav-container&gt;
+</pre>
+            <p><b>app.component.css</b></p>
+            <pre class="prettyprint notranslate">
+.example-container { 
+   width: 500px;  
+   height: 300px; 
+   border: 1px solid rgba(0, 0, 0, 0.5); 
+}
+.example-sidenav { 
+   padding: 20px; 
+   width: 150px; 
+   font-size: 20px;
+   border: 1px solid rgba(0, 0, 0, 0.5); 
+   background-color: #ccc; 
+   color:white; 
+}
+</pre>
+            <p>Following is the display of menu and sidenav in the browser &minus;</p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/open_sidenav.jpg"
+               alt="Open Sidenav" />
+            <p>Following panel opens up on the left side if we click on Open Sidenav &minus;</p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/panel_opens.jpg"
+               alt="Panel Opens" />
+            <h2>Datepicker</h2>
+            <p>Let us now add a datepicker using materials. To add a datepicker, we need to import the modules required
+               to show the datepicker.</p>
+            <p>In <b>app.module.ts</b>, we have imported the following module as shown below for datepicker &minus;</p>
+            <pre class="prettyprint notranslate">
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppRoutingModule , RoutingComponent} from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NewCmpComponent } from './new-cmp/new-cmp.component';
+import { ChangeTextDirective } from './change-text.directive';
+import { SqrtPipe } from './app.sqrt';
+import { MyserviceService } from './myservice.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ScrollDispatchModule } from '@angular/cdk/scrolling';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDatepickerModule, MatInputModule, MatNativeDateModule } from '@angular/material';
+
+@NgModule({
+   declarations: [
+      SqrtPipe,
+      AppComponent,
+      NewCmpComponent,
+      ChangeTextDirective,
+      RoutingComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      HttpClientModule,
+      ScrollDispatchModule,
+      DragDropModule,
+      ReactiveFormsModule,
+      BrowserAnimationsModule,
+      MatDatepickerModule,
+      MatInputModule,
+      MatNativeDateModule
+   ],
+   providers: [MyserviceService],
+   bootstrap: [AppComponent]
+})
+export class AppModule { }
+</pre>
+            <p>Here, we have imported modules such as MatDatepickerModule, MatInputModule, and MatNativeDateModule.</p>
+            <p>Now, the app.component.ts is as shown below &minus;</p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core'; 
+@Component({ 
+   selector: 'app-root', 
+   templateUrl: './app.component.html', s
+   tyleUrls: ['./app.component.css'] 
+}) 
+export class AppComponent { 
+   constructor() {} 
+}
+</pre>
+            <p>The <b>app.component.html</b> is as shown below &minus;</p>
+            <pre class="prettyprint notranslate">
+&lt;mat-form-field&gt;
+   &lt;input matInput [matDatepicker] = "picker" placeholder = "Choose a date"&gt; 
+   &lt;mat-datepicker-toggle matSuffix [for] = "picker"&gt;&lt;/mat-datepicker-toggle&gt;
+   &lt;mat-datepicker #picker&gt;&lt;/mat-datepicker&gt;
+&lt;/mat-form-field&gt;
+</pre>
+            <p>Global css added in style.css &minus;</p>
+            <pre class="prettyprint notranslate">
+/* You can add global styles to this file, and also 
+import other style files */ 
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+body { 
+   font-family: Roboto, Arial, sans-serif; 
+   margin: 10; 
+}
+.basic-container { 
+   padding: 30px; 
+}
+.version-info { 
+   font-size: 8pt; 
+   float: right;
+}
+</pre>
+            <p>The datepicker is displayed in the browser as shown below &minus;</p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/datepicker.jpg" alt="Datepicker" />
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/choose_date.jpg"
+               alt="Choose Date" />
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/date.jpg" alt="Date" />
+            <h1>Testing and Building Angular7 Projects</h1>
+            <p>In this chapter will discuss the following topics &minus;</p>
+            <ul class="list">
+               <li>To test Angular 7 Project</li>
+               <li>To build Angular 7 Project</li>
+            </ul>
+            <h2>Testing Angular 7 Project</h2>
+            <p>During the project setup, the required packages for testing are already installed. There is a
+               <b>.spec.ts</b> file created for every new component, service, directive, etc. We are going to use
+               jasmine to write our test cases.</p>
+            <p>For any changes added to your component, services, directives or any other files created, you can include
+               your test cases in the respective .spec.ts files. So most of the unit testing can be covered at the
+               beginning itself.</p>
+            <p>To run the test cases, the command used is as follows&minus;</p>
+            <pre class="result notranslate">
+ng test
+</pre>
+            <p>Below is the app.component.spec.ts file for <b>app.component.ts</b> &minus;</p>
+            <pre class="prettyprint notranslate">
+import { TestBed, async } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AppComponent } from './app.component';
+
+describe('AppComponent', () => {
+   beforeEach(async(() => {
+      TestBed.configureTestingModule({
+         imports: [
+            RouterTestingModule
+         ],
+         declarations: [
+            AppComponent
+         ],
+      }).compileComponents();
+   }));
+   it('should create the app', () => {
+      const fixture = TestBed.createComponent(AppComponent);
+      const app = fixture.debugElement.componentInstance;
+      expect(app).toBeTruthy();
+   });
+   it(`should have as title 'angular7-app'`, () => {
+      const fixture = TestBed.createComponent(AppComponent);
+      const app = fixture.debugElement.componentInstance;
+      expect(app.title).toEqual('angular7-app');
+   });
+   it('should render title in a h1 tag', () => {
+      const fixture = TestBed.createComponent(AppComponent);
+      fixture.detectChanges();
+      const compiled = fixture.debugElement.nativeElement;
+      expect(compiled.querySelector('h1').textContent).toContain(
+         'Welcome to angular7-app!');
+   })
+});
+</pre>
+            <p><b>app.component.ts</b></p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+   title = 'angular7-app';
+}
+</pre>
+            <p>Now let us run the command to see the test cases running.</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/ng_test.jpg" alt="Ng Test" />
+            <p></p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/run_the_command.jpg"
+               alt="Run The Command" />
+            <p>The test cases status is shown in the command line as shown above and will also open up in the browser as
+               shown below &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/karma.jpg" alt="Karma" />
+            <p>Incase of any failure, it will show the details as follows &minus;</p>
+            <p>To do that, let us change the app.component.spec.ts as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+import { TestBed, async } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AppComponent } from './app.component';
+
+describe('AppComponent', () => {
+   beforeEach(async(() => {
+      TestBed.configureTestingModule({
+         imports: [
+            RouterTestingModule
+         ],
+         declarations: [
+            AppComponent
+         ],
+      }).compileComponents();
+   }));
+   it('should create the app', () => {
+      const fixture = TestBed.createComponent(AppComponent);
+      const app = fixture.debugElement.componentInstance;
+      expect(app).toBeTruthy();
+   });
+   it(`should have as title 'angular7-app'`, () => {
+      const fixture = TestBed.createComponent(AppComponent);
+      const app = fixture.debugElement.componentInstance;
+      expect(app.title).toEqual('Angular 7'); // change the 
+      title from angular7-app to Angular 7
+   });
+   it('should render title in a h1 tag', () => {
+      const fixture = TestBed.createComponent(AppComponent);
+      fixture.detectChanges();
+      const compiled = fixture.debugElement.nativeElement;
+      expect(compiled.querySelector('h1').textContent).toContain(
+         'Welcome to angular7-app!');
+   });
+});
+</pre>
+            <p>In the above file, the test cases check for the title, <b>Angular 7</b>. But in app.component.ts, we have
+               the title, <b>angular7-app</b> as shown below &minus;</p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+   title = 'angular7-app';
+}
+</pre>
+            <p>Here the test case will fail and below are the details shown in command line and browser.</p>
+            <h3>In command line</h3>
+            <p>Following screen is displayed in command line &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/command_line.jpg"
+               alt="Command Line" />
+            <h3>In browser</h3>
+            <p>Following screen is displayed in the browser &minus;</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/karma_connected.jpg"
+               alt="Karma Connected" />
+            <p>All the failed test-cases for your project will be displayed as shown above in command line and browser.
+            </p>
+            <p>Similarly, you can write test cases for your services, directives and the new components which will be
+               added to your project.</p>
+            <h2>Building Angular 7 Project</h2>
+            <p>Once you are done with the project in Angular, we need to build it so that it can be used in production
+               or stating.</p>
+            <p>The configuration for build, i.e., production, staging, development, testing needs to be defined in your
+               <b>src/environments</b>.</p>
+            <p>At present, we have the following environments defined in src/environment &minus;</p>
+            <img class="center" src="/angular7/images/environments.jpg" alt="Environments" />
+            <p>You can add files based on your build to src/environment, i.e., environment.staging.ts,
+               enviornment.testing.ts, etc.</p>
+            <p>At present, we will try to build for production environment. The file <b>environment.ts</b> contains
+               default environment settings and details of the file as follows &minus;</p>
+            <pre class="result notranslate">
+export const environment = {
+   production: false
+};
+</pre>
+            <p>To build the file for production, we need to make the <b><i>production: true</i></b> in environment.ts as
+               follows &minus;</p>
+            <pre class="result notranslate">
+export const environment = {
+   production: true
+};
+</pre>
+            <p>The default environment file has to be imported inside components as follows &minus;</p>
+            <p><b>app.component.ts</b></p>
+            <pre class="prettyprint notranslate">
+import { Component } from '@angular/core';
+import { environment } from './../environments/environment';
+
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+   title = 'angular7-app';
+}
+</pre>
+            <p>The environment replacement from default to production which we are trying to do are defined inside
+               angular.json <b><i>fileReplacements</i></b> section as follows &minus;</p>
+            <pre class="prettyprint notranslate">
+"production": {
+   "fileReplacements": [
+      {
+         "replace": "src/environments/environment.ts",
+         "with": "src/environments/environment.prod.ts"
+      }
+   ],
+}
+</pre>
+            <p>When the command for build runs, the file gets replaced to <b>src/environments/environment.prod.ts</b>.
+               The additional configuration like staging or testing can be added here as shown in the below example
+               &minus;</p>
+            <pre class="prettyprint notranslate">
+"configurations": {
+   "production": { ... },
+   "staging": {
+      "fileReplacements": [
+         {
+            "replace": "src/environments/environment.ts",
+            "with": "src/environments/environment.staging.ts"
+         }
+      ]
+   }
+}
+</pre>
+            <p>So the command to run the build is as follows &minus;</p>
+            <pre class="result notranslate">
+ng build --configuration = production // for production environmnet
+ng build --configuration = staging // for stating enviroment
+</pre>
+            <p>Now let us run the build command for production, the command will create a dist folder inside our project
+               which will have the final files after build.</p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/ng_build.jpg" alt="Ng Build" />
+            <p></p>
+            <img class="full-width" src="https://www.tutorialspoint.com/angular7/images/dist_folder.jpg"
+               alt="Dist Folder" />
+            <p>The final files are build inside dist/ folder which can be hosted on the production server at your end.
+            </p>
+            <img class="center" src="https://www.tutorialspoint.com/angular7/images/dist.jpg" alt="Dist" />
+            <div class="mui-container-fluid button-borders show" id="bottom_navigation">
+               <div class="pre-btn">
+                  <a href="/angular7/angular7_testing_and_building_project.htm"><i
+                        class="fal fa-chevron-circle-left"></i> Previous Page</a>
+                  <a class="hide-on-mobile" href="javascript:printPage();"><i class="fa fa-print"></i> Print Page</a>
+               </div>
+               <div class="nxt-btn">
+                  <a href="/angular7/angular7_useful_resources.htm">Next Page <i
+                        class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+               </div>
+            </div>
+         </div>
+         <!-- Tutorial Content Ends Here -->
+      </div>
+   </div>
+   <footer id="footer">
+      <div class="mui--text-center">
+         <div class="mui--text-caption mui--text-light">
+            <a href="/index.htm" class="logo"><img class="img-responsive"
+                  src="https://www.tutorialspoint.com/images/logo-black.png" alt="Tutorials Point"
+                  title="Tutorials Point"></a>
+         </div>
+         <ul class="mui-list--inline mui--text-body2 mui--text-light">
+            <li><a href="/about/index.htm"><i class="fal fa-globe"></i> About us</a></li>
+            <li><a href="/about/about_terms_of_use.htm"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+            <li><a href="/about/about_privacy.htm"> <i class="fal fa-shield-check"></i> Privacy Policy</a></li>
+            <li><a href="/about/faq.htm"><i class="fal fa-question-circle"></i> FAQ's</a></li>
+            <li><a href="/about/about_helping.htm"><i class="fal fa-hands-helping"></i> Helping</a></li>
+            <li><a href="/about/contact_us.htm"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+         </ul>
+         <div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights
+            Reserved.</div>
+      </div>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-232293-17"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag() { dataLayer.push(arguments); }
+         gtag('js', new Date());
+         gtag('config', 'UA-232293-6');
+      </script>
+   </footer>
+</body>
+
+</html>

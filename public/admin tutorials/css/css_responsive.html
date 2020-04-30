@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+   <title>CSS - Responsive - Tutorialspoint</title>
+   <meta charset="utf-8">
+   <meta name="description"
+      content="CSS - Responsive - Responsive web design provides an optimal experience, easy reading and easy navigation with a minimum of resizing on different devices such as desktops, mobiles" />
+   <meta name="keywords"
+      content="C, C++, Python, Java, HTML, CSS, JavaScript, SQL, PHP, jQuery, XML, DOM, Bootstrap, Programming, examples, code" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+   <link rel="stylesheet" href="../style.css">
+   <script src="../script.js"></script>
+</head>
+
+<body>
+   <header id="header">
+      <!-- Top main-menu Starts Here -->
+      <div class="mui-appbar mui-container-fulid mui--appbar-line-height mui--z1" id="logo-menu">
+         <div class="mui-container">
+            <div class="left-menu">
+               <img class="tp-logo" alt="tutorialspoint" src="../images/logo.png">
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> CSS Tutorial <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="index.html">CSS - Home</a></li>
+                           <li><a target="_top" href="what_is_css.html">CSS - Introduction</a></li>
+                           <li><a target="_top" href="css_syntax.html">CSS - Syntax</a></li>
+                           <li><a target="_top" href="css_inclusion.html">CSS - Inclusion</a></li>
+                           <li><a target="_top" href="css_measurement_units.html">CSS - Measurement Units</a></li>
+                           <li><a target="_top" href="css_colors.html">CSS - Colors</a></li>
+                           <li><a target="_top" href="css_backgrounds.html">CSS - Backgrounds</a></li>
+                           <li><a target="_top" href="css_fonts.html">CSS - Fonts</a></li>
+                           <li><a target="_top" href="css_text.html">CSS - Text</a></li>
+                           <li><a target="_top" href="css_images.html">CSS - Images</a></li>
+                           <li><a target="_top" href="css_links.html">CSS - Links</a></li>
+                           <li><a target="_top" href="css_tables.html">CSS - Tables</a></li>
+                           <li><a target="_top" href="css_borders.html">CSS - Borders</a></li>
+                           <li><a target="_top" href="css_margins.html">CSS - Margins</a></li>
+                           <li><a target="_top" href="css_lists.html">CSS - Lists</a></li>
+                           <li><a target="_top" href="css_padding.html">CSS - Padding</a></li>
+                           <li><a target="_top" href="css_cursors.html">CSS - Cursors</a></li>
+                           <li><a target="_top" href="css_outlines.html">CSS - Outlines</a></li>
+                           <li><a target="_top" href="css_dimension.html">CSS - Dimension</a></li>
+                           <li><a target="_top" href="css_scrollbars.html">CSS - Scrollbars</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> CSS Advanced <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="css_visibility.html">CSS - Visibility</a></li>
+                           <li><a target="_top" href="css_positioning.html">CSS - Positioning</a></li>
+                           <li><a target="_top" href="css_layers.html">CSS - Layers</a></li>
+                           <li><a target="_top" href="css_pseudo_classes.html">CSS - Pseudo Classes</a></li>
+                           <li><a target="_top" href="css_pseudo_elements.html">CSS - Pseudo Elements</a></li>
+                           <li><a target="_top" href="css_at_rules.html">CSS - @ Rules</a></li>
+                           <li><a target="_top" href="css_text_effects.html">CSS - Text Effects</a></li>
+                           <li><a target="_top" href="css_media_types.html">CSS - Media Types</a></li>
+                           <li><a target="_top" href="css_paged_media.html">CSS - Paged Media</a></li>
+                           <li><a target="_top" href="css_aural_media.html">CSS - Aural Media</a></li>
+                           <li><a target="_top" href="css_printing.html">CSS - Printing</a></li>
+                           <li><a target="_top" href="css_layouts.html">CSS - Layouts</a></li>
+                           <li><a target="_top" href="css_validations.html">CSS - Validations</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> CSS3 Tutorial <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="css3_tutorial.html">CSS3 - Tutorial</a></li>
+                           <li><a target="_top" href="css3_rounded_corner.html">CSS3 - Rounded Corner</a></li>
+                           <li><a target="_top" href="css3_boarder_image.html">CSS3 - Border Images</a></li>
+                           <li><a target="_top" href="css3_multi_background.html">CSS3 - Multi Background</a></li>
+                           <li><a target="_top" href="css3_color.html">CSS3 - Color</a></li>
+                           <li><a target="_top" href="css3_gradients.html">CSS3 - Gradients</a></li>
+                           <li><a target="_top" href="css3_shadow.html">CSS3 - Shadow</a></li>
+                           <li><a target="_top" href="css3_text.html">CSS3 - Text</a></li>
+                           <li><a target="_top" href="css3_web_font.html">CSS3 - Web font</a></li>
+                           <li><a target="_top" href="css3_2d_transform.html">CSS3 - 2d transform</a></li>
+                           <li><a target="_top" href="css3_3d_transform.html">CSS3 - 3d transform</a></li>
+                           <li><a target="_top" href="css3_animation.html">CSS3 - Animation</a></li>
+                           <li><a target="_top" href="css3_multi_columns.html">CSS3 - Multi columns</a></li>
+                           <li><a target="_top" href="css3_userinterface.html">CSS3 - User Interface</a></li>
+                           <li><a target="_top" href="css3_box_sizing.html">CSS3 - Box Sizing</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="mui-dropdown">
+                  <a class="mui-btn mui-btn--primary categories" data-mui-toggle="dropdown">
+                     <i class="fa fa-th-large"></i>
+                     <span> CSS References & tools <span class="mui-caret"></span></span>
+                  </a>
+                  <ul class="mui-dropdown__menu cat-menu">
+                     <li>
+                        <ul>
+                           <li><a target="_top" href="css_responsive.html">Responsive Web Design</a></li>
+                           <li><a target="_top" href="css_references.html">CSS - References</a></li>
+                           <li><a target="_top" href="css_color_references.html">CSS - Color References</a></li>
+                           <li><a target="_top" href="css_web_fonts.html">CSS - Web safe fonts</a></li>
+                           <li><a target="_top" href="css_units.html">CSS - Units</a></li>
+                           <li><a target="_top" href="css_animation.html">CSS - Animation</a></li>
+                           <li><a target="_top" href="css_converter.html">CSS - PX to EM converter</a></li>
+                           <li><a target="_top" href="css_color_picker.html">Color Chooser &amp; Animation</a>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="right-menu">
+               <a href="../index.html">
+                  <button class="mui-btn mui-btn--primary mobile-menu">home</button>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- Top main-menu Ends Here jamal -->
+   </header>
+   <div class="mui-container-fluid content">
+      <div class="mui-container">
+         <!-- Tutorial Content Starts Here -->
+         <div class="mui-col-md-12 tutorial-content">
+            <div class="cover">
+               <img class="img-responsive" src="../images/css.jpg" />
+            </div>
+            <h1>CSS - Responsive</h1>
+            <hr />
+            <br>
+            <h2>CSS3 Responsive Web Design</h2>
+            <p>Responsive web design provides an optimal experience, easy reading and easy navigation with a minimum of
+               resizing on different devices such as desktops, mobiles and tabs).</p>
+            <h2>Responsive structure</h2>
+            <p>Below image shows the responsive structure of web pages.</p>
+            <img src="/css/images/responsive.jpg" alt="responsive" />
+            <h2>Flexible Grid demo</h2>
+            <div class="demo-view">
+               <a href="http://tpcg.io/aBotnH" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+      &lt;style&gt;
+         body {
+            font: 600 14px/24px "Open Sans", 
+               "HelveticaNeue-Light", 
+               "Helvetica Neue Light", 
+               "Helvetica Neue", 
+               Helvetica, Arial, 
+               "Lucida Grande", 
+               Sans-Serif;
+         }
+         h1 {
+            color: #9799a7;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 6px;
+         }
+         .container:before, .container:after {
+            content: "";
+            display: table;
+         }
+         .container:after {
+            clear: both;
+         }
+         .container {
+            background: #eaeaed;
+            margin-bottom: 24px;
+            *zoom: 1;
+         }
+         .container-75 {
+            width: 75%;
+         }
+         .container-50 {
+            margin-bottom: 0;
+            width: 50%;
+         }
+         .container, section, aside {
+            border-radius: 6px;
+         }
+         section, aside {
+            background: #2db34a;
+            color: #fff;
+            margin: 1.858736059%;
+            padding: 20px 0;
+            text-align: center;
+         }
+         section {
+            float: left;
+            width: 63.197026%;
+         }
+         aside {
+            float: right;
+            width: 29.3680297%;
+         }
+      &lt;/style&gt;
+   &lt;/head&gt;
+   
+   &lt;body&gt;
+   
+      &lt;h1&gt;100% Wide Container&lt;/h1&gt;
+      
+      &lt;div class = "container"&gt;
+         &lt;section&gt;Section&lt;/section&gt;
+         &lt;aside&gt;Aside&lt;/aside&gt;
+      &lt;/div&gt;
+      
+      &lt;h1&gt;75% Wide Container&lt;/h1&gt;
+      
+      &lt;div class = "container container-75"&gt;
+         &lt;section&gt;Section&lt;/section&gt;
+         &lt;aside&gt;Aside&lt;/aside&gt;
+      &lt;/div&gt;
+      
+      &lt;h1&gt;50% Wide Container&lt;/h1&gt;
+      
+      &lt;div class = "container container-50"&gt;
+         &lt;section&gt;Section&lt;/section&gt;
+         &lt;aside&gt;Aside&lt;/aside&gt;
+      &lt;/div&gt;
+      
+   &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            <p>It will produce the following result &minus;</p>
+            <div>
+               <style>
+                  body {
+                     font: 600 14px/24px "Open Sans",
+                        "HelveticaNeue-Light",
+                        "Helvetica Neue Light",
+                        "Helvetica Neue",
+                        Helvetica, Arial,
+                        "Lucida Grande",
+                        Sans-Serif;
+                  }
+
+                  h1 {
+                     color: #9799a7;
+                     font-size: 14px;
+                     font-weight: bold;
+                     margin-bottom: 6px;
+                  }
+
+                  .container:before,
+                  .container:after {
+                     content: "";
+                     display: table;
+                  }
+
+                  .container:after {
+                     clear: both;
+                  }
+
+                  .container {
+                     background: #eaeaed;
+                     margin-bottom: 24px;
+                     *zoom: 1;
+                  }
+
+                  .container-75 {
+                     width: 75%;
+                  }
+
+                  .container-50 {
+                     margin-bottom: 0;
+                     width: 50%;
+                  }
+
+                  .container,
+                  section,
+                  aside {
+                     border-radius: 6px;
+                  }
+
+                  section,
+                  aside {
+                     background: #2db34a;
+                     color: #fff;
+                     margin: 1.858736059%;
+                     padding: 20px 0;
+                     text-align: center;
+                  }
+
+                  section {
+                     float: left;
+                     width: 63.197026%;
+                  }
+
+                  aside {
+                     float: right;
+                     width: 29.3680297%;
+                  }
+               </style>
+               <h1>100% Wide Container</h1>
+               <div class="container">
+                  <section>Section</section>
+                  <aside>Aside</aside>
+               </div>
+               <h1>75% Wide Container</h1>
+               <div class="container container-75">
+                  <section>Section</section>
+                  <aside>Aside</aside>
+               </div>
+               <h1>50% Wide Container</h1>
+               <div class="container container-50">
+                  <section>Section</section>
+                  <aside>Aside</aside>
+               </div>
+            </div>
+            <h2>Media queries</h2>
+            <p>Media queries is for different style rules for different size devices such as mobiles, desktops, etc.,
+            </p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/YT4rOE" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+      &lt;style&gt;
+         body {
+            background-color: lightpink;
+         }
+         @media screen and (max-width: 420px) {
+            body {
+               background-color: lightblue;
+            }
+         }
+      &lt;/style&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+      &lt;p&gt;
+         If screen size is less than 420px, then it will show lightblue 
+         color, or else it will show light pink color
+      &lt;/p&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            <p>It will produce the following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/media.htm" height="100px"
+               width="660px"></iframe>
+            <h2>Bootstrap responsive web design</h2>
+            <p>Bootstrap is most popular web design framework based on HTML,CSS and Java script and it helps you to
+               design web pages in responsive way for all devices.</p>
+            <div class="demo-view">
+               <a href="http://tpcg.io/jo4UJQ" target="_blank" rel="nofollow" class="demo"><i
+                     class="fa-external-link"></i> Live Demo</a>
+            </div>
+            <pre class="prettyprint notranslate">
+&lt;html&gt;
+   &lt;head&gt;
+      &lt;meta charset = "utf-8"&gt;
+      &lt;meta name = "viewport" content = "width=device-width, initial-scale = 1"&gt;
+      &lt;link rel = "stylesheet" 
+         href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"&gt;
+      &lt;style&gt;
+         body {
+            color:green;
+         }
+      &lt;/style&gt;
+   &lt;/head&gt;
+
+   &lt;body&gt;
+   
+      &lt;div class = "container"&gt;
+      
+         &lt;div class = "jumbotron"&gt;
+            &lt;h1&gt;Tutorials point&lt;/h1&gt; 
+            &lt;p&gt;
+               Tutorials Point originated from the idea that there exists a class 
+               of readers who respond better to online content and prefer to learn 
+               new skills at their own pace from the comforts of their drawing rooms.
+            &lt;/p&gt; 
+         &lt;/div&gt;
+      
+         &lt;div class = "row"&gt;
+            &lt;div class = "col-md-4"&gt;
+               &lt;h2&gt;Android&lt;/h2&gt;
+               &lt;p&gt;
+                  Android is an open source and Linux-based operating system for mobile 
+                  devices such as smartphones and tablet computers. Android was developed 
+                  by the Open Handset Alliance, led by Google, and other companies.
+               &lt;/p&gt;
+         &lt;/div&gt;
+         
+         &lt;div class = "col-md-4"&gt;
+            &lt;h2&gt;CSS&lt;/h2&gt;
+            &lt;p&gt;
+               Cascading Style Sheets, fondly referred to as CSS, is a simple design 
+               language intended to simplify the process of making web pages presentable.
+            &lt;/p&gt;
+         &lt;/div&gt;
+      
+         &lt;div class = "col-md-4"&gt;
+            &lt;h2&gt;Java&lt;/h2&gt;
+            &lt;p&gt;
+               Java is a high-level programming language originally developed by Sun 
+               Microsystems and released in 1995. Java runs on a variety of platforms,
+               such as Windows, Mac OS, and the various versions of UNIX. This tutorial
+               gives a complete understanding of Java.
+            &lt;/p&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+      
+   &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            <p>It will produce the following result &minus;</p>
+            <iframe onload="resizeFrame(this)" class="result" src="/css/src/bootstrap.htm" height="600px"
+               width="660px"></iframe>
+            <div class="mui-container-fluid button-borders show" id="bottom_navigation">
+               <div class="pre-btn">
+                  <a href="/css/css3_box_sizing.htm"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+                  <a class="hide-on-mobile" href="javascript:printPage();"><i class="fa fa-print"></i> Print Page</a>
+               </div>
+               <div class="nxt-btn">
+                  <a href="/css/css_questions_answers.htm">Next Page <i
+                        class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+               </div>
+            </div>
+            <div class="google-bottom-ads">
+               <div>Advertisements</div>
+               <div>
+                  <div id="vi_bottom_ads"></div>
+                  <script>
+                     (function () {
+                        var adPos = document.getElementById('vi_bottom_ads');
+                        var mobile_ad_id = "vi_9017967";
+                        var desktop_ad_id = "vi_9013190";
+                        var ad_id = window.innerWidth <= 768 ? mobile_ad_id : desktop_ad_id;
+                        adPos.innerHTML = '<div class="adsbyvli" data-ad-slot="' + ad_id + '"></div>';
+                        (vitag.displayInit = window.vitag.displayInit || []).push(function () {
+                           viAPItag.display(ad_id);
+                        });
+                     }())
+                  </script>
+               </div>
+               <div class="space-bottom"></div>
+            </div>
+         </div>
+         <!-- Tutorial Content Ends Here -->
+         <!-- Right Column Starts Here -->
+         <div class="mui-col-md-2 google-right-ads">
+            <div class="space-top"></div>
+            <div class="google-right-ad" style="margin: 0px auto !important;margin-top:5px;">
+               <div class="adsbyvli" data-ad-slot="vi_9017966"></div>
+               <script>(vitag.Init = window.vitag.Init || []).push(function () { viAPItag.display("vi_9017966") })</script>
+            </div>
+            <div class="google-right-ad" style="margin-top:16px;">
+               <div class="adsbyvli" data-ad-slot="vi_9017967"></div>
+               <script>(vitag.Init = window.vitag.Init || []).push(function () { viAPItag.display("vi_9017967") })</script>
+            </div>
+            <div class="google-right-ad" style="margin-top:16px;margin-bottom:15px;">
+               <div class="adsbyvli" data-ad-slot="vi_9013289"></div>
+               <script>(vitag.Init = window.vitag.Init || []).push(function () { viAPItag.display("vi_9013289") })</script>
+            </div>
+            <div class="space-bottom" style="margin-bottom:15px;"></div>
+         </div>
+         <!-- Right Column Ends Here -->
+      </div>
+   </div>
+   <div class="clear"></div>
+   <footer id="footer">
+      <div class="mui--text-center">
+         <div class="mui--text-caption mui--text-light">
+            <a href="/index.htm" class="logo"><img class="img-responsive" src="/images/logo-black.png"
+                  alt="Tutorials Point" title="Tutorials Point"></a>
+         </div>
+         <ul class="mui-list--inline mui--text-body2 mui--text-light">
+            <li><a href="/about/index.htm"><i class="fal fa-globe"></i> About us</a></li>
+            <li><a href="/about/about_terms_of_use.htm"><i class="fal fa-asterisk"></i> Terms of use</a></li>
+            <li><a href="/about/about_privacy.htm"> <i class="fal fa-shield-check"></i> Privacy Policy</a></li>
+            <li><a href="/about/faq.htm"><i class="fal fa-question-circle"></i> FAQ's</a></li>
+            <li><a href="/about/about_helping.htm"><i class="fal fa-hands-helping"></i> Helping</a></li>
+            <li><a href="/about/contact_us.htm"><i class="fal fa-map-marker-alt"></i> Contact</a></li>
+         </ul>
+         <div class="mui--text-caption mui--text-light bottom-copyright-text">&copy; Copyright 2020. All Rights
+            Reserved.</div>
+      </div>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-232293-17"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag() { dataLayer.push(arguments); }
+         gtag('js', new Date());
+         gtag('config', 'UA-232293-6');
+      </script>
+   </footer>
+</body>
+
+</html>
