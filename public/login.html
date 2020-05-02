@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+        <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="styles/style.css"/>
+        <title>Hello, World!</title>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+		var y = document.forms["myForm"]["fpass"].value;
+  if (x == "jamal", y == "1234") {
+							document.getElementById("demo").innerHTML = "<a	href='index.html'>login</a>";
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+    
+    <h1>jamal 1234</h1>
+    
+    <p id="demo"></p>
+        <form name="myForm" action="" onsubmit="return validateForm()" method="post">
+            Name: 
+            <input type="text" name="fname">
+            <input type="text" name="fpass">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
